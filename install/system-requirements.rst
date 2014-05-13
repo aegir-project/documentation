@@ -1,3 +1,5 @@
+.. index:: System Requirements
+
 System Requirements
 ===================
 
