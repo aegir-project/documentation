@@ -9,5 +9,3 @@ Aegir requires some special permissions to your server in order to automate some
    :maxdepth: 2
 
    install/system-requirements
-
-

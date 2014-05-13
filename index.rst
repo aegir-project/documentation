@@ -18,6 +18,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   quick-start
    install
 
 
@@ -25,6 +26,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
