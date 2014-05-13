@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aegir'
-copyright = u'2014, Christopher Gervais'
+copyright = u'2014, Aegir Project'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -199,7 +199,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'Aegir.tex', u'Aegir Documentation',
-   u'Christopher Gervais', 'manual'),
+   u'Aegir Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -229,7 +229,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'aegir', u'Aegir Documentation',
-     [u'Christopher Gervais'], 1)
+     [u'Aegir Project'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -243,7 +243,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Aegir', u'Aegir Documentation',
-   u'Christopher Gervais', 'Aegir', 'One line description of project.',
+   u'Aegir Project', 'Aegir', 'One line description of project.',
    'Miscellaneous'),
 ]
 
