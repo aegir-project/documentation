@@ -21,14 +21,13 @@ Aegir must run on some flavour of UNIX, because the majority of functionality in
 Web server
 ----------
 
-You will need at least one dedicated web server, running Apache. We generally work with Apache 2 but we should be compatible with the 1.x series. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide php-cgi or php-fpm (recommended) modules, you will need to install and run php-fpm server separately. You can find useful examples and tips in the third party Barracuda installer available at the barracuda project page.
+You will need at least one dedicated web server, running Apache. We generally work with Apache 2. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide php-cgi or php-fpm (recommended) modules, you will need to install and run php-fpm server separately. You can find useful examples and tips in the third party Barracuda installer available at the barracuda project page.
 N.B.: This third party installer is not supported by the core Aegir developers, but you can find helpful community support at the boa group.
 
-PHP 5.2 and 5.3
+PHP
 ---------------
 
-Aegir depends on Drush 4.x, which requires PHP 5.2 or higher. Aegir 2.x depends on a minimun of Drush 5.10 (though Drush 6 is recommended), which requires PHP 5.3 or higher. You also need to have the command-line version of PHP to run Drush properly, and the MySQL extensions for PHP.
-Given that PHP 5.2 has been deprecated since July 2010, we suggest using PHP 5.3 if possible. Note that while Drupal 6.x and above support PHP 5.3, some contributed third-party modules may still have problems with this version. Most often these cause warnings that can be safely ignored. Aegir and Drush themselves have no known outstanding PHP 5.3 compatibility issues, although you could have a lot of warnings in Drupal 6 due to ereg deprecation, see this issue for details. If you need to host Drupal 5.x sites, note that Drupal 5.x is not compatible with PHP 5.3 and above, and most likely never will be. See http://drupal.org/node/360605 (amongst other issues) for details. As such, Aegir has dropped support for Drupal 5 in versions 2.0+.
+Aegir depends on Drush 6.5.0, which requires PHP 5.3 or higher. You also need to have the command-line version of PHP to run Drush properly, and the MySQL extensions for PHP.
 
 Database server
 ---------------
