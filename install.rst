@@ -10,3 +10,5 @@ Aegir requires some special permissions to your server in order to automate some
 
    install/system-requirements
    install/debian
+   install/manual
+   install/common-problems

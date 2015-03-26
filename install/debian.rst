@@ -159,6 +159,7 @@ An example aegir-custom.make file could look like http://cgit.drupalcode.org/pro
 After installing Aegir, you can reinstall (WARNING, data is LOST) the front end (hostmaster), with following commands:
 
 .. code:: console
+
   sudo rm -rf /var/aegir/hostmaster-\*.\*
   sudo su -s /bin/sh aegir -c "drush -y hostmaster-install --aegir_db_pass=$DB_PASSWORD --makefile=$MAKEFILE $DOMAIN"
 
