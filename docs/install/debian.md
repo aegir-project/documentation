@@ -1,5 +1,3 @@
-.. index:: Installing on Debian
-
 Debian
 ======
 
@@ -9,7 +7,7 @@ If you wish to install Debian packages over an existing manual install, it's pos
 
 Debian packages are uploaded to http://debian.aegirproject.org/ shortly after a release. We eventually want to upload those packages to the official archives, but this will take some adaptation and time to sponsor the packages in.
 
-[toc]
+[TOC]
 
 Requirements for automatic install on Debian
 --------------------------------------------

@@ -1,16 +1,12 @@
-.. index:: Manual Installation
-
-
-
 Manual Installation
 ===================
 
 This page describes to process you need to follow if Aegir doesn't
-have packages for your distribution. We currently provide :doc:`debian`
+have packages for your distribution. We currently provide `debian`
 packages and others should be coming, if you help! This manual
 assumes you are fairly familiar with the UNIX commandline interface,
 but should be possible to follow through if you copy and paste
-faithfully *all* steps of the procedure.
+faithfully **all** steps of the procedure.
 
 A note on supported systems:
 

@@ -1,0 +1,12 @@
+site_name: Aegir Hosting System
+repo_url: https://github.com/aegir-project/aegir-docs/
+theme: readthedocs
+pages:
+- ['index.md', 'Home']
+- ['quick-start.md', 'Quick Start']
+- ['install/install.md', 'Install']
+- ['install/system-requirements.md', 'Install', 'System Requirements']
+- ['install/debian.md', 'Install', 'Debian/Ubuntu']
+- ['install/manual.md', 'Install', 'Manual']
+- ['install/common-problems.md', 'Install', 'Common Problems']
+

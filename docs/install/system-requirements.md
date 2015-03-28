@@ -1,5 +1,3 @@
-.. index:: System Requirements
-
 System Requirements
 ===================
 
@@ -27,7 +25,7 @@ N.B.: This third party installer is not supported by the core Aegir developers, 
 PHP
 ---------------
 
-Aegir depends on Drush 6.5.0, which requires PHP 5.3 or higher. You also need to have the command-line version of PHP to run Drush properly, and the MySQL extensions for PHP.
+Aegir depends on Drush 6.5.0 or later, which requires PHP 5.3 or higher. You also need to have the command-line version of PHP to run Drush properly, and the MySQL extensions for PHP.
 
 Database server
 ---------------
