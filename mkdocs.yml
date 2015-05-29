@@ -9,4 +9,7 @@ pages:
 - ['install/debian.md', 'Install', 'Debian/Ubuntu']
 - ['install/manual.md', 'Install', 'Manual']
 - ['install/common-problems.md', 'Install', 'Common Problems']
-
+- ['import/importing-sites.md', 'Importing Sites']
+- ['import/aegir-backups.md', 'Aegir Backups']
+- ['import/single-site.md', 'Single Site Import']
+- ['import/complete-drupal-install.md', 'Complete Drupal Install']
