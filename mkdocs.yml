@@ -9,4 +9,7 @@ pages:
 - ['install/debian.md', 'Install', 'Debian/Ubuntu']
 - ['install/manual.md', 'Install', 'Manual']
 - ['install/common-problems.md', 'Install', 'Common Problems']
-
+- ['import/importing-sites.md', 'Importing Sites']
+- ['import/remote-import.md', 'Importing Sites', 'Remote Import']
+- ['import/single-site.md', 'Importing Sites', 'Single Site Import']
+- ['import/complete-drupal-install.md', 'Importing Sites', 'Complete Drupal Install']
