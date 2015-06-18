@@ -14,4 +14,5 @@ pages:
 - ['import/single-site.md', 'Importing Sites', 'Single Site Import']
 - ['import/complete-drupal-install.md', 'Importing Sites', 'Complete Drupal Install']
 - ['hooking-into-aegir/hooking-into-aegir.md', 'Hooking into Aegir (site overrides)', 'Introduction']
-- ['hooking-into-aegir/injecting-server-vhosts.md'], 'Hooking into Aegir (site overrides)', 'Injecting into server-wide vhosts']
+- ['hooking-into-aegir/injecting-server-vhosts.md', 'Hooking into Aegir (site overrides)', 'Injecting into server-wide vhosts']
+- ['hooking-into-aegir/override-site-specifics.md', 'Hooking into Aegir (site overrides)', 'Overriding site specific PHP values']
