@@ -21,4 +21,21 @@ Here below is the same code from ergonlogic demonstrating how to create a domain
      }
     }
 
+One further example from staceyb on injecting a rewrite rule. Name the file the same as the function and place it in /var/aegir/.drush 
+
+    <?php
+      function aliasredirects_provision_apache_vhost_config($uri, $data) {
+      // the uri to check here is the name of the site in Aegir
+      if ($uri === "example.com") {
+        $rval[] = "";
+        $rval[] = "RewriteEngine On";
+        // check to see if https is not on first
+        $rval[] = "RewriteCond %{HTTPS} !=on";
+        // rewrite to https with a 301 redirect
+        $rval[] = "RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]";
+        $rval[] = "";
+        return $rval;
+      }
+    }
+
 Make sure you Verify your site after you create the file. Then scroll through the log and find the message you added in the code.

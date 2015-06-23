@@ -12,7 +12,7 @@ The local.settings.php file should be placed in the root of your drupal site, e.
 
 On the other hand, if the changes mode is either PHP_INI_PERDIR or PHP_INI_SYSTEM, php_ini() won't work. In this case, the solution is to inject the value into the vhost. Since vhosts are managed by Aegir, manually adding an override to /var/aegir/config/server_master/apache/vhost.d/<uri> would get blown away the next time that the site is verified.
 
-As described in [Injecting into site vhosts](#todo), we can inject values into vhosts using a Drush hook. For example, to raise the file upload size limit on http://ergonlogic.com, we add the following code in /var/aegir/.drush/ergonlogiccom.drush.inc:
+As described in [Injecting into site vhosts](injecting-into-site-vhosts.md), we can inject values into vhosts using a Drush hook. For example, to raise the file upload size limit on http://ergonlogic.com, we add the following code in /var/aegir/.drush/ergonlogiccom.drush.inc:
 
     <?php
       function ergonlogiccom_provision_apache_vhost_config($uri, $data) {
