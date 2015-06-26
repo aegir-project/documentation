@@ -29,7 +29,7 @@ php_value post_max_size 200M
 Also, in the verify task log I get the following informative message:
 Overriding PHP file size values. See .drush/ergonlogiccom.drush.inc
 
-###Developer Note
+### Developer Note
 
 One challenge this technique may present is inspecting the values of the parameters passed into this function. It appears that the Hostmaster site doesn't get bootstrapped, and so common debugging tools (such as devel.module's dd()) aren't available. However drush_log() is, and when called, will push arbitrary messages back into your Aegir site's verify task log.
 

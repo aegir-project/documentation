@@ -3,7 +3,7 @@ Injecting into site vhosts
 
 Aegir provides some hook functions in its API, one of which allows you to inject extra configuration snippets into your Apache vhost files for sites.
 
-###When would I want to do this?
+### When would I want to do this?
 
 A good example for this is when you may need to inject a custom Rewrite rule that goes beyond what the Aegir Aliases 'redirection' feature provides.
 
@@ -13,7 +13,7 @@ Typically you'd just add what you need to the vhost file, but the problem is tha
 
 Fortunately there is a very easy and elegant solution to this problem to save your configurations persistently across Verify tasks and the like, by means of invoking the Provision hook provision_apache_vhost_config(), or, if you are using Nginx, provision_nginx_vhost_config() (and just replace the below examples with 'nginx' instead of 'apache' where necessary). Below "mig5" is just an example, you can replace this with anything as drush looks for all *.drush.inc files in ~aegir/.drush
 
-###A simple example
+### A simple example
 
 In this example I'll inject a simple 'ErrorLog' apache definition into a vhost to save the site error logs to a file.
 
@@ -79,7 +79,7 @@ If you want to only inject code into a specific site, wrap your code with an if 
         }
       }
 
-###A more advanced example
+### A more advanced example
 
 Managing multiple versions of a production site can be a tricky proposition, even in Aegir. This is particularly true when you want to use the same canonical domain name to allow users to access one such site of your choosing at any given moment. For instance, in Aegir I might have a site named www.example.com (with an alias of example.com,) and a couple of alternates with the site names of test1.example.com and test2.example.com. If I suddenly decide that I want my primary domain to access test1.example.com, Aegir forces me into a tedious process that ultimately results in site downtime – I have to delete or migrate the existing www.example.com site to a new unused site name (or clone it to an unused site name, and delete the original) and then I have to migrate test1.example.com to the vacated site name www.example.com. Alternatively, I could add the www.example.com and example.com aliases to test1.example.com but then my users would just be redirected to test1.example.com.
 
