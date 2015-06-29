@@ -20,3 +20,4 @@ pages:
 - ['hooking-into-aegir/injecting-into-site-vhosts.md', 'Hooking into Aegir (site overrides)', 'Injecting into site vhosts']
 - ['hooking-into-aegir/injecting-into-settings.md', 'Hooking into Aegir (site overrides)', 'Injecting into settings.php']
 - ['hooking-into-aegir/injecting-into-drushrc.md', 'Hooking into Aegir (site overrides)', 'Injecting into drushrc.php']
+- ['remote-servers/remote-servers.md', 'Remote Serves (Multiserver)', 'Remote Servers (Multiserver)']
