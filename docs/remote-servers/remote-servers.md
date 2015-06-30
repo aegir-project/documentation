@@ -108,3 +108,27 @@ A verify task will be spawned and added to the Task queue ready for dispatching.
 Now when you add a new Platform node in Aegir, you have the option of setting which web server to host it on. If you are not using a makefile but are downloading a platform manually, you must still do this on the main Aegir server. The contents will then be synced across to the web server.
 
 You don't choose a web server when installing a new site. Because a site depends on a platform, its web server is implied by which platform has been chosen. In other words, all sites on a platform are hosted on the same server. You cannot host two sites on the same platform on different servers.
+
+#### Shell commands as root
+
+These are the commands outlined above consolidated.
+
+    apt-get install mysql-client
+    adduser --system --group --home /var/aegir aegir
+    adduser aegir www-data    #make aegir a user of group www-data
+    chsh -s /bin/sh aegir
+    apt-get install rsync apache2 php5 php5-cli php5-mysql
+    mkdir /var/aegir/.ssh
+    cat > /var/aegir/.ssh/authorized_keys <<EOF
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQAB...UF aegir@filer01
+    EOF
+    chown aegir:aegir /var/aegir/.ssh -R
+    chmod 750 /var/aegir/.ssh
+    chmod 640 /var/aegir/.ssh/authorized_keys
+    a2enmod rewrite
+    ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
+    cat > /etc/sudoers.d/aegir <<EOF
+    Defaults:aegir  !requiretty
+    aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
+    EOF
+    chmod 440 /etc/sudoers.d/aegir
