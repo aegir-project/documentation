@@ -20,3 +20,6 @@ pages:
 - ['hooking-into-aegir/injecting-into-site-vhosts.md', 'Hooking into Aegir (site overrides)', 'Injecting into site vhosts']
 - ['hooking-into-aegir/injecting-into-settings.md', 'Hooking into Aegir (site overrides)', 'Injecting into settings.php']
 - ['hooking-into-aegir/injecting-into-drushrc.md', 'Hooking into Aegir (site overrides)', 'Injecting into drushrc.php']
+- ['remote-servers/remote-servers.md', 'Remote Serves (Multiserver)', 'Remote Servers (Multiserver)']
+- ['remote-servers/web-packs.md', 'Multiple Web Heads using the Pack module', 'Multiple Web Heads using the Pack module']
+- ['remote-servers/remote-platforms.md', 'Adding a platform', 'Adding a platform']
