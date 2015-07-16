@@ -77,7 +77,7 @@ Next, we need to add the tag in hostmaster, and push it to the d.o repos. So in 
 
 ```
 cd provision
-sh release.sh 1.10  
+sh release.sh 1.10
 cd ../hostmaster  
 git tag 6.x-1.10  
 git push origin 6.x-1.10
@@ -113,17 +113,17 @@ To do a new release of Eldir:
 
 ## 2.5. Test the manual install in Jenkins
 
-Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [S_aegir_6.x-1.x_install job](http://ci.aegirproject.org/job/S_aegir_6.x-1.x_install/) (or [S_aegir_6.x-2.x_install job](http://ci.aegirproject.org/job/S_aegir_6.x-2.x_install/) for 2.x) with the following parameters:
+Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev/) with the following parameters:
 
 *   the right release as the `AEGIR_VERSION` parameter
-*   the `DRUSH_VERSION` to match what is required for this release. (Currently '4.5' for Aegir 1.x)
+*   the `DRUSH_VERSION` to match what is required for this release.
 
 If the build fails, delete the remote tags (using `git push origin :6.x-1.7`, for example), fix the bugs and start again.
 
 
 ## 2.6. Build the Debian packages
 
-Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official job](http://ci.aegirproject.org/job/S_aegir-debian-official/).
+Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/).
 
 If you need to move the tags again, you will need to clear the testing archive using the [R clear repo job](http://ci.aegirproject.org/job/R%20clear%20repo/), with the testing argument.
 
@@ -152,14 +152,15 @@ Once both of those tasks have executed successfully, you can test the upgrade of
 
 Once the tags are pushed and release notes published, we create a release node with an excerpt of (and a link to) the release notes so that tarballs are created and issue queue versions updated.
 
-This needs to be done in the [hostmaster](https://drupal.org/node/add/project-release/195997) and [provision](https://drupal.org/node/add/project-release/196005) (and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) for 2.x) projects on Drupal.org.
+This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
+And after those are fully build in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
 Note: this could be [automated](http://drupal.org/node/1050618) with the right stuff on Drupal.org.
 
-**Special, for 2.x**: make sure release nodes are created in order! The projects shipped with hostmaster (hosting, eldir, etc) need to be fully released before the hostmaster release node is created!
-
 
 ## 2.9. Build the release in Jenkins again
+
+OBSOLETE???
 
 At this point, it's possible that the tarballs on Drupal.org were not created properly. We want to test the real procedure, so run a your build again, but choose 'package' as the `AEGIR_FETCH_MODE`. [S_aegir_6.x-1.x_install job](http://ci.aegirproject.org/job/S_aegir_6.x-1.x_install/)
 
@@ -170,16 +171,7 @@ Note: The link provided may reference the wrong test, since there doesn't appear
 
 Finally, when the Debian packages are tested you will need to pull them into the stable release channel:
 
-[http://ci.aegirproject.org/view/Release%20scripts/job/R%20repo%20pull/](http://ci.aegirproject.org/view/Release%20scripts/job/R%20repo%20pull/ "http://ci.aegirproject.org/view/Release%20scripts/job/R%20repo%20pull/")
-
-**2.x note**: we pull to testing (and stable since the betas), manually:
-
-    reprepro copy testing unstable aegir2
-    reprepro copy testing unstable aegir2-hostmaster
-    reprepro copy testing unstable aegir2-provision
-    reprepro copy testing unstable aegir2-cluster-slave
-
-**3.x note**: we pull to stable (since the betas), manually:
+We pull to stable (since the betas), manually:
 
     reprepro@zeus:~$ reprepro copy stable unstable aegir3
     reprepro@zeus:~$ reprepro copy stable unstable aegir3-hostmaster
@@ -203,7 +195,7 @@ After doing that, you can re-run the 'copy' commands to publish the .debs to the
 
 Once all this is done and the tarballs are generated, the release notes are published in:
 
-*   The [handbook](/node/66) (this is where the release notes live!)
+*   The [handbook](http://community.aegirproject.org/release-notes) (this is where the release notes live!)
 *   A link to the release notes on the [frontpage block](/)
 *   An [event in the calendar](/node/add/event)
 *   A [discussion post](/node/add/discussion) (don't forget to make it 'sticky' & remove stickiness from the previous announcement)
