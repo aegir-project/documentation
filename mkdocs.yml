@@ -23,3 +23,4 @@ pages:
 - ['remote-servers/remote-servers.md', 'Remote Serves (Multiserver)', 'Remote Servers (Multiserver)']
 - ['remote-servers/web-packs.md', 'Multiple Web Heads using the Pack module', 'Multiple Web Heads using the Pack module']
 - ['remote-servers/remote-platforms.md', 'Adding a platform', 'Adding a platform']
+- ['community/release-process.md', 'Release process', 'Release Process' ]
