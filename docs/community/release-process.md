@@ -37,6 +37,10 @@ We build complete release notes for every release. Those are made up of a summar
 
 Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
 
+`drush rn 7.x-3.0-beta1 HEAD`
+
+or later
+
 `drush rn 7.x-3.0-alpha1 7.x-3.0-alpha2`
 
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release, which are also entered in the `debian/changelog` file by the script below.
@@ -53,7 +57,8 @@ _note from just after 7.x-3.0-beta1_: It's probably a good idea to disable the J
 
 Paraphrasing from the script itself:
 
-```The following operations will be done:  
+```
+The following operations will be done:
  0. prompt you for a debian/changelog entry  
  1. change the makefile to download tarball  
  2. change the upgrade.sh.txt version  
@@ -65,12 +70,13 @@ Paraphrasing from the script itself:
 
 The operation can be aborted before step 7. Don't forget that as  
 long as changes are not pushed upstream, this can all be reverted (see  
-git-reset(1) and git-revert(1) ).```
+git-reset(1) and git-revert(1) ).
+```
 
 Next, we need to add the tag in hostmaster, and push it to the d.o repos. So in short, this sums up as:
 
 ```
-cd provision  
+cd provision
 sh release.sh 1.10  
 cd ../hostmaster  
 git tag 6.x-1.10  
@@ -81,7 +87,8 @@ Notice how we just provide the Aegir release number (`1.10`) to the release scri
 
 **Special, for 2.x:** While we wait for core support in drush ([issue #1991764](https://drupal.org/node/1991764)) we need to manually modify the makefiles in hostmaster, drupal-org.make and hostmaster.make to point to the tags we lay down manually in hostmaster, hosting and provision (and maybe eldir). So this ends up being:
 
-```cd provision  
+```
+cd provision  
 sh release.sh 2.0  
 cd ../hostmaster  
 git pull  
@@ -90,7 +97,8 @@ git push origin 6.x-2.0
 cd ../hosting  
 git pull  
 git tag 6.x-2.0  
-git push origin 6.x-2.0```
+git push origin 6.x-2.0
+```
 
 ### 2.4.1. Optional: new Eldir release
 
