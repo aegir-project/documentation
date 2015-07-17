@@ -39,11 +39,12 @@ Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
 
 `drush rn 7.x-3.0-beta1 HEAD`
 
-or later
+or after placing the tags
 
 `drush rn 7.x-3.0-alpha1 7.x-3.0-alpha2`
 
-The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release, which are also entered in the `debian/changelog` file by the script below.
+This is done forn the different git projects. Changing the first line to add 'to $name'.
+The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
 
 ## 2.4. Running the release.sh script
 
@@ -73,32 +74,8 @@ long as changes are not pushed upstream, this can all be reverted (see
 git-reset(1) and git-revert(1) ).
 ```
 
-Next, we need to add the tag in hostmaster, and push it to the d.o repos. So in short, this sums up as:
-
-```
-cd provision
-sh release.sh 1.10
-cd ../hostmaster  
-git tag 6.x-1.10  
-git push origin 6.x-1.10
-```
-
 Notice how we just provide the Aegir release number (`1.10`) to the release script, not the Drupal branch (`6.x`), which is hardcoded in the script to remove potential confusion.
 
-**Special, for 2.x:** While we wait for core support in drush ([issue #1991764](https://drupal.org/node/1991764)) we need to manually modify the makefiles in hostmaster, drupal-org.make and hostmaster.make to point to the tags we lay down manually in hostmaster, hosting and provision (and maybe eldir). So this ends up being:
-
-```
-cd provision  
-sh release.sh 2.0  
-cd ../hostmaster  
-git pull  
-git tag 6.x-2.0  
-git push origin 6.x-2.0  
-cd ../hosting  
-git pull  
-git tag 6.x-2.0  
-git push origin 6.x-2.0
-```
 
 ### 2.4.1. Optional: new Eldir release
 
@@ -158,14 +135,6 @@ And after those are fully build in the [hostmaster](https://drupal.org/node/add/
 Note: this could be [automated](http://drupal.org/node/1050618) with the right stuff on Drupal.org.
 
 
-## 2.9. Build the release in Jenkins again
-
-OBSOLETE???
-
-At this point, it's possible that the tarballs on Drupal.org were not created properly. We want to test the real procedure, so run a your build again, but choose 'package' as the `AEGIR_FETCH_MODE`. [S_aegir_6.x-1.x_install job](http://ci.aegirproject.org/job/S_aegir_6.x-1.x_install/)
-
-Note: The link provided may reference the wrong test, since there doesn't appear to be an AEGIR_FETCH_MODE parameter.
-
 
 ## 2.10. Publish the Debian packages
 
@@ -199,7 +168,7 @@ Once all this is done and the tarballs are generated, the release notes are publ
 *   A link to the release notes on the [frontpage block](/)
 *   An [event in the calendar](/node/add/event)
 *   A [discussion post](/node/add/discussion) (don't forget to make it 'sticky' & remove stickiness from the previous announcement)
-*   Update the version in the [script upgrade page](/upgrading/script)
+*   Update the version in the [script upgrade page](http://community.aegirproject.org/upgrading/script)
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
 *   Twitter as @aegirproject
