@@ -43,7 +43,7 @@ or after placing the tags
 
 `drush rn 7.x-3.0-alpha1 7.x-3.0-alpha2`
 
-This is done forn the different git projects. Changing the first line to add 'to $name'.
+This is done for the different git projects. Changing the first line to add 'to $name'.
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
 
 ## 2.4. Running the release.sh script
@@ -165,9 +165,8 @@ After doing that, you can re-run the 'copy' commands to publish the .debs to the
 Once all this is done and the tarballs are generated, the release notes are published in:
 
 *   The [handbook](http://community.aegirproject.org/release-notes) (this is where the release notes live!)
-*   A link to the release notes on the [frontpage block](/)
-*   An [event in the calendar](/node/add/event)
-*   A [discussion post](/node/add/discussion) (don't forget to make it 'sticky' & remove stickiness from the previous announcement)
+*   A link to the release notes on the [frontpage block](http://community.aegirproject.org/)
+*   An [event in the calendar](http://community.aegirproject.org/node/add/event)
 *   Update the version in the [script upgrade page](http://community.aegirproject.org/upgrading/script)
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
