@@ -265,7 +265,7 @@ These instructions will install the daemon to run as a regular service in /etc/i
 
 #. Install the init script in place
 
-    $ sudo cp <hostmaster_platform_root>/profiles/hostmaster/modules/hosting/queued/init.d.example /etc/init.d/hosting-queued
+    $ sudo cp <hostmaster_platform_root>/profiles/hostmaster/modules/aegir/hosting/queued/init.d.example /etc/init.d/hosting-queued
 
 #. Setup symlinks and runlevels
 
