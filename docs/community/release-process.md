@@ -115,6 +115,19 @@ You can also build and upload the package yourself as explained in these [detail
 
 See the [detailed instructions](http://community.aegirproject.org/node/543) for the dput configuration.
 
+### 2.6.1 Fix Debian packages only
+
+When there's a bug in the Debian packaging itself we can do a minor package version update. USE WITH CARE!
+
+    cd <provision source>
+    <Fix>
+    git commit
+    git tag <previous version tag>.1
+    git push --tags
+
+We don't create a release node on Drupal.org, just run the [S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/) job. And publish as listed below.
+
+
 
 ## 2.7. Test the upgrade in Jenkins
 
@@ -142,10 +155,11 @@ Finally, when the Debian packages are tested you will need to pull them into the
 
 We pull to stable (since the betas), manually:
 
-    reprepro@zeus:~$ reprepro copy stable unstable aegir3
-    reprepro@zeus:~$ reprepro copy stable unstable aegir3-hostmaster
-    reprepro@zeus:~$ reprepro copy stable unstable aegir3-provision
-    reprepro@zeus:~$ reprepro copy stable unstable aegir3-cluster-slave
+    reprepro@zeus:~$
+    reprepro copy stable unstable aegir3
+    reprepro copy stable unstable aegir3-hostmaster
+    reprepro copy stable unstable aegir3-provision
+    reprepro copy stable unstable aegir3-cluster-slave
 
 If Jenkins has managed to build .debs and upload them before you've have a chance to pull them into testing/stable, you can manually remove them like so:
 
