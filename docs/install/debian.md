@@ -117,6 +117,14 @@ During the Postfix configuration, the following options appear: "No configuratio
 
 At the end of the installation, you will receive an email message or, if the user "aegir" has been assigned with a local email account during the installation, the file /var/mail/aegir will contain the message. It will include a one-time login to your new Aegir control panel, that is a URL to copy into your browser so that you can set the password for the "admin" user.
 
+### Installing with Nginx
+
+If you want to use Nginx instead of Apache, you'll have to explicitely tell apt-get:
+
+    $ sudo apt-get install aegir3 nginx php5-fpm
+
+This is because the package expects Apache2 by default.
+
 Custom Drupal distributions and make files
 ------------------------------------------
 
