@@ -22,6 +22,8 @@ Web server
 You will need at least one dedicated web server, running Apache. We generally work with Apache 2. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide php-cgi or php-fpm (recommended) modules, you will need to install and run php-fpm server separately. You can find useful examples and tips in the third party Barracuda installer available at the barracuda project page.
 N.B.: This third party installer is not supported by the core Aegir developers, but you can find helpful community support at the boa group.
 
+See also [installing with Nginx](debian#installing-with-nginx).
+
 PHP
 ---------------
 
