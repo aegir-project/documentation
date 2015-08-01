@@ -2,26 +2,24 @@ site_name: Aegir Hosting System
 repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
 pages:
-- ['index.md', 'Home']
-- ['quick-start.md', 'Quick Start']
-- ['install/install.md', 'Install']
-- ['install/system-requirements.md', 'Install', 'System Requirements']
-- ['install/debian.md', 'Install', 'Debian/Ubuntu']
-- ['install/manual.md', 'Install', 'Manual']
-- ['install/common-problems.md', 'Install', 'Common Problems']
-- ['import/importing-sites.md', 'Importing Sites']
-- ['import/remote-import.md', 'Importing Sites', 'Remote Import']
-- ['import/single-site.md', 'Importing Sites', 'Single Site Import']
-- ['import/complete-drupal-install.md', 'Importing Sites', 'Complete Drupal Install']
-- ['hooking-into-aegir/hooking-into-aegir.md', 'Hooking into Aegir (site overrides)', 'Introduction']
-- ['hooking-into-aegir/override-site-specifics.md', 'Hooking into Aegir (site overrides)', 'Overriding site specific PHP values']
-- ['hooking-into-aegir/injecting-server-vhosts.md', 'Hooking into Aegir (site overrides)', 'Injecting into server-wide vhosts']
-- ['hooking-into-aegir/injecting-into-htaccess.md', 'Hooking into Aegir (site overrides)', 'Injecting into platform-wide vhosts (.htaccess)']
-- ['hooking-into-aegir/injecting-into-site-vhosts.md', 'Hooking into Aegir (site overrides)', 'Injecting into site vhosts']
-- ['hooking-into-aegir/injecting-into-settings.md', 'Hooking into Aegir (site overrides)', 'Injecting into settings.php']
-- ['hooking-into-aegir/injecting-into-drushrc.md', 'Hooking into Aegir (site overrides)', 'Injecting into drushrc.php']
-- ['remote-servers/remote-servers.md', 'Remote Serves (Multiserver)', 'Remote Servers (Multiserver)']
-- ['remote-servers/web-packs.md', 'Multiple Web Heads using the Pack module', 'Multiple Web Heads using the Pack module']
-- ['remote-servers/remote-platforms.md', 'Adding a platform', 'Adding a platform']
-- ['community/release-process.md', 'Release process', 'Release Process']
-- ['uninstall/uninstall.md', 'Uninstalling Aegir', 'Uninstalling Aegir']
+- 'Home': 'index.md'
+- 'Quick Start': 'quick-start.md'
+- 'Install':
+  - 'Install': 'install/install.md'
+  - 'System Requirements': 'install/system-requirements.md'
+  - 'Debian/Ubuntu': 'install/debian.md'
+  - 'Manual': 'install/manual.md'
+  - 'Common Problems': 'install/common-problems.md'
+  - 'Uninstalling Aegir': 'install/uninstall.md'
+- 'Usage':
+  - 'Importing Sites':
+    - 'Importing Sites': 'import/importing-sites.md'
+    - 'Remote Import':  'import/remote-import.md'
+    - 'Single Site Import': 'import/single-site.md'
+    - 'Complete Drupal Install': 'import/complete-drupal-install.md'
+  - 'Hooking into Aegir (site overrides)': 'hooking-into-aegir.md'
+  - 'Remote Serves (Multiserver)':
+    - 'Remote Servers (Multiserver)': 'remote-servers/remote-servers.md'
+    - 'Multiple Web Heads using the Pack module': 'remote-servers/web-packs.md'
+    - 'Adding a platform': 'remote-servers/remote-platforms.md'
+- 'Release Process': 'community/release-process.md'
