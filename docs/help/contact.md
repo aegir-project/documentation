@@ -25,7 +25,7 @@ There are mailing lists that can be used for support, general discussion and dev
 * [announce](https://listes.koumbit.net/cgi-bin/mailman/listinfo/announce-lists.aegirproject.org) - the announce mailing list is used to announce new releases or major news
 * [users](https://listes.koumbit.net/cgi-bin/mailman/listinfo/users-lists.aegirproject.org) - the user mailing list is used for general discussions and support for Aegir users
 * [core](https://listes.koumbit.net/cgi-bin/mailman/listinfo/core-lists.aegirproject.org) - the core mailing list is used for internal discussions in the core team
-* [develop](https://listes.koumbit.net/cgi-bin/mailman/listinfo/develop-aegirproject.org) - for discussions about the ongoing development of the project
+* [develop](https://listes.koumbit.net/cgi-bin/mailman/listinfo/develop-aegirproject.org) - for discussions about the ongoing development of the project (also AegirNG, the next major version)
 * [discuss](https://listes.koumbit.net/cgi-bin/mailman/listinfo/discuss-aegirproject.org) - for general technical discussions, how-to questions, etc
 * [coord](https://listes.koumbit.net/cgi-bin/mailman/listinfo/coord-aegirproject.org) - for coordination of tasks that are not code-related
 * [business](https://listes.koumbit.net/cgi-bin/mailman/listinfo/business-aegirproject.org) - for discussing business models, partnering opportunities, etc
