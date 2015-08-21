@@ -25,6 +25,10 @@ For the specifics of release naming conventions and the cycle, see [the branch n
 
 Look into [Jenkins](http://ci.aegirproject.org/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
+### 2.1.1 Disable Debian dev builds in Jenkins
+
+It's probably a good idea to disable the Jenkins jobs named 'D_aegir-debian*'. This prevents later troubles in the 'Publish the Debian packages' section.
+The dev package is build before the stable one, and as 3.1+103.0544212 > 3.1 it gets added to the stable repo.
 
 ## 2.2. Verify that drupal-org.make specifies up-to-date versions
 
@@ -53,8 +57,6 @@ Each time we make a new release, we run a script called `release.sh` in provisio
 This script should only be used by the core dev team when doing an official release. If you are not one of those people, you probably shouldn't be running this.
 
 This script does all the 'hard' work in that it doesn't forget all the very many places to edit version numbers etc of relevant documentation and other scripts. This includes install.sh.txt and upgrade.sh.txt.
-
-_note from just after 7.x-3.0-beta1_: It's probably a good idea to disable the Jenkins jobs named 'D_aegir-debian*'. This could prevent later troubles in the 'Publish the Debian packages' section.
 
 Paraphrasing from the script itself:
 
