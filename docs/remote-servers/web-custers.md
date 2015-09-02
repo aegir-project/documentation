@@ -3,9 +3,9 @@ Multiple Web Heads using the Cluster module
 
 If you wish to run the same website concurrently on multiple hosts you can use the Pack or Cluster module. 
 
-The **Web Cluster** module uses Rsync to get all files to all servers.
+The [**Web Cluster**](web-clusters.md) module uses Rsync to get all files to all servers.
 
-The **Web Pack** module shares files to all servers via an NFS mount.  The NFS setup must be done manually.
+The [**Web Pack**](web-packs.md) module shares files to all servers via an NFS mount.  The NFS setup must be done manually.
 
 This documentation page is about the **Web Cluster** module.
 
