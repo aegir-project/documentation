@@ -35,6 +35,17 @@ To test that the site is available from both servers, you must edit your DNS or 
 3. Edit /etc/hosts or your DNS so myclustersite.com resolves to the IP of server #2.
 4. Visit the URL http://myclustersite.com again. If the site works, we know we can load the site from remote server #2.
 
-Now you must setup a load balancer that will route requests to both remote server #1 and #2.
+Final Tasks
+===========
 
-Setting up a load balancer is out of scope of this article, for now.
+There are two important final tasks to get a working drupal site running on a server cluster:
+
+1. Load Balancer.
+  Now you must setup a load balancer that will route requests to both remote server #1 and #2.
+
+2. Shared Files folder.
+  Uploaded files will only go to one server when you upload them.  They will appear as missing when requests come in to the other servers.
+
+  There are a number of ways to deal with this: You can use NFS to create a shared files folder, or you can configure your load balancer to always send requests for the files folder to a single server.
+
+  Setting up a load balancer and dealing with the files folder is out of scope of this article, for now.
