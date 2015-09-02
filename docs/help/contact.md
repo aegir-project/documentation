@@ -48,3 +48,7 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 **Stack exchange**
 
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
+
+**Historic data**
+
+* [Archived community.aegirproject.org site](http://community-archive.aegirproject.org) (OpenAtrium 1.x)
