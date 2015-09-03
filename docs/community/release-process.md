@@ -180,10 +180,7 @@ After doing that, you can re-run the 'copy' commands to publish the .debs to the
 
 Once all this is done and the tarballs are generated, the release notes are published in:
 
-*   The [handbook](http://community.aegirproject.org/release-notes) (this is where the release notes live!)
-*   A link to the release notes on the [frontpage block](http://community.aegirproject.org/)
-*   An [event in the calendar](http://community.aegirproject.org/node/add/event)
-*   Update the version in the [script upgrade page](http://community.aegirproject.org/upgrading/script)
+*   The [docs](http://aegir.readthedocs.org/en/3.x/release-notes/3.1-release-notes/)
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
 *   Twitter as @aegirproject
