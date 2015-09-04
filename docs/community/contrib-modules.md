@@ -1,11 +1,11 @@
 ## 1. Extensions to Hostmaster (frontend)
 
-### [Hosting Git](http://drupal.org/project/hosting_git)
+### [Hosting Git](https://www.drupal.org/project/hosting_git)
 
 This is a simple module for the Aegir project that adds a 'Git pull', 'Git checkout' and 'Git clone' task for sites.
 The successor of Hosting site Git & Hosting platform Git
 
-### [Hosting Logs](http://drupal.org/project/hosting_logs)
+### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
 
@@ -13,7 +13,7 @@ This is a simple module for the Aegir project that adds a 'Logs' tab to sites an
 
 Allows a site to have its modules built from a makefile in the sites directory.
 
-### [Hosting tasks extra](http://drupal.org/project/hosting_tasks_extra)
+### [Hosting tasks extra](https://www.drupal.org/project/hosting_tasks_extra)
 
 This module extends Aegir hostmaster (and drush/provision) with some additional tasks. Such as: cache-clear and registry-rebuild.
 Now also includes the functionality from [Aegir HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
@@ -31,24 +31,24 @@ Adds the Strict Transport Security header to hosts that require SSL.
 ## 3. Themes
 
 *   [Saeven](https://www.drupal.org/project/saeven)
-*   [Eldir](http://drupal.org/project/eldir). (The default theme)
+*   [Eldir](https://www.drupal.org/project/eldir). (The default theme)
 
 ## 4. Configuration management - e.g. Puppet modules and Chef cookbooks
 
 Those projects allow you to manage Aegir instance(s) through a configaration management tool.
 
-*   [Aegir Puppet module](http://drupal.org/project/puppet-aegir)
-*   [Drush Puppet module](http://drupal.org/project/puppet-drush)
+*   [Aegir Puppet module](https://www.drupal.org/project/puppet-aegir)
+*   [Drush Puppet module](https://www.drupal.org/project/puppet-drush)
 *   [Aegir3 Chef Cookbook](https://supermarket.chef.io/cookbooks/aegir3)
 *   [Ansible role](https://github.com/GetValkyrie/ansible-role-aegir/)
 
 ## 5. Others
 
-### [Aegir up](http://drupal.org/project/aegir-up)
+### [Aegir up](https://www.drupal.org/project/aegir-up)
 
 Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
 
-### [DevShop](http://drupal.org/project/devshop)
+### [DevShop](https://www.drupal.org/project/devshop)
 
 DevShop is a Drupal Development Environment Manager built on Aegir.
 

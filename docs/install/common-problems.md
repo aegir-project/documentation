@@ -76,7 +76,7 @@ Also, in some configurations, it seems necessary to restart crond for the user c
 
     $ sudo service crond restart
 
-See http://drupal.org/node/632308 if you have more information about this issue.
+See https://www.drupal.org/node/632308 if you have more information about this issue.
 
 
 7. CentOS aegir.conf permission denied
@@ -94,7 +94,7 @@ Check your SELinux settings. If enabled, you can run the following command on th
 
 Alternatively, you can disable SELinux completely if you desire. Both options will result in removing the permisson denied error.
 
-You can see [this comment](http://drupal.org/node/1286926#comment-5028062) for a little more info.
+You can see [this comment](https://www.drupal.org/node/1286926#comment-5028062) for a little more info.
 
 Try the following if nothing else works:
 
@@ -132,8 +132,8 @@ Content of dispatch.sh:
 
 Solaris (and maybe others) suffers from the dreaded execution issues of drush:
 
-* http://drupal.org/node/637574
-* http://drupal.org/node/586466
+* https://www.drupal.org/node/637574
+* https://www.drupal.org/node/586466
 
 Those can be worked around by hardcoding the --php executable on the commandline path. Adding the proper shebang ( `#!/usr/local/bin/php`, for example) header and using a proper PATH that includes the PHP executable also helps.
 

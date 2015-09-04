@@ -147,7 +147,7 @@ Once the tags are pushed and release notes published, we create a release node w
 This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
 And after those are fully build in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
-Note: this could be [automated](http://drupal.org/node/1050618) with the right stuff on Drupal.org.
+Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
 
 

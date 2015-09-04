@@ -48,7 +48,7 @@ This way of importing sites is often considered the safest whereby you transfer 
 
 	Make a backup of the database on your old server Backup and Migrate module is good for this, or you can use phpmyadmin or your favourite MySQL management tool. It's a good idea to truncate the cache, search and watchdog tables first to reduce the size of the database (Backup and Migrate does this for you).
 
-	Aegir does not provide support for importing databases with prefixed tables so it is best to remove prefixes form the database. However, a [workaround is available](http://drupal.org/node/483346#comment-3113516) if you want to keep prefixes on your tables.
+	Aegir does not provide support for importing databases with prefixed tables so it is best to remove prefixes form the database. However, a [workaround is available](https://www.drupal.org/node/483346#comment-3113516) if you want to keep prefixes on your tables.
 
 	Unlike traditional Drupal projects the database settings cannot be found in settings.php. The database credentials are stored in the Apache vhost config of the associated site. This is a security measure implemented by the Aegir project.
 

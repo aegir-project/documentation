@@ -13,7 +13,7 @@ Remember that Aegir, like Drupal, transcends timezones, and even the developers 
 
 We try to meet check-in there on Thursdays at 2PM GMT (10 AM EDT, 8 AM MDT).
 
-New to IRC? IRC instructions for Drupal users are at: [http://drupal.org/irc](http://drupal.org/irc "http://drupal.org/irc").
+New to IRC? IRC instructions for Drupal users are at: [https://www.drupal.org/irc](https://www.drupal.org/irc "https://www.drupal.org/irc").
 
 **Twitter**
 

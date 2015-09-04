@@ -71,7 +71,7 @@ That is used to add the site settings added by the UI in the hosting backend imp
 
 ### Aegir-wide Customization
 
-In some situations you may want to implement the same configuration settings on all your Aegir sites. This is where global.inc comes in. Note that global.inc is now included in settings.php before local.settings.php, so that Aegir system administrators no longer retain the ability to override configuration changes in local.settings.php, but instead it is possible to override global settings per site [read why this has been changed](http://drupal.org/node/1044938): this change is available since 0.4-rc1 release.
+In some situations you may want to implement the same configuration settings on all your Aegir sites. This is where global.inc comes in. Note that global.inc is now included in settings.php before local.settings.php, so that Aegir system administrators no longer retain the ability to override configuration changes in local.settings.php, but instead it is possible to override global settings per site [read why this has been changed](https://www.drupal.org/node/1044938): this change is available since 0.4-rc1 release.
 
 For example, say the system administrator wanted to limit users' session lifetimes to a maximum of one day they could create a global.inc as follows:
 
