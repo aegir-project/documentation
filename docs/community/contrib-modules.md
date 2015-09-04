@@ -9,10 +9,6 @@ The successor of Hosting site Git & Hosting platform Git
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
 
-### [Hosting Platform Pathauto](http://drupal.org/project/hosting_platform_pathauto)
-
-This is an add-on module for the Aegir hosting system: [http://aegirproject.org/](http://aegirproject.org/ "http://aegirproject.org/") This module simply makes a little time-saving tweak when creating a new platform: ...
-
 ### [Hosting site make](https://github.com/mglaman/hosting_site_make)
 
 Allows a site to have its modules built from a makefile in the sites directory.
