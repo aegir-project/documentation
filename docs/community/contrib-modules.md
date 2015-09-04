@@ -1,3 +1,5 @@
+Please note that the support and development status varies for these contributed modules.
+
 ## 1. Extensions to Hostmaster (frontend)
 
 ### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
