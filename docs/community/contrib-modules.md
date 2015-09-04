@@ -1,5 +1,13 @@
 ## 1. Extensions to Hostmaster (frontend)
 
+### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
+
+Module to configure settings and crons specific to CiviCRM.
+
+### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
+
+This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to be preformed on an Aegir managed site.
+
 ### [Hosting Git](https://www.drupal.org/project/hosting_git)
 
 This is a simple module for the Aegir project that adds a 'Git pull', 'Git checkout' and 'Git clone' task for sites.
@@ -9,6 +17,19 @@ The successor of Hosting site Git & Hosting platform Git
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
 
+### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
+
+Integrates with an instance of the Piwik analytic software package and the Drupal piwik module.
+D7 port in https://www.drupal.org/node/2195591
+
+### [Hosting Remote Import](https://www.drupal.org/project/hosting_remote_import)
+
+Provides a UI for fetching sites from remote Aegir servers.
+
+### [Hosting Site Backup Manager](https://www.drupal.org/project/hosting_site_backup_manager)
+
+Extends the backup functionality of Aegir. It adds a tab to the site content type. The tab shows the backups and enables per backup actions (Restore, Delete and Get).
+
 ### [Hosting site make](https://github.com/mglaman/hosting_site_make)
 
 Allows a site to have its modules built from a makefile in the sites directory.
@@ -17,6 +38,16 @@ Allows a site to have its modules built from a makefile in the sites directory.
 
 This module extends Aegir hostmaster (and drush/provision) with some additional tasks. Such as: cache-clear and registry-rebuild.
 Now also includes the functionality from [Aegir HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
+
+### [Hosting Variables](https://www.drupal.org/project/hosting_variables)
+
+Allows you to set arbitrary custom Drupal variables for each site, such as site name and slogan.
+These variables will be put in settings.php, and so can't be overriden (or changed) through the site interface.
+
+### [Hosting Wordpress](https://www.drupal.org/project/hosting_wordpress)
+
+Module to manage WordPress sites. It aims to support the main Aegir functionality, such as installation, upgrade, migration and backups.
+
 
 ## 2. Extensions to Provision (backend)
 
