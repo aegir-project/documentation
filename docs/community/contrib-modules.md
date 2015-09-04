@@ -39,13 +39,14 @@ Adds the Strict Transport Security header to hosts that require SSL.
 *   [Saeven](https://www.drupal.org/project/saeven)
 *   [Eldir](http://drupal.org/project/eldir). (The default theme)
 
-## 4. Puppet modules and Chef cookbooks
+## 4. Configuration management - e.g. Puppet modules and Chef cookbooks
 
-Those projects allow you to manage Aegir instance(s) through Puppet. Chef recipes also welcome, we don't discriminate.
+Those projects allow you to manage Aegir instance(s) through a configaration management tool.
 
 *   [Aegir Puppet module](http://drupal.org/project/puppet-aegir)
 *   [Drush Puppet module](http://drupal.org/project/puppet-drush)
 *   [Aegir3 Chef Cookbook](https://supermarket.chef.io/cookbooks/aegir3)
+*   [Ansible role](https://github.com/GetValkyrie/ansible-role-aegir/)
 
 ## 5. Others
 
