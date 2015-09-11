@@ -91,7 +91,7 @@ Features include:
 * Automatic Drush aliases for running commands against sites inside the VM.
 Development & Support
 
-While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [Ansible role](https://github.com/GetValkyrie/valkyrie) 
+While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie) 
 
 ### [Aegir up](https://www.drupal.org/project/aegir-up) DEPRECATED Replace by GetValkyrie
 
