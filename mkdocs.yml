@@ -3,6 +3,7 @@ repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
 pages:
 - ['index.md', 'Home']
+- ['help/contact.md', 'Contacting the community']
 - ['quick-start.md', 'Quick Start']
 - ['install/install.md', 'Install']
 - ['install/system-requirements.md', 'Install', 'System Requirements']
@@ -28,4 +29,3 @@ pages:
 - ['community/contrib-modules.md', 'Community', 'Contriubted-modules']
 - ['release-notes/3.1-release-notes.md', 'Release Notes', 'Release Notes']
 - ['uninstall/uninstall.md', 'Uninstalling Aegir', 'Uninstalling Aegir']
-- ['help/contact.md', 'Contacting the community', 'Contacting the community']
