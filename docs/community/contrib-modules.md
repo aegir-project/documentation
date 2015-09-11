@@ -83,8 +83,6 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 
 Valkyrie is an opinionated development stack that makes features/git based Drupal development easy.
 
-![Valkyrie logo]({{https://www.drupal.org}}/files/styles/grid-3/public/project-images/valkyrie_logo.png?itok=iQBTBnV5)
-
 Features include:
 * Everything is wrapped up neatly in a VM. This keeps your computer tidy and Valkyrie consistent across various machines.
 * Folders in the VM are mounted from your computer via NFS to make developing with your favorite editor easy (we like Vim).
