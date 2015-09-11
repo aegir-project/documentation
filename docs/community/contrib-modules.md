@@ -77,7 +77,23 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 
 ## 5. Others
 
-### [Aegir up](https://www.drupal.org/project/aegir-up)
+
+
+### [Valkyrie](https://www.drupal.org/project/valkyrie)  
+
+Valkyrie is an opinionated development stack that makes features/git based Drupal development easy.
+
+Features include:
+* Everything is wrapped up neatly in a VM. This keeps your computer tidy and Valkyrie consistent across various machines.
+* Folders in the VM are mounted from your computer via NFS to make developing with your favorite editor easy (we like Vim).
+* Automatic domain resolution using vagrant-dns on Macs or Avahi on Linux systems (we haven't tested this on Windows, sorry). Each site you create on Valkyrie will get an automatically resolving domain name which keeps you from needing to hack your /etc/hosts file.
+* Drush extensions to make all kinds of common development tasks easy.
+* Automatic Drush aliases for running commands against sites inside the VM.
+Development & Support
+
+While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie) 
+
+### [Aegir up](https://www.drupal.org/project/aegir-up) DEPRECATED Replace by GetValkyrie
 
 Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
 
