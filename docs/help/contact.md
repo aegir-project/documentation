@@ -47,8 +47,9 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 *   [http://mig5.net/category/tags/aegir](http://mig5.net/category/tags/aegir "http://mig5.net/category/tags/aegir")
 *   [http://praxis.coop/en/taxonomy/term/7](http://praxis.coop/en/taxonomy/term/7)
 
-**Stack exchange**
+**Q & A**
 
+* [Askbot](https://ask.aegir.support/)
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
 
 **Historic data**
