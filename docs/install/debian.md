@@ -145,6 +145,14 @@ After installing Aegir, you can reinstall (WARNING, data is LOST) the front end 
 ``su -s /bin/sh aegir -c "some command"`` runs ``some command`` in the ``/bin/sh`` shell as user ``aegir``.  ``sudo`` runs the ``su`` command as root - prompting for your user's password instead ``su`` asking for aegir's password.
  Make sure you fil in the variables.
 
+
+Custom options
+--------------
+
+To create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option.
+
+    $ echo "aegir3-hostmaster aegir/working-copy string true" | sudo debconf-set-selections
+
 Troubleshooting the install
 ---------------------------
 
