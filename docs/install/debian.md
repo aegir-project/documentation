@@ -151,7 +151,7 @@ Custom options
 
 To create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option.
 
-    $ echo "aegir3-hostmaster aegir/working-copy string true" | sudo debconf-set-selections
+    $ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
 
 Troubleshooting the install
 ---------------------------
