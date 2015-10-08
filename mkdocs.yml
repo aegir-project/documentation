@@ -25,6 +25,7 @@ pages:
 - ['remote-servers/web-packs.md', 'Multiple Web Heads using the Pack module', 'Multiple Web Heads using the Pack module']
 - ['remote-servers/web-clusters.md', 'Multiple Web Heads using the Cluster module', 'Multiple Web Heads using the Cluster module']
 - ['remote-servers/remote-platforms.md', 'Adding a platform', 'Adding a platform']
+- ['community/code-of-conduct.md', 'Community', 'Code of Conduct']
 - ['community/release-process.md', 'Community', 'Release Process']
 - ['community/contrib-modules.md', 'Community', 'Contributed-modules']
 - ['release-notes/3.1-release-notes.md', 'Release Notes', 'Release Notes']
