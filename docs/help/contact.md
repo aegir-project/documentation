@@ -45,7 +45,7 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 
 *   [http://developmentseed.org/tags/aegir](http://developmentseed.org/tags/aegir "http://developmentseed.org/tags/aegir")
 *   [http://mig5.net/category/tags/aegir](http://mig5.net/category/tags/aegir "http://mig5.net/category/tags/aegir")
-*   [http://praxis.coop/en/taxonomy/term/7](http://praxis.coop/en/taxonomy/term/7)
+*   [http://praxis.coop/en/taxonomy/term/7](https://praxis.coop/en/tags/aegir)
 
 **Q & A**
 
