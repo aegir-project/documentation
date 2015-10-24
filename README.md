@@ -6,9 +6,10 @@ This project aims to document the Aegir Hosting System. It uses mkdocs to build 
     $ brew install python;               # For OSX users
     $ sudo aptitude install python-pip   # For Debian/Ubuntu users
     $ pip install mkdocs
-    $ git clone https://github.com/aegir-project/aegir-docs.git
+    $ git clone https://github.com/aegir-project/documentation.git
+    $ mv documentation aegir-docs
     $ cd aegir-docs
-    $ git remote add sandbox https://github.com/<username>/aegir-docs.git
+    $ git remote add sandbox https://github.com/<username>/documentation.git
     $ mkdocs serve
 
 Your local aegir-docs site should now be available for browsing: http://127.0.0.1:8000/. When you find a typo, an error, unclear or missing explanations or instructions, hit ctrl-c, to stop the server, and start editing. Find the page you’d like to edit; everything is in the docs/ directory. Make your changes, commit and push them, and start a pull request:
