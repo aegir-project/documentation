@@ -6,8 +6,7 @@ This project aims to document the Aegir Hosting System. It uses mkdocs to build 
     $ brew install python;               # For OSX users
     $ sudo aptitude install python-pip   # For Debian/Ubuntu users
     $ pip install mkdocs
-    $ git clone https://github.com/aegir-project/documentation.git
-    $ mv documentation aegir-docs
+    $ git clone https://github.com/aegir-project/documentation.git aegir-docs
     $ cd aegir-docs
     $ git remote add sandbox https://github.com/<username>/documentation.git
     $ mkdocs serve
