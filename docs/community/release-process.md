@@ -79,16 +79,6 @@ git-reset(1) and git-revert(1) ).
 Notice how we just provide the Aegir release number (`1.10`) to the release script, not the Drupal branch (`6.x`), which is hardcoded in the script to remove potential confusion.
 
 
-### 2.4.1. Optional: new Eldir release
-
-If we do a major release (say a point zero release), we may want to make a new release of the theme ([Eldir](https://drupal.org/project/eldir)). This can also be performed if there enough new changes on the theme to warrant a new release on its own.
-
-To do a new release of Eldir:
-
-1.  tag and push the tag
-2.  [create a release node](https://drupal.org/node/add/project-release/452774) for Eldir
-
-
 ## 2.5. Test the manual install in Jenkins
 
 Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev/) with the following parameters:
