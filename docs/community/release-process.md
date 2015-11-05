@@ -128,7 +128,6 @@ Once both of those tasks have executed successfully, you can test the upgrade of
 
 (Note that this test is currently non-functional)
 
-
 ## 2.8. Creating release nodes on Drupal.org
 
 Once the tags are pushed and release notes published, we create a release node with an excerpt of (and a link to) the release notes so that tarballs are created and issue queue versions updated.
@@ -138,7 +137,21 @@ And after those are fully build in the [hostmaster](https://drupal.org/node/add/
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
+## 2.9 Manually test install and upgrade
 
+If the Jenkins tests are disabled in 2.7, you should test the install and upgrade to 3.2 in a local VM. (Vagrant is very useful for this.)
+
+At this point, the unstable repo actually contains the future stable version (ie 3.1 instead of 3.1-dev-abc). Check that it actually does.
+
+To test the install, just use the instructions on http://aegirproject.org but replace "stable" by "unstable". You should end up with a stable version.
+
+To test the upgrade, create a new VM, install normally with the aegirproject.org instructions, then replace stable by unstable in your lists (/etc/apt/), and run
+
+    apt-get update && apt-get upgrade
+
+It should ask you if you want to upgrade Aegir3. Say yes and make sure there are no errors.
+
+If you don't encounter errors in this procedure, you're good to go.
 
 ## 2.10. Publish the Debian packages
 
