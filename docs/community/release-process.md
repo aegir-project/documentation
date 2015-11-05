@@ -38,14 +38,17 @@ In the hostmaster project we maintain our own drupal-org.make file. Check that e
 ## 2.3. Generating the release notes
 
 We build complete release notes for every release. Those are made up of a summary of the release, an outline of key changes, of known issues, install and upgrade instructions and a full list of bugfixes and new features.
+As we have a number of Drupal.org projects to cover we try to centralize our release notes combined with the documentation. Published under [the release notes](http://aegir.readthedocs.org/en/3.x/release-notes) section.
+On Drupal.org we add a link to the version specific release notes page on the release nodes for all projects we cover.
 
 Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
+ With a patch from https://www.drupal.org/node/2609134 for MD format.
 
-`drush rn 7.x-3.0-beta1 HEAD`
+`drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.0-beta1 HEAD`
 
 or after placing the tags
 
-`drush rn 7.x-3.0-alpha1 7.x-3.0-alpha2`
+`drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.0-alpha1 7.x-3.0-alpha2`
 
 This is done for the different git projects. Changing the first line to add 'to $name'.
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
