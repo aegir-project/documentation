@@ -28,5 +28,7 @@ pages:
 - ['community/code-of-conduct.md', 'Community', 'Code of Conduct']
 - ['community/release-process.md', 'Community', 'Release Process']
 - ['community/contrib-modules.md', 'Community', 'Contributed-modules']
-- ['release-notes/3.1-release-notes.md', 'Release Notes', 'Release Notes']
+- ['release-notes/3.0-release-notes.md', 'Release Notes', 'Release 3.0 Notes']
+- ['release-notes/3.1-release-notes.md', 'Release Notes', 'Release 3.1 Notes']
+- ['release-notes/3.2-release-notes.md', 'Release Notes', 'Release 3.2 Notes']
 - ['uninstall/uninstall.md', 'Uninstalling Aegir', 'Uninstalling Aegir']
