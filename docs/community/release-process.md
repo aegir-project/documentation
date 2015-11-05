@@ -27,7 +27,7 @@ Look into [Jenkins](http://ci.aegirproject.org/) to see if all tasks have been p
 
 ### 2.1.1 Disable Debian dev builds in Jenkins
 
-It's probably a good idea to disable the Jenkins jobs named 'D_aegir-debian*'. This prevents later troubles in the 'Publish the Debian packages' section.
+It's probably a good idea to disable the Jenkins jobs named 'D_aegir-debian-build*'. This prevents later troubles in the 'Publish the Debian packages' section.
 The dev package is build before the stable one, and as 3.1+103.0544212 > 3.1 it gets added to the stable repo.
 
 ## 2.2. Verify that drupal-org.make specifies up-to-date versions
@@ -84,10 +84,9 @@ Notice how we just provide the Aegir release number (`1.10`) to the release scri
 
 ## 2.5. Test the manual install in Jenkins
 
-Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev/) with the following parameters:
+Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6/) with the following parameters:
 
-*   the right release as the `AEGIR_VERSION` parameter
-*   the `DRUSH_VERSION` to match what is required for this release.
+A similar job exists for [Drush7](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush7/) and [Drush8](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush8/)
 
 If the build fails, delete the remote tags (using `git push origin :6.x-1.7`, for example), fix the bugs and start again.
 
@@ -191,3 +190,7 @@ Once all this is done and the tarballs are generated, the release notes are publ
 *   Twitter as @aegirproject
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
+
+## 2.12. Re-enable the debian dev build job
+
+The job that was disabled in section 2.1.1 can now be enabled again.
