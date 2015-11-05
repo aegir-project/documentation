@@ -86,8 +86,7 @@ If we do a major release (say a point zero release), we may want to make a new r
 To do a new release of Eldir:
 
 1.  tag and push the tag
-2.  update the version to fetch in hostmaster.make
-3.  [create a release node](https://drupal.org/node/add/project-release/452774) for Eldir
+2.  [create a release node](https://drupal.org/node/add/project-release/452774) for Eldir
 
 
 ## 2.5. Test the manual install in Jenkins
