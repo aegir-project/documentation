@@ -158,6 +158,7 @@ If you don't encounter errors in this procedure, you're good to go.
 ### Quick test VMs
 
 You can use an Vagrant base box to quickly test the install and upgrade. Some such boxes are optimized for Aegir development and testing:
+
 * Debian VirtualBox: [PraxisLabs/jessie64-aegir3-dev.box](https://atlas.hashicorp.com/PraxisLabs/boxes/jessie64-aegir3-dev.box)
 
 (Please add your base box to the list if relevant.)
