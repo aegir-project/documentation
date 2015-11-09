@@ -32,7 +32,7 @@ Don't restart Apache even when it prompts you. This will be done by the Verify t
 
 Add the aegir user to sudoers so it can restart Apache
 
-    sudo visudo -f /etc/sudoers.d/aegir):
+    sudo visudo -f /etc/sudoers.d/aegir
 
     aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
 
