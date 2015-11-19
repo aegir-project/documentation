@@ -1,5 +1,5 @@
-Common installation problems
-============================
+Installation Trouble-shooting
+=============================
 
 1. Verify and install run everything through SSH
 ------------------------------------------------

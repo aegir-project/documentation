@@ -9,7 +9,7 @@ pages:
 - ['install/system-requirements.md', 'Install', 'System Requirements']
 - ['install/debian.md', 'Install', 'Debian/Ubuntu']
 - ['install/manual.md', 'Install', 'Manual']
-- ['install/common-problems.md', 'Install', 'Common Problems']
+- ['install/trouble-shooting.md', 'Install', 'Trouble-shooting']
 - ['import/importing-sites.md', 'Importing Sites']
 - ['import/remote-import.md', 'Importing Sites', 'Remote Import']
 - ['import/single-site.md', 'Importing Sites', 'Single Site Import']
