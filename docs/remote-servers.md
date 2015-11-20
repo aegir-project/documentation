@@ -102,7 +102,7 @@ If you have followed the instructions above, and your SSH connection gets closed
 
 Now you can add a new server node in Aegir, set the hostname and/or IP and set the service type to be 'Apache' (or Apache_SSL if this site is to handle SSL sites).
 
-![Create Server Aegir Admin Screen](/img/create-remote-server.png)
+![Create Server Aegir Admin Screen](/_images/create-remote-server.png)
 
 A verify task will be spawned and added to the Task queue ready for dispatching. During a server verification task, various configurations will be set on the Aegir master server and also synced to the remote web server, restarting Apache.
 
@@ -187,7 +187,7 @@ Relying on an NFS share to serve your entire /var/aegir/platforms can be a singl
 
 Below is an example diagram of a Pack cluster known to be functioning in production (with an optional MySQL-MMM cluster out of scope for this documentation), which may help you visualise the Pack and how it can be put together.
 
-![Diagram of Pack configuration with multiple servers](/img/aegir-pack.png)
+![Diagram of Pack configuration with multiple servers](/_images/aegir-pack.png)
 
 
 Using the Cluster module

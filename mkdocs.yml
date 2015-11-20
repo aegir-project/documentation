@@ -1,7 +1,7 @@
 site_name: Aegir Hosting System
 repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
-extra_css: [ 'style.css' ]
+extra_css: [ '_css/toc.css' ]
 pages:
 - Home: 'index.md'
 - 'Quick Start': 'quick-start.md'
