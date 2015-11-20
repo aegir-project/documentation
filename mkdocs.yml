@@ -11,7 +11,8 @@ pages:
 - 'Multiple Servers': 'remote-servers.md'
 - 'Extending Aegir': 'contrib-modules.md'
 - Community:
-  - 'Contacting the community': 'community/contact.md'
+#  - 'Contacting the community': 'community/contact.md'
+  - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release Process': 'community/release-process.md'
 - 'Release Notes':
