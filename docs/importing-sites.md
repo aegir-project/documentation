@@ -1,16 +1,17 @@
 Importing sites into Aegir
 ==========================
 
+[TOC]
+
 It is possible to import existing sites into the Aegir hosting system, so that they can be managed by Aegir.
 
 These instructions assume you've set up a new server with Aegir on it, and you want to import sites into Aegir from another server, or even from the same server, using backups.
 
 There are three standard ways of importing sites into Aegir:
 
-* from [Remote Import](#remote-import)Aegir backups - simplest and fastest, scriptable
-* from any [single site](#single-site) manually - most reliable, can import even non-aegir sites, hard to automate
-* from a [complete drupal install](#complete-drupal-install) - fairly reliable, can import non-aegir sites, could be automated but requires access to the database servers currently in use by the site
-
+* using [Remote Import](#remote-import) - simplest and fastest, scriptable
+* from any [single site](#importing-a-single-site-manually) manually - most reliable, can import even non-aegir sites, hard to automate
+* from a [complete drupal install](#importing-a-complete-drupal-platform) - fairly reliable, can import non-aegir sites, could be automated but requires access to the database servers currently in use by the site
 
 Remote Import
 -------------
@@ -27,16 +28,7 @@ In general it may be considered safer/less prone to confusing errors to [transfe
 
 Also, it is much faster to just "deploy" an Aegir backup than go through the manual procedure here, so you should generally follow that procedure instead of the one defined here unless you have a very hairy setup.
 
-To transer a site manually into Aegir, those are the steps you should follow:
-
-Table of Contents
-
-  1. [Create the site database, user and directory](#1-create-the-site-database-user-and-directory)
-  2. [Transfer the files](#2-transfer-the-files)
-  3. [Transfer the Database](#3-transfer-the-database)
-  4. [Verify in Aegir](#4-verify-in-aegir)
-
-### 1. Create the site database, user and directory
+### 1. Create site resources
 
 In order to import the site, you need to create a database and database user for the site, along with a directory in the platform.
 
@@ -54,7 +46,7 @@ If this is not working for some reason, you can create the mysql user and databa
 
     mysql> CREATE DATABASE databasename;
 
-### 2. Transfer the files
+### 2. Transfer files
 
 You need to copy the sites/example.com directory from your old server to the new Aegir server.
 
@@ -82,7 +74,7 @@ Once the file is unpacked, check the ownership and group of each file by using l
 
     $ sudo chown -R aegir:www-data $platform/sites/*/files
 
-### 3. Transfer the database
+### 3. Transfer database
 
 Make a backup of the database on your old server Backup and Migrate module is good for this, or you can use phpmyadmin or your favourite MySQL management tool. It's a good idea to truncate the cache, search and watchdog tables first to reduce the size of the database. The "Backup and Migrate" module does this for you.
 
@@ -111,14 +103,6 @@ It's a good idea to clear the caches, and you may need to get imagecache to rebu
 
 Importing a complete Drupal platform
 ------------------------------------
-
-Table of Contents
-
-1. [Transfer the codebase](#1-transfer-the-codebase)
-2. [Transfer the database](#2-transfer-the-database)
-3. [Setup platform in Aegir](#3-setup-platform-in-aegir)
-4. [Import and verify sites in Aegir](#4-import-and-verify-sites-in-aegir)
-5. [Migrate to another platform](#5-migrate-to-another-platform)
 
 This method of importing sites is often considered the safest whereby you transfer across an entire codebase containing Drupal core, and define it as a Platform first. This makes sure you bring any dependencies, contrib modules etc, in exactly the same version and configuration that is referenced in the database for the site.
 

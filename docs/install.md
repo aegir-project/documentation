@@ -1,13 +1,13 @@
 Installation Guide
 ==================
 
+[TOC]
+
 Aegir requires some special permissions to your server in order to automate
 some configurations. For example, when a new site is installed, the web server
 will be automatically configured (vhost) and restarted. Therefore Aegir cannot
 be installed on a shared hosting environment. Consult the [system
 requirements](#system-requirements) to ensure your server(s) are up to the task.
-
-[TOC]
 
 System Requirements
 -------------------
@@ -43,7 +43,7 @@ You will require a database server, obviously. Aegir currently only supports MyS
 
 Aegir requires an MTA (Mail Transfer Agent) installed on your webserver in order to be able to install new sites to your new platform. If you don't have an MTA, the site installation will fail with message like "could not send email". Additional messages will show that site has been removed because of this problem. To remedy the situation simply install an MTA like sendmail, postfix, or exim and do the minimal configuration.
 
-### A configured Fully Qualified Domain Name (FQDN)
+### A Fully Qualified Domain Name (FQDN)
 
   For example, `aegir.example.com`. The hostname returned by the commands ``hostname -f`` and ``uname -a`` must resolve to the IP address of your server. After setting up your FQDN you must restart your server with a ``reboot`` command so your changes take effect. Note that newly created domain name usually take 24 to 48 hours to fully start working. This period, called propagation, is the projected length of time it takes for root name servers and cache records across the entire web to be updated with your website's DNS information.
 
@@ -58,7 +58,7 @@ The jQueryUI library is used in the Aegir UI, unzip is required to extract it. S
 Other popular control panels such as Plesk, cPanel etc, are designed to manage all aspects of Apache configuration and other areas that Aegir also is intended to be used for.
 Running Aegir alongside such control panels is not supported and very likely may cause you problems or difficulties installing or running Aegir. Filing bug reports that are caused by interference by another control panel will likely be closed unless the problem can be fixed without causing problems for other Aegir users. Proceed at your own risk!
 
-### System requirements of popular Drupal distributions
+### Requirements of Drupal distributions
 
 Some Drupal distributions, such as OpenAtrium, are specialized products that may contain unique prerequisites for optimal performance. Such examples may include raising the php-cli program's memory_limit to something higher than 64M.
 Please note that this is not a requirement of Aegir but of the distribution you are trying to install a site on. Thus the Aegir documentation may not officially 'require' such performance settings, but be aware that Aegir may report errors if the system was under-resourced to complete such a task.
@@ -73,7 +73,7 @@ If you wish to install Debian packages over an existing manual install, it's pos
 
 Debian packages are uploaded to http://debian.aegirproject.org/ shortly after a release. We eventually want to upload those packages to the official archives, but this will take some adaptation and time to sponsor the packages in.
 
-### 1. Ensure system requirements are satisfied
+### 1. Ensure requirements are satisfied
 
 Here's what you'll need to install Aegir on a Debian or Ubuntu system:
 
@@ -126,7 +126,7 @@ If you have a virtual machine already setup and want to change the FDQN:
 * reboot and test ``hostname -f``, ``uname -n``, ``resolveip NEW_NAME``, ``resolveip IP``
 * [YMMV - Your Mileage May Vary](http://www.ducea.com/2006/08/07/how-to-change-the-hostname-of-a-linux-system/)
 
-### 5. Manual installation of MySQL (on Ubuntu 12.04 LTS)
+### 5. (Optional) Manual installation of MySQL
 
 Please note that Ubuntu 12.04 LTS installs, by default, an insecure MySQL installation that contains an anonymous user grant, allowing anyone to login without a password. This breaks Aegir functionality.
 
@@ -168,7 +168,7 @@ During the Postfix configuration, the following options appear: "No configuratio
 
 At the end of the installation, you will receive an email message or, if the user "aegir" has been assigned with a local email account during the installation, the file /var/mail/aegir will contain the message. It will include a one-time login to your new Aegir control panel, that is a URL to copy into your browser so that you can set the password for the "admin" user.
 
-#### 7.1. Custom Drupal distributions and make files
+#### 7.1. Custom make files
 
 If you have your own Drupal make file, you can go ahead with the above process, but change the make file to the one you want:
 
@@ -261,7 +261,7 @@ Finally, create a symlink from an apache configuration file to a folder within t
 
      $ ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
 
-###### 3.2.1.1. Ubuntu 14.04+ specific Apache configuration
+###### 3.2.1.1. Ubuntu 14.04+
 
 Ubuntu 14.04 departs from Debian and previous Ubuntu Apache setup in that it doesn't use ``/etc/apache2/conf.d`` any more and better separates out ``sites-enabled`` from ``conf-enabled`` configurations. So:
 
@@ -373,7 +373,7 @@ Note that Aegir will ask you for your MySQL root password. If you do not want to
 Note: If you are running your Aegir databases on a remote DB server, you will want to create this aegir_root user. The install will often fail if you're trying to use the root user on a remote database. See [this issue]() for details.
 
 
-##### 3.6.1. Ubuntu, RHEL, Arch linux specific configurations
+##### 3.6.1. OS-specific configurations
 
 NOTE : If you are running either Ubuntu 12.04 LTS, RHEL 6 or Arch Linux, you should still install MySQL in the same way as above.  However, once done, you must now remove the anonymous, passwordless login that those platforms creates by default.
 
@@ -387,7 +387,7 @@ Next step is to install the Aegir software components themselves, that is: drush
 
 #### 4.1. Install drush
 
-Before installing Aegir proper, you first need to install Drush. See then Drush [installtion documentation](http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects)
+Before installing Aegir proper, you first need to install Drush. See then Drush [installation documentation](http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects)
 
 #### 4.2. Stop! Now become the Aegir user
 
@@ -422,7 +422,7 @@ Upon completion of the installation, the traditional Drupal 'Welcome' e-mail wil
 
 There are other commandline switches available, documented in ``drush help hostmaster-install``, as usual.
 
-##### 4.4.1. Arch Linux specific configuration
+##### 4.4.1. Arch Linux configuration
 
     $ drush hostmaster-install --web_group=http
 
@@ -476,7 +476,7 @@ You may also want to read on with `what you can do with Aegir` now that it is in
 Installation Trouble-shooting
 -----------------------------
 
-### Verify and install run everything through SSH
+### Verify and install through SSH
 
 Since Aegir has multi-server support, it is possible that you have a misconfigured "FQDN" and that aegir then tries to connect to the local server as a remote server. To check if you have a misconfigured server, run the following commands:
 
