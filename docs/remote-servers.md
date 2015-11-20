@@ -1,5 +1,5 @@
-Remote servers (multiserver)
-============================
+Multiple Servers
+================
 
 [TOC]
 
@@ -7,6 +7,9 @@ Aegir supports multiple 'server' entities. These servers have 'services' such as
 
 Some previous experience in the configuration of Apache and MySQL will help if you want to use remote servers with Aegir. If you haven't had any experience in setting up and maintaining Apache or MySQL before you might want get familiar with the basic concepts first.
 
+
+Remote servers
+--------------
 
 ### System dependencies
 
@@ -136,7 +139,7 @@ These are the commands outlined above consolidated.
 
 
 Using the Pack module
-=====================
+---------------------
 
 If you wish to run the same website concurrently on multiple hosts you use the Pack module. Enable the pack module as you would any other drupal module.
 
@@ -191,7 +194,7 @@ Below is an example diagram of a Pack cluster known to be functioning in product
 
 
 Using the Cluster module
-========================
+------------------------
 
 If you wish to run the same website concurrently on multiple hosts you can use the Pack or Cluster module. 
 
@@ -201,8 +204,8 @@ The [**Web Pack**](web-packs.md) module shares files to all servers via an NFS m
 
 This documentation page is about the **Web Cluster** module.
 
-Setting up Web Clusters
------------------------
+
+### Setting up Web Clusters
 
 In this setup, we will add two web servers and a single database server.
 
@@ -227,8 +230,7 @@ To test that the site is available from both servers, you must edit your DNS or 
 3. Edit /etc/hosts or your DNS so myclustersite.com resolves to the IP of server #2.
 4. Visit the URL http://myclustersite.com again. If the site works, we know we can load the site from remote server #2.
 
-Final Tasks
-===========
+### Final Tasks
 
 There are two important final tasks to get a working drupal site running on a server cluster:
 
@@ -244,7 +246,7 @@ There are two important final tasks to get a working drupal site running on a se
 
 
 Platforms on remote web servers
-===============================
+-------------------------------
 
 If you have been using Aegir for a while simply because it handles updates, moving to new releases, cloning, aliases and everything Drupal with such elegance on a single server - you might not be entirely clear on what changes when you make the move to multiple servers. Hopefully this will help.
 

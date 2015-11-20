@@ -8,7 +8,7 @@ pages:
 - Install: 'install.md'
 - 'Importing Sites': 'importing-sites.md'
 - 'Altering Behaviours': 'altering-behaviours.md'
-- 'Remote Servers (Multiserver)': 'remote-servers.md'
+- 'Multiple Servers': 'remote-servers.md'
 - 'Extending Aegir': 'contrib-modules.md'
 - Community:
   - 'Contacting the community': 'community/contact.md'
