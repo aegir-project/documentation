@@ -1,9 +1,12 @@
-## Contact the community
+Contact the community
+=====================
+
+[TOC]
 
 Want to talk with the Aegir community? There are many channels with various virtues.
 
-
-**IRC**
+IRC
+---
 
 You can [join the #aegir channel at Freenode](http://webchat.freenode.net/?channels=#aegir) on IRC. There's a loyal community of Aegir developers and users that frequent this channel. Much development discussion also takes place here, and support questions are welcomed.
 
@@ -15,12 +18,14 @@ We try to meet check-in there on Thursdays at 2PM GMT (10 AM EDT, 8 AM MDT).
 
 New to IRC? IRC instructions for Drupal users are at: [https://www.drupal.org/irc](https://www.drupal.org/irc "https://www.drupal.org/irc").
 
-**Twitter**
+Twitter
+-------
 
 * [Follow the project twitter account](https://twitter.com/aegirproject)
 
 
-**Mailing Lists**
+Mailing Lists
+-------------
 
 There are mailing lists that can be used for support, general discussion and development or announcements.
 
@@ -33,13 +38,16 @@ There are mailing lists that can be used for support, general discussion and dev
 * [business](https://listes.koumbit.net/cgi-bin/mailman/listinfo/business-aegirproject.org) - for discussing business models, partnering opportunities, etc
 
 
-**Events**
+Events
+------
 
 Aegir is often present at many of the popular DrupalCamps and DrupalCons, either as a formal session or in smaller BOF sessions.
 
 We encourage users who are confident in using Aegir to demonstrate it at any relevant events they attend, and to [post slides/screencasts](/node/7) so that others can benefit.
 
-**Blogs**
+
+Blogs
+-----
 
 As well as the News/Blog area here, the developers also often blog about new Aegir features or share handy tips for the community. Here are two blogs to stay up to date with:
 
@@ -47,18 +55,24 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 *   [http://mig5.net/category/tags/aegir](http://mig5.net/category/tags/aegir "http://mig5.net/category/tags/aegir")
 *   [https://praxis.coop/en/tags/aegir](https://praxis.coop/en/tags/aegir)
 
-**Q & A**
+
+Q & A
+-----
 
 * [Askbot](https://ask.aegir.support/)
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
 
-** Drupal.org Issue queue's**
+
+Drupal.org Issue queue's
+------------------------
 
 * [Hostmaster](https://www.drupal.org/project/issues/hostmaster)
 * [Provision](https://www.drupal.org/project/issues/provision)
 * [Hosting](https://www.drupal.org/project/issues/hosting)
 * [Or a combined search](https://www.drupal.org/project/issues?text=&projects=provision,+hosting,+eldir,+Hostmaster+%28Aegir%29,+Hosting%20Git,+Hosting%20Tasks%20Extra,+Hosting%20Site%20Backup Manager,+hosting_civicrm&status=Open&priorities=All&categories=All)
 
-**Historic data**
+
+Historic data
+-------------
 
 * [Archived community.aegirproject.org site](http://community-archive.aegirproject.org) (OpenAtrium 1.x)
