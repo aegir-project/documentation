@@ -3,16 +3,18 @@ repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
 extra_css: [ 'style.css' ]
 pages:
-- ['index.md', 'Home']
-- ['quick-start.md', 'Quick Start']
-- ['install.md', 'Install']
-- ['importing-sites.md', 'Importing Sites']
-- ['altering-behaviours.md', 'Altering Behaviours']
-- ['remote-servers.md', 'Remote Servers (Multiserver)']
-- ['community/contact.md', 'Community', 'Contacting the community']
-- ['community/code-of-conduct.md', 'Community', 'Code of Conduct']
-- ['community/release-process.md', 'Community', 'Release Process']
-- ['community/contrib-modules.md', 'Community', 'Contributed-modules']
-- ['release-notes/3.0-release-notes.md', 'Release Notes', 'Release 3.0 Notes']
-- ['release-notes/3.1-release-notes.md', 'Release Notes', 'Release 3.1 Notes']
-- ['release-notes/3.2-release-notes.md', 'Release Notes', 'Release 3.2 Notes']
+- Home: 'index.md'
+- 'Quick Start': 'quick-start.md'
+- Install: 'install.md'
+- 'Importing Sites': 'importing-sites.md'
+- 'Altering Behaviours': 'altering-behaviours.md'
+- 'Remote Servers (Multiserver)': 'remote-servers.md'
+- 'Extending Aegir': 'contrib-modules.md'
+- Community:
+  - 'Contacting the community': 'community/contact.md'
+  - 'Code of Conduct': 'community/code-of-conduct.md'
+  - 'Release Process': 'community/release-process.md'
+- 'Release Notes':
+  - 3.0: 'release-notes/3.0.md'
+  - 3.1: 'release-notes/3.1.md'
+  - 3.2: 'release-notes/3.2.md'

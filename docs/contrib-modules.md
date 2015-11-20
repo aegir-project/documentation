@@ -1,6 +1,12 @@
+Contributed modules
+===================
+
+[TOC]
+
 Please note that the support and development status varies for these contributed modules.
 
-## 1. Extensions to Hostmaster (frontend)
+Extensions to Hostmaster (frontend)
+-----------------------------------
 
 ### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
 
@@ -51,7 +57,8 @@ These variables will be put in settings.php, and so can't be overriden (or chang
 Module to manage WordPress sites. It aims to support the main Aegir functionality, such as installation, upgrade, migration and backups.
 
 
-## 2. Extensions to Provision (backend)
+Extensions to Provision (backend)
+---------------------------------
 
 Starting from Aegir 7.x-3.x the Drush component can be included in a 'drush' directory in the same git repository as the hosting module.
 
@@ -61,13 +68,15 @@ Therefore this list will be shorter then for previous versions.
 
 Adds the Strict Transport Security header to hosts that require SSL.
 
-## 3. Themes
+
+Themes
+------
 
 *   [Saeven](https://www.drupal.org/project/saeven)
 *   [Eldir](https://www.drupal.org/project/eldir). (The default theme)
 
-## 4. Configuration management - e.g. Puppet modules and Chef cookbooks
-
+Configuration management
+------------------------
 Those projects allow you to manage Aegir instance(s) through a configaration management tool.
 
 *   [Aegir Puppet module](https://www.drupal.org/project/puppet-aegir)
@@ -75,11 +84,11 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 *   [Aegir3 Chef Cookbook](https://supermarket.chef.io/cookbooks/aegir3)
 *   [Ansible role](https://github.com/GetValkyrie/ansible-role-aegir/)
 
-## 5. Others
 
+Others
+------
 
-
-### [Valkyrie](https://www.drupal.org/project/valkyrie)  
+### [Valkyrie](https://www.drupal.org/project/valkyrie)
 
 Valkyrie is an opinionated development stack that makes features/git based Drupal development easy.
 
@@ -91,9 +100,11 @@ Features include:
 *   Automatic Drush aliases for running commands against sites inside the VM.
 Development & Support
 
-While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie) 
+While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie)
 
-### [Aegir up](https://www.drupal.org/project/aegir-up) DEPRECATED Replace by GetValkyrie
+### [Aegir up](https://www.drupal.org/project/aegir-up)
+
+DEPRECATED: Replaced by Valkyrie
 
 Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
 
@@ -109,6 +120,8 @@ A tiny Drupal Module to simplify file paths in content. This helps prevent broke
 
 This module is not for hostmaster, but for the sites hosted under Aegir.
 
-## 6. Your module here?
+
+Your module here?
+-----------------
 
 _Developers:_ Please add your contributed module here. Pull requests welcome on https://github.com/aegir-project/documentation/
