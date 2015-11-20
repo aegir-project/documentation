@@ -5,7 +5,7 @@ pages:
 - ['index.md', 'Home']
 - ['help/contact.md', 'Contacting the community']
 - ['quick-start.md', 'Quick Start']
-- ['install/install.md', 'Install']
+- ['install.md', 'Install']
 - ['import/importing-sites.md', 'Importing Sites']
 - ['import/remote-import.md', 'Importing Sites', 'Remote Import']
 - ['import/single-site.md', 'Importing Sites', 'Single Site Import']

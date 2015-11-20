@@ -1,5 +1,5 @@
-Quick Start
------------
+Quick Start Guide
+-----------------
 
 On a recent Debian or Ubuntu server (with a fully qualified domain name), run the following commands:
 
@@ -9,4 +9,4 @@ On a recent Debian or Ubuntu server (with a fully qualified domain name), run th
     $ sudo apt-get update
     $ sudo apt-get install aegir3
 
-See the Installation Guide for more details, or guidance on installing on other operating systems.
+See the [Installation Guide](/install) for more details, or guidance on installing on other operating systems.
