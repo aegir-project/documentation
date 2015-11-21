@@ -10,6 +10,7 @@ pages:
 - 'Altering Behaviours': 'altering-behaviours.md'
 - 'Multiple Servers': 'remote-servers.md'
 - 'Extending Aegir': 'contrib-modules.md'
+- 'SSL': 'ssl.md'
 - Community:
 #  - 'Contacting the community': 'community/contact.md'
   - 'Contacting the community': 'help/contact.md'
