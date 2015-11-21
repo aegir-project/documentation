@@ -28,7 +28,9 @@ Enable SSL support and restart your webserver at this point.
     # a2enmod ssl
     # service apache2 restart
 
-### Enable SSL support in Aegir
+
+Enable SSL support in Aegir
+---------------------------
 
 You have to enable SSL support in Aegir as it is off by default.
 
@@ -39,7 +41,9 @@ You have to enable SSL support in Aegir as it is off by default.
 3. Check SSL support
 4. Click Save configuration
 
-### Configure a web server
+
+Configure a web server
+----------------------
 
 You next need to enable SSL on a web server.
 
@@ -53,7 +57,9 @@ You next need to enable SSL on a web server.
 
 If all goes well you will see the following changes in your Aegir file system structure: a new `/var/aegir/config/ssl.d` directory and a new `/var/aegir/config/server_master/ssl.d` directory. The `/var/aegir/config/ssl.d` directory is where you will be able to manipulate SSL keys and certificates, for example by importing commercial SSL certificates or generating a new key. Do not manually edit the `/var/aegir/config/server_master/ssl.d` directory as changes to that directory will be overwritten when the server or site are verified.
 
-### Configure a site
+
+Configure a site
+----------------
 
 You can now finally enable SSL on any sites that are installed on any platforms associated with the server where we enabled SSL.
 
@@ -76,7 +82,9 @@ Aegir will then generate a certificate and private key for your web site and ins
 
 Now, when you navigate to https://example.com you should see that your site is SSL enabled. It will, however, generate warnings in your browsers because it is a self-signed certificates. See below for how to use commercial certificates to remove this warning.
 
-### Commercial Certificate File(s)
+
+Commercial Certificates
+-----------------------
 
 If you wish to use your own commercial certificate and key you will need to do the following:
 
@@ -88,6 +96,6 @@ If you wish to use your own commercial certificate and key you will need to do t
 
 You should now be able to access your site via https:// using your commercial certificate.
 
-#### Nginx
+### Nginx
 
 It is recommended to allow Aegir to create a default self-signed certificate and key first, and then replace the contents of both files (not the files itself) with your real key and certificate. Any chained certificates (bundles) should be included in the same file, directly below your own certificate - there is no need for extra files/lines like it is for Apache configuration.
