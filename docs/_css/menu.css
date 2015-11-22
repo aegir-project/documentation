@@ -1,0 +1,12 @@
+/* Hide the duplicate page title entry. */
+li.toctree-l3 > a {
+  display: none;
+}
+
+/* Indent deeper menu items.*/
+a.current {
+  padding-left: 2.4em !important;
+}
+a.toctree-l4 {
+  padding-left: 3.4em !important;
+}

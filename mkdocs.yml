@@ -2,7 +2,9 @@ site_name: Aegir Hosting System
 repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
 site_favicon: '_images/favicon.ico'
-extra_css: [ '_css/toc.css' ]
+extra_css:
+  - '_css/toc.css'
+  - '_css/menu.css'
 pages:
 - 'Home': 'index.md'
 - 'Quick Start': 'quick-start.md'
