@@ -10,6 +10,7 @@ pages:
 - 'Quick Start': 'quick-start.md'
 - 'Install': 'install.md'
 - 'Using Aegir':
+  - 'Interface': 'using/interface.md'
   - 'Importing Sites': 'using/importing-sites.md'
 - 'Advanced Features':
   - 'SSL': 'advanced/ssl.md'
