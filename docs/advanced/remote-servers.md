@@ -58,13 +58,13 @@ Where
 
 * 'root' is the username on the Aegir server that will be connecting. Leave 'root';
 * 'aegir_server_ip' is the IP address of your Aegir server. For example '123.123.123.123';
-* 'password' is the password that will be used by your Aegir 'root' user to connect to the remote server's MySQL to create databases and users. It is suggested to store that password in a secure location. To increase security, it is recommended to choose a password with 6 to 16 alphanumeric and or punctuation characters. 
+* 'password' is the password that will be used by your Aegir 'root' user to connect to the remote server's MySQL to create databases and users. It is suggested to store that password in a secure location. To increase security, it is recommended to choose a password with 6 to 16 alphanumeric and or punctuation characters.
 
 If MySQL returns something like "Query OK", that means the command was successful. For example:
 
-    Query OK, 0 rows affected (0.00 sec) 
+    Query OK, 0 rows affected (0.00 sec)
 
-Note the comment about "bind-address = 127.0.0.1" within section 3.6 of the [manual configuration page](install/manual).
+Note the comment about "bind-address = 127.0.0.1" within section 3.6 of the [manual configuration page](install/#36-database-configuration).
 
 When the server is being verified, Aegir will attempt to create a database and grant privileges to a user for that database. If any of these two fails, [verify that your MySQL configuration is correct](http://www.ghacks.net/2009/12/27/allow-remote-connections-to-your-mysql-server/) and that there is no firewall blocking your MySQL port.
 
@@ -138,14 +138,23 @@ These are the commands outlined above consolidated.
     chmod 440 /etc/sudoers.d/aegir
 
 
-Using the Pack module
----------------------
+Clustering
+----------
+
+If you wish to run the same website concurrently on multiple hosts you can use the Pack or Cluster module.
+
+The [**Web Cluster**](#using-the-cluster-module) module uses Rsync to get all files to all servers.
+
+The [**Web Pack**](#using-the-pack-module) module shares files to all servers via an NFS mount.  The NFS setup must be done manually.
+
+
+### Using the Pack module
 
 If you wish to run the same website concurrently on multiple hosts you use the Pack module. Enable the pack module as you would any other drupal module.
 
 A Pack consists of a single server node that is specified as "pack" and any number of server nodes specified as "apache" or "nginx". Aegir rsync's configuration (Apache & Nginx) to "all" nodes in the Pack and rysnc's the platform and site code to only the "master" node in the Pack. All other "slave" nodes will see the platform and site code via NFS.
 
-### Configuring the Pack server node:
+#### Configuring the Pack server node:
 
 The "pack" server node will not be used by Aegir to physically deploy sites or platforms on, so consider it more of a 'virtual server group' for logistical purposes only. When creating the pack node, you do not need to supply a valid Server hostname or IP address, so choose a naming convention that makes sense in your environment.
 
@@ -155,9 +164,9 @@ Now select the "Master" server from the list of Master servers. The Master serve
 
 Finally, select the "Slave" servers from the list of Slave servers. The Slave servers will have the Apache or Nginx config rsync'd to them but not the platform or site code, since those will be available to all Slave servers via the NFS share.
 
-### Configuring the Web server nodes:
+#### Configuring the Web server nodes:
 
-Configure all web server nodes using [these instructions](remote-servers.md). Take care to ensure the 'aegir' user and group on your NFS client machines, have the same UID/GID as that of the NFS server, or else you may run into permissions issues with NFS.
+Configure all web server nodes using [these instructions](#remote-servers). Take care to ensure the 'aegir' user and group on your NFS client machines, have the same UID/GID as that of the NFS server, or else you may run into permissions issues with NFS.
 
 Then mount the files on the remote server.
 
@@ -180,11 +189,11 @@ Add this to your fstab on the servers that mount the NFS share, so that the shar
 
     10.0.0.1:/var/aegir/platforms /var/aegir/platforms nfs rw 0 0
 
-#### Creating a Platform on a Pack:
+##### Creating a Platform on a Pack:
 
 When configuring a Platform to be deployed on a Pack, choose the "Pack" server node from the Web server radio group during the Platform node creation. Then you choose this Platform as usual when adding a site, and that site will be served from any servers within the Pack.
 
-#### Caveats
+##### Caveats
 
 Relying on an NFS share to serve your entire /var/aegir/platforms can be a single point of failure if the NFS share becomes unavailable. You may want to look into providing some sort of failover for NFS (google for things like DRBD and Heartbeat), or using some other form of redundancy for your NFS (Netapp filer clusters etc)
 
@@ -193,29 +202,21 @@ Below is an example diagram of a Pack cluster known to be functioning in product
 ![Diagram of Pack configuration with multiple servers](/_images/aegir-pack.png)
 
 
-Using the Cluster module
-------------------------
-
-If you wish to run the same website concurrently on multiple hosts you can use the Pack or Cluster module. 
-
-The [**Web Cluster**](web-clusters.md) module uses Rsync to get all files to all servers.
-
-The [**Web Pack**](web-packs.md) module shares files to all servers via an NFS mount.  The NFS setup must be done manually.
+### Using the Cluster module
 
 This documentation page is about the **Web Cluster** module.
 
-
-### Setting up Web Clusters
+#### Setting up Web Clusters
 
 In this setup, we will add two web servers and a single database server.
 
 1. Under **Admin > Hosting > Features**, enable the "Web Clusters" module.
-2. Setup two or more additional **Remote Servers** using the [Remote Server Instructions](remote-servers.md).
+2. Setup two or more additional **Remote Servers** using the [Remote Server Instructions](#remote-servers).
 3. Create Remote Server Nodes: Visit **Servers > Add Server** and enter the hostname of your remote server.  For **Web Server**, select *Apache*, *Apache SSL*, *NGINX*, or *NGINX SSL*.
 4. Repeat Step 3 for all of your web servers.
 5. Create Cluster Server Node: Visit **Servers > Add Server** and enter any hostname (something like "cluster" so you can identify it.).  For **Web Server**, select *Cluster* and select all of the web servers you wish to add to the cluster.
 6. Setup Database Server: You have two options here.
-  1. Provision a new, separate database server using only the MySQL section from the [Remote Server Instructions](remote-servers.md).  then visit **Servers > Add Server**, enter the new server's hostname, and select "MySQL" for "Database" and enter the root username and password you set during the Remote Server Instructions.
+  1. Provision a new, separate database server using only the [MySQL section](#mysql-access) above.  Then visit **Servers > Add Server**, enter the new server's hostname, and select "MySQL" for "Database" and enter the root username and password you set during the Remote Server Instructions.
   2. Use an existing server other than "localhost". Aegir installs a database server called "localhost" by default. You cannot use this server for sites installed on remote servesr.  Find the default web server aegir installed (named after the hostmaster hostname).  Click *Edit*, then select "MySQL" for "Database" and enter the root username and password.  If you use the server with the same hostname as the "localhost" database server, you can use the same root username and password.
 7. Make sure the Database Server Hostname resolves to the database server IP.  This can be done with DNS or by manually editing the /etc/hosts file on the remote servers.
 8. Create or Edit a platform node, and select the cluster server you created in step 5.
@@ -230,7 +231,7 @@ To test that the site is available from both servers, you must edit your DNS or 
 3. Edit /etc/hosts or your DNS so myclustersite.com resolves to the IP of server #2.
 4. Visit the URL http://myclustersite.com again. If the site works, we know we can load the site from remote server #2.
 
-### Final Tasks
+#### Final Tasks
 
 There are two important final tasks to get a working drupal site running on a server cluster:
 

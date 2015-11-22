@@ -4,20 +4,22 @@ theme: readthedocs
 site_favicon: '_images/favicon.ico'
 extra_css: [ '_css/toc.css' ]
 pages:
-- Home: 'index.md'
+- 'Home': 'index.md'
 - 'Quick Start': 'quick-start.md'
-- Install: 'install.md'
-- 'Importing Sites': 'importing-sites.md'
-- 'Altering Behaviours': 'altering-behaviours.md'
-- 'Multiple Servers': 'remote-servers.md'
-- 'Extending Aegir': 'contrib-modules.md'
-- 'SSL': 'ssl.md'
-- Community:
+- 'Install': 'install.md'
+- 'Using Aegir':
+  - 'Importing Sites': 'using/importing-sites.md'
+- 'Advanced Features':
+  - 'SSL': 'advanced/ssl.md'
+  - 'Multiple Servers': 'advanced/remote-servers.md'
+  - 'Altering Behaviours': 'advanced/altering-behaviours.md'
+  - 'Extending Aegir': 'advanced/contrib-modules.md'
+- 'Community':
 #  - 'Contacting the community': 'community/contact.md'
   - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release Process': 'community/release-process.md'
 - 'Release Notes':
-  - 3.0: 'release-notes/3.0.md'
-  - 3.1: 'release-notes/3.1.md'
-  - 3.2: 'release-notes/3.2.md'
+  - '3.0': 'release-notes/3.0.md'
+  - '3.1': 'release-notes/3.1.md'
+  - '3.2': 'release-notes/3.2.md'
