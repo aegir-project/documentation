@@ -1,41 +1,43 @@
-[Release process](/content/release-process)
+Release Process
+===============
 
-*   [Developer](/category/level/developer "This level is generally for users interested in further developing the Aegir system itself, or extending it with contributed modules.")
+[TOC]
 
 This page aims to document our release process. It documents the release cycle, but also the steps required to make a release.
 
-# 1. The release cycle
+
+The release cycle
+-----------------
 
 In general, each major Aegir release comprises a simultaneous release of all the modules that are part of the project. We generally go through several testing releases (alphas, betas & RCs) before doing the first stable release on a branch.
 
-*   First an **alpha** is released to test new functionalities and to accomplish the goals decided in the [Project Roadmap](/node/35) for that major version. Example: `0.4-alpha1`, [`0.4-alpha15`](/0.4-alpha15)
-*   When we have covered most of the functionalities outlined in the [roadmap](/roadmap), we push out **beta releases** until no more critical issues show up. This is generally considered a _soft feature freeze_. Example: [`0.4-beta1`](/0.4-beta1)
-*   Then we go into _full feature freeze_ and release a **first release candidate** (RC). Then a stable release branch is created, and the development branch is kept opened for development for the next stable release. This is generally considered a _soft API freeze_. Release candidates are made as long as critical bugs are found. Example: [`0.4-rc1`](/0.4-rc1), [freeze announcement](/node/360)
-*   Once the development branch has no known critical bugs, the **stable release** is announced. From there on only critical fixes (security, critical performance and critical bugfixes) are committed to the stable branch, and stable releases are published (without alpha/beta/RC) directly on the stable branch. The stable branch is in **full API freeze**. New features are generally committed to the development branch.
+* First an **alpha** is released to test new functionalities and to accomplish the goals decided in the [Project Roadmap](/node/35) for that major version. Example: `0.4-alpha1`, [`0.4-alpha15`](/0.4-alpha15)
+* When we have covered most of the functionalities outlined in the [roadmap](/roadmap), we push out **beta releases** until no more critical issues show up. This is generally considered a _soft feature freeze_. Example: [`0.4-beta1`](/0.4-beta1)
+* Then we go into _full feature freeze_ and release a **first release candidate** (RC). Then a stable release branch is created, and the development branch is kept opened for development for the next stable release. This is generally considered a _soft API freeze_. Release candidates are made as long as critical bugs are found. Example: [`0.4-rc1`](/0.4-rc1), [freeze announcement](/node/360)
+* Once the development branch has no known critical bugs, the **stable release** is announced. From there on only critical fixes (security, critical performance and critical bugfixes) are committed to the stable branch, and stable releases are published (without alpha/beta/RC) directly on the stable branch. The stable branch is in **full API freeze**. New features are generally committed to the development branch.
 
 See also [the tag and branch naming convention](/content/branch-and-tagging-conventions).
 
 
-# 2. Steps for a release
+Steps for a release
+-------------------
 
 For the specifics of release naming conventions and the cycle, see [the branch naming convention](/node/187).
 
 
-## 2.1. Make sure Jenkins is all green
+### 1. Make sure Jenkins is all green
 
 Look into [Jenkins](http://ci.aegirproject.org/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
-### 2.1.1 Disable Debian dev builds in Jenkins
+#### 1.1 Disable Debian dev builds
 
-It's probably a good idea to disable the Jenkins jobs named 'D_aegir-debian-build*'. This prevents later troubles in the 'Publish the Debian packages' section.
-The dev package is build before the stable one, and as 3.1+103.0544212 > 3.1 it gets added to the stable repo.
+It's probably a good idea to disable the Jenkins jobs named `D_aegir-debian-build*`. This prevents later troubles in the 'Publish the Debian packages' section. The dev package is build before the stable one, and as 3.1+103.0544212 > 3.1 it gets added to the stable repo.
 
-## 2.2. Verify that drupal-org.make specifies up-to-date versions
+### 2. Verify drupal-org.make
 
-In the hostmaster project we maintain our own drupal-org.make file. Check that e.g. the ctools version specified is not out-dated.
+In the hostmaster project we maintain our own drupal-org.make file. Verify that drupal-org.make specifies up-to-date versions. Check that e.g. the ctools version specified is not out-dated.
 
-
-## 2.3. Generating the release notes
+### 3. Generating the release notes
 
 We build complete release notes for every release. Those are made up of a summary of the release, an outline of key changes, of known issues, install and upgrade instructions and a full list of bugfixes and new features.
 As we have a number of Drupal.org projects to cover we try to centralize our release notes combined with the documentation. Published under [the release notes](http://aegir.readthedocs.org/en/3.x/release-notes) section.
@@ -53,7 +55,7 @@ or after placing the tags
 This is done for the different git projects. Changing the first line to add 'to $name'.
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
 
-## 2.4. Running the release.sh script
+### 4. Running the release.sh script
 
 Each time we make a new release, we run a script called `release.sh` in provision.
 
@@ -65,24 +67,24 @@ Paraphrasing from the script itself:
 
 ```
 The following operations will be done:
- 0. prompt you for a debian/changelog entry  
- 1. change the makefile to download tarball  
- 2. change the upgrade.sh.txt version  
- 3. display the resulting diff  
- 4. commit those changes to git  
- 5. lay down the tag  
- 6. revert the commit  
- 7. (optionally) push those changes  
+ 0. prompt you for a debian/changelog entry
+ 1. change the makefile to download tarball
+ 2. change the upgrade.sh.txt version
+ 3. display the resulting diff
+ 4. commit those changes to git
+ 5. lay down the tag
+ 6. revert the commit
+ 7. (optionally) push those changes
 
-The operation can be aborted before step 7. Don't forget that as  
-long as changes are not pushed upstream, this can all be reverted (see  
+The operation can be aborted before step 7. Don't forget that as
+long as changes are not pushed upstream, this can all be reverted (see
 git-reset(1) and git-revert(1) ).
 ```
 
 Notice how we just provide the Aegir release number (`1.10`) to the release script, not the Drupal branch (`6.x`), which is hardcoded in the script to remove potential confusion.
 
 
-## 2.5. Test the manual install in Jenkins
+### 5. Test the manual install in Jenkins
 
 Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6/) with the following parameters:
 
@@ -91,7 +93,7 @@ A similar job exists for [Drush7](http://ci.aegirproject.org/job/P_Aegir_Puppet_
 If the build fails, delete the remote tags (using `git push origin :6.x-1.7`, for example), fix the bugs and start again.
 
 
-## 2.6. Build the Debian packages
+### 6. Build the Debian packages
 
 Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/).
 
@@ -108,7 +110,7 @@ You can also build and upload the package yourself as explained in these [detail
 
 See the [detailed instructions](http://community.aegirproject.org/node/543) for the dput configuration.
 
-### 2.6.1 Fix Debian packages only
+#### 6.1 Fix Debian packages only
 
 When there's a bug in the Debian packaging itself we can do a minor package version update. USE WITH CARE!
 
@@ -121,8 +123,7 @@ When there's a bug in the Debian packaging itself we can do a minor package vers
 We don't create a release node on Drupal.org, just run the [S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/) job. And publish as listed below.
 
 
-
-## 2.7. Test the upgrade in Jenkins
+### 7. Test the upgrade in Jenkins
 
 Once both of those tasks have executed successfully, you can test the upgrade of the Debian packages by running the following Jenkins job:
 
@@ -130,7 +131,7 @@ Once both of those tasks have executed successfully, you can test the upgrade of
 
 (Note that this test is currently non-functional)
 
-## 2.8. Creating release nodes on Drupal.org
+### 8. Creating release nodes on Drupal.org
 
 Once the tags are pushed and release notes published, we create a release node with an excerpt of (and a link to) the release notes so that tarballs are created and issue queue versions updated.
 
@@ -139,7 +140,7 @@ And after those are fully build in the [hostmaster](https://drupal.org/node/add/
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
-## 2.9 Manually test install and upgrade
+### 9. Manually test install and upgrade
 
 If the Jenkins tests are disabled in 2.7, you should test the install and upgrade to 3.2 in a local VM. (Vagrant is very useful for this.)
 
@@ -155,7 +156,7 @@ It should ask you if you want to upgrade Aegir3. Say yes and make sure there are
 
 If you don't encounter errors in this procedure, you're good to go.
 
-### Quick test VMs
+#### 9.1. Quick test VMs
 
 You can use an Vagrant base box to quickly test the install and upgrade. Some such boxes are optimized for Aegir development and testing:
 
@@ -163,7 +164,7 @@ You can use an Vagrant base box to quickly test the install and upgrade. Some su
 
 (Please add your base box to the list if relevant.)
 
-## 2.10. Publish the Debian packages
+### 10. Publish the Debian packages
 
 Finally, when the Debian packages are tested you will need to pull them into the stable release channel:
 
@@ -179,7 +180,7 @@ If Jenkins has managed to build .debs and upload them before you've have a chanc
 
     reprepro remove unstable aegir2-cluster-slave aegir2 aegir2-provision aegir2-hostmaster
 
-This should be prevented by disabling the Jenkins jobs named 'D_aegir-debian*' before starting to push the release tags.
+This should be prevented by disabling the Jenkins jobs named `D_aegir-debian*` before starting to push the release tags.
 
 You can then re-upload the new .debs you've generated, using the '-f' (force) flag:
 
@@ -188,7 +189,7 @@ You can then re-upload the new .debs you've generated, using the '-f' (force) fl
 After doing that, you can re-run the 'copy' commands to publish the .debs to the appropriate releases.
 
 
-## 2.11. Publish the release notes widely
+### 11. Publish the release notes widely
 
 Once all this is done and the tarballs are generated, the release notes are published in:
 
@@ -199,6 +200,6 @@ Once all this is done and the tarballs are generated, the release notes are publ
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
 
-## 2.12. Re-enable the debian dev build job
+### 12. Re-enable the debian dev build job
 
 The job that was disabled in section 2.1.1 can now be enabled again.
