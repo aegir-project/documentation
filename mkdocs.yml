@@ -5,24 +5,30 @@ site_favicon: '_images/favicon.ico'
 extra_css:
   - '_css/toc.css'
   - '_css/menu.css'
+  - '_css/images.css'
 pages:
 - 'Home': 'index.md'
-- 'Quick Start': 'quick-start.md'
+- 'Quick start': 'quick-start.md'
 - 'Install': 'install.md'
 - 'Using Aegir':
   - 'Interface': 'using/interface.md'
-  - 'Importing Sites': 'using/importing-sites.md'
-- 'Advanced Features':
+  - 'Sites': 'using/sites.md'
+  - 'Site tasks': 'using/site-tasks.md'
+  - 'Site aliases': 'using/site-aliases.md'
+  - 'Importing sites': 'using/importing-sites.md'
+#  - 'Platforms': 'using/platforms.md'
+#  - 'Platform tasks': 'using/platform-tasks.md'
+- 'Advanced features':
   - 'SSL': 'advanced/ssl.md'
-  - 'Multiple Servers': 'advanced/remote-servers.md'
-  - 'Altering Behaviours': 'advanced/altering-behaviours.md'
+  - 'Multiple servers': 'advanced/remote-servers.md'
+  - 'Altering behaviours': 'advanced/altering-behaviours.md'
   - 'Extending Aegir': 'advanced/contrib-modules.md'
 - 'Community':
 #  - 'Contacting the community': 'community/contact.md'
   - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
-  - 'Release Process': 'community/release-process.md'
-- 'Release Notes':
+  - 'Release process': 'community/release-process.md'
+- 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
   - '3.2': 'release-notes/3.2.md'
