@@ -6,8 +6,8 @@ Site-specific Aegir tasks
 Aegir provides a number of tasks that can be run on sites. Below, we'll look at
 the most common ones that ship with Aegir.
 
-Installing a new website
-------------------------
+Installing a new site
+---------------------
 
 Creating a new website using Aegir is really, really easy, and is probably one of the most exciting aspects of Aegir. The very idea of clicking a button and suddenly being able to visit a new site may even be the prospect that drove you to installing Aegir in the first place.
 
@@ -65,8 +65,8 @@ When the Reset password task has been run on a site, the 'Go to' link automatica
 Once the one-time login URL has been clicked, this link returns to being a 'Go to' link.
 
 
-Migrating/upgrading and renaming websites
------------------------------------------
+Migrating/upgrading sites
+-------------------------
 
 One of the most powerful features of Aegir is the way it can help you to upgrade large numbers of websites safely.
 
@@ -88,7 +88,7 @@ By default, Migrate is not enabled in Aegir after a fresh installation, as it is
 
 To enable the Migrate feature, simply go to /admin/hosting/features and check the Migrate feature. Submit the form and then return to the site node, and you'll see that the Migrate task is now available.
 
-#### Migrating a site - the Migrate form
+#### Migrating a site
 
 In the Aegir frontend, click on the website that you want to migrate. As per usual, in the 'Site view' you are presented with some summary information about the site, as well as a list of available tasks. Click the 'Run' button for the 'Migrate' task. A modalframe dialog will appear in your browser.
 
@@ -130,7 +130,7 @@ If your intention is to upgrade your site between versions of any package (this 
 
 If you've had to download extra packages to the target platform to make them possible candidates for an upgrade, you may need to visit that platform node in the Aegir frontend, and run the Verify task against the site (this is a re-runnable task). This updates Aegir's registry of information about all the packages on the platform.
 
-### Migrating
+### The migration process
 
 Select the relevant target platform and click 'Migrate' to submit the form. The modalframe dialog will close and Aegir will spawn a new Migrate task into the Task queue, and process it on the next cron run.
 
@@ -191,7 +191,7 @@ As with the Migrate form, you can view the package comparison table between the 
 
 Once you have made your selection and submitted the form, a 'Clone' task is spawned and added to the Task queue ready for dispatching.
 
-### What Clone does
+### The cloning process
 
 The Clone task makes the following actions in the system:
 
@@ -285,9 +285,9 @@ Where no custom reason was given for a backup, the message 'Generated on request
 
 Choose a backup to restore from and submit the form. A 'Restore' task will be spawned and added to the Task queue for dispatching by the backend.
 
-### What happens during a Restore task
+### The restore process
 
-The restore process
+The following describes what happens during a Restore task:
 
 1. puts the site under 'maintenance mode' temporarily (safety first!) generates a new backup of the site before restoring to it (still safety first!). This new backup will be available in the list of backups if you ever re-run the Restore task, and will carry the description 'Generated before being restored to a previous version'.
 2. uses the implied provision-deploy command in the backend to unpack the tarball,
@@ -315,7 +315,7 @@ The Aegir frontend is a Drupal site in itself, and sites are represented in that
 
 This is an incorrect method of deleting a site, and doesn't actually spawn a task to clear away the site from the server at all. Below are the steps to correctly remove a site.
 
-### Method 1 (default) - Disable the site first
+### Disable the site first
 
 Part of this confusion can stem from the fact that when viewing a site node in Aegir, the Delete button is not actually present in the list of available tasks by default:
 
@@ -329,7 +329,7 @@ Once you Disable a site (see the Disable section prior to this chapter), the lis
 
 ![Delete task](/_images/delete.png)
 
-### Method 2 (optional) - Delete without Disabling
+### Delete without Disabling
 
 The first method above is the default Aegir configuration. However, some users might be too confused by the lack of the Delete button altogether, which may not be ideal for your situation.
 
