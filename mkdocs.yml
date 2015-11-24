@@ -28,6 +28,7 @@ pages:
   - 'Advanced features':
     - 'SSL': 'usage/advanced/ssl.md'
     - 'Multiple servers': 'usage/advanced/remote-servers.md'
+    - 'Access control': 'usage/advanced/clients.md'
 - 'Extending Aegir': 'extend.md'
 - 'Extending Aegir':
   - 'Altering behaviours': 'extend/altering-behaviours.md'
