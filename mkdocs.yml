@@ -23,12 +23,12 @@ pages:
 #  - 'Servers': 'usage/servers.md'
 #  - 'Servers':
 #    - 'Server tasks': 'usage/servers/tasks.md'
-- 'Advanced features': 'advanced.md'
-- 'Advanced features':
-  - 'SSL': 'advanced/ssl.md'
-  - 'Multiple servers': 'advanced/remote-servers.md'
-  - 'Altering behaviours': 'advanced/altering-behaviours.md'
-  - 'Extending Aegir': 'advanced/contrib-modules.md'
+  - 'Advanced features': 'usage/advanced.md'
+  - 'Advanced features':
+    - 'SSL': 'usage/advanced/ssl.md'
+    - 'Multiple servers': 'usage/advanced/remote-servers.md'
+    - 'Altering behaviours': 'usage/advanced/altering-behaviours.md'
+    - 'Extending Aegir': 'usage/advanced/contrib-modules.md'
 - 'Community': 'community.md'
 - 'Community':
 #  - 'Contacting the community': 'community/contact.md'
