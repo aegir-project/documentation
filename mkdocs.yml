@@ -37,7 +37,7 @@ pages:
   - 'Provision':
     - 'Contexts': 'extend/provision/contexts.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
-  - 'Community contributions': 'extend/contrib.md'
+  - 'Contributed projects': 'extend/contrib.md'
 - 'Community': 'community.md'
 - 'Community':
 #  - 'Contacting the community': 'community/contact.md'
