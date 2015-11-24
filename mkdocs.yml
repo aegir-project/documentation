@@ -19,8 +19,8 @@ pages:
     - 'Site aliases': 'usage/sites/aliases.md'
     - 'Importing sites': 'usage/sites/importing.md'
   - 'Platforms': 'usage/platforms.md'
-#  - 'Platforms':
-#    - 'Platform tasks': 'usage/platforms/tasks.md'
+  - 'Platforms':
+    - 'Platform tasks': 'usage/platforms/tasks.md'
 #  - 'Servers': 'usage/servers.md'
 #  - 'Servers':
 #    - 'Server tasks': 'usage/servers/tasks.md'
