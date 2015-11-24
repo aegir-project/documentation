@@ -10,24 +10,32 @@ pages:
 - 'Home': 'index.md'
 - 'Quick start': 'quick-start.md'
 - 'Install': 'install.md'
+- 'Using Aegir': 'usage.md'
 - 'Using Aegir':
-  - 'Interface': 'using/interface.md'
-  - 'Sites': 'using/sites.md'
-  - 'Site tasks': 'using/site-tasks.md'
-  - 'Site aliases': 'using/site-aliases.md'
-  - 'Importing sites': 'using/importing-sites.md'
-#  - 'Platforms': 'using/platforms.md'
-#  - 'Platform tasks': 'using/platform-tasks.md'
+  - 'Sites': 'usage/sites.md'
+  - 'Sites':
+    - 'Site tasks': 'usage/sites/tasks.md'
+    - 'Site aliases': 'usage/sites/aliases.md'
+    - 'Importing sites': 'usage/sites/importing.md'
+#  - 'Platforms': 'usage/platforms.md'
+#  - 'Platforms':
+#    - 'Platform tasks': 'usage/platforms/tasks.md'
+#  - 'Servers': 'usage/servers.md'
+#  - 'Servers':
+#    - 'Server tasks': 'usage/servers/tasks.md'
+- 'Advanced features': 'advanced.md'
 - 'Advanced features':
   - 'SSL': 'advanced/ssl.md'
   - 'Multiple servers': 'advanced/remote-servers.md'
   - 'Altering behaviours': 'advanced/altering-behaviours.md'
   - 'Extending Aegir': 'advanced/contrib-modules.md'
+- 'Community': 'community.md'
 - 'Community':
 #  - 'Contacting the community': 'community/contact.md'
   - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release process': 'community/release-process.md'
+- 'Release notes': 'release-notes.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'

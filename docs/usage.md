@@ -5,6 +5,7 @@ The Aegir Interface
 
 So you've installed Aegir, arrived at the home page of your installation and are waiting for the magic to begin. On this page we'll introduce you to Aegir and how easy it is to use.
 
+In the pages that follow, we'll look in more depth at the three core entities in Aegir: [sites](/usage/sites), [platforms](/usage/platforms) and [servers](/usage/servers).
 
 Home
 ----

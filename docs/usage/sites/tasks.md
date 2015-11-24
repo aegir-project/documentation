@@ -183,7 +183,7 @@ The clone form has these options:
 * **Domain name** - this is the URL for the new site, which must be unique.
 * **Platform** - this is the target platform to clone the site to. It may be the current platform or a different platform that meets the requirements for hosting this site (has all the correct or newer versions of relevant modules)
 * **Database server** - this option is only available if you have a remote database server configured, otherwise it is implied.
-* **Site aliases** - If you have the [Site Aliases feature](/using/aliases) enabled, you are also able to set new Site Aliases for this clone at this point. If the original site also had aliases, you will have to change or remove the aliases that load in this form before you can submit it.
+* **Site aliases** - If you have the [Site Aliases feature](/usage/sites/aliases) enabled, you are also able to set new Site Aliases for this clone at this point. If the original site also had aliases, you will have to change or remove the aliases that load in this form before you can submit it.
 
 ![Clone form](/_images/clone-form.png)
 
