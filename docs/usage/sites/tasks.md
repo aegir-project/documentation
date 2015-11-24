@@ -154,6 +154,17 @@ Aegir will attempt to restore the site's vhost and settings.php to reflect the o
 
 The user may be requried to manually recover from this error depending on what has occurred. Nonetheless, remember that a backup was made early on, and this can be used to restore the site easily.
 
+### Migration Tips
+
+In the context of sites, migration is the task of moving a site from one platform to another. Migration is the Aegir-preferred method for applying updates to modules and certainly to core. In other words, to upgrade core or modules, create a new platform with the upgrades, then migrate sites to the new platform.
+
+Ideally, a migration requires nothing more than a mouse-click on the Migrate button on the Site node in your Aegir for the site you want to migrate. If you've prepared your destination platform properly, a migration will be this simple. Proper preparation, therefore, is vital.
+
+To prepare a new platform to be a destination for migration, consider at least the following:
+
+* The directory structure for your modules and themes must be the same on the source and destination platforms. For example, if the modules on the source platform are in `../platform-abc/sites/all/modules/contrib` then the destination platform must have its modules also in this directory.
+* You may need to clear the Drupal cache on the source platform to avoid migration errors. Upgrades to Aegir in the future may handle this automatically, so be aware of the version of Aegir you're running and whether it includes upgrades to address this issue.
+
 
 Cloning sites
 -------------
