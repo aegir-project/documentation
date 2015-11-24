@@ -12,6 +12,7 @@ pages:
 - 'Install': 'install.md'
 - 'Using Aegir': 'usage.md'
 - 'Using Aegir':
+  - 'Verifying servers, platforms and sites': 'usage/verify.md'
   - 'Sites': 'usage/sites.md'
   - 'Sites':
     - 'Site tasks': 'usage/sites/tasks.md'
