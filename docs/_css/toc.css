@@ -7,7 +7,7 @@
 }
 
 .toc::before {
-  content: "Table of Contents";
+  content: "On this page:";
   font-size: 110%;
   font-weight: bold;
 }
