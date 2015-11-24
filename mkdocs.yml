@@ -33,6 +33,9 @@ pages:
 - 'Extending Aegir':
   - 'Design and terminology': 'extend/terminology.md'
   - 'Architecture': 'extend/architecture.md'
+  - 'Provision': 'extend/provision.md'
+  - 'Provision':
+    - 'Contexts': 'extend/provision/contexts.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Community contributions': 'extend/contrib.md'
 - 'Community': 'community.md'
