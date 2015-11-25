@@ -5,6 +5,7 @@ ul.subnav > li > span {
 }
 
 /* Exceptions to the above, for second H1 headers on a page */
+a[href="#working-as-aegir-user"],
 a[href="#extracting-a-drupal-site-from-aegir"] {
   display: inherit !important;
 }

@@ -32,6 +32,7 @@ pages:
     - 'SSL': 'usage/advanced/ssl.md'
     - 'Multiple servers': 'usage/advanced/remote-servers.md'
     - 'Access control': 'usage/advanced/clients.md'
+    - 'ProvisionACL': 'usage/advanced/provisionacl.md'
 - 'Extending Aegir': 'extend.md'
 - 'Extending Aegir':
   - 'Design and terminology': 'extend/terminology.md'

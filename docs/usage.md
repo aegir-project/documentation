@@ -30,10 +30,7 @@ This gives you access to all the normal Drupal administrative functionality, whi
 The Eldir theme
 ---------------
 
-The Aegir project ships with a default theme called 'Eldir' which is the
-classic navy blue, simplistic functional interface consistent with the overall
-Aegir brand. Eldir has been specifically designed for Aegir - nonetheless it is
-a Drupal theme like any other.
+The Aegir project ships with a default theme called 'Eldir' which is the classic navy blue, simplistic functional interface consistent with the overall Aegir brand. Eldir has been specifically designed for Aegir - nonetheless it is a Drupal theme like any other.
 
 ### Blocks
 
@@ -63,9 +60,7 @@ These tasks are kicked off during the actual Aegir installation.
 
 A task is colored a neutral blue-grey if currently queued but not running yet white with a spinning wheel if currently in the process of being run green if completed successfully red if there was an error
 
-It's worth checking the queues regularly to see that the Task or Cron queues
-are being run regularly. If not you may have a problem with the cron setup on
-your server - see the FAQ.
+It's worth checking the queues regularly to see that the Task or Cron queues are being run regularly. If not you may have a problem with the cron setup on your server - see the FAQ.
 
 #### Navigation
 
@@ -87,11 +82,41 @@ The main content area also is where nodes are viewable or editable, such as view
 Modalframe
 ----------
 
-When clicking on a task's 'Run' or 'View' buttons, a modalframe dialog is
-loaded in the browser. This is to provide a fluid, attractive experience for
-the user without requiring them to leave the current page or node to perform
-operations on a site. When the action is performed on the task, the modalframe
-will close and the user will be returned to the page they were on when they
-clicked that button.
+When clicking on a task's 'Run' or 'View' buttons, a modalframe dialog is loaded in the browser. This is to provide a fluid, attractive experience for the user without requiring them to leave the current page or node to perform operations on a site. When the action is performed on the task, the modalframe will close and the user will be returned to the page they were on when they clicked that button.
 
 ![Modal frame](/_images/modal-frame.png)
+
+
+Working as aegir user
+=====================
+
+It can be convenient to do stuff as the aegir user. The default shell of the aegir user is `/bin/false`, so you have to make sure to use something more usable:
+
+    sudo su - aegir -s /bin/bash
+
+GNU Screen is a super useful window manager for the console. When launching screen you may get errors like:
+
+    Cannot open your terminal '/dev/pts/6' - please check.
+
+You can get around this by running:
+
+    script /dev/null
+
+All in all this works nicely:
+
+    sudo su aegir -s /bin/bash -c "script -q /dev/null"
+
+It can be convenient to put it in a little script as `/usr/local/bin/suaegir`, or add it as as a shell alias.
+
+Allowing other users besides root on your system to run commands as aegir can also be very convenient. However, it entails some security considerations.
+
+If you wish to allow other users on your system to run commands as the aegir user using sudo, without allowing them to use sudo generally, you can add the following two lines to your `/etc/sudoers.d/aegir`, or (`/etc/sudoers` using `visudo`):
+
+    User_Alias      AEGIRUSERS = comma, separated, list, of, users
+    AEGIRUSERS      ALL = (aegir) ALL
+
+If you want to allow these users to use aegir without entering a password, simply change the second line to this:
+
+    AEGIRUSERS      ALL = (aegir) NOPASSWD:ALL
+
+An alternative to allowing multiple users to operate as 'aegir' is to use [Provision ACL](usage/advanced/provisionacl).
