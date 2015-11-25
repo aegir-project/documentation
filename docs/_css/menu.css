@@ -4,6 +4,12 @@ ul.subnav > li > span {
   display: none;
 }
 
+/* Exceptions to the above, for second H1 headers on a page */
+a[href="#extracting-a-drupal-site-from-aegir"] {
+  display: inherit !important;
+}
+
+
 /* Indent 2nd-level placeholder pages.*/
 ul.subnav > li.toctree-l1 > a.current {
   padding-left: 2.4em !important;
