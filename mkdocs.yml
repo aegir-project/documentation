@@ -42,10 +42,9 @@ pages:
     - 'Contexts': 'extend/provision/contexts.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Contributed projects': 'extend/contrib.md'
+- 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
-#  - 'Contacting the community': 'community/contact.md'
-  - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release process': 'community/release-process.md'
 - 'Release notes': 'release-notes/3.2.md'
