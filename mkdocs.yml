@@ -10,6 +10,8 @@ pages:
 - 'Home': 'index.md'
 - 'Quick start': 'quick-start.md'
 - 'Install': 'install.md'
+- 'Install':
+  - 'Uninstall': 'install/uninstall.md'
 - 'Using Aegir': 'usage.md'
 - 'Using Aegir':
   - 'Verifying servers, platforms and sites': 'usage/verify.md'
