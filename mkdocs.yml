@@ -48,7 +48,7 @@ pages:
   - 'Contacting the community': 'help/contact.md'
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release process': 'community/release-process.md'
-- 'Release notes': 'release-notes.md'
+- 'Release notes': 'release-notes/3.2.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
