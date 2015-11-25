@@ -11,6 +11,7 @@ pages:
 - 'Quick start': 'quick-start.md'
 - 'Install': 'install.md'
 - 'Install':
+  - 'Upgrade': 'install/upgrade.md'
   - 'Uninstall': 'install/uninstall.md'
 - 'Using Aegir': 'usage.md'
 - 'Using Aegir':
