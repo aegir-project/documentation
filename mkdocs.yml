@@ -2,53 +2,15 @@ site_name: Aegir Hosting System
 repo_url: https://github.com/aegir-project/documentation
 theme: readthedocs
 site_favicon: '_images/favicon.ico'
+docs_dir: .
+site_dir: '_site'
 extra_css:
   - '_css/toc.css'
   - '_css/menu.css'
   - '_css/images.css'
 pages:
 - 'Home': 'index.md'
-- 'Quick start': 'quick-start.md'
-- 'Install': 'install.md'
-- 'Install':
-  - 'Upgrade': 'install/upgrade.md'
-  - 'Uninstall': 'install/uninstall.md'
-- 'Using Aegir': 'usage.md'
-- 'Using Aegir':
-  - 'Verifying servers, platforms and sites': 'usage/verify.md'
-  - 'Sites': 'usage/sites.md'
-  - 'Sites':
-    - 'Site tasks': 'usage/sites/tasks.md'
-    - 'Site aliases': 'usage/sites/aliases.md'
-    - 'Importing sites': 'usage/sites/importing.md'
-  - 'Platforms': 'usage/platforms.md'
-  - 'Platforms':
-    - 'Platform tasks': 'usage/platforms/tasks.md'
-#  - 'Servers': 'usage/servers.md'
-#  - 'Servers':
-#    - 'Server tasks': 'usage/servers/tasks.md'
-  - 'Advanced features': 'usage/advanced.md'
-  - 'Advanced features':
-    - 'SSL': 'usage/advanced/ssl.md'
-    - 'Multiple servers': 'usage/advanced/remote-servers.md'
-    - 'Access control': 'usage/advanced/clients.md'
-    - 'ProvisionACL': 'usage/advanced/provisionacl.md'
-- 'Extending Aegir': 'extend.md'
-- 'Extending Aegir':
-  - 'Design and terminology': 'extend/terminology.md'
-  - 'Architecture': 'extend/architecture.md'
-  - 'Provision': 'extend/provision.md'
-  - 'Provision':
-    - 'Contexts': 'extend/provision/contexts.md'
-  - 'Altering behaviours': 'extend/altering-behaviours.md'
-  - 'Contributed projects': 'extend/contrib.md'
-- 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
   - 'Code of Conduct': 'community/code-of-conduct.md'
-  - 'Release process': 'community/release-process.md'
-- 'Release notes': 'release-notes/3.2.md'
-- 'Release notes':
-  - '3.0': 'release-notes/3.0.md'
-  - '3.1': 'release-notes/3.1.md'
-  - '3.2': 'release-notes/3.2.md'
+  - 'Documentation': 'community/documentation.md'

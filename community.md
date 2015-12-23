@@ -59,20 +59,10 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 Q & A
 -----
 
-* [Askbot](https://ask.aegir.support/)
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
 
 
-Drupal.org Issue queue's
-------------------------
-
-* [Hostmaster](https://www.drupal.org/project/issues/hostmaster)
-* [Provision](https://www.drupal.org/project/issues/provision)
-* [Hosting](https://www.drupal.org/project/issues/hosting)
-* [Or a combined search](https://www.drupal.org/project/issues?text=&projects=provision,+hosting,+eldir,+Hostmaster+%28Aegir%29,+Hosting%20Git,+Hosting%20Tasks%20Extra,+Hosting%20Site%20Backup Manager,+hosting_civicrm&status=Open&priorities=All&categories=All)
+Git repo issue queues
+---------------------
 
 
-Historic data
--------------
-
-* [Archived community.aegirproject.org site](http://community-archive.aegirproject.org) (OpenAtrium 1.x)
