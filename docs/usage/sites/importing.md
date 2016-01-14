@@ -31,8 +31,7 @@ This means, of course, that you'll need to add your ssh key to this server and
 set it up like other remote servers. Note that you don't need to install
 anything other than the SSH key on this server.
 
-A general guide to setting up SSH on remote servers can be found here:
-http://aegir.readthedocs.org/en/3.x/remote-servers/remote-servers/#ssh-keys
+A general guide to setting up SSH on remote servers can be found [here](http://aegir.readthedocs.org/en/3.x/usage/advanced/remote-servers/#ssh-keys).
 
 Once you've set up your server in the frontend you should get a new menu item
 called: 'Import remote sites' when viewing the server node. Click on that link
