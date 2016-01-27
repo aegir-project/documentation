@@ -40,6 +40,7 @@ pages:
   - 'Provision': 'extend/provision.md'
   - 'Provision':
     - 'Contexts': 'extend/provision/contexts.md'
+  - 'Frontend': 'extend/frontend.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Contributed projects': 'extend/contrib.md'
 - 'Help': 'help/contact.md'

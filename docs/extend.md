@@ -15,6 +15,7 @@ These extensions may come in the form of:
 * Adding new services or implementations of service types (postgres for the DB service, for example)
 * Overriding or hooking into existing forms such as the site form, to send extra data to the backend
 * Using APIs to inject bits of configuration into configuration files such as settings.php and vhosts.
+* Use the powers of Drupal to extend the content types and views.
 
 This area is be devoted to teaching you how to extend and develop for Aegir to encourage contributions to the Aegir project or to help you modify Aegir to suit your unique use case.
 
@@ -32,6 +33,6 @@ Please submit any suggestions or bug reports to the Aegir Project issue queue of
 Example modules
 ---------------
 
-The contrib modules page documents all known Aegir extensions in existence. In addition, Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways.
+The [contrib modules page](http://docs.aegirproject.org/en/3.x/extend/contrib/) documents all known Aegir extensions in existence. In addition, Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways.
 
 
