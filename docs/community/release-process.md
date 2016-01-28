@@ -127,9 +127,9 @@ We don't create a release node on Drupal.org, just run the [S_aegir-debian-offic
 
 Once both of those tasks have executed successfully, you can test the upgrade of the Debian packages by running the following Jenkins job:
 
-[http://ci.aegirproject.org/view/Upgrades/job/U%20aegir%206.x-1.x%20deb%2...](http://ci.aegirproject.org/view/Upgrades/job/U%20aegir%206.x-1.x%20deb%20upgrade/ "http://ci.aegirproject.org/view/Upgrades/job/U%20aegir%206.x-1.x%20deb%20upgrade/")
+* [7.x-3.x-stable-to-unstable](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package)
+* [6.x-2.x_to_7.x-3.x_upgrade](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/)
 
-(Note that this test is currently non-functional)
 
 ### 8. Creating release nodes on Drupal.org
 
@@ -142,7 +142,7 @@ Note: this could be [automated](https://www.drupal.org/node/1050618) with the ri
 
 ### 9. Manually test install and upgrade
 
-If the Jenkins tests are disabled in 2.7, you should test the install and upgrade to 3.2 in a local VM. (Vagrant is very useful for this.)
+If the Jenkins tests are disabled in one of the early steps, you should test the install and upgrade to the new version in a local VM. (Vagrant is very useful for this, the provision repo has a Vagrantfile.)
 
 At this point, the unstable repo actually contains the future stable version (ie 3.1 instead of 3.1-dev-abc). Check that it actually does.
 
