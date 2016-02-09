@@ -1,0 +1,161 @@
+Building and working with the debian packages
+=============================================
+
+[TOC]
+
+Debian is one of the main supported operating systems in Aegir. For other
+systems, see Operating System Support. See also the following instructions:
+
+* [Install using Debian packages](/install/#debianubuntu)
+* [Upgrade using Debian packages](/install/upgrade/#upgrades-with-debian-packages)
+
+The following is aimed at developers wishing to maintain their own Debian
+packages or work within the packaging framework.
+
+Basic requirements
+------------------
+
+You need the following packages to build the Aegir Debian packages:
+
+    apt-get install devscripts git-buildpackage
+
+See also the section below on [Adding a new uploader](#adding-a-new-uploader).
+
+Building a package for a new release
+------------------------------------
+
+Assuming we have just released 3.3, the following instructions will merge that
+code into the `upstream` branch (which is used to create the Debian diff) and
+then merged again in the debian branch (where the Debian code lives). We then
+use `git-buildpackage` to build the package and tag it, then push those changes
+back in the repository.
+
+    cd provision
+    git pull
+    # if you previously ran release.sh, run:
+    git reset --hard 7.x-3.4
+    # otherwise run this next line:
+    dch -v 3.3 -D unstable new upstream release
+    git-buildpackage -kanarcat@koumbit.org
+    dput aegir ../build-area/aegir3-provision_3.3_i386.changes
+
+*Note*: Version numbers are slightly different in Debian - we use the "magic"
+`~` separator to indicate that 3.0~alpha2 is actually lower than 3.0...
+
+Packages are initially uploaded to the `unstable` repository for initial
+test builds. The idea is that this final package can be moved to `testing` for
+broader testing, using the command:
+
+    sudo -u reprepro reprepro -b /srv/reprepro/ copy testing unstable aegir2 aegir2-provision aegir2-hostmaster aegir2-cluster-slave
+
+When confirmed as ready, it is migrated to the `stable` repository, using the command:
+
+    sudo -u reprepro reprepro -b /srv/reprepro/ copy stable testing aegir2 aegir2-provision aegir2-hostmaster aegir2-cluster-slave
+
+Building a branch package
+-------------------------
+
+Sometimes you want to have a test package for a given branch without going
+through a full release. Here how it's done.
+
+    git checkout debian
+    git merge 7.x-3.x
+    git describe
+    dch -v 3.4~rc3+28-1
+    git-buildpackage --git-tag -kanarcat@koumbit.org
+
+This is also available in the Debian package as:
+
+    ./debian/rules jenkins-build-auto
+
+Installing packages manually
+----------------------------
+
+    dpkg -i aegir3-provision_3.4~rc3+g6632e6e-1_all.deb
+
+We also make sure our custom makefile fetches the right one from provision:
+
+    -includes[aegir] = "http://drupalcode.org/project/provision.git/blob_plain/7.x-3.4-rc3:/aegir.make"
+    +includes[aegir] = "http://drupalcode.org/project/provision.git/blob_plain/7.x-3.x:/aegir.make"
+
+Developing on Debian
+--------------------
+
+To develop third party extensions to Aegir on Debian, it is recommended to
+install the Debian packages. If you are working on Aegir core, this could be a
+bit trickier since the files are not where you expect them to be and are not
+deployed as git repositories however.
+
+You can, however, copy in place a .git directory using the following:
+
+    git clone --branch=7.x-3.4-rc3 http://git.drupal.org/project/provision
+    cp -Rp provision/.git /usr/share/drush/commands/provision/.git
+    cd /usr/share/drush/commands/provision
+    git stash
+
+This will bring back a bunch of files that are removed from the Debian package,
+so it will yield warnings on uninstall of the Debian package but it should
+otherwise work.
+
+You can do something similar with the frontend.
+
+Package versioning
+------------------
+
+The stable repository should contain the latest release. The testing repository
+will also contain the latest release (unless we're in the process of building a
+release) but could have fixes to the Debian package that are being tested. The
+unstable repository is automatically built from the stable branch and may be
+broken.
+
+To see what changes are done to the Debian package, see the
+[debian/changelog](http://drupalcode.org/project/provision.git/blob/refs/heads/debian:/debian/changelog)
+which is maintained on the [debian
+branch](http://drupalcode.org/project/provision.git/shortlog/refs/heads/debian).
+To see which version of the package is currently available in the repository,
+you will unfortunately need to parse
+the Packages file for
+[unstable](http://debian.aegirproject.org/dists/unstable/main/binary-amd64/Packages),
+[testing](http://debian.aegirproject.org/dists/testing/main/binary-amd64/Packages)
+or
+[stable](http://debian.aegirproject.org/dists/stable/main/binary-amd64/Packages).
+
+Adding a new uploader
+---------------------
+
+To enable a new maintainer to upload to the Debian repository at
+debian.aegirproject.org, something like the following steps will have to be
+followed:
+
+Create a `~/.dput.cfg` with the following entry:
+
+    # See /etc/dput.cf for examples
+    [aegir]
+    login     = *
+    # login     = another_username
+    fqdn      = debian.aegirproject.org
+    method      = scp
+    incoming    = ~reprepro/incoming
+
+Next, GPG keys will have to be authorized to upload to the repository:
+
+    sudo -u reprepro -i
+    gpg --search-keys foo@bar.com
+    gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
+    echo allow * by key 1234ABCD >> /srv/reprepro/conf/uploaders
+
+Replacing an expired key
+------------------------
+
+    gpg --gen-key
+    gpg --list-keys
+    gpg --keyserver pgp.mit.edu --send-keys <key id>
+    sudo -u reprepro -i
+    gpg --search-keys <key id>
+    gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
+    echo allow * by key <key id> >> /srv/reprepro/conf/uploaders
+
+How the archive was built
+-------------------------
+
+The following documentation was used: <https://wiki.koumbit.net/RepreproConfiguration>

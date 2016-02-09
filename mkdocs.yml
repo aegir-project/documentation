@@ -48,6 +48,8 @@ pages:
 - 'Community':
   - 'Code of Conduct': 'community/code-of-conduct.md'
   - 'Release process': 'community/release-process.md'
+  - 'Release process':
+    - 'community/release-process/debian-packaging.md'
 - 'Release notes': 'release-notes/3.3.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
