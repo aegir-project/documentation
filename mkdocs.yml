@@ -50,9 +50,10 @@ pages:
   - 'Release process': 'community/release-process.md'
   - 'Release process':
     - 'community/release-process/debian-packaging.md'
-- 'Release notes': 'release-notes/3.3.md'
+- 'Release notes': 'release-notes/3.4.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
   - '3.2': 'release-notes/3.2.md'
   - '3.3': 'release-notes/3.3.md'
+  - '3.4': 'release-notes/3.4.md'
