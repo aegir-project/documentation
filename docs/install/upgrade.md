@@ -190,9 +190,9 @@ This page describes the upgrade script in the Provision repository that tries to
 
 It is imperative that you read the version-specific upgrade notes before attempting to run the upgrade.sh script, as the script will assume you have your system set up appropriately to handle the upgrade process.
 
-You can download the upgrade.sh script for Aegir 3.2 with the following command:
+You can download the upgrade.sh script for Aegir 3.x with the following command:
 
-    wget -O upgrade.sh 'http://drupalcode.org/project/provision.git/blob_plain/refs/tags/7.x-3.2:/upgrade.sh.txt'
+    wget -O upgrade.sh 'http://cgit.drupalcode.org/provision/plain/upgrade.sh.txt?h=7.x-3.x'
 
 Make sure you download it to somewhere that the aegir user can access in order to execute it.
 

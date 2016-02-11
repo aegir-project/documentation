@@ -387,7 +387,7 @@ Next step is to install the Aegir software components themselves, that is: drush
 
 #### 4.1. Install drush
 
-Before installing Aegir proper, you first need to install Drush. See then Drush [installation documentation](http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects)
+Before installing Aegir proper, you first need to install Drush. See then Drush [installation documentation](http://docs.drush.org/en/master/install/)
 
 #### 4.2. Stop! Now become the Aegir user
 
