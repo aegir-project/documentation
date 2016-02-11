@@ -71,7 +71,7 @@ Once your backend is upgraded, you can upgrade your frontend. Think of this as t
 
 The command will make sure the target directory is a valid Aegir install. If the directory does not exist, provision will use drush_make to fetch and assemble the correct version of the front end for the specific release of the backend you are running.
 
-hostmaster-migrate will also completely replace the crontab entry for the aegir user.
+`drush hostmaster-migrate` will also update the crontab entry for the aegir user.
 
 The command above will fetch the latest stable Drupal release, so it can simply be run again when a new security release of Drupal is made available.
 
