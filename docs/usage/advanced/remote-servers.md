@@ -29,7 +29,9 @@ Any number of remote web servers may be configured. The remote server needs an a
 You'll also need to prepare the web server in the same way you did for the master Aegir server during installation:
 
     a2enmod rewrite
-    ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
+    ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf 
+       or, depending on Ubuntu release,
+    ln -s /var/aegir/config/apache.conf /etc/apache2/conf-enabled/aegir.conf    
 
 Don't restart Apache even when it prompts you. This will be done by the Verify task you'll spawn for the server from the Aegir frontend later.
 
