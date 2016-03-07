@@ -302,24 +302,21 @@ If your distributions require more memory than these limits, then use some commo
 
 #### 3.4. Sudo configuration
 
-Next, we need to give the aegir user permission to execute the Apache2 command to restart the web server without entering a password.
+Next, we need to give the Aegir user permission to execute the command to restart the Web server without entering a password.  Let's create a file to do so.
 
-Create a file at ``/etc/sudoers.d/aegir`` and add the following:
+    $ sudo --preserve-env visudo --file=/etc/sudoers.d/aegir
+
+Add these lines:
 
     Defaults:aegir  !requiretty
-    aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
+    aegir ALL=NOPASSWD: /usr/sbin/apache2ctl # for Apache
+    aegir ALL=NOPASSWD: /etc/init.d/nginx    # for Nginx
 
-After saving, change the permissions on the file:
+The *visudo* command should ensure safe permissions on the file after saving.  If not, change them:
 
     $ sudo chmod 0440 /etc/sudoers.d/aegir
 
 Note - the path to your apache2ctl program may differ from this example. On some systems it may also be called 'apachectl' instead of apache2ctl. Adjust to suit your own requirements.
-
-##### 3.4.2. Nginx specific configuration
-
-For those using Nginx, set the sudoers line as follows
-
-     aegir ALL=NOPASSWD: /etc/init.d/nginx
 
 #### 3.5. DNS configuration
 

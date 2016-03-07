@@ -91,30 +91,19 @@ Consult the [GRANT](http://dev.mysql.com/doc/refman/5.1/en/grant.html) and [DROP
 
 At this point, we have removed all data that Aegir manages and we would be ready to reinstall the frontend. If we want to remove all traces, however, there's more work to do.
 
-
 #### Remove the aegir user's crontab
 
     crontab -r -u aegir
 
-#### Delete /var/aegir
+#### Delete the aegir user and its home directory, /var/aegir
 
-    rm -rf /var/aegir
-
-#### Delete the aegir user
-
-    userdel aegir
+    userdel --remove aegir
 
 This will also remove the user from the www-data group.
 
 #### Remove the user from sudoers
 
-    visudo
-
-Remove the line that looks something like
-
-    aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
-
-Save and exit the file.
+    rm /etc/sudoers.d/aegir
 
 #### Delete the symlink/include from Apache
 
@@ -122,8 +111,9 @@ Depending on your installation and OS this may vary.
 
 Generally:
 
-    rm /etc/apache2/conf.d/aegir.conf
+    rm /etc/apache2/conf.d/aegir.conf # for Apache
+    rm /etc/nginx/conf.d/aegir.conf # for Nginx
 
-If your Include statements were contained in a global system httpd.conf file or similar, you will need to remove these lines manually.
+If Apache's Include statements were contained in a global system httpd.conf file or similar, you will need to remove these lines manually.
 
-Restart Apache when you have completed this.
+Restart the Web server when you have completed this.
