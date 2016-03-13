@@ -18,23 +18,23 @@ Aegir installs sites on a platform, which means it places the site directory in 
 Settings.php and cloaked credentials
 ------------------------------------
 
-Within a multisite structure where multiple sites share the same 'Document Root' or codebase on the system, administrative users on sites that have PHP access, are capable of manipulating the server into exposing the database credentials of other sites in that codebase with reasonable ease. This is a pretty serious disclosure of sensitive information, although it is only possible if users have PHP execution privileges. Any multisite installation of Drupal (even without Aegir) has the potential for this to be a problem.
+Within a multisite structure where multiple sites share the same 'Document Root' or codebase on the system, administrative users on sites that have PHP access are capable of manipulating the server into exposing the database credentials of other sites in that codebase with reasonable ease. This is a pretty serious disclosure of sensitive information, although it is only possible if users have PHP execution privileges. Any multisite installation of Drupal (even without Aegir) has the potential for this to be a problem.
 
 But security is very important to Aegir, and that's why special precautions are enabled by default to avoid this issue.
 
 Essentially, when Aegir installs a site and creates the `settings.php` for that site, it 'masks' or 'cloaks' the database credentials, replacing them instead with environment variables fetched from the $\_SERVER array in PHP.
 
-The credentials are instead set in the site's Apache 'vhost' configuration file, which is stored outside the 'Document Root' or platform codebase, and is therefore safe from prying eyes by administrative users.
+The credentials are instead set in the Web server's configuration file for the site, which is stored outside the 'Document Root' or platform codebase, and is therefore safe from prying eyes by administrative users.
 
-Apache/PHP is able to read the environment variables from the vhost and understand the settings.php's mask, allowing your site to work as normal.
+The Web server along with PHP is able to read the environment variables from this configuration and understand the settings.php's mask, allowing your site to work as normal.
 
 If this feature confuses you or is inconvenient, you have a few options available to you:
 
-* Run Nginx (which doesn't cloak the credentials)
-* Set `$options['provision_db_cloaking'] = FALSE;` in the site's `drushrc.php` and then re-Verify the site
+* The two supported Web servers, Apache and Nginx, cloak the credentials. You can use another Web server.
+* Set `$options['provision_db_cloaking'] = FALSE;` in the site's `drushrc.php` and then re-Verify the site.
 * Stop worrying and enjoy the extra security Aegir provides you.
 
-Also note that when you run the Backup task against a site, it actually uncloaks the credentials of the settings.php that it saves in a tarball with the rest of the site. The benefit of this is that you are able to take the backup tarball and deploy it on a non-Aegir server, using standard Drupal, and your `settings.php` will be in 'normal' Drupal form for that environment. This also makes it easier to 'import' sites from previous-Aegir installations, into new Aegir installations if need be.
+Also note that when you run the Backup task against a site, it actually uncloaks the credentials of the settings.php that it saves in a tarball with the rest of the site. The benefit of this is that you are able to take the backup tarball and deploy it on a non-Aegir server, using standard Drupal, and your `settings.php` will be in 'normal' Drupal form for that environment. This also makes it easier to 'import' sites from previous-Aegir installations into new Aegir installations if need be.
 
 
 'Files' rewrite rule
