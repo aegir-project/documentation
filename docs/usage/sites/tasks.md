@@ -19,12 +19,12 @@ Much like your Platform, a site is represented as a node in the Aegir frontend. 
 
 The site node is a form requiring various attributes to be filled out in order to accurately advise the Aegir system about what kind of site you wish to create. These fields commonly are:
 
-* **Domain name** - the site name. This becomes the title of the node.
-* **Client** - who is the client or owner of this site. This field really only is relevant if you have enabled the Clients feature to manage segregations of sites between clients.
-* **Install Profile** - the install profile to use to install this site. This has a dramatic effect on the end result of your site
-* **Platform** - the platform to install the site on. The list of available platforms is based on what profile you choose above (in other words, which platforms support that install profile. The choice of platform also implies which web server hosts that platform, so this is why 'web server' is not a selectable option in the form.
-* **Language** - what language install the site with. This is dependent on the profile or platform chosen.
-* **Database server** - which database server to install the database on.
+* **Domain name**: The site name. This becomes the title of the new Site node.
+* **Client**: The client or owner of this site.
+* **Install Profile**: The installation profile to use to install this site. This has a dramatic effect on the end result of your site.
+* **Platform**: The platform to install the site on. The list of available platforms is based on what profile you choose above (in other words, which platforms support that installation profile). The choice of platform also implies which web server hosts that platform; so this is why 'web server' is not a selectable option in the form.
+* **Language**: The language to install the site with. This is dependent on the profile or platform chosen.
+* **Database server**: The database server to install the database on.
 
 Below is an example of the site form.
 
