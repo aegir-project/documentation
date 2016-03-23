@@ -102,6 +102,12 @@ Development & Support
 
 While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie)
 
+
+### [Skynet](https://github.com/PraxisLabs/skynet)
+
+Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemon. It is written in Python using [Cement](http://builtoncement.org).
+
+
 ### [Aegir up](https://www.drupal.org/project/aegir-up)
 
 DEPRECATED: Replaced by Valkyrie
