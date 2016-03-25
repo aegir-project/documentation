@@ -20,10 +20,13 @@ Presentations
 
 ### 2015
 
+* [Aegir: core and contrib - architecture and deep dive](http://community.aegirproject.org/sites/community.aegirproject.org/files/aegir_core_and_contrib_-_nyc_summit/index.pdf)
+    * Christopher Gervais - ergonlogic | Herman van Rink - helmo, July 2015
 * [Aegir: A Drupal-As-A-Service Secret Weapon (Drupal GovCon)](https://youtu.be/vsAOjP5iIhQ)
     * Mobomo, July 22, 2015
 * [Drupal CI with Aegir and TeamCity (Western New York Drupal User Group)](https://www.youtube.com/watch?v=oBdVFyRifc4)
     * GuyPaddock, Apr 8, 2015
+
 ### 2014
 * [Web Stacks for local development (Drupal Melbourne Meetup March 11 --)](https://www.youtube.com/watch?v=enSrAjgycnQ)
     * Brian Gilbert (@BrianGilbert_) of [Realityloop](http://realityloop.com/)
