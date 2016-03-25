@@ -74,6 +74,7 @@ Themes
 
 *   [Saeven](https://www.drupal.org/project/saeven)
 *   [Eldir](https://www.drupal.org/project/eldir). (The default theme)
+*   [Bara](https://github.com/MartijnBraam/aegir-bara)
 
 Configuration management
 ------------------------
