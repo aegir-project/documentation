@@ -35,7 +35,7 @@ From the top admin menu select **Hosting>Clients**. On this page you can configu
 Create clients
 --------------
 
-Creating a new Client on Aegir is as simple as selecting **Create Content>Client**. Then enter their email address (twice for confirmation), Name and Organization. Now click 'Save'.
+Creating a new Client on Aegir is as simple as selecting **Create Content>Client**. Then enter their email address (twice for confirmation), Name and Organization. Now click 'Save'.  *A [bug](https://www.drupal.org/node/2698687) was introduced in Aegir 3 preventing capture of email addresses and organization names. For now, it's only possible to enter client names.*
 
 Depending on the options you selected above they might also have a user account created for them at this stage by Aegir, and then be emailed with their login details.
 
