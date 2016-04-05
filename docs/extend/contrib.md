@@ -25,6 +25,10 @@ The successor of Hosting site Git & Hosting platform Git
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
 
+### [Aegir Network](https://www.drupal.org/project/hosting_network)
+
+Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
+
 ### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
 
 Integrates with an instance of the Piwik analytic software package and the Drupal piwik module.
