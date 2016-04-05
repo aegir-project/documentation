@@ -135,4 +135,4 @@ This module is not for hostmaster, but for the sites hosted under Aegir.
 Your module here?
 -----------------
 
-_Developers:_ Please add your contributed module here. Pull requests welcome on https://github.com/aegir-project/documentation/
+_Developers:_ Please add your contributed module here. Pull requests welcome on [GitHub](https://github.com/aegir-project/documentation/).
