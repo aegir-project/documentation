@@ -23,7 +23,7 @@ This area is be devoted to teaching you how to extend and develop for Aegir to e
 Aegir API documentation
 -----------------------
 
-The inline documentation is a good start to understand the various hooks and internals that allow you to extend and customize Aegir to your liking. The documentation is rendered on http://api.aegirproject.org daily.
+The inline documentation is a good start to understand the various hooks and internals that allow you to extend and customize Aegir to your liking. The documentation is rendered on [api.aegirproject.org](http://api.aegirproject.org) daily.
 
 See also the developer cheat sheet.
 
