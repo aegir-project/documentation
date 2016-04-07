@@ -25,7 +25,7 @@ Aegir API documentation
 
 The inline documentation is a good start to understand the various hooks and internals that allow you to extend and customize Aegir to your liking. The documentation is rendered on [api.aegirproject.org](http://api.aegirproject.org) daily.
 
-See also the developer cheat sheet.
+See also the [developer cheat sheet](http://community.aegirproject.org/dev-cheat-sheet/).
 
 Please submit any suggestions or bug reports to the Aegir Project issue queue of your choice, under the "documentation" component.
 
