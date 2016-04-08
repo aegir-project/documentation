@@ -30,7 +30,19 @@ Extends the backup functionality of Aegir. It adds a tab to the site content typ
 
 #### [Hosting Tasks Extra](https://www.drupal.org/project/hosting_tasks_extra)
 
-This module extends Aegir hostmaster (and drush/provision) with some additional tasks such as: cache-clear and registry-rebuild.  It now also includes the functionality from [Aegir HTTP basic authentication](https://github.com/computerminds/aegir_http_basic).
+This module extends Aegir hostmaster (and drush/provision) with some additional tasks:
+
+* Revert features
+* Flush all caches
+* Rebuild registry
+* Run cron
+* Sync data (between sites)
+* Run DB schema updates
+
+It also includes site functionality for:
+
+* [HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
+* Generating and showing Drush aliases
 
 ### Not included in Aegir package
 
