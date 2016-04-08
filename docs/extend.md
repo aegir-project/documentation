@@ -33,6 +33,4 @@ Please submit any suggestions or bug reports to the Aegir Project issue queue of
 Example modules
 ---------------
 
-The [contrib modules page](http://docs.aegirproject.org/en/3.x/extend/contrib/) documents all known Aegir extensions in existence. In addition, Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways.
-
-
+The [Contributed Extensions](http://docs.aegirproject.org/en/3.x/extend/contrib/) page documents all known Aegir extensions in existence. In addition, Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways.

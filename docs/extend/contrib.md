@@ -1,9 +1,9 @@
-Contributed modules
-===================
+Contributed extensions
+======================
 
 [TOC]
 
-Please note that the support and development status varies for these contributed modules.
+Please note that the support and development status varies for these.
 
 Extensions to Hostmaster (frontend)
 -----------------------------------
@@ -149,7 +149,7 @@ A tiny Drupal Module to simplify file paths in content. This helps prevent broke
 This module is not for hostmaster, but for the sites hosted under Aegir.
 
 
-Your module here?
------------------
+Your extension here?
+--------------------
 
-_Developers:_ Please add your contributed module here. Pull requests welcome on [GitHub](https://github.com/aegir-project/documentation/).
+_Developers:_ Please add your contributed extensions here. Pull requests welcome on [GitHub](https://github.com/aegir-project/documentation/).
