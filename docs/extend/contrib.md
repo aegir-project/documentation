@@ -104,8 +104,8 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 *   [Ansible role](https://github.com/GetValkyrie/ansible-role-aegir/)
 
 
-Others
-------
+Development
+-----------
 
 ### [Valkyrie](https://www.drupal.org/project/valkyrie)
 
@@ -121,17 +121,20 @@ Development & Support
 
 While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie)
 
+### [Aegir up](https://www.drupal.org/project/aegir-up) (deprecated)
+
+*This tool is deprecated, having been replaced by [Valkyrie](#valkyrie), above.*
+
+Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
+
+
+Others
+------
 
 ### [Skynet](https://github.com/PraxisLabs/skynet)
 
 Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemon. It is written in Python using [Cement](http://builtoncement.org).
 
-
-### [Aegir up](https://www.drupal.org/project/aegir-up)
-
-DEPRECATED: Replaced by Valkyrie
-
-Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
 
 ### [DevShop](https://www.drupal.org/project/devshop)
 
