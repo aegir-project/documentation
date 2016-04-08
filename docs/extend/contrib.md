@@ -8,55 +8,57 @@ Please note that the support and development status varies for these contributed
 Extensions to Hostmaster (frontend)
 -----------------------------------
 
-### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
+Some of these ship with Aegir (the ["golden contrib"](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) suite of modules) so their features simply require enabling if desired.  For the others, manual installation is required.
 
-Module to configure settings and crons specific to CiviCRM.
+### Included in Aegir package
 
-### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
+#### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
 
-This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to be preformed on an Aegir managed site.
+Module to configure settings and cron jobs specific to CiviCRM.
 
-### [Hosting Git](https://www.drupal.org/project/hosting_git)
+#### [Hosting Git](https://www.drupal.org/project/hosting_git)
 
-This is a simple module for the Aegir project that adds a 'Git pull', 'Git checkout' and 'Git clone' task for sites.
-The successor of Hosting site Git & Hosting platform Git
+This is a simple module for the Aegir project that adds a 'Git pull', 'Git checkout' and 'Git clone' task for sites.  It's the successor of Hosting Site Git & Hosting Platform Git.
 
-### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
-
-This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
-
-### [Aegir Network](https://www.drupal.org/project/hosting_network)
-
-Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
-
-### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
-
-Integrates with an instance of the Piwik analytic software package and the Drupal piwik module.
-D7 port in https://www.drupal.org/node/2195591
-
-### [Hosting Remote Import](https://www.drupal.org/project/hosting_remote_import)
+#### [Hosting Remote Import](https://www.drupal.org/project/hosting_remote_import)
 
 Provides a UI for fetching sites from remote Aegir servers.
 
-### [Hosting Site Backup Manager](https://www.drupal.org/project/hosting_site_backup_manager)
+#### [Hosting Site Backup Manager](https://www.drupal.org/project/hosting_site_backup_manager)
 
 Extends the backup functionality of Aegir. It adds a tab to the site content type. The tab shows the backups and enables per backup actions (Restore, Delete and Get).
 
-### [Hosting site make](https://github.com/mglaman/hosting_site_make)
+#### [Hosting Tasks Extra](https://www.drupal.org/project/hosting_tasks_extra)
+
+This module extends Aegir hostmaster (and drush/provision) with some additional tasks such as: cache-clear and registry-rebuild.  It now also includes the functionality from [Aegir HTTP basic authentication](https://github.com/computerminds/aegir_http_basic).
+
+### Not included in Aegir package
+
+#### [Aegir Network](https://www.drupal.org/project/hosting_network)
+
+Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
+
+#### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
+
+This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to be performed on an Aegir managed site.
+
+#### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
+
+This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
+
+#### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
+
+Integrates with an instance of the [Piwik analytic software package](https://en.wikipedia.org/wiki/Piwik) and the [Drupal Piwik module](https://www.drupal.org/project/piwik).
+
+#### [Hosting Site Make](https://github.com/mglaman/hosting_site_make)
 
 Allows a site to have its modules built from a makefile in the sites directory.
 
-### [Hosting tasks extra](https://www.drupal.org/project/hosting_tasks_extra)
+#### [Hosting Variables](https://www.drupal.org/project/hosting_variables)
 
-This module extends Aegir hostmaster (and drush/provision) with some additional tasks. Such as: cache-clear and registry-rebuild.
-Now also includes the functionality from [Aegir HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
+Allows you to set arbitrary custom Drupal variables for each site, such as site name and slogan.  These variables will be put in settings.php so can't be overriden (or changed) through the site interface.
 
-### [Hosting Variables](https://www.drupal.org/project/hosting_variables)
-
-Allows you to set arbitrary custom Drupal variables for each site, such as site name and slogan.
-These variables will be put in settings.php, and so can't be overriden (or changed) through the site interface.
-
-### [Hosting Wordpress](https://www.drupal.org/project/hosting_wordpress)
+#### [Hosting Wordpress](https://www.drupal.org/project/hosting_wordpress)
 
 Module to manage WordPress sites. It aims to support the main Aegir functionality, such as installation, upgrade, migration and backups.
 
