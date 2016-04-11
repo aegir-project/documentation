@@ -62,6 +62,10 @@ This is a simple module for the Aegir project that adds a 'Logs' tab to sites an
 
 Integrates with an instance of the [Piwik analytic software package](https://en.wikipedia.org/wiki/Piwik) and the [Drupal Piwik module](https://www.drupal.org/project/piwik).
 
+#### [Hosting Services](https://www.drupal.org/project/hosting_services)
+
+Allows clients to manage their sites through Web services via the [Services](https://www.drupal.org/project/services) framework.  The [Clients](../usage/advanced/clients.md) functionality must be enabled.
+
 #### [Hosting Site Make](https://github.com/mglaman/hosting_site_make)
 
 Allows a site to have its modules built from a makefile in the sites directory.
