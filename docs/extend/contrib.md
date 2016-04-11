@@ -62,6 +62,28 @@ This is a simple module for the Aegir project that adds a 'Logs' tab to sites an
 
 Integrates with an instance of the [Piwik analytic software package](https://en.wikipedia.org/wiki/Piwik) and the [Drupal Piwik module](https://www.drupal.org/project/piwik).
 
+#### [Hosting REST API](https://github.com/PraxisLabs/hosting_restapi)
+
+Provides a minimal REST API implementation for Aegir.  It makes some implementation-specific assumptions such as:
+
+* Client orders are managed within Aegir itself.
+* The public-facing / client-facing site is CiviCRM.
+
+Ideally, generic functionality from this module will eventually become part of Hosting SaaS (directly below).
+
+#### [Hosting SaaS](https://www.drupal.org/project/hosting_saas)
+
+Provides common parameters for Software as a Service (SaaS) or "site factory" setups of Aegir.  Currently, sites can be cloned programmatically (via code) given a particular configuration.  See [Automated Drupal SaaS with Aegir3](https://praxis.coop/en/blog/automated-drupal-saas-aegir3) for a use case.
+
+#### [Hosting SaaS Utilities](https://github.com/PraxisLabs/hosting_saas_utils)
+
+Extra functionality for Hosting SaaS including:
+
+* Creating a new user as the site owner instead of the default administrator.
+* Setting variables in new sites based on POST arguments.
+
+There are [plans](https://www.drupal.org/node/2698053) to merge this into Hosting SaaS (directly above).
+
 #### [Hosting Services](https://www.drupal.org/project/hosting_services)
 
 Allows clients to manage their sites through Web services via the [Services](https://www.drupal.org/project/services) framework.  The [Clients](../usage/advanced/clients.md) functionality must be enabled.
