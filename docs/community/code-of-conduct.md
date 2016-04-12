@@ -11,7 +11,6 @@ community members, at all times:
 * __Show respect__
 * __Value diversity__
 
-In support of these values, we commit to
-http://contributor-covenant.org/version/1/2/0/code_of_conduct.md. Please
+In support of these values, we commit to the [Contributor Covenant Code of Conduct](http://contributor-covenant.org/version/1/4/). Please
 report any abuse to the project's maintainers by sending and email to
-conduct at aegirproject.org. Any such reports will be kept confidential."
+conduct at aegirproject dot org. Any such reports will be kept confidential.
