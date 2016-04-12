@@ -15,7 +15,7 @@ The core developers also are reachable in #aegir on IRC.
 Remember that Aegir, like Drupal, transcends timezones, and even the developers are many hours apart from each other. Sometimes it's quiet, and sometimes it's very busy. Don't repeat yourself, someone will usually respond in a few hour if not immediately. If you can't hang around for an answer... try one of the other channels.
 
 We try to meet check-in there on Thursdays at 2PM GMT (10 AM EDT, 8 AM MDT). 
-We're also experimenting with a more informal chat via https://appear.in/aegir (Thursdays at 8PM UTC)
+We're also experimenting with a more informal chat via [https://appear.in/aegir](https://appear.in/aegir) (Thursdays at 8PM UTC).
 
 New to IRC? IRC instructions for Drupal users are at: [https://www.drupal.org/irc](https://www.drupal.org/irc "https://www.drupal.org/irc").
 
