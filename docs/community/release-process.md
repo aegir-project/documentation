@@ -44,7 +44,7 @@ As we have a number of Drupal.org projects to cover we try to centralize our rel
 On Drupal.org we add a link to the version specific release notes page on the release nodes for all projects we cover.
 
 Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
- With a patch from https://www.drupal.org/node/2609134 for MD format.
+ with [a patch for the MD format](https://www.drupal.org/node/2609134):
 
 `drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.3 HEAD`
 
