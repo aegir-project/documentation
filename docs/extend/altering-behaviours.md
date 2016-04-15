@@ -165,7 +165,7 @@ Injecting into drushrc.php
 
 The drushrc.php file can be changed in two ways:
 
-* changing the templates used for the Drushrc context see the [hook_provision_config_load_templates() hook](http://api.aegirproject.org/api/aegir/provision3%21provision.api.php/function/hook_provision_config_load_templates/7.x-3.x)
+* changing the templates used for the Drushrc context see the [hook_provision_config_load_templates() hook](http://api.aegirproject.org/api/Provision/provision.api.php/function/hook_provision_config_load_templates/7.x-3.x)
 * creating a local.drushrc.php file in the site-specific folder (e.g. sites/example.com/local.drushrc.php
 
 Injecting into site vhosts
@@ -291,7 +291,7 @@ The end result is improved performance for your sites, without losing any functi
 Injecting into server-wide vhosts
 ---------------------------------
 
-Changing maximum filesize upload is common when setting up sites in Drupal. As described in [Overriding site-specific PHP values](site-specific-overrides) you can change value for each site created with Aegir by adding a .drush.inc file in /var/aegir/.drush directory. But wouldn´t it be nice to be able to do it server-wide?
+Changing maximum filesize upload is common when setting up sites in Drupal. As described in [Overriding site-specific PHP values](#overriding-site-specific-php-values) you can change value for each site created with Aegir by adding a .drush.inc file in /var/aegir/.drush directory. But wouldn´t it be nice to be able to do it server-wide?
 
 For instance, you could create a file called global_settings.drush.inc, place it in /var/aegir/.drush and put in the following code:
 

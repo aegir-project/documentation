@@ -69,7 +69,7 @@ Debian/Ubuntu
 
 These are the installation instructions that are recommended on Debian. Aegir dependencies (Apache, MySQL, PHP...) are also automatically installed.
 
-If you wish to install Debian packages over an existing manual install, it's possible. See [the Debian upgrade procedures](/upgrading/debian).
+If you wish to install Debian packages over an existing manual install, it's possible. See [the Debian upgrade procedures](/install/upgrade/#upgrades-with-debian-packages).
 
 Debian packages are uploaded to http://debian.aegirproject.org/ shortly after a release. We eventually want to upload those packages to the official archives, but this will take some adaptation and time to sponsor the packages in.
 
@@ -89,7 +89,7 @@ Use this command to add the Aegir package "Software Source" repository to your s
 
     echo "deb http://debian.aegirproject.org stable main" | sudo tee -a /etc/apt/sources.list.d/aegir-stable.list
 
-To install a customized Debian package, see the [developer instructions for the debian package](/debian). Other distributions are available for courageous people that want to try development versions.
+To install a customized Debian package, see the [developer instructions for the debian package](/community/release-process/debian-packaging/). Other distributions are available for courageous people that want to try development versions.
 
 **dev note**: to install the development version of Aegir, you can use the `unstable` or `testing` distribution above.
 
@@ -200,9 +200,9 @@ To make the install smoother, the install command is run without much debugging 
 
     $ env DPKG_DEBUG=developer sudo apt-get install aegir
 
-You can build your own Debian packages from our repositories using [these instructions](/node/543).
+You can build your own Debian packages from our repositories using [these instructions](/community/release-process/debian-packaging/).
 
-Also see the general [Installation Trouble-shooting](installation-trouble-shooting) section below.
+Also see the general [Installation Trouble-shooting](/install/#installation-trouble-shooting) section below.
 
 Manual Installation
 -------------------
