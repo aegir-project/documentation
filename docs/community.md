@@ -60,7 +60,7 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 Q & A
 -----
 
-* [Askbot](https://ask.aegir.support/)
+* [Askbot](http://ask.aegir.support/)
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
 
 
