@@ -73,7 +73,7 @@ If MySQL returns something like "Query OK", that means the command was successfu
 
     Query OK, 0 rows affected (0.00 sec)
 
-Note the comment about "bind-address = 127.0.0.1" within section 3.6 of the [manual configuration page](install/#36-database-configuration).
+Note the comment about "bind-address = 127.0.0.1" within section 3.6 of the [manual configuration page](/install/#36-database-configuration).
 
 When the server is being verified, Aegir will attempt to create a database and grant privileges to a user for that database. If any of these two fails, [verify that your MySQL configuration is correct](http://www.ghacks.net/2009/12/27/allow-remote-connections-to-your-mysql-server/) and that there is no firewall blocking your MySQL port.
 

@@ -221,7 +221,7 @@ It's a good idea to clear the caches, and you may need to get imagecache to rebu
 
 Now that you have your sites under Aegir's control you can take advantage of its power, and easily migrate them to another platform. In the event that your sites were on old versions of Drupal core and a new one is available and present as another Platform on your Aegir server, you can use the Migrate process to upgrade those sites onto the new core.
 
-For details on how to Migrate sites, consult the [Migrate documentation](@todo).
+For details on how to Migrate sites, consult the [Migrate documentation](/usage/sites/tasks/#migratingupgrading-sites).
 
 
 Extracting a Drupal site from Aegir
