@@ -11,19 +11,14 @@ The release cycle
 
 In general, each major Aegir release comprises a simultaneous release of all the modules that are part of the project. We generally go through several testing releases (alphas, betas & RCs) before doing the first stable release on a branch.
 
-* First an **alpha** is released to test new functionalities and to accomplish the goals decided in the [Project Roadmap](/node/35) for that major version. Example: `3.0-alpha1`
-* When we have covered most of the functionalities outlined in the [roadmap](/roadmap), we push out **beta releases** until no more critical issues show up. This is generally considered a _soft feature freeze_. Example: `3.0-beta1`
+* First an **alpha** is released to test new functionalities and to accomplish the goals decided in the project roadmap for that major version. Example: `3.0-alpha1`
+* When we have covered most of the functionalities outlined in the roadmap, we push out **beta releases** until no more critical issues show up. This is generally considered a _soft feature freeze_. Example: `3.0-beta1`
 * Then we go into _full feature freeze_ and release a **first release candidate** (RC). Then a stable release branch is created, and the development branch is kept opened for development for the next stable release. This is generally considered a _soft API freeze_. Release candidates are made as long as critical bugs are found. Example: `3.0-rc1`.
 * Once the development branch has no known critical bugs, the **stable release** is announced. From there on only critical fixes (security, critical performance and critical bugfixes) are committed to the stable branch, and stable releases are published (without alpha/beta/RC) directly on the stable branch. The stable branch is in **full API freeze**. New features are generally committed to the development branch.
-
-See also [the tag and branch naming convention](/content/branch-and-tagging-conventions).
 
 
 Steps for a release
 -------------------
-
-For the specifics of release naming conventions and the cycle, see [the branch naming convention](/node/187).
-
 
 ### 1. Make sure Jenkins is all green
 
@@ -40,7 +35,7 @@ In the hostmaster project we maintain our own drupal-org.make file. Verify that 
 ### 3. Generating the release notes
 
 We build complete release notes for every release. Those are made up of a summary of the release, an outline of key changes, of known issues, install and upgrade instructions and a full list of bugfixes and new features.
-As we have a number of Drupal.org projects to cover we try to centralize our release notes combined with the documentation. Published under [the release notes](http://aegir.readthedocs.org/en/3.x/release-notes) section.
+As we have a number of Drupal.org projects to cover we try to centralize our release notes combined with the documentation. Published under the release notes section.
 On Drupal.org we add a link to the version specific release notes page on the release nodes for all projects we cover.
 
 Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
@@ -187,7 +182,7 @@ After doing that, you can re-run the 'copy' commands to publish the .debs to the
 
 Once all this is done and the tarballs are generated, the release notes are published in:
 
-*   The [docs](http://aegir.readthedocs.org/en/3.x/release-notes)
+*   The [docs](http://docs.aegirproject.org)
 *   Update the upgrade.sh link in the [documentation](http://docs.aegirproject.org/en/3.x/install/upgrade/#upgrades-with-upgradesh-script)
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)

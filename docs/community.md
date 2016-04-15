@@ -44,7 +44,7 @@ Events
 
 Aegir is often present at many of the popular DrupalCamps and DrupalCons, either as a formal session or in smaller BOF sessions.
 
-We encourage users who are confident in using Aegir to demonstrate it at any relevant events they attend, and to [post slides/screencasts](/node/7) so that others can benefit.
+We encourage users who are confident in using Aegir to demonstrate it at any relevant events they attend, and to post slides/screencasts so that others can benefit.
 
 
 Blogs
@@ -52,8 +52,8 @@ Blogs
 
 As well as the News/Blog area here, the developers also often blog about new Aegir features or share handy tips for the community. Here are two blogs to stay up to date with:
 
-*   [http://developmentseed.org/tags/aegir](http://developmentseed.org/tags/aegir "http://developmentseed.org/tags/aegir")
-*   [http://mig5.net/category/tags/aegir](http://mig5.net/category/tags/aegir "http://mig5.net/category/tags/aegir")
+*   [https://developmentseed.org/blog/](https://developmentseed.org/)
+*   [https://mig5.net/tags/aegir](https://mig5.net/tags/aegir)
 *   [https://praxis.coop/en/tags/aegir](https://praxis.coop/en/tags/aegir)
 
 

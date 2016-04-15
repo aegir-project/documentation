@@ -62,12 +62,6 @@ Presentations
     * Roel De Meester, September 2009
 * [DrupalCon DC - Deploying and Maintaining Drupal Sites Using the Aegir Hosting System](http://www.archive.org/details/DrupalconDc2009-DeployingAndMaintainingDrupalSitesUsingTheAegir/)
     * Adrian Rossouw
-* [DrupalCamp Montréal - Aegir - One Drupal to Rule them All!](http://blip.tv/play/AYGqs1IC)
-    * Antoine Beaupré
-* [Drupal Vancouver April meet - Automated Deployment with the Ægir Hosting System](http://blip.tv/play/AYGYi1EC)
-    * Robin Puga
-* [Drupal Melbourne Meet Oct - Introduction to the Aegir Hosting System](http://blip.tv/play/AYGow2oC)
-    * Miguel Jacq
 
 ### 2008
 * [Deploying and maintaining Drupal sites using Aegir hosting system (DrupalCon Szeged)](http://archive.org/details/aegir/)
