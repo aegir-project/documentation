@@ -46,6 +46,10 @@ It also includes site functionality for:
 
 ### Not included in Aegir package
 
+#### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
+
+This module provides config-export and config-import commands for Aegir.
+
 #### [Aegir Network](https://www.drupal.org/project/hosting_network)
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
