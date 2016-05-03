@@ -29,7 +29,7 @@ New release of Drupal core
 
 Just as you would use the Migrate task in Aegir to upgrade one of your sites to a new copy of Drupal core, you can follow the UPGRADE.txt to upgrade your actual Aegir frontend system to a new copy of Drupal core too. The upgrade process (including the script) will always fetch the latest available copy of Drupal core to place the frontend on.
 
-Currently you cannot upgrade the Aegir site itself from the frontend with a Migrate task as you do for your managed sites. This may change in the future, but has not been developed yet.
+Currently you cannot upgrade the Aegir site itself from the frontend with a Migrate task as you do for your managed sites. This may change in the future as we have an open issue over at [Allow upgrade of hostmaster sites from the frontend](https://www.drupal.org/node/711746).
 
 
 Manual Upgrade
