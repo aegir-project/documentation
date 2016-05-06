@@ -73,9 +73,20 @@ The command will make sure the target directory is a valid Aegir install. If the
 
 `drush hostmaster-migrate` will also update the crontab entry for the aegir user.
 
-The command above will fetch the latest stable Drupal release, so it can simply be run again when a new security release of Drupal is made available.
+If you have customized your Aegir installation and are maintaining your own makefile, you can use the *--makefile* flag so the platform is created with another makefile than the default. Be warned that this may create problems if the makefile doesn't include the right Aegir modules.
 
-If you have customized your Aegir installation and are maintaining your own makefile, you can use the --makefile flag so the platform is created with another makefile than the default. Be warned that this may create problems if the makefile doesn't include the right Aegir modules.
+If there is a newer release of Aegir than what you have installed, the hostmaster command will fetch the latest stable Drupal release.  If you have the latest stable version of Aegir already installed, this won't happen because Drupal core changes could affect the stability of the distribution. So it cannot simply be run whenever a new security release of core Drupal is made available (unless your instance was installed via the *unstable* channel, which is not recommended).
+
+To upgrade Drupal core (say for a new security release) while running Aegir stable, this method should work, but make sure to test on a development instance before running on your production environment:
+
+1. Become the Aegir user.
+    * sudo -Hsu aegir
+1. Upgrade Drupal core.
+    * drush @hostmaster pm-updatecode drupal
+1. Verify the upgraded platform.
+    * drush @platform_hostmaster provision-verify
+1. Verify the Hostmaster site.
+    * drush @hostmaster provision-verify
 
 
 Upgrades with Debian packages
