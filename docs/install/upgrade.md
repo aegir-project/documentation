@@ -80,13 +80,13 @@ If there is a newer release of Aegir than what you have installed, the hostmaste
 To upgrade Drupal core (say for a new security release) while running Aegir stable, this method should work, but make sure to test on a development instance before running on your production environment:
 
 1. Become the Aegir user.
-    * sudo -Hsu aegir
+    * `sudo -Hsu aegir`
 1. Upgrade Drupal core.
-    * drush @hostmaster pm-updatecode drupal
+    * `drush @hostmaster pm-updatecode drupal`
 1. Verify the upgraded platform.
-    * drush @platform_hostmaster provision-verify
+    * `drush @platform_hostmaster provision-verify`
 1. Verify the Hostmaster site.
-    * drush @hostmaster provision-verify
+    * `drush @hostmaster provision-verify`
 
 
 Upgrades with Debian packages
