@@ -46,6 +46,10 @@ It also includes site functionality for:
 
 ### Not included in Aegir package
 
+#### [Aegir Cloud](https://www.drupal.org/project/aegir_cloud)
+
+Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.
+
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
 This module provides config-export and config-import commands for Aegir.
