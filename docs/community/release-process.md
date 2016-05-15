@@ -50,6 +50,8 @@ or after placing the tags
 This is done for the different git projects. Changing the first line to add 'to $name'.
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
 
+Add it as a new file under [release-notes](https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes), and add a line to [mkdocs.yml](https://github.com/aegir-project/documentation/blob/3.x/mkdocs.yml)
+
 ### 4. Running the release.sh script
 
 Each time we make a new release, we run a script called `release.sh` in provision. This script does all the 'hard' work in that it doesn't forget all the very many places to edit version numbers etc of relevant documentation and other scripts. This includes install.sh.txt and upgrade.sh.txt.
