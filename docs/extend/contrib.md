@@ -58,24 +58,11 @@ This module provides config-export and config-import commands for Aegir.
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
 
-#### [Aegir SaaS](https://www.drupal.org/project/hosting_saas)
-
-Provides common parameters for Software as a Service (SaaS) or "site factory" setups of Aegir.  Currently, sites can be cloned programmatically (via code) given a particular configuration.  See [Automated Drupal SaaS with Aegir3](https://praxis.coop/en/blog/automated-drupal-saas-aegir3) for a use case.
-
-There is [on-going work](https://www.drupal.org/node/2705805) to merge this module into Aegir Services.
-
-#### [Aegir SaaS Utilities](https://github.com/PraxisLabs/hosting_saas_utils)
-
-Extra functionality for Aegir SaaS including:
-
-* Creating a new user as the site owner instead of the default administrator.
-* Setting variables in new sites based on POST arguments.
-
-There is [on-going work](https://www.drupal.org/node/2705805) to merge this module into Aegir Services.
-
 #### [Aegir Services](https://www.drupal.org/project/hosting_services)
 
-Aims to be a one-stop shop for all Web services functionality offered within Aegir. Allows site management through Web services via the [Services](https://www.drupal.org/project/services) framework.
+Aims to be a one-stop shop for all Web services functionality offered within Aegir. It allows for remote site management via the [Services](https://www.drupal.org/project/services) framework.
+
+The Aegir SaaS sub-module sets up a fully functional endpoint (via the base module's API) allowing for remote administration of sites, notably cloning existing sites, for software-as-a-service (SaaS) / site-factory Aegir set-ups. It fully configures a service endpoint providing common parameters for cloning as configured in the module's settings. Using the API's task resource, sites can also be disabled, enabled, deleted, and have any other task performed on them supported by your Aegir installation. See [the module's README](http://cgit.drupalcode.org/hosting_services/tree/submodules/hosting_saas/README.md) for more information.
 
 #### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
 
@@ -88,15 +75,6 @@ This is a simple module for the Aegir project that adds a 'Logs' tab to sites an
 #### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
 
 Integrates with an instance of the [Piwik analytic software package](https://en.wikipedia.org/wiki/Piwik) and the [Drupal Piwik module](https://www.drupal.org/project/piwik).
-
-#### [Hosting REST API](https://github.com/PraxisLabs/hosting_restapi)
-
-Provides a minimal REST API implementation for Aegir.  It makes some implementation-specific assumptions such as:
-
-* Client orders are managed within Aegir itself.
-* The public-facing / client-facing site is CiviCRM.
-
-There is [on-going work](https://www.drupal.org/node/2705805) to merge generic functionality from this module into Aegir Services.
 
 #### [Hosting Site Make](https://github.com/mglaman/hosting_site_make)
 
