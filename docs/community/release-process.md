@@ -88,7 +88,7 @@ Notice how we just provide the Aegir release number (`3.4`) to the release scrip
 
 ### 5. Test the manual install in Jenkins
 
-Before making a full release, test the release in Jenkins. To do so, start a build of the launch the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush8/) with the following parameters. Similar job exist for [Drush7](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush7/) and [Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6/)
+Before making a full release, test the release in Jenkins. To do so, start a build of the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush8/) job. Similar job exist for [Drush7](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush7/) and [Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6/)
 
 If any of these builds fail, delete the remote tags (using `git push origin :7.x-3.4`, for example), fix the bugs and start again.
 
@@ -120,7 +120,7 @@ We don't create a release node on Drupal.org, just run the [S_aegir-debian-offic
 Once the tags are pushed and release notes published, we create a release node with an excerpt of (and a link to) the release notes so that tarballs are created and issue queue versions updated.
 
 This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
-And after those are fully build in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
+WAIT.... And after those are fully build in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
@@ -169,7 +169,7 @@ We pull to stable (since the betas), manually:
 
 If Jenkins has managed to build .debs and upload them before you've have a chance to pull them into testing/stable, you can manually remove them like so:
 
-    reprepro remove unstable aegir2-cluster-slave aegir2 aegir2-provision aegir2-hostmaster
+    reprepro remove unstable aegir3-cluster-slave aegir3 aegir3-provision aegir3-hostmaster
 
 This should be prevented by disabling the Jenkins jobs named `D_aegir-debian*` before starting to push the release tags.
 
