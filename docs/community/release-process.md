@@ -161,6 +161,8 @@ Finally, when the Debian packages are tested you will need to pull them into the
 
 We pull to stable (since the betas), manually:
 
+    ssh jenkins@ci.aegirproject.org
+    sudo su - reprepro
     reprepro@zeus:~$
     reprepro copy stable unstable aegir3
     reprepro copy stable unstable aegir3-hostmaster
@@ -189,6 +191,7 @@ Once all this is done and the tarballs are generated, the release notes are publ
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
 *   Twitter as @aegirproject
+    *   Template: "#aegir 3.? released! Release notes at http://docs.aegirproject.org/en/3.x/release-notes/3.?/"
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
 
