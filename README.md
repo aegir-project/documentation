@@ -3,9 +3,9 @@ Aegir Documentation Project
 
 This project aims to document the Aegir Hosting System. It uses mkdocs to build the site at http://docs.aegirproject.org. To get started contributing to this project, fork it on Github. Then install mkdocs and clone this repo:
 
-    $ brew install python;               # For OSX users
-    $ sudo aptitude install python-pip   # For Debian/Ubuntu users
-    $ pip install mkdocs
+    # brew install python;               # For OSX users
+    # aptitude install python-pip        # For Debian/Ubuntu users
+    # pip install mkdocs
     $ git clone https://github.com/aegir-project/documentation.git aegir-docs
     $ cd aegir-docs
     $ git remote add sandbox https://github.com/<username>/documentation.git
