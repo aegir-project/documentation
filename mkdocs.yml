@@ -6,6 +6,7 @@ extra_css:
   - '_css/toc.css'
   - '_css/menu.css'
   - '_css/images.css'
+  - '_css/style.css'
 pages:
 - 'Home': 'index.md'
 - 'Quick start': 'quick-start.md'

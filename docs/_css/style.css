@@ -1,0 +1,18 @@
+.wy-side-nav-search {
+  background-color: #0A1F36;
+}
+
+a.icon.icon-home:before {
+  background:url('../_images/logo.png');
+  width: 208px;
+  height: 59px;
+  content: '';
+  background-repeat: no-repeat;
+}
+
+a.icon.icon-home {
+  font-size: x-large;
+  margin-bottom: 0;
+  color: #E3F6F7;
+}
+
