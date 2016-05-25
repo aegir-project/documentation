@@ -49,6 +49,11 @@ pages:
 - 'Community': 'community.md'
 - 'Community':
   - 'Code of Conduct': 'community/code-of-conduct.md'
+  - 'Core team': 'community/core-team.md'
+  - 'Core team':
+    - 'Criteria': 'community/core-team/criteria.md'
+    - 'Leadership': 'community/core-team/leadership.md'
+    - 'Welcoming a new member': 'community/core-team/welcome.md'
   - 'Release process': 'community/release-process.md'
   - 'Release process':
     - 'community/release-process/debian-packaging.md'
