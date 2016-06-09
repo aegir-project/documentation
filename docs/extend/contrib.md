@@ -64,6 +64,10 @@ Aims to be a one-stop shop for all Web services functionality offered within Aeg
 
 The Aegir SaaS sub-module sets up a fully functional endpoint (via the base module's API) allowing for remote administration of sites, notably cloning existing sites, for software-as-a-service (SaaS) / site-factory Aegir set-ups. It fully configures a service endpoint providing common parameters for cloning as configured in the module's settings. Using the API's task resource, sites can also be disabled, enabled, deleted, and have any other task performed on them supported by your Aegir installation. See [the module's README](http://cgit.drupalcode.org/hosting_services/tree/submodules/hosting_saas/README.md) for more information.
 
+#### [Hosting Certificate](https://gitlab.com/aegir/hosting_certificate)
+
+SSL certificate handling as a Hosting Service. A prototype to restyle SSL handling in Aegir.
+
 #### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
 
 This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to be performed on an Aegir managed site.
@@ -71,6 +75,10 @@ This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to 
 #### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
+
+#### [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le)
+
+This module replaces self-generated Aegir certificates with Let's Encrypt ones.
 
 #### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
 
@@ -116,6 +124,7 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 *   [Drush Puppet module](https://www.drupal.org/project/puppet-drush)
 *   [Aegir3 Chef Cookbook](https://supermarket.chef.io/cookbooks/aegir3)
 *   [Ansible role](https://github.com/GetValkyrie/ansible-role-aegir/)
+*   [Aegir Ansible](https://www.drupal.org/project/aegir_ansible)
 
 
 Development
