@@ -13,6 +13,8 @@ Presentations
 
 ### 2016
 
+* [One Drupal to Rule Them All](http://www.drupalnorth.org/en/session/one-drupal-rule-them-all)
+    * Christopher Gervais - ergonlogic - June 2016
 * [DIY GPL Planet Scale Drupal "Cloud"(DrupalCamp Stanford)](https://drupalcamp.stanford.edu/diy-gpl-planet-scale-drupal-cloud) - [slides](https://docs.google.com/presentation/d/1bl350NkaARCUDoi8jA7G7ylIUpa_fIJL9kU4rTNwb9A/edit?usp=sharing)
     * Nicholas Roberts, April
 * [DIY Drupal Cloud with Drupal, Drush and Aegir (Southern Californian Linux Expo)](https://www.socallinuxexpo.org/scale/14x/presentations/diy-drupal-cloud-drupal-drush-and-aegir) - [Slides](https://docs.google.com/presentation/d/11ZqtIG06ATNDTHLKm89QRjRBofHKVxvsMJz-p9QBowk/edit?usp=sharing)
