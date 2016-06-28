@@ -171,6 +171,11 @@ A tiny Drupal Module to simplify file paths in content. This helps prevent broke
 
 This module is not for hostmaster, but for the sites hosted under Aegir.
 
+### [Recurly Aegir](https://www.drupal.org/project/recurly_aegir)
+
+Automatically manages [Aegir](https://www.drupal.org/project/hostmaster) sites from another Drupal instance with [Recurly](https://www.drupal.org/project/recurly) subscriptions / recurring billing / e-commerce.  Communicates with an Aegir instance via [Aegir SaaS](#aegir-services).
+
+This Drupal 8+ module allows clients to pay for their hosted Drupal sites. When a new subscription notification from Recurly is received, a new site will be provisioned. If a subscription is [cancelled](https://dev.recurly.com/page/webhooks#section-canceled-subscription) or [expired](https://dev.recurly.com/page/webhooks#section-expired-subscription), the site will be disabled. If it gets [reactivated](https://dev.recurly.com/page/webhooks#section-reactivated-account) or [re-added](https://dev.recurly.com/page/webhooks#section-new-subscription), the site will be re-enabled. Sites can be deleted after subscription expiration if not renewed.
 
 Your extension here?
 --------------------
