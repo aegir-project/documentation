@@ -54,5 +54,5 @@ These people have made significant contributions to the project but do not yet h
 
 Sorry if your name isn't here and you have made significant contributions! Feel free to add it or contact us if you feel you have been forgotten...
 
-All contributors of Aegir's history can also be found on Ohloh.net's contributors page although that doesn't count patches that were sent in the Drupal.org issue queues.
+All contributors of Aegir's history can also be found on [Open Hub's Contributors page](https://www.openhub.net/p/aegirproject/contributors/summary) although that doesn't count patches that were sent in the Drupal.org issue queues.
 
