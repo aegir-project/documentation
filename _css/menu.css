@@ -1,0 +1,38 @@
+/* Hide the duplicate page title entry. */
+li.toctree-l3 > a,
+ul.subnav > li > span {
+  display: none;
+}
+/* Hide redirected pages */
+li > a[href="../help/contact/"] {
+  display: none;
+}
+
+/* Exceptions to the above, for second H1 headers on a page */
+li > a[href="#working-as-aegir-user"],
+li.toctree-l3 > a[href="#extracting-a-drupal-site-from-aegir"] {
+  display: inherit !important;
+}
+
+
+/* Indent 2nd-level placeholder pages.*/
+ul.subnav > li.toctree-l1 > a.current {
+  padding-left: 2.4em !important;
+}
+ul.subnav > li.toctree-l1.current > ul > li > a {
+  padding-left: 3.4em !important;
+}
+
+
+ul.subnav > ul.subnav,
+ul.subnav > ul.subnav > li {
+  margin-left: -1em;
+}
+
+ul.subnav > ul.subnav > li > a,
+ul.subnav > ul.subnav > li.current > a {
+  padding-left: 4.4em !important;
+}
+ul.subnav > ul.subnav > li.current > ul > li > a {
+  padding-left: 5.4em !important;
+}

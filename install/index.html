@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Install - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../_css/toc.css" rel="stylesheet">
+  <link href="../_css/menu.css" rel="stylesheet">
+  <link href="../_css/images.css" rel="stylesheet">
+  <link href="../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Install";
+    var mkdocs_page_input_path = "install.md";
+    var mkdocs_page_url = "/install/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Install</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#installation-guide">Installation Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#system-requirements">System Requirements</a></li>
+                
+                    <li><a class="toctree-l4" href="#debianubuntu">Debian/Ubuntu</a></li>
+                
+                    <li><a class="toctree-l4" href="#manual-installation">Manual Installation</a></li>
+                
+                    <li><a class="toctree-l4" href="#installation-trouble-shooting">Installation Trouble-shooting</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Install</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation-guide">Installation Guide</h1>
+<div class="toc">
+<ul>
+<li><a href="#installation-guide">Installation Guide</a><ul>
+<li><a href="#system-requirements">System Requirements</a><ul>
+<li><a href="#your-own-server">Your own server</a></li>
+<li><a href="#a-unix-based-operating-system">A Unix-based operating system</a></li>
+<li><a href="#web-server">Web server</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#database-server">Database server</a></li>
+<li><a href="#mail-transfer-agent">Mail transfer agent</a></li>
+<li><a href="#a-fully-qualified-domain-name-fqdn">A Fully Qualified Domain Name (FQDN)</a></li>
+<li><a href="#other-utilities-sudo-rsync-git-and-unzip">Other utilities: sudo, rsync, git and unzip</a></li>
+<li><a href="#no-conflicting-control-panels">No conflicting Control Panels</a></li>
+<li><a href="#requirements-of-drupal-distributions">Requirements of Drupal distributions</a></li>
+</ul>
+</li>
+<li><a href="#debianubuntu">Debian/Ubuntu</a><ul>
+<li><a href="#1-ensure-requirements-are-satisfied">1. Ensure requirements are satisfied</a></li>
+<li><a href="#2-add-project-repositories">2. Add project repositories</a></li>
+<li><a href="#3-add-archive-key-to-your-keyring">3. Add archive key to your keyring</a></li>
+<li><a href="#4-dns-configuration">4. DNS configuration</a></li>
+<li><a href="#5-optional-manual-installation-of-mysql">5. (Optional) Manual installation of MySQL</a></li>
+<li><a href="#6-optional-install-with-nginx">6. (Optional) Install with Nginx</a></li>
+<li><a href="#7-install-aegir">7. Install Aegir</a><ul>
+<li><a href="#71-custom-make-files">7.1. Custom make files</a></li>
+<li><a href="#72-custom-options">7.2 Custom options</a></li>
+</ul>
+</li>
+<li><a href="#8-troubleshooting-the-install">8. Troubleshooting the install</a></li>
+</ul>
+</li>
+<li><a href="#manual-installation">Manual Installation</a><ul>
+<li><a href="#1-review-system-requirements">1. Review System Requirements</a></li>
+<li><a href="#2-install-system-requirements">2. Install system requirements</a></li>
+<li><a href="#3-configure-system-requirements">3. Configure system requirements</a><ul>
+<li><a href="#31-create-the-aegir-user">3.1. Create the Aegir user</a></li>
+<li><a href="#32-webserver-configuration">3.2. Webserver configuration</a><ul>
+<li><a href="#321-apache-configuration">3.2.1. Apache configuration</a><ul>
+<li><a href="#3211-ubuntu-1404">3.2.1.1. Ubuntu 14.04+</a></li>
+</ul>
+</li>
+<li><a href="#322-nginx-configuration">3.2.2. Nginx configuration</a></li>
+</ul>
+</li>
+<li><a href="#33-php-configuration">3.3. PHP configuration</a></li>
+<li><a href="#34-sudo-configuration">3.4. Sudo configuration</a></li>
+<li><a href="#35-dns-configuration">3.5. DNS configuration</a></li>
+<li><a href="#36-database-configuration">3.6. Database configuration</a><ul>
+<li><a href="#361-os-specific-configurations">3.6.1. OS-specific configurations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-install-aegir-components">4. Install Aegir components</a><ul>
+<li><a href="#41-install-drush">4.1. Install drush</a></li>
+<li><a href="#42-stop-now-become-the-aegir-user">4.2. Stop! Now become the Aegir user</a></li>
+<li><a href="#43-install-provision">4.3. Install provision</a></li>
+<li><a href="#44-running-hostmaster-install">4.4. Running hostmaster-install</a><ul>
+<li><a href="#441-arch-linux-configuration">4.4.1. Arch Linux configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5-install-the-hosting-queue-daemon">5. Install the Hosting Queue Daemon</a><ul>
+<li><a href="#51-install-the-init-script-in-place">5.1. Install the init script in place</a></li>
+<li><a href="#52-setup-symlinks-and-runlevels">5.2. Setup symlinks and runlevels</a></li>
+<li><a href="#53-start-the-daemon">5.3. Start the daemon</a></li>
+</ul>
+</li>
+<li><a href="#6-checkpoint-finished">6. Checkpoint / Finished!</a></li>
+</ul>
+</li>
+<li><a href="#installation-trouble-shooting">Installation Trouble-shooting</a><ul>
+<li><a href="#verify-and-install-through-ssh">Verify and install through SSH</a></li>
+<li><a href="#namevirtualhost-4280-has-no-virtualhosts">NameVirtualHost *:80 has no VirtualHosts</a></li>
+<li><a href="#making-sure-it-works">Making sure it works</a></li>
+<li><a href="#access-by-the-servers-physical-ip-address">Access by the server's physical IP address</a></li>
+<li><a href="#centos-firewall-settings">CentOS firewall settings</a></li>
+<li><a href="#centos-cron-requires-restart">CentOS cron requires restart?!</a></li>
+<li><a href="#centos-aegirconf-permission-denied">CentOS aegir.conf permission denied</a></li>
+<li><a href="#solaris-cron-issues">Solaris cron issues</a></li>
+<li><a href="#drush-execution-path-issues">Drush execution path issues</a></li>
+<li><a href="#apc-issues">APC issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Aegir requires some special permissions to your server in order to automate
+some configurations. For example, when a new site is installed, the web server
+will be automatically configured (vhost) and restarted. Therefore Aegir cannot
+be installed on a shared hosting environment. Consult the <a href="#system-requirements">system
+requirements</a> to ensure your server(s) are up to the task.</p>
+<h2 id="system-requirements">System Requirements</h2>
+<p>A system capable of running Drupal</p>
+<p>The Aegir system is entirely Drupal based, and has the same base requirements that Drupal does (with the exception that it won't run on Windows). See more notes on Unix and LAMP/LEMP requirements below.</p>
+<h3 id="your-own-server">Your own server</h3>
+<p>The low level of access required to be able to configure and run this system is very far beyond what is commonly available to users with shared hosting. A VPS from any popular provider such as Linode, Rackspace, Slicehost, Amazon EC, etc. will do fine. You will need root access to the server and the server needs to be dedicated to Aegir.</p>
+<h3 id="a-unix-based-operating-system">A Unix-based operating system</h3>
+<p>Aegir must run on some flavour of UNIX, because the majority of functionality in this system occurs in the back-end, through command line scripting. There are also several features (such as symlinks), that are not available to users on Windows. There are no plans currently to add Windows support. See the operating system support page for more information.</p>
+<h3 id="web-server">Web server</h3>
+<p>You will need at least one dedicated web server, running Apache. We generally work with Apache 2. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide php-cgi or php-fpm (recommended) modules, you will need to install and run php-fpm server separately. You can find useful examples and tips in the third party Barracuda installer available at the barracuda project page.
+N.B.: This third party installer is not supported by the core Aegir developers, but you can find helpful community support at the boa group.</p>
+<p>See also <a href="#install-with-nginx">installing with Nginx</a>.</p>
+<h3 id="php">PHP</h3>
+<p>Aegir depends on Drush 6.5.0 or later, which requires PHP 5.3 or higher. You also need to have the command-line version of PHP to run Drush properly, and the MySQL extensions for PHP.</p>
+<h3 id="database-server">Database server</h3>
+<p>You will require a database server, obviously. Aegir currently only supports MySQL and MariaDB. It is preferable to use a dedicated (not shared-hosting) server since Aegir will create database users and will require the use of a MySQL root user.</p>
+<h3 id="mail-transfer-agent">Mail transfer agent</h3>
+<p>Aegir requires an MTA (Mail Transfer Agent) installed on your webserver in order to be able to install new sites to your new platform. If you don't have an MTA, the site installation will fail with message like "could not send email". Additional messages will show that site has been removed because of this problem. To remedy the situation simply install an MTA like sendmail, postfix, or exim and do the minimal configuration.</p>
+<h3 id="a-fully-qualified-domain-name-fqdn">A Fully Qualified Domain Name (FQDN)</h3>
+<p>For example, <code>aegir.example.com</code>. The hostname returned by the commands <code>hostname -f</code> and <code>uname -a</code> must resolve to the IP address of your server. After setting up your FQDN you must restart your server with a <code>reboot</code> command so your changes take effect. Note that newly created domain name usually take 24 to 48 hours to fully start working. This period, called propagation, is the projected length of time it takes for root name servers and cache records across the entire web to be updated with your website's DNS information.</p>
+<h3 id="other-utilities-sudo-rsync-git-and-unzip">Other utilities: sudo, rsync, git and unzip</h3>
+<p>Aegir installs itself via a Drush Make makefile that downloads via git if you want the bleeding edge code, or via wget if you want the latest official release. If you want the latest development version, and don't have the git program you will need to install it on the server.
+The jQueryUI library is used in the Aegir UI, unzip is required to extract it. Sudo is required to allow the aegir user the limited privilege to restart the webserver when required. Rsync is used to sync files to remote servers.</p>
+<h3 id="no-conflicting-control-panels">No conflicting Control Panels</h3>
+<p>Other popular control panels such as Plesk, cPanel etc, are designed to manage all aspects of Apache configuration and other areas that Aegir also is intended to be used for.
+Running Aegir alongside such control panels is not supported and very likely may cause you problems or difficulties installing or running Aegir. Filing bug reports that are caused by interference by another control panel will likely be closed unless the problem can be fixed without causing problems for other Aegir users. Proceed at your own risk!</p>
+<h3 id="requirements-of-drupal-distributions">Requirements of Drupal distributions</h3>
+<p>Some Drupal distributions, such as OpenAtrium, are specialized products that may contain unique prerequisites for optimal performance. Such examples may include raising the php-cli program's memory_limit to something higher than 64M.
+Please note that this is not a requirement of Aegir but of the distribution you are trying to install a site on. Thus the Aegir documentation may not officially 'require' such performance settings, but be aware that Aegir may report errors if the system was under-resourced to complete such a task.</p>
+<h2 id="debianubuntu">Debian/Ubuntu</h2>
+<p>These are the installation instructions that are recommended on Debian. Aegir dependencies (Apache, MySQL, PHP...) are also automatically installed.</p>
+<p>If you wish to install Debian packages over an existing manual install, it's possible. See <a href="../install/upgrade/#upgrades-with-debian-packages">the Debian upgrade procedures</a>.</p>
+<p>Debian packages are uploaded to http://debian.aegirproject.org/ shortly after a release. We eventually want to upload those packages to the official archives, but this will take some adaptation and time to sponsor the packages in.</p>
+<h3 id="1-ensure-requirements-are-satisfied">1. Ensure requirements are satisfied</h3>
+<p>Here's what you'll need to install Aegir on a Debian or Ubuntu system:</p>
+<ul>
+<li>Basic Linux system administration skills</li>
+<li>Root access to your server</li>
+<li>An up-to-date system and applications (<code>sudo aptitude update &amp;&amp; sudo aptitude safe-upgrade</code>)</li>
+</ul>
+<p>See <a href="#system-requirements">system-requirements</a></p>
+<h3 id="2-add-project-repositories">2. Add project repositories</h3>
+<p>Use this command to add the Aegir package "Software Source" repository to your system:</p>
+<pre><code>echo "deb http://debian.aegirproject.org stable main" | sudo tee -a /etc/apt/sources.list.d/aegir-stable.list
+</code></pre>
+<p>To install a customized Debian package, see the <a href="../community/release-process/debian-packaging/">developer instructions for the debian package</a>. Other distributions are available for courageous people that want to try development versions.</p>
+<p><strong>dev note</strong>: to install the development version of Aegir, you can use the <code>unstable</code> or <code>testing</code> distribution above.</p>
+<h3 id="3-add-archive-key-to-your-keyring">3. Add archive key to your keyring</h3>
+<p>This repository self-signs packages uploaded to it (and packages uploaded are verified against a whitelist of trusted uploaders) using OpenPGP (GnuPG, to be more precise).</p>
+<p>Use these commands to download and add the repository's PGP key, then update the package list on your system:</p>
+<pre><code>wget -q http://debian.aegirproject.org/key.asc -O- | sudo apt-key add -
+sudo apt-get update
+</code></pre>
+<h3 id="4-dns-configuration">4. DNS configuration</h3>
+<p>Aegir requires a properly configured "FQDN" (Fully Qualified Domain Name) be assigned to the machine. In practice, this means that the hostname returned by the <code>hostname -f</code> and <code>uname -n</code> shell commands should resolve to the IP address for this server, and vice versa, with the <code>resolveip</code> command (included with the mysql-server package).</p>
+<p>For Ubuntu, /etc/hosts should have entries that look like:</p>
+<pre><code>::1 host.example.com host ip6-localhost ip6-loopback
+127.0.0.1 host.example.com host localhost
+123.123.123.123 host.example.com host localhost
+</code></pre>
+<p>To set this up in a virtual machine (e.g. Virtualbox), here are the steps:</p>
+<ul>
+<li>Create a new VM</li>
+<li>Go to settings-&gt;network.  Enable Adapter 2, and set to "host-only"</li>
+<li>Install Ubuntu.  Set hostname as FQDN during install</li>
+<li>You may need to add the lines <code>auto eth1</code> and <code>iface eth1 inet dhcp</code> to /etc/network/interfaces</li>
+</ul>
+<p>If you have a virtual machine already setup and want to change the FDQN:</p>
+<ul>
+<li>change /etc/hostname using: <code>sudo hostname NEW_NAME</code></li>
+<li>change /etc/hosts using: <code>sudo nano /etc/hosts</code> and change name</li>
+<li>reboot and test <code>hostname -f</code>, <code>uname -n</code>, <code>resolveip NEW_NAME</code>, <code>resolveip IP</code></li>
+<li><a href="http://www.ducea.com/2006/08/07/how-to-change-the-hostname-of-a-linux-system/">YMMV - Your Mileage May Vary</a></li>
+</ul>
+<h3 id="5-optional-manual-installation-of-mysql">5. (Optional) Manual installation of MySQL</h3>
+<p>Please note that Ubuntu 12.04 LTS installs, by default, an insecure MySQL installation that contains an anonymous user grant, allowing anyone to login without a password. This breaks Aegir functionality.</p>
+<p>If you are running Ubuntu 12.04, you should install MySQL manually, and then ensure it is installed securely:</p>
+<pre><code>$ sudo apt-get install mysql-server
+$ sudo mysql_secure_installation
+</code></pre>
+<p>When running 'sudo mysql_secure_installation', answer 'Y' to 'Remove anonymous users?'</p>
+<pre><code>By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+</code></pre>
+<p>Now you can proceed with installing Aegir below.</p>
+<h3 id="6-optional-install-with-nginx">6. (Optional) Install with Nginx</h3>
+<p>If you want to use Nginx instead of Apache, you'll have to explicitely tell apt-get:</p>
+<pre><code>$ sudo apt-get install aegir3 nginx php5-fpm
+</code></pre>
+<p>This is because the package expects Apache2 by default.</p>
+<h3 id="7-install-aegir">7. Install Aegir</h3>
+<p>To install Aegir version 3, frontend and backend, use the following command:</p>
+<pre><code>$ sudo apt-get install aegir3
+</code></pre>
+<p>This will prompt you for the required information (MySQL password, Postfix configuration...) and go ahead with the install.</p>
+<p>During the Postfix configuration, the following options appear: "No configuration, Internet site, Internet with smarthost, Satellite system, Local only". That first text screen only allows to use the tab key to select "OK", and then the enter key to display a second screen where you can select one of the choices. The default is "Internet site", useful in most cases to enable the server to send email messages, for example to the admin.</p>
+<p>At the end of the installation, you will receive an email message or, if the user "aegir" has been assigned with a local email account during the installation, the file /var/mail/aegir will contain the message. It will include a one-time login to your new Aegir control panel, that is a URL to copy into your browser so that you can set the password for the "admin" user.</p>
+<h4 id="71-custom-make-files">7.1. Custom make files</h4>
+<p>If you have your own Drupal make file, you can go ahead with the above process, but change the make file to the one you want:</p>
+<pre><code>$ echo "aegir3-hostmaster aegir/makefile string /var/aegir/makefiles/aegir/aegir-custom.make | sudo debconf-set-selections
+$ sudo apt-get install aegir3
+</code></pre>
+<p>This allows you to specify the makefile path for your custom distribution of Aegir. To maintain these customizations, you'll need to ensure you do the same when upgrading.</p>
+<p>An example aegir-custom.make file could look like http://cgit.drupalcode.org/provision/tree/aegir-dev.make</p>
+<p>After installing Aegir, you can reinstall (WARNING, data is LOST) the front end (hostmaster), with following commands:</p>
+<pre><code>$ sudo rm -rf /var/aegir/hostmaster-\*.\*
+$ sudo su -s /bin/sh aegir -c "drush -y hostmaster-install --aegir_db_pass=$DB_PASSWORD --makefile=$MAKEFILE $DOMAIN"
+</code></pre>
+<p><code>su -s /bin/sh aegir -c "some command"</code> runs <code>some command</code> in the <code>/bin/sh</code> shell as user <code>aegir</code>.  <code>sudo</code> runs the <code>su</code> command as root - prompting for your user's password instead <code>su</code> asking for aegir's password.
+ Make sure you fil in the variables.</p>
+<h4 id="72-custom-options">7.2 Custom options</h4>
+<p>To create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option.</p>
+<pre><code>$ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
+</code></pre>
+<h3 id="8-troubleshooting-the-install">8. Troubleshooting the install</h3>
+<p>To make the install smoother, the install command is run without much debugging information, which can make diagnostics pretty hard. For this, there's a special environment variable you can set that will trigger debugging output. Install aegir with this:</p>
+<pre><code>$ env DPKG_DEBUG=developer sudo apt-get install aegir
+</code></pre>
+<p>You can build your own Debian packages from our repositories using <a href="../community/release-process/debian-packaging/">these instructions</a>.</p>
+<p>Also see the general <a href="../install/#installation-trouble-shooting">Installation Trouble-shooting</a> section below.</p>
+<h2 id="manual-installation">Manual Installation</h2>
+<p>This is the process you need to follow if Aegir doesn't have packages for your distribution. We currently provide <code>debian</code> packages and others should be coming, if you help! This manual assumes you are fairly familiar with the UNIX commandline interface, but should be possible to follow through if you copy and paste faithfully <strong>all</strong> steps of the procedure.</p>
+<p>A note on supported systems:</p>
+<p>These instructions provide example commands for a Debian-like distribution, but should be fairly easy to adapt to other environments. This document is meant as a canonical reference that should work on every supported platform. It can also be used for people porting Aegir to new platforms or installing on alien platform for which Aegir is not yet packaged.</p>
+<p>It currently contains special recommendations for CentOS, RHEL 6, Arch Linux and Solaris. Users of those platforms are also strongly encouraged to review the :doc:<code>common-problems</code> that occur on those platforms. Aegir is also known to be installable (and was developed partly on) Mac OS X, but that process is so obtuse that it has a <a href="">separate page</a> for the first part of the manual (up to Install Aegir components).</p>
+<p>Installing Aegir may seem daunting at first (which is why we provide automated installs through packages), but once you get around it, it's fairly simple.  Note that these instructions setup a complete Aegir system. If you want to only setup a new remote web/db server, it should be sufficient to install the system requirements (step 1), configure them (step 2) and follow the <a href="">Remote server how-to</a>.</p>
+<h3 id="1-review-system-requirements">1. Review System Requirements</h3>
+<p>See the <a href="#system-requirements">System Requirements</a></p>
+<h3 id="2-install-system-requirements">2. Install system requirements</h3>
+<p>To install the required components, use your system's package manager. For Debian based systems this would look like:</p>
+<pre><code>$ sudo apt-get install apache2 php5 php5-cli php5-gd php5-mysql php-pear postfix sudo rsync git-core unzip
+</code></pre>
+<p><em>Note</em>: replace <code>apache2</code> with <code>nginx php5-fpm</code> to install nginx on Ubuntu Precise or newer.</p>
+<h3 id="3-configure-system-requirements">3. Configure system requirements</h3>
+<h4 id="31-create-the-aegir-user">3.1. Create the Aegir user</h4>
+<p>The provision framework of Aegir requires that the scripts run as a non-root system account, to ensure that it can correctly set the file permissions on the hosted files.</p>
+<p>Also to ensure that the file permissions of the hosted sites are always as safe as can be, and especially to make sure that the web server does not have the ability to modify the code of the site, the configured system account needs to be a member of the web server group, in order to be able to correctly set the file permissions.</p>
+<p>While you can choose another username, most aegir documentation assumes the Aegir user is <code>aegir</code>, its home directory is <code>/var/aegir</code>
+and the webserver group is <code>www-data</code>.</p>
+<pre><code>$ sudo adduser --system --group --home /var/aegir aegir
+$ sudo adduser aegir www-data    #make aegir a user of group www-data
+</code></pre>
+<h4 id="32-webserver-configuration">3.2. Webserver configuration</h4>
+<p>Aegir supports two popular web servers, Apache and Nginx.</p>
+<h5 id="321-apache-configuration">3.2.1. Apache configuration</h5>
+<p>Aegir assumes a few Apache modules are available on the server, and generates its own configuration files. The way we enable this is by symlinking a single file which contains all the configuration necessary. In Debian-based systems, you should symlink this file inside <code>/etc/apache2/conf.d</code> ior <code>/etc/apache2/conf-enabled</code>  that will be parsed on startup or alternatively you can place include that file in your apache.conf/httpd.conf. We prefer the former. In other systems there are similar ways to accomplish this. Consult your OS's documentation if unsure.</p>
+<p>If you are on a Debian-based system, you will also need to enable the mod_rewrite module manually.</p>
+<p>Run the following shell commands as root. First, configure Apache to enable RewriteEngine:</p>
+<pre><code> $ a2enmod rewrite
+</code></pre>
+<p>Finally, create a symlink from an apache configuration file to a folder within the /var/aegir/:</p>
+<pre><code> $ ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
+</code></pre>
+<h6 id="3211-ubuntu-1404">3.2.1.1. Ubuntu 14.04+</h6>
+<p>Ubuntu 14.04 departs from Debian and previous Ubuntu Apache setup in that it doesn't use <code>/etc/apache2/conf.d</code> any more and better separates out <code>sites-enabled</code> from <code>conf-enabled</code> configurations. So:</p>
+<pre><code> $ ln -s /var/aegir/config/apache.conf /etc/apache2/conf-available/aegir.conf
+ $ a2enconf aegir
+</code></pre>
+<p>Do not reload/restart Apache if prompted to after running these commands, it will fail.</p>
+<h5 id="322-nginx-configuration">3.2.2. Nginx configuration</h5>
+<p>(If you just succeeded in installing Apache, please skip this section.)</p>
+<p>Aegir assumes standard Nginx configuration is available on the server, and generates its own configuration files. The way we enable this is by symlinking a single file which contains all the configuration necessary. In Debian-based systems, you should symlink this file inside <code>/etc/nginx/conf.d</code> that will be parsed on startup.</p>
+<p>Please make sure your nginx installation is up and running before continuing. On Ubuntu 12.04 Server, for instance, you must edit /etc/nginx/nginx.conf and uncomment the line "types_hash_max_size 2048;" in order for nginx to start successfully.</p>
+<pre><code>$ sudo ln -s /var/aegir/config/nginx.conf /etc/nginx/conf.d/aegir.conf
+</code></pre>
+<p>Do not reload/restart Nginx after running these commands, it will fail.</p>
+<p>The installer script creates the configuration file referenced by the newly created symlink.</p>
+<h4 id="33-php-configuration">3.3. PHP configuration</h4>
+<p>Some complex installation profiles or distributions require a PHP memory limit that is higher than the default. To avoid common errors when installing sites on some distributions, the PHP command line tool should be configured to use 192Mb of RAM.</p>
+<p>Change the memory_limit directive in /etc/php5/cli/php.ini to read:</p>
+<pre><code> memory_limit = 192M      ; Maximum amount of memory a script may consume (192MB)
+</code></pre>
+<p>Most modern Drupal sites require around 96M or even 128M of RAM for certain operations. This is far more than what is provided by the default PHP configuration.</p>
+<p>Change the memory_limit directive in /etc/php5/apache2/php.ini to read:</p>
+<pre><code>memory_limit = 128M      ; Maximum amount of memory a script may consume (128MB)
+</code></pre>
+<p>If your distributions require more memory than these limits, then use some common sense and update it as appropriate to suit your individual needs.</p>
+<h4 id="34-sudo-configuration">3.4. Sudo configuration</h4>
+<p>Next, we need to give the Aegir user permission to execute the command to restart the Web server without entering a password.  Let's create a file to do so.</p>
+<pre><code>$ sudo --preserve-env visudo --file=/etc/sudoers.d/aegir
+</code></pre>
+<p>Add these lines:</p>
+<pre><code>Defaults:aegir  !requiretty
+aegir ALL=NOPASSWD: /usr/sbin/apache2ctl # for Apache
+aegir ALL=NOPASSWD: /etc/init.d/nginx    # for Nginx
+</code></pre>
+<p>The <em>visudo</em> command should ensure safe permissions on the file after saving.  If not, change them:</p>
+<pre><code>$ sudo chmod 0440 /etc/sudoers.d/aegir
+</code></pre>
+<p>Note - the path to your apache2ctl program may differ from this example. On some systems it may also be called 'apachectl' instead of apache2ctl. Adjust to suit your own requirements.</p>
+<h4 id="35-dns-configuration">3.5. DNS configuration</h4>
+<p>Aegir requires a properly configured "FQDN" (Fully Qualified Domain Name) be assigned to the machine. In practice, this means that the hostname returned by the <code>hostname</code> and <code>uname -n</code> shell commands should resolve to the IP address for this server, and vice versa.</p>
+<p>If you only intend to use Aegir on a single server, it is acceptable for the resolved IP address to be the '127.0.0.1' loopback address.</p>
+<p>If you intend to manage multiple servers using Aegir, you will need to make sure that the IP address is the public IP of this server.</p>
+<p>You can add multiple entries to your /etc/hosts file for testing purposes, for example:</p>
+<pre><code> 127.0.0.1 aegir.example.com example.com test1.example.com test2.example.com test3.example.com
+</code></pre>
+<p>Then you can use test1.example.com to create your first site.</p>
+<h4 id="36-database-configuration">3.6. Database configuration</h4>
+<p>Aegir supports MySQL right now. It is best to install the MySQL server using your Linux distribution's package manager.</p>
+<pre><code>$ sudo apt-get install mysql-server
+</code></pre>
+<p>To make sure that the Aegir backend, and all the possible web servers can reach your database server, you need to configure mysql to listen on all the public IP addresses available to it.</p>
+<p>Again, as root, edit the MySQL configuration file <code>/etc/mysql/my.cnf</code> configuration line to comment out by placing a # at the beginning of the line as follow:</p>
+<p>Before:</p>
+<pre><code>bind-address        = 127.0.0.1
+</code></pre>
+<p>After:</p>
+<pre><code># bind-address      = 127.0.0.1
+</code></pre>
+<p>Without this line commented out, MySQL will listen only on localhost for database connection requests.</p>
+<p>Now you need to restart mysql, to clear any caches.</p>
+<pre><code> $ sudo /etc/init.d/mysql restart
+</code></pre>
+<p>The installer will prompt you for your MySQL root user password. The root user will be used to make administrative tasks such as creating new databases, and granting and revoking access to those databases for sites.</p>
+<p>Even though MySQL is now listening on all IP's, it will not allow invalid users to connect to the databases, without the correct user accounts configured.</p>
+<p>If you are concerned about MySQL being accessible in this way, you can also configure your firewall to only allow incoming connections from certain addresses. This is outside the scope of this document however.</p>
+<p>Note that Aegir will ask you for your MySQL root password. If you do not want to use your regular root password for Aegir, you will need to create another root account for Aegir using a MySQL command like:</p>
+<pre><code> mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'aegir_root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+</code></pre>
+<p>Note: If you are running your Aegir databases on a remote DB server, you will want to create this aegir_root user. The install will often fail if you're trying to use the root user on a remote database. See <a href="">this issue</a> for details.</p>
+<h5 id="361-os-specific-configurations">3.6.1. OS-specific configurations</h5>
+<p>NOTE : If you are running either Ubuntu 12.04 LTS, RHEL 6 or Arch Linux, you should still install MySQL in the same way as above.  However, once done, you must now remove the anonymous, passwordless login that those platforms creates by default.</p>
+<pre><code>$ sudo mysql_secure_installation
+</code></pre>
+<p>Otherwise, Aegir will fail to install and work at all. See <a href="">this FAQ entry</a>.</p>
+<h3 id="4-install-aegir-components">4. Install Aegir components</h3>
+<p>Next step is to install the Aegir software components themselves, that is: drush, provision and hostmaster.</p>
+<h4 id="41-install-drush">4.1. Install drush</h4>
+<p>Before installing Aegir proper, you first need to install Drush. See then Drush <a href="http://docs.drush.org/en/master/install/">installation documentation</a></p>
+<h4 id="42-stop-now-become-the-aegir-user">4.2. Stop! Now become the Aegir user</h4>
+<p>The remaining of this manual assumes you are running as the Aegir user. Things will go very wrong if you do not change your shell credentials to become that user.</p>
+<pre><code>$ sudo -u aegir -s -H
+</code></pre>
+<h4 id="43-install-provision">4.3. Install provision</h4>
+<p>Once Drush is installed, install the latest recommended Provision release.</p>
+<pre><code>$ drush dl --destination=/var/aegir/.drush provision-7.x-3.0
+$ drush cache-clear drush
+</code></pre>
+<h4 id="44-running-hostmaster-install">4.4. Running hostmaster-install</h4>
+<p>Once you have downloaded drush and provision, you can install all other aegir components using the hostmaster-install command:</p>
+<pre><code> $ drush hostmaster-install
+</code></pre>
+<p>You will be prompted for the required information if not provided on the commandline. See the inline help for the available options:</p>
+<pre><code> $ drush help hostmaster-install
+</code></pre>
+<p>For example, to install the frontend on Nginx, use:</p>
+<pre><code> $ drush hostmaster-install --http_service_type=nginx
+</code></pre>
+<p>It is imperative that you provide a valid FQDN to the installer. This is used for database GRANTs. Remote web servers depend on the FQDN being resolvable in order to connect back to your Aegir master server if it is used as your database server for managed sites.</p>
+<p>Upon completion of the installation, the traditional Drupal 'Welcome' e-mail will be sent to the e-mail address specified by <code>--client_email=(your e-mail)</code> or if not provided as a command line switch, the address prompted by the installer process. This e-mail address will also be used as the default e-mail address of the first user and client in Aegir, but can be changed later.</p>
+<p>There are other commandline switches available, documented in <code>drush help hostmaster-install</code>, as usual.</p>
+<h5 id="441-arch-linux-configuration">4.4.1. Arch Linux configuration</h5>
+<pre><code>$ drush hostmaster-install --web_group=http
+</code></pre>
+<h3 id="5-install-the-hosting-queue-daemon">5. Install the Hosting Queue Daemon</h3>
+<p>For Aegir 3.x installs, using the Hosting Queued Daemon (hosting_queued) is highly recommended.</p>
+<p>These instructions will install the daemon to run as a regular service in /etc/init.d/. Instructions will vary according to platforms, but the following should work in Debian.</p>
+<h4 id="51-install-the-init-script-in-place">5.1. Install the init script in place</h4>
+<pre><code>$ sudo cp &lt;hostmaster_platform_root&gt;/profiles/hostmaster/modules/aegir/hosting/queued/init.d.example /etc/init.d/hosting-queued
+</code></pre>
+<h4 id="52-setup-symlinks-and-runlevels">5.2. Setup symlinks and runlevels</h4>
+<pre><code>$ sudo update-rc.d hosting-queued defaults
+</code></pre>
+<h4 id="53-start-the-daemon">5.3. Start the daemon</h4>
+<pre><code>$ sudo /etc/init.d/hosting-queued start
+</code></pre>
+<h3 id="6-checkpoint-finished">6. Checkpoint / Finished!</h3>
+<p>At this point, you have checked out all the code and setup your basic Drupal system (Drupal core, hosting, hostmaster and eldir) that will be the Aegir frontend and the backend system (provision and drush). Your filesystem layout should look something like this:</p>
+<pre><code> /var/aegir/hostmaster-3.x/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/modules/contrib/admin_menu/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/modules/contrib/views/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/modules/aegir/hosting/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/modules/aegir/hosting_git/
+ /var/aegir/hostmaster-3.x/profiles/hostmaster/themes/eldir/
+ /var/aegir/hostmaster-3.x/sites/aegir.example.com/
+ /var/aegir/config/server_master/apache.conf
+ /var/aegir/config/server_master/apache/conf.d/
+ /var/aegir/config/server_master/apache/vhost.d/
+ /var/aegir/config/server_master/apache/platform.d/
+ /var/aegir/backups/
+ /var/aegir/.drush/provision/
+</code></pre>
+<p>Variations on this are acceptable, but you are better to stick with the defaults if you really want to get through this.</p>
+<p>The installation will provide you with a one-time login URL to stdout or via an e-mail. Use this link to login to your new Aegir site for the first time.</p>
+<p>For troubleshooting this process and resulting install, see the <a href="#installation-trouble-shooting">Installation Trouble-shooting</a> section.</p>
+<p>You may also want to read on with <code>what you can do with Aegir</code> now that it is installed.</p>
+<h2 id="installation-trouble-shooting">Installation Trouble-shooting</h2>
+<h3 id="verify-and-install-through-ssh">Verify and install through SSH</h3>
+<p>Since Aegir has multi-server support, it is possible that you have a misconfigured "FQDN" and that aegir then tries to connect to the local server as a remote server. To check if you have a misconfigured server, run the following commands:</p>
+<pre><code> $ resolveip `uname -n`
+</code></pre>
+<p>If the command returns your IP address, you are all set. If it returns an error you will need to edit your <code>/etc/hosts</code> file.</p>
+<p>First line of this file looks like:</p>
+<pre><code> 127.0.0.1  localhost
+</code></pre>
+<p>Simply add all domains you want to this line. e.g:</p>
+<pre><code> 127.0.0.1  localhost aegir.example.com example.com
+</code></pre>
+<h3 id="namevirtualhost-4280-has-no-virtualhosts">NameVirtualHost *:80 has no VirtualHosts</h3>
+<p>It does not hurt anything, but it can be annoying in your logs. This may disappear as soon as you define your first virtual site using Aegir. If it does not, you most likely have a second NameVirtualHost statement in your configuration someplace other than in the Aegir configurations.</p>
+<p>If you are on a Debian system, that is usually a configuration fragment in /etc/apache2/ports.conf or in a fragment symbolically linked in /etc/apache2/sites-enabled and it is safe to comment out any NameVirtualHost statements you find there as this really is a large part of the job you have asked Aegir to do for you.</p>
+<p>Once those are commented out, the message should disappear.</p>
+<h3 id="making-sure-it-works">Making sure it works</h3>
+<p>Your new Aegir server will be installed with a single site named the way you specified in your install script. That's great, but you may have more paths to that same server.</p>
+<p>When you try to browse to your server for the first time from a non- localhost browser you may get an addressing issue. If you do, make sure that you actually have the server defined in DNS and that the DNS server was reloaded. If it was reloaded and you use slave servers, make sure that the serial number in the zone file was incremented so that the slaves automatically reload.</p>
+<p>If you already have multiple URLs in your DNS which resolve to the same Aegir, you should check them. For instance: if your DNS resolves both aegir.example.com and sitecontrol.example.com to your new Aegir server's IP, you need to make sure that both are accommodated. If they will both get the same physical hostmaster site, one should be set up as an alias to the other. If they are indeed going to be separate sites you will have to create a new site node with the other name as a virtual site.</p>
+<h3 id="access-by-the-servers-physical-ip-address">Access by the server's physical IP address</h3>
+<p>Another "gotcha" that you may run into is http access using the actual IP itself. Remember that the IP is not picked up by the site vhost and will not match a ServerName or ServerAlias - so it gets picked up by the default vhost. This is just standard apache stuff, nothing Aegir or Drupal specific here, but quite the annoyance and a potential problem.</p>
+<p>You can easily work around it by simply adding the IP as a Site Alias in the site node in either the Aegir site (or another site that you may have defined which you would prefer the IP to address).</p>
+<p>You can tell if you have the IP problem by simply pointing your browser to the server by IP as http://999.999.999.999/ and seeing what comes up. If you get an install screen, you have the problem. You certainly do not want that install screen getting executed!</p>
+<p>The good news is that fixing it is easy.</p>
+<p>Simply log into Aegir, click on Sites, click on the site name that you want the IP to address, click on Edit and scroll down to Domain Aliases. Put the IP into the box, click on the Redirect checkbox so that Aegir instructs Apache to do a rewrite to the real domain name, and finally click Save.</p>
+<p>If you do not have the Domain Aliases entry box, you need to turn that feature on. In that case, go to your administration menu at the top of the page, point to Hosting and then click on Features. Click the checkbox for Site Aliasing and then Save Configuration. The Aliases box will now appear when you edit a site.  There is excellent information about the site alias feature in <a href="http://community.aegirproject.org/node/60">this handbook page</a> with much more detail.</p>
+<p>After the Verify job completes you should test your server again. Now when you address the server by it's IP address the URL should automatically change to the site you selected and the install screen never appears.</p>
+<h3 id="centos-firewall-settings">CentOS firewall settings</h3>
+<p>You may need to adjust CentOS's firewall settings to allow HTTP traffic on port 80. If you installed CentOS with a UI, enable "Firewall settings -- WWW (HTTP)".</p>
+<p>Alternatively, another solution may be to edit /etc/sysconfig/iptables and add a rule accepting traffic on the relevant interface on port 80.</p>
+<p>Afterwards, you can restart the firewall with this command:</p>
+<pre><code>$ sudo service iptables restart
+</code></pre>
+<h3 id="centos-cron-requires-restart">CentOS cron requires restart?!</h3>
+<p>Also, in some configurations, it seems necessary to restart crond for the user crontab changes to take effect (very bizarre). For that, use:</p>
+<pre><code>$ sudo service crond restart
+</code></pre>
+<p>See https://www.drupal.org/node/632308 if you have more information about this issue.</p>
+<h3 id="centos-aegirconf-permission-denied">CentOS aegir.conf permission denied</h3>
+<p>When trying to restart httpd, you may receive:</p>
+<pre><code>Starting httpd: httpd: Syntax error on line 209 of /etc/httpd/conf/httpd.conf: Could not open configuration file
+/etc/httpd/conf.d/aegir.conf: Permission denied
+</code></pre>
+<p>Check your SELinux settings. If enabled, you can run the following command on the aegir.conf file in
+/var/aegir/config/server_master directory:</p>
+<pre><code>$ sudo chcon -t httpd_config_t apache.conf
+</code></pre>
+<p>Alternatively, you can disable SELinux completely if you desire. Both options will result in removing the permisson denied error.</p>
+<p>You can see <a href="https://www.drupal.org/node/1286926#comment-5028062">this comment</a> for a little more info.</p>
+<p>Try the following if nothing else works:</p>
+<pre><code>$ sudo setenforce permissive
+</code></pre>
+<p>See <a href="http://wiki.centos.org/HowTos/SELinux">this doc</a> to make the change permanent.</p>
+<h3 id="solaris-cron-issues">Solaris cron issues</h3>
+<p>I had numerous problems setting up a proper cron job, as Solaris' crond seems pretty anal about what it accepts. The only way I could get it to work was to create a wrapper shell script that would be called using the simplest cron tab.</p>
+<p>Crontab entry:</p>
+<pre><code>* * * * * /var/aegir/dispatch.sh
+</code></pre>
+<p>Content of dispatch.sh:</p>
+<pre><code>#!/usr/bin/bash
+
+HOME=/var/aegir
+LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:/usr/lib/sparcv9:/opt/mysql/mysql/lib:/usr/sfw/lib:/usr/sfw/lib/gcc:/opt/sfw/lib
+PATH=/usr/bin:/opt/mysql/mysql/bin:/usr/sfw/bin:/opt/sfw/bin:/opt/SUNWspro/bin:/usr/local/bin:/opt/csw/bin
+
+export HOME
+export LD_LIBRARY_PATH
+export PATH
+
+php '/var/aegir/drush/drush.php' --php=/usr/local/bin/php '@hostmaster' hosting-dispatch`
+</code></pre>
+<h3 id="drush-execution-path-issues">Drush execution path issues</h3>
+<p>Solaris (and maybe others) suffers from the dreaded execution issues of drush:</p>
+<ul>
+<li>https://www.drupal.org/node/637574</li>
+<li>https://www.drupal.org/node/586466</li>
+</ul>
+<p>Those can be worked around by hardcoding the --php executable on the commandline path. Adding the proper shebang ( <code>#!/usr/local/bin/php</code>, for example) header and using a proper PATH that includes the PHP executable also helps.</p>
+<h3 id="apc-issues">APC issues</h3>
+<p>If you are having trouble running APC with Aegir, try downgrading to APC 3.1.4. This can be achieved by the following:</p>
+<pre><code>sudo pecl uninstall apc
+sudo pecl install apc-3.1.4
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="upgrade/" class="btn btn-neutral float-right" title="Upgrade">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../quick-start/" class="btn btn-neutral" title="Quick start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../quick-start/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="upgrade/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

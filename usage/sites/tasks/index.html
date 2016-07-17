@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Site tasks - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Site tasks";
+    var mkdocs_page_input_path = "usage/sites/tasks.md";
+    var mkdocs_page_url = "/usage/sites/tasks/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Site tasks</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#site-specific-aegir-tasks">Site-specific Aegir tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#installing-a-new-site">Installing a new site</a></li>
+                
+                    <li><a class="toctree-l4" href="#resetting-site-password">Resetting site password</a></li>
+                
+                    <li><a class="toctree-l4" href="#migratingupgrading-sites">Migrating/upgrading sites</a></li>
+                
+                    <li><a class="toctree-l4" href="#cloning-sites">Cloning sites</a></li>
+                
+                    <li><a class="toctree-l4" href="#disabling-and-enabling-sites">Disabling and Enabling sites</a></li>
+                
+                    <li><a class="toctree-l4" href="#backup-and-restore">Backup and Restore</a></li>
+                
+                    <li><a class="toctree-l4" href="#deleting-sites">Deleting sites</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Sites &raquo;</li>
+        
+      
+    
+    <li>Site tasks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="site-specific-aegir-tasks">Site-specific Aegir tasks</h1>
+<div class="toc">
+<ul>
+<li><a href="#site-specific-aegir-tasks">Site-specific Aegir tasks</a><ul>
+<li><a href="#installing-a-new-site">Installing a new site</a><ul>
+<li><a href="#the-site-form">The Site form</a></li>
+<li><a href="#installing-the-site">Installing the site</a></li>
+</ul>
+</li>
+<li><a href="#resetting-site-password">Resetting site password</a></li>
+<li><a href="#migratingupgrading-sites">Migrating/upgrading sites</a><ul>
+<li><a href="#how-to-migrate-a-site">How to migrate a site</a><ul>
+<li><a href="#enabling-the-feature">Enabling the feature</a></li>
+<li><a href="#migrating-a-site">Migrating a site</a></li>
+<li><a href="#upgrades-warnings-errors">Upgrades, warnings, errors?</a></li>
+</ul>
+</li>
+<li><a href="#the-migration-process">The migration process</a></li>
+<li><a href="#potential-errors">Potential errors?</a></li>
+<li><a href="#migration-tips">Migration Tips</a></li>
+</ul>
+</li>
+<li><a href="#cloning-sites">Cloning sites</a><ul>
+<li><a href="#enabling-clone">Enabling Clone</a></li>
+<li><a href="#cloning-a-site">Cloning a site</a></li>
+<li><a href="#the-cloning-process">The cloning process</a></li>
+</ul>
+</li>
+<li><a href="#disabling-and-enabling-sites">Disabling and Enabling sites</a><ul>
+<li><a href="#how-to-disable-a-site">How to Disable a site</a></li>
+<li><a href="#how-to-enable-a-site">How to Enable a site</a></li>
+<li><a href="#disabling-before-deleting">Disabling before deleting</a></li>
+</ul>
+</li>
+<li><a href="#backup-and-restore">Backup and Restore</a><ul>
+<li><a href="#backing-up">Backing up</a></li>
+<li><a href="#restoring-from-a-backup">Restoring from a backup</a></li>
+<li><a href="#the-restore-process">The restore process</a></li>
+<li><a href="#automatic-backups-and-purge">Automatic backups and purge</a></li>
+</ul>
+</li>
+<li><a href="#deleting-sites">Deleting sites</a><ul>
+<li><a href="#disable-the-site-first">Disable the site first</a></li>
+<li><a href="#delete-without-disabling">Delete without Disabling</a></li>
+<li><a href="#the-deletion-process">The deletion process</a></li>
+<li><a href="#manually-deleting-the-site">Manually deleting the site</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Aegir provides a number of tasks that can be run on sites. Below, we'll look at
+the most common ones that ship with Aegir.</p>
+<h2 id="installing-a-new-site">Installing a new site</h2>
+<p>Creating a new website using Aegir is really, really easy, and is probably one of the most exciting aspects of Aegir. The very idea of clicking a button and suddenly being able to visit a new site may even be the prospect that drove you to installing Aegir in the first place.</p>
+<p>To create a site you must have created a Platform first, which is the codebase, typically a copy of Drupal core, on which to place your new site. Read the Platform documentation if you have not yet completed this stage.</p>
+<h3 id="the-site-form">The Site form</h3>
+<p>Much like your Platform, a site is represented as a node in the Aegir frontend. To create a new site, you must create a new Site node.</p>
+<p>The site node is a form requiring various attributes to be filled out in order to accurately advise the Aegir system about what kind of site you wish to create. These fields commonly are:</p>
+<ul>
+<li><strong>Domain name</strong>: The site name. This becomes the title of the new Site node.</li>
+<li><strong>Client</strong>: The client or owner of this site.</li>
+<li><strong>Install Profile</strong>: The installation profile to use to install this site. This has a dramatic effect on the end result of your site.</li>
+<li><strong>Platform</strong>: The platform to install the site on. The list of available platforms is based on what profile you choose above (in other words, which platforms support that installation profile). The choice of platform also implies which web server hosts that platform; so this is why 'web server' is not a selectable option in the form.</li>
+<li><strong>Language</strong>: The language to install the site with. This is dependent on the profile or platform chosen.</li>
+<li><strong>Database server</strong>: The database server to install the database on.</li>
+</ul>
+<p>Below is an example of the site form.</p>
+<p><img alt="Site form" src="../../../_images/site-form.png" /></p>
+<h3 id="installing-the-site">Installing the site</h3>
+<p>Once you have filled out the site form per your requirements, click Save to submit the form. An 'Install' task is automatically spawned and added to the task queue for the dispatcher to execute.</p>
+<p>The backend does the hard work of essentially completing a standard Drupal installation automatically. It creates a database and database user for the site, executes the Drupal installation procedure, populates the database, and generates a web server virtualhost configuration file for the site (Apache or NginX depending on your environment). In the event that the platform is located on a remote web server, the data is synced across from the main Aegir site to the remote server.</p>
+<p>Finally, it restarts the HTTP service to load the new site's virtualhost into the HTTP service's runtime environment.</p>
+<p>A traditional 'welcome' e-mail containing the one-time login link is sent to the e-mail address of the 'Client' who owns this site. As well as that, the login link is generated and displayed on the new site node view (see below).</p>
+<p><img alt="Site view" src="../../../_images/site-view.png" /></p>
+<p>As you can see above, the successful installation of the site has provided a series of tasks available to be performed against this site. This task block is similar in appearance to the Task Queue block we previously discussed, but rather than showing a list of tasks either run, queued or processing, it instead displays the list of potential tasks that may be run for this site only.</p>
+<p>We will discuss these tasks and more in the following sections.</p>
+<h2 id="resetting-site-password">Resetting site password</h2>
+<p>The 'Reset password' task is a simple one: it allows you to generate a new one-time login URL for a site.</p>
+<p><img alt="Login link" src="../../../_images/login-link.png" /></p>
+<p>The one-time login URL is bound to the account of the admin user (uid 1) of a site. It cannot be used to reset the password of another user on the site.</p>
+<p>This can be handy in cases where the password for the admin user of a site has been forgotten. The 'Reset password' task is re-runnable and provides a convenient method of re-gaining access to a website from within Aegir.</p>
+<p>In normal situations, viewing a site node shows a 'Go to' clickable link that takes the user to the site in question.</p>
+<p>When the Reset password task has been run on a site, the 'Go to' link automatically gets changed to become a 'Login to' link that is the one-time login URL.</p>
+<p>Once the one-time login URL has been clicked, this link returns to being a 'Go to' link.</p>
+<h2 id="migratingupgrading-sites">Migrating/upgrading sites</h2>
+<p>One of the most powerful features of Aegir is the way it can help you to upgrade large numbers of websites safely.</p>
+<p>For example, you may have dozens of sites hosted on a drupal 7.41 codebase. But suddenly the 7.42 release comes out with vital security fixes. Previously you'd have to go to each site, back up the files and database, upload the new codebase, run update.php, check everything worked and then onto the next site.</p>
+<p>With Aegir you simply click a button in the frontend and it handles everything. This is called 'migrating' sites in Aegir terminology, because it might be used in more cases than simply upgrading the main codebase. For example you may have different 'platforms' with different mixes of contrib modules and themes and charge clients for tiers of 'basic', 'advanced' and 'gold' packages. When they choose to move from basic to advance, you simply migrate their site.</p>
+<p>Other examples of using Migrate include:</p>
+<ul>
+<li>moving a standard Drupal site to a Pressflow platform for performance enhancements</li>
+<li>renaming a site (giving it a new URL entirely)</li>
+<li>the Clone feature (discussed in later chapters) is a subsidiary of Migrate, except it doesn't move but copy the site.</li>
+</ul>
+<h3 id="how-to-migrate-a-site">How to migrate a site</h3>
+<h4 id="enabling-the-feature">Enabling the feature</h4>
+<p>By default, Migrate is not enabled in Aegir after a fresh installation, as it is an optional feature. This means that the 'Migrate' button is not immediately present in the list of available tasks for a site.</p>
+<p>To enable the Migrate feature, simply go to /admin/hosting/features and check the Migrate feature. Submit the form and then return to the site node, and you'll see that the Migrate task is now available.</p>
+<h4 id="migrating-a-site">Migrating a site</h4>
+<p>In the Aegir frontend, click on the website that you want to migrate. As per usual, in the 'Site view' you are presented with some summary information about the site, as well as a list of available tasks. Click the 'Run' button for the 'Migrate' task. A modalframe dialog will appear in your browser.</p>
+<p><img alt="Migrate form" src="../../../_images/migrate-form.png" /></p>
+<p>The Migrate form has several options. These are:</p>
+<ul>
+<li><strong>Domain name</strong> -- This is already the domain of the existing site. If you are intending to simply rename the site (give it a new URL altogether), you can simply change this field and leave the target platform be the 'current platform'. This will make the site accessible under the new URL.</li>
+<li><strong>Platform selection</strong> -- A radio selection of available platforms on the Aegir system. Certain platforms will be un-selectable. This is because they contain 'Errors' - that is, they contain versions of packages (modules, libraries or themes) that are of an older version than that of the original platform. You cannot upgrade a site to older versions of the same package.</li>
+</ul>
+<h4 id="upgrades-warnings-errors">Upgrades, warnings, errors?</h4>
+<p>What's this about upgrades, warnings and errors on each potential platform to migrate the site to?</p>
+<p>Up until now you might be forgiven for thinking that Aegir is simply automating the install of sites and creating Apache vhosts and databases.</p>
+<p>The truth is, Aegir actually is a much more advanced tool than that. It keeps a running registry in its database of your Platforms and Sites and what modules, themes, libraries and install profiles are available on platforms and installed on sites.</p>
+<p>Not only does it keep track of what these packages are, but it also keeps track of what version of a package is installed (say, Views 6.x-2.11), and whether it is actually an enabled module or not.</p>
+<p>The Migrate task, despite its name, is the tool for upgrading your site, because the Migrate code actually invokes the command <code>drush updatedb</code> in the backend, automatically. drush updatedb is the equivalent of running <code>/update.php</code> in your browser against your site.</p>
+<p>In this way, when the time comes (and it always does) to Migrate your site, Aegir is able to intelligently analyse the available platforms on the system and make a sane judgement on where you can upgrade your site to. The logic is as follows:</p>
+<ol>
+<li>Current platform has module X, schema version 6002 and 6003</li>
+<li>Site module has module X, schema version 6003 installed</li>
+<li>Target platform A has module X, schema version 6002. Site cannot be upgraded to an older schema version. An error.</li>
+<li>Target platform B does not have module X at all. Theoretically this is still a possible upgrade, but module X will probably be disabled by Drupal's upgrade logic during the process. This is a warning.</li>
+<li>Target platform C has module X, schema version 6003. Site is upgradeable, there is no change.</li>
+<li>Target platform D has module X, schema version 6004. Site is upgradeable. There is a module update to be performed.</li>
+</ol>
+<p>In the logic laid out above, examples 4, 5 ,6, or platforms B, C and D would be listed as valid target platforms. Target platform D would actually upgrade the site's module to a newer version, which may involve database updates.</p>
+<p>To view the schema differences between current and target platforms in this way, click the 'Compare platforms' link against each target platform in the form.</p>
+<p><img alt="Platform comparison" src="../../../_images/platform-comparison.png" /></p>
+<p>If your intention is to upgrade your site between versions of any package (this can include core or contrib!), you need to make sure the relevant packages are present and up to date on the platform you want to migrate to. Aegir can only try and make this judgement call based on the information you feed into the system by adding and verifying platforms with the correct components.</p>
+<p>If you've had to download extra packages to the target platform to make them possible candidates for an upgrade, you may need to visit that platform node in the Aegir frontend, and run the Verify task against the site (this is a re-runnable task). This updates Aegir's registry of information about all the packages on the platform.</p>
+<h3 id="the-migration-process">The migration process</h3>
+<p>Select the relevant target platform and click 'Migrate' to submit the form. The modalframe dialog will close and Aegir will spawn a new Migrate task into the Task queue, and process it on the next cron run.</p>
+<p>The process of Migration in the backend occurs automatically, like all Aegir tasks, and is as follows:</p>
+<ol>
+<li>The site is placed into maintenance or 'site offline mode' as a precaution. Safety first!</li>
+<li>A 'backup' task is implied silently. The site and its database are backed up into a tarball. Still safety first!</li>
+<li>Depending on the settings sent to the backend (are we migrating the site under its current name, or just renaming the site, or renaming the site and migrating as well), various metadata regarding the site is updated</li>
+<li>If we are moving to a new platform (upgrading, not just renaming), the backup tarball that was made earlier, is used in a silent 'provision-deploy' command, which essentially unpacks the tarball into the target platform and creates a new database and database user for the site, importing the database dump that was made in the backup</li>
+<li>The deploy task above, invokes drush updatedb, effectively upgrading the site by calling all hook_update() functions.</li>
+<li>Various bits and pieces are fixed up, such as paths to files in the 'files' table of the database.</li>
+<li>Caches are cleared</li>
+<li>A verify task is run, settings.php and apache vhost are updated to reflect the new path (new platform) and new database credentials, site gets brought back out of maintenance mode.</li>
+<li>If all went well and nothing has fatally errored here, we remove the old copy of the site from the previous platform (it wasn't touched til now, other than backing it up)</li>
+</ol>
+<h3 id="potential-errors">Potential errors?</h3>
+<p>If something goes wrong during all this work, the metadata reflecting where the site is located on the system (which platform it is on) and other information is reverted. The task will become 'red' in the task queue, indicating an error.</p>
+<p>Aegir will attempt to restore the site's vhost and settings.php to reflect the original platform and database credentials, and bring the site out of maintenance, in an effort to return the site to a state where it was prior to the Migrate.</p>
+<p>The user may be requried to manually recover from this error depending on what has occurred. Nonetheless, remember that a backup was made early on, and this can be used to restore the site easily.</p>
+<h3 id="migration-tips">Migration Tips</h3>
+<p>In the context of sites, migration is the task of moving a site from one platform to another. Migration is the Aegir-preferred method for applying updates to modules and certainly to core. In other words, to upgrade core or modules, create a new platform with the upgrades, then migrate sites to the new platform.</p>
+<p>Ideally, a migration requires nothing more than a mouse-click on the Migrate button on the Site node in your Aegir for the site you want to migrate. If you've prepared your destination platform properly, a migration will be this simple. Proper preparation, therefore, is vital.</p>
+<p>To prepare a new platform to be a destination for migration, consider at least the following:</p>
+<ul>
+<li>The directory structure for your modules and themes must be the same on the source and destination platforms. For example, if the modules on the source platform are in <code>../platform-abc/sites/all/modules/contrib</code> then the destination platform must have its modules also in this directory.</li>
+<li>You may need to clear the Drupal cache on the source platform to avoid migration errors. Upgrades to Aegir in the future may handle this automatically, so be aware of the version of Aegir you're running and whether it includes upgrades to address this issue.</li>
+</ul>
+<h2 id="cloning-sites">Cloning sites</h2>
+<p>Aegir provides an easy method of making entire copies of a site. This includes the actual site files, modules and so on, as well as a copy of the actual database.</p>
+<p>This feature is called 'Clone' in Aegir, because it is a method of duplicating a site with a new URL or 'site name'.</p>
+<p>The feature is very closely linked to the Migrate feature because it is almost the same, except that rather than move the site, it leaves the existing site in place and just copies it to a new name.</p>
+<p>For this reason, enabling the Clone feature also enables the Migrate feature.</p>
+<h3 id="enabling-clone">Enabling Clone</h3>
+<p>The Clone feature is disabled by default on a fresh Aegir installation. To enable it, visit /admin/hosting/features in your Aegir frontend, check the 'Clone' box and submit the form.</p>
+<p>Now when you visit a site node in your frontend, you'll see there's a 'Clone' button in your list of available tasks for the site.</p>
+<p><img alt="Clone task" src="../../../_images/clone-task.png" /></p>
+<h3 id="cloning-a-site">Cloning a site</h3>
+<p>To clone a site, simply click the Clone button. A modalframe dialog will appear with a form. If you are familiar with the Migrate feature, you'll likely notice the similarities between the two forms.</p>
+<p>The clone form has these options:</p>
+<ul>
+<li><strong>Domain name</strong> - this is the URL for the new site, which must be unique.</li>
+<li><strong>Platform</strong> - this is the target platform to clone the site to. It may be the current platform or a different platform that meets the requirements for hosting this site (has all the correct or newer versions of relevant modules)</li>
+<li><strong>Database server</strong> - this option is only available if you have a remote database server configured, otherwise it is implied.</li>
+<li><strong>Site aliases</strong> - If you have the <a href="../../../usage/sites/aliases">Site Aliases feature</a> enabled, you are also able to set new Site Aliases for this clone at this point. If the original site also had aliases, you will have to change or remove the aliases that load in this form before you can submit it.</li>
+</ul>
+<p><img alt="Clone form" src="../../../_images/clone-form.png" /></p>
+<p>As with the Migrate form, you can view the package comparison table between the current platform of the original site and that of a target platform, by clicking the 'Compare platforms' link. You can only clone a site to another platform if it meets the requirements for successfully hosting that site. In other words, the target platform has to contain the same or newer versions of modules. If the packages are missing on the target platform, those missing modules may be disabled.</p>
+<p>Once you have made your selection and submitted the form, a 'Clone' task is spawned and added to the Task queue ready for dispatching.</p>
+<h3 id="the-cloning-process">The cloning process</h3>
+<p>The Clone task makes the following actions in the system:</p>
+<ol>
+<li>Makes a backup of the original site. This tarball will be used to 'deploy' a copy of the site</li>
+<li>Generates a new Drush alias for the new site</li>
+<li>Deploys the backup tarball to the new location as a new site</li>
+<li>The new site is imported and verified into the Aegir system, and relevant configurations are saved (HTTP vhost file, etc)</li>
+</ol>
+<p><img alt="Clone import" src="../../../_images/clone-import.png" /></p>
+<p><strong>When might I want to use Clone?</strong></p>
+<p>Clone can be a very useful tool in a variety of situations. Commonly, people use Clone for:</p>
+<ul>
+<li>Testing what a 'Migrate' might do to a site, without migrating it. In other words, Clone can be used as a simulation tool to anticipate results of
+upgrading a site to a new release or build safely.</li>
+<li>If you have a 'template' site, often with a custom install profile, and anticipate having to generate multiple sites that are very similar, you can use Clone to rapidly do this.</li>
+<li>Cloning a live site to a 'development' version of a site, especially to a development platform residing on a remote 'development' web server, can be a useful and fast method of working on a site by ensuring the dev environment has the latest database and files from production.</li>
+</ul>
+<p><strong>Is there any relationship between the original and cloned site?</strong></p>
+<p>Currently there is no real relationship between the original site and any of its clones.</p>
+<p>In future, Aegir development is likely to develop natural relationships between these sites, which will allow for 'rules' to be established, for example being able to regularly 're-clone' a site 'over the top' of previously-made clone, or automatically schedule clones after the original site has been migrated (upgraded) to keep a clone 'up to date' with the original.</p>
+<p>Other uses may develop in time.</p>
+<h2 id="disabling-and-enabling-sites">Disabling and Enabling sites</h2>
+<p>Aegir provides a method for sites to be temporarily 'disabled'. This means preventing all access to a site, but in a way that it can be re-enabled later.</p>
+<p>Think of disabling a site in a similar fashion to placing a site under Maintenance mode, but that instead of a 'Site offline' message, a request to the site is redirected to a special page under the main Aegir frontend's URL, and a 'Site disabled' message is shown instead.</p>
+<p><img alt="Disabled site" src="../../../_images/disable.png" /></p>
+<p>Aegir makes no presumptions about why you may wish to disable a site. Use this feature at your own discretion.</p>
+<h3 id="how-to-disable-a-site">How to Disable a site</h3>
+<p>To disable a site, simply click on the site node in the Aegir frontend. In the list of available tasks for this site, click the 'Disable' button. A modalframe dialog will load, prompting you to confirm if you really wish to disable the site. Confirm and submit the form to spawn a 'Disable' task to the queue to take this site offline.</p>
+<h3 id="how-to-enable-a-site">How to Enable a site</h3>
+<p>Once your site has been disabled, the list of available tasks has now radically changed in the site node: you now have only the option to Delete the site or Enable it again.</p>
+<p>To re-enable a disabled site, simply click Enable. The site will be brought back out of hibernation and become live again.</p>
+<h3 id="disabling-before-deleting">Disabling before deleting</h3>
+<p>In Aegir's default configuration, you must first disable a site before you may delete it. This is meant as a precaution - if considering deleting a site, it forces you to think about whether you really want to, before accidentally clicking Delete and irreversibly removing your site.</p>
+<p>But don't worry - Aegir always silently makes a backup of the site before disabling (or deleting) a site.</p>
+<h2 id="backup-and-restore">Backup and Restore</h2>
+<p>The Aegir system provides a convenient method of backing up sites, and restoring sites from those backups.</p>
+<p>Like most other Aegir functionality, the Backup feature comes in the form of a task, aptly named 'Backup'. It is one of the core features of Aegir and thus is always available for a site, out of the box.</p>
+<p>Backing up a site in Aegir is twofold: the site folder (containing the settings.php, files dir and so on) is added to a tarball along with a database dump of the site and stored in /var/aegir/backups on the master Aegir server.</p>
+<p>In the event that the website or database is a remote server, those relevant components are synced down to the master Aegir server to be tarballed up. Only the master Aegir server stores backups of a site. (This is known as a 'spoke' model, as opposed to a 'mesh' or distributed model, and suits the Aegir system at this time).</p>
+<p>The tarball generated for a site can be used for a number of things: restoring a site from that backup via the 'Restore' task, or from the command line using the provision-deploy command for advanced users as a method of quickly importing a site onto a system.</p>
+<p>Other cases whereby a backup task is generated and its tarball used are when a site is being Migrated (upgraded) or being Cloned as a new site, but that is outside the scope of this chapter.</p>
+<h3 id="backing-up">Backing up</h3>
+<p>When viewing the site node of a site in the Aegir frontend, click the 'Backup' button in the list of available tasks for this site.</p>
+<p>A modalframe dialog appears, prompting for confirmation, as well as providing an editable Description field which you may fill out. This field is optional, designed only to aid you in future if you seek a reason for why a backup was made.</p>
+<p><img alt="Backup form" src="../../../_images/backup.png" /></p>
+<p>Once the form is submitted, a Backup task is spawned and added to the Task queue for dispatching by the backend.</p>
+<p>The full output of a Backup task is viewable in the task log. Extra security precautions are built into Aegir so that the 'mysqldump' command uses file descriptors to hide exposing the database user's password in the running process and output of the task.</p>
+<h3 id="restoring-from-a-backup">Restoring from a backup</h3>
+<p>Restoring a site from a backup is simple and follows the same pattern as backing up. Simply click the 'Restore' button from the list of available tasks for a site. A modalframe dialog will load, and the form offers a list of radio items. These are the backups that have been made for a site, in the format of 'Date/time - Reason'.</p>
+<p>Where no custom reason was given for a backup, the message 'Generated on request' is shown instead.</p>
+<p><img alt="Restore form" src="../../../_images/restore.png" /></p>
+<p>Choose a backup to restore from and submit the form. A 'Restore' task will be spawned and added to the Task queue for dispatching by the backend.</p>
+<h3 id="the-restore-process">The restore process</h3>
+<p>The following describes what happens during a Restore task:</p>
+<ol>
+<li>puts the site under 'maintenance mode' temporarily (safety first!) generates a new backup of the site before restoring to it (still safety first!). This new backup will be available in the list of backups if you ever re-run the Restore task, and will carry the description 'Generated before being restored to a previous version'.</li>
+<li>uses the implied provision-deploy command in the backend to unpack the tarball,</li>
+<li>create a new database and import the database dump into it,</li>
+<li>create a new database user,</li>
+<li>spawn a verify task silently, which will:<ul>
+<li>re-write the settings.php,</li>
+<li>sync the data if necessary to a remote platform,</li>
+<li>re-generate the web server's vhost configuration file for this site,</li>
+<li>finally reload the web server</li>
+</ul>
+</li>
+</ol>
+<h3 id="automatic-backups-and-purge">Automatic backups and purge</h3>
+<p>Automatic creation and deletion (clean-up / purging) of backups can be handled by <a href="https://www.drupal.org/project/hosting_site_backup_manager">Hosting Site Backup Manager</a>. It makes it easy to set up scheduled backup tasks for all of your sites, which can be restored from the backups generated by these tasks.</p>
+<p>While not included as a core component, the module is one of the externally-maintained ones that ships with Aegir.  These modules are referred to as <a href="http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make">Golden Contrib</a>.</p>
+<p>To enable the functionality, surf to Administration » Hosting (Features) » Experimental.  Check <strong>Backup Manager</strong> and optionally one or both of its sub-modules (below).  Then save the form.</p>
+<ul>
+<li><strong>Backup scheduling/queue</strong> (allows backups to be scheduled per site)</li>
+<li><strong>Backup window</strong> (allows backups to be restricted to certain time periods)</li>
+</ul>
+<h2 id="deleting-sites">Deleting sites</h2>
+<p>There may come a time when you want to remove a website from your Aegir system and your server altogether. As you'd expect, Aegir handles this for you too. It ships with a 'Delete' task that is capable of removing the site from the Aegir system, as well as carrying out backend tasks to remove the site from the filesystem and web/db servers.</p>
+<p>The Aegir frontend is a Drupal site in itself, and sites are represented in that system as nodes. New users that are familiar with Drupal often make the mistake of thinking that the process of deleting a site is like deleting a node in Drupal, and attempt to delete the site node (or are confused by the fact we hide the Delete button for this reason).</p>
+<p>This is an incorrect method of deleting a site, and doesn't actually spawn a task to clear away the site from the server at all. Below are the steps to correctly remove a site.</p>
+<h3 id="disable-the-site-first">Disable the site first</h3>
+<p>Part of this confusion can stem from the fact that when viewing a site node in Aegir, the Delete button is not actually present in the list of available tasks by default:</p>
+<p><img alt="Disable first" src="../../../_images/delete-disable.png" /></p>
+<p>This is because, in the default Aegir configuration, you must run the Disable task against a site before you may Delete it. This logic is in Aegir to help users avoid accidentally deleting a site either by accidentally processing the task (despite having to confirm it first) or to prompt the user to think a little bit more on the decision before irreversibly blowing away the data.</p>
+<p>The decision stems from Aegir development policy of being uncomfortable making such risky actions on your data. While it is possible to delete a site, we'd like you to really be sure that's what you want to do.</p>
+<p>Once you Disable a site (see the Disable section prior to this chapter), the list of available tasks is modified to only offer an Enable or Delete button. At this point you can run the Delete task and permanently remove your site.</p>
+<p><img alt="Delete task" src="../../../_images/delete.png" /></p>
+<h3 id="delete-without-disabling">Delete without Disabling</h3>
+<p>The first method above is the default Aegir configuration. However, some users might be too confused by the lack of the Delete button altogether, which may not be ideal for your situation.</p>
+<p>For this reason, Aegir also provides a configurable setting allowing a site to be Deleted without requiring a Disable first. This option makes the 'Delete' button appear in the list of available tasks, even when a site is currently in an Enabled state.</p>
+<p>To activate this setting, visit /admin/hosting/settings on your site and uncheck the checkbox that is titled "Require site to be disabled before
+deletion".</p>
+<p>Re-visit the site node and you'll see that the Delete button is now present and clickable, alongside the Disable button.</p>
+<p><img alt="Delete without disabling" src="../../../_images/delete-nodisable.png" /></p>
+<h3 id="the-deletion-process">The deletion process</h3>
+<p>When you click Delete and confirm your intentions in the modaldialog that loads, a 'Delete' task is spawned and added to the Task queue to await dispatch by the backend system.</p>
+<p>The process runs through a series of steps to remove this site from your server. These are as follows:</p>
+<ol>
+<li>Make a backup of the site and its database for the last time (safety first, remember!)</li>
+<li>Drops the site database</li>
+<li>Revokes the GRANT to that database for the database user (effectively deleting the database user)</li>
+<li>Deletes the site folder and everything inside it, from the platform that the site was hosted on</li>
+<li>Removes the Drush alias file for the site</li>
+<li>Removes the site's web server vhost configuration file</li>
+<li>.Reloads the web server</li>
+<li>Sets the site's status to 'Deleted' in the Aegir system.</li>
+</ol>
+<p><strong>Note</strong>: This process does not delete the site node from the Aegir system. This is by design. The site node is retained in the Aegir database for historical purposes (you could customise Aegir by adding the ability to run a report or a View of all deleted historical sites, for example)</p>
+<p>The deleted status of the site, removes it from the list of sites in the 'Sites' page (and thus front page) of the Aegir system.
+Historical tasks run on the site remain in the Task queue history.</p>
+<h3 id="manually-deleting-the-site">Manually deleting the site</h3>
+<p>Sometimes something goes wrong during an Install or a Delete task and a site doesn't install or get deleted successfully. The Delete task cannot be run or re-run on this site because Aegir has no way of knowing just how much of it got deleted (whether the files are still there but not the database, for example). Re-running the Delete task is likely to fail because some of these steps listed above will not exit successfully on completion.</p>
+<p>At the time of writing, no task in Aegir exists to 'force' a removal of a site without having to bootstrap it first, so some manual steps are required on your part to remove this site.</p>
+<ol>
+<li>Manually remove the site files on the server if they exist (i.e. <code>/var/aegir/platforms/drupal-6.16/sites/my-failed-site.com</code>)</li>
+<li>Drop the database and revoke db user privileges associated with this site if it got created before failing (check the vhost configuration file's 'SetEnv' parameters, or the settings.php if the credentials are uncloaked, for the site's database name and user)</li>
+<li>Manually remove the Apache vhost file for this site if it is still present (in <code>/var/aegir/config/server_master/apache/vhost.d/</code>)</li>
+<li>Manually remove the Drush alias for this site if it is still present (in <code>/var/aegir/.drush/</code>)</li>
+<li>Enter the Aegir database from mysql and set the status of the node in the hosting_site table to -2 (deleted). For example, if your site node was nid 83 (the 'Edit' tab of the site node will tell you this), run <code>UPDATE hosting_site SET status = '-2' WHERE nid = 83;</code></li>
+<li>Still in the Aegir database, delete the node record in the hosting_context table. For example, if your site node was nid 83 (as above), run <code>DELETE FROM hosting_context WHERE nid = 83;</code></li>
+<li>Alternatively, if you want to even remove the node altogether from the system (not recommended), go to <code>/node/83/delete</code> in your browser on the Aegir frontend and delete the node. This will remove the site node and all associated task nodes from the system, as well as remove the entry from the hosting_site table in the database.</li>
+<li>If you are using the SSL feature and had Encryption enabled for this site, you may also need to manually delete the SSL certificate folder located in <code>/var/aegir/config/ssl.d/&lt;example.com&gt;</code> and/or <code>/var/aegir/config/server_master/ssl.d/&lt;example.com&gt;</code>.</li>
+<li>Additionally you may also need to delete the entry for the domain you are deleting in the hosting_ssl_cert table of the Aegir database.</li>
+<li>If you are using the DNS feature you may also need to remove the site's entry in the zone file by running the following command: drush @server_master provision-zone rr-delete example.com sub.domain A</li>
+<li>If your site has ssl support enabled you also need to remove ssl certificate from database issuing <code>DELETE FROM hosting_ssl_cert WHERE ssl_key = 'your.site.domain';</code></li>
+<li>Re-verify the Platform node where the Platform is the one where your site was hosted on. This will regenerate some metadata whereby the Platform believed it still had that site contained within it.</li>
+</ol>
+<p>If you need to manually remove the site's platform see the instructions here: http://community.aegirproject.org/node/27</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../aliases/" class="btn btn-neutral float-right" title="Site aliases">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Sites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../aliases/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Extending Aegir - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../_css/toc.css" rel="stylesheet">
+  <link href="../_css/menu.css" rel="stylesheet">
+  <link href="../_css/images.css" rel="stylesheet">
+  <link href="../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Extending Aegir";
+    var mkdocs_page_input_path = "extend.md";
+    var mkdocs_page_url = "/extend/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Extending Aegir</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#extending-aegir">Extending Aegir</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-can-i-extend-exactly">What can I extend exactly?</a></li>
+                
+                    <li><a class="toctree-l4" href="#aegir-api-documentation">Aegir API documentation</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-modules">Example modules</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Extending Aegir</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="extending-aegir">Extending Aegir</h1>
+<div class="toc">
+<ul>
+<li><a href="#extending-aegir">Extending Aegir</a><ul>
+<li><a href="#what-can-i-extend-exactly">What can I extend exactly?</a></li>
+<li><a href="#aegir-api-documentation">Aegir API documentation</a></li>
+<li><a href="#example-modules">Example modules</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Aegir is designed to be easily extendable by developers. As it is made with Drupal and Drush, it is made of the hooks and command you know and love. If you are a user or admin looking to deploy contrib modules, you should look into the contrib modules list and user documentation instead.</p>
+<h2 id="what-can-i-extend-exactly">What can I extend exactly?</h2>
+<p>These extensions may come in the form of:</p>
+<ul>
+<li>Adding new tasks to be performed against sites</li>
+<li>Adding new services or implementations of service types (postgres for the DB service, for example)</li>
+<li>Overriding or hooking into existing forms such as the site form, to send extra data to the backend</li>
+<li>Using APIs to inject bits of configuration into configuration files such as settings.php and vhosts.</li>
+<li>Use the powers of Drupal to extend the content types and views.</li>
+</ul>
+<p>This area is be devoted to teaching you how to extend and develop for Aegir to encourage contributions to the Aegir project or to help you modify Aegir to suit your unique use case.</p>
+<h2 id="aegir-api-documentation">Aegir API documentation</h2>
+<p>The inline documentation is a good start to understand the various hooks and internals that allow you to extend and customize Aegir to your liking. The documentation is rendered on <a href="http://api.aegirproject.org">api.aegirproject.org</a> daily.</p>
+<p>See also the <a href="http://community.aegirproject.org/dev-cheat-sheet/">developer cheat sheet</a>.</p>
+<p>Please submit any suggestions or bug reports to the Aegir Project issue queue of your choice, under the "documentation" component.</p>
+<h2 id="example-modules">Example modules</h2>
+<p>The <a href="http://docs.aegirproject.org/en/3.x/extend/contrib/">Contributed Extensions</a> page documents all known Aegir extensions in existence. In addition, Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="terminology/" class="btn btn-neutral float-right" title="Design and terminology">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../usage/advanced/provisionacl/" class="btn btn-neutral" title="ProvisionACL"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../usage/advanced/provisionacl/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="terminology/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

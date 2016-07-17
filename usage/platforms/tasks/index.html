@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Platform tasks - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Platform tasks";
+    var mkdocs_page_input_path = "usage/platforms/tasks.md";
+    var mkdocs_page_url = "/usage/platforms/tasks/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Platform tasks</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#platform-specific-aegir-tasks">Platform-specific Aegir tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#lock">Lock</a></li>
+                
+                    <li><a class="toctree-l4" href="#unlock">Unlock</a></li>
+                
+                    <li><a class="toctree-l4" href="#migrate">Migrate</a></li>
+                
+                    <li><a class="toctree-l4" href="#delete">Delete</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Platforms &raquo;</li>
+        
+      
+    
+    <li>Platform tasks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="platform-specific-aegir-tasks">Platform-specific Aegir tasks</h1>
+<div class="toc">
+<ul>
+<li><a href="#platform-specific-aegir-tasks">Platform-specific Aegir tasks</a><ul>
+<li><a href="#lock">Lock</a></li>
+<li><a href="#unlock">Unlock</a></li>
+<li><a href="#migrate">Migrate</a></li>
+<li><a href="#delete">Delete</a><ul>
+<li><a href="#manually-deleting-a-platform">Manually deleting a platform</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Platforms, like sites, have tasks that can be performed against them, however these tasks are smaller in number and generally more simple.</p>
+<p>Some tasks that are available to platforms out of the box are Lock/Unlock and Delete.</p>
+<h2 id="lock">Lock</h2>
+<p>The lock task is simply a conceptual protection placed over a platform so that new sites can't be installed on that platform.</p>
+<p>It doesn't actually modify anything on the filesystem or on the platform itself, but merely changes the status of the platform in the Aegir database.  Once a platform is considered 'locked', it no longer appears in the New Site form when adding a new site.</p>
+<p>You might choose to Lock a platform if there is something wrong with that platform and you want to prevent new sites from being added to it by one of your clients or users, or you want to 'hide' the platform for some other reason (perhaps awaiting a release date before allowing new sites).</p>
+<h2 id="unlock">Unlock</h2>
+<p>To unlock a platform that has been locked, simply click the Unlock button and the status of the platform will be switched back to an Enabled state.</p>
+<h2 id="migrate">Migrate</h2>
+<p>Platforms have 'migrate' tasks just as sites do. However, in the case of a platform, triggering a migration basically entails automatically adding 'migrate' tasks for all of the sites hosted on the platform. This is a convenient way to keep all of your sites up-to-date, as it's a single task, rather than having to trigger the migrations each site individually.</p>
+<h2 id="delete">Delete</h2>
+<p>The Delete task is similar to that of sites. The delete button allows you to completely remove a platform from your filesystem irreversibly.</p>
+<p>This can be handy if you engage in a build management methodology that involves making regular new platforms to upgrade your site to. It is easy to amass large numbers of platforms on the filesystem, so the Delete task was born to deal with that problem.</p>
+<p>A platform can only be deleted if there are no sites currently provisioned on it. The task will fail before deleting anything if it detects that there are sites in the 'sites' directory of that platform.</p>
+<p>You must migrate these sites off to a valid new platform before you can delete such a platform.</p>
+<p>Unlike site deletions, there is no backup made of a platform (because it's not bootstrappable by Drush), so be careful with this task: there is no going back!</p>
+<p>It is recommended to make regular filesystem backups outside of Aegir altogether, and to use the Lock task to temporarily 'disable' a platform from use if you are unsure whether you want to delete it, but don't want it shown on the Aegir frontend.</p>
+<h3 id="manually-deleting-a-platform">Manually deleting a platform</h3>
+<p>Similarily to deleting sites, sometimes something goes wrong during a Delete task and the platform doesn't get completely removed. Often this is caused by permissions problems on the platform (i.e something owned by a different user that the aegir user can't remove).</p>
+<p>The Delete task sometimes cannot be re-run in this situation. In which case:</p>
+<ul>
+<li>Manually remove the platform files on the server if they exist (i.e <code>/var/aegir/drupal-7.41</code>)</li>
+<li>Remove the Drush alias for this platform if it is still present (in <code>/var/aegir/.drush/</code>)</li>
+<li>Remove the platform configuration file from <code>/var/aegir/config/server_master/apache/platform.d</code> (and the same for the other server_ directory if the platform was hosted on a remote webserver)</li>
+<li>Go to e.g. /node/123456/delete in your browser on the Aegir frontend and delete the node. This will remove the platform node and all associated task nodes from the system, as well as remove the entry from the hosting_platform and hosting_context table in the database.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../advanced/" class="btn btn-neutral float-right" title="Advanced features">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Platforms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../advanced/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

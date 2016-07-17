@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Upgrade - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_css/toc.css" rel="stylesheet">
+  <link href="../../_css/menu.css" rel="stylesheet">
+  <link href="../../_css/images.css" rel="stylesheet">
+  <link href="../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Upgrade";
+    var mkdocs_page_input_path = "install/upgrade.md";
+    var mkdocs_page_url = "/install/upgrade/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Upgrade</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#upgrade-guide">Upgrade Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#upgrade-options">Upgrade options</a></li>
+                
+                    <li><a class="toctree-l4" href="#new-release-of-drupal-core">New release of Drupal core</a></li>
+                
+                    <li><a class="toctree-l4" href="#manual-upgrade">Manual Upgrade</a></li>
+                
+                    <li><a class="toctree-l4" href="#upgrades-with-debian-packages">Upgrades with Debian packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#upgrades-with-upgradesh-script">Upgrades with upgrade.sh script</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Install &raquo;</li>
+        
+      
+    
+    <li>Upgrade</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="upgrade-guide">Upgrade Guide</h1>
+<div class="toc">
+<ul>
+<li><a href="#upgrade-guide">Upgrade Guide</a><ul>
+<li><a href="#upgrade-options">Upgrade options</a></li>
+<li><a href="#new-release-of-drupal-core">New release of Drupal core</a></li>
+<li><a href="#manual-upgrade">Manual Upgrade</a><ul>
+<li><a href="#conventions-tips">Conventions &amp; Tips</a></li>
+<li><a href="#upgrading-overview">Upgrading Overview</a><ul>
+<li><a href="#upgrading-drush">Upgrading drush</a></li>
+<li><a href="#upgrading-the-backend">Upgrading the backend</a></li>
+<li><a href="#upgrading-the-frontend">Upgrading the frontend</a></li>
+<li><a href="#the-hostmaster-migrate-command">The hostmaster-migrate command</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#upgrades-with-debian-packages">Upgrades with Debian packages</a><ul>
+<li><a href="#regular-update-process">Regular update process</a></li>
+<li><a href="#upgrading-from-non-debian-installs">Upgrading from non-Debian installs</a></li>
+<li><a href="#custom-distributions">Custom distributions</a><ul>
+<li><a href="#keeping-custom-distributions-up-to-date">Keeping custom distributions up to date</a></li>
+</ul>
+</li>
+<li><a href="#rolling-back-the-upgrade">Rolling back the upgrade</a><ul>
+<li><a href="#recovering-a-failed-upgrade">Recovering a Failed Upgrade</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#upgrades-with-upgradesh-script">Upgrades with upgrade.sh script</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Upgrading Aegir is designed to be as easy as it possibly can be, and regularly improves over time as the developers attempt to streamline the process for users.</p>
+<p>Nonetheless, the upgrade process can seem a little daunting to users. This is mainly because some expectation arises that because Aegir is built on Drupal, and is made for managing Drupal sites, it seems reasonable to expect the upgrade process to be as straightforward as, say, upgrading a regular Drupal site.</p>
+<p>Aegir is a powerful system that goes beyond a normal Drupal application by being split into two parts: a frontend (the browser-based control panel) and the backend (bits on the system in /var/aegir, such as Drush and Drush extensions), along with a system user on your server that runs command-line scripts and restarts services, and cronjobs.</p>
+<p>Typically what this means is that when it comes time to upgrade Aegir, you not only have to upgrade the frontend site, but also update the components that reside in the 'backend'.</p>
+<p>But don't panic! We have instructions and even a script to run, to take care of almost all of it for you, eliminating as much as possible the chance for human error.</p>
+<h2 id="upgrade-options">Upgrade options</h2>
+<p>There are three options you can choose to upgrade your Aegir install when a new release comes up:</p>
+<ul>
+<li>Upgrades using Debian packages</li>
+<li>Upgrades using the upgrade.sh.txt script</li>
+<li>Manual upgrades</li>
+</ul>
+<h2 id="new-release-of-drupal-core">New release of Drupal core</h2>
+<p>Just as you would use the Migrate task in Aegir to upgrade one of your sites to a new copy of Drupal core, you can follow the UPGRADE.txt to upgrade your actual Aegir frontend system to a new copy of Drupal core too. The upgrade process (including the script) will always fetch the latest available copy of Drupal core to place the frontend on.</p>
+<p>Currently you cannot upgrade the Aegir site itself from the frontend with a Migrate task as you do for your managed sites. This may change in the future as we have an open issue over at <a href="https://www.drupal.org/node/711746">Allow upgrade of hostmaster sites from the frontend</a>.</p>
+<h2 id="manual-upgrade">Manual Upgrade</h2>
+<p>This section outlines the requirements for doing a manual upgrade of Aegir to a new release. Before going ahead with this, you probably want to read the upgrade path and version-specific notes.</p>
+<h3 id="conventions-tips">Conventions &amp; Tips</h3>
+<p>All instructions and in general all commands must be run as aegir user, so all permissions are always set correctly.</p>
+<p>To become aegir user you can issue this command. Note you must run this as root or prefix with sudo.</p>
+<pre><code>su -s /bin/sh aegir
+</code></pre>
+<p>Note that /bin/sh is an example. You may wish to instead use the shell of your choice, i.e /bin/bash</p>
+<p>A standard umask of 022 is assumed. This is the default on most systems.</p>
+<h3 id="upgrading-overview">Upgrading Overview</h3>
+<h4 id="upgrading-drush">Upgrading drush</h4>
+<p>As part of your Aegir upgrade, you may need to upgrade Drush to the latest stable version compatible with the target Aegir release. Aegir 3.x works with Drush 6, 7 and 8. Note that to install and manage Drupal 8 sites, Drush 8+ is required.</p>
+<h4 id="upgrading-the-backend">Upgrading the backend</h4>
+<p>After drush is updated, you must then proceed to upgrade the backend. The reason for upgrading the backend first before the frontend, is that the frontend upgrade process is instigated by the backend using Drush Make. Thus you need to be running the new backend first in order to successfully produce a new frontend.</p>
+<p>In general, we try to keep the backend and the frontend compatible with each other during release cycles. That is: provision 3.2 and hosting 3.3 will always be able to talk to each other, but hosting 3.x may have trouble talking to the 2.x backend, so you need to upgrade the backend first when you do a major upgrade (for example, 2.4 -&gt; 3.0).</p>
+<p>Bottomline: first you upgrade the backend, then the frontend.</p>
+<h4 id="upgrading-the-frontend">Upgrading the frontend</h4>
+<p>Once your backend is upgraded, you can upgrade your frontend. Think of this as the backend fetching a new copy of Drupal core and the Hostmaster frontend application onto your server, and then moving the Aegir site's settings.php and other bits and pieces over to the new codebase.</p>
+<h4 id="the-hostmaster-migrate-command">The hostmaster-migrate command</h4>
+<p>The command will make sure the target directory is a valid Aegir install. If the directory does not exist, provision will use drush_make to fetch and assemble the correct version of the front end for the specific release of the backend you are running.</p>
+<p><code>drush hostmaster-migrate</code> will also update the crontab entry for the aegir user.</p>
+<p>If you have customized your Aegir installation and are maintaining your own makefile, you can use the <em>--makefile</em> flag so the platform is created with another makefile than the default. Be warned that this may create problems if the makefile doesn't include the right Aegir modules.</p>
+<p>If there is a newer release of Aegir than what you have installed, the hostmaster command will fetch the latest stable Drupal release.  If you have the latest stable version of Aegir already installed, this won't happen because Drupal core changes could affect the stability of the distribution. So it cannot simply be run whenever a new security release of core Drupal is made available (unless your instance was installed via the <em>unstable</em> channel, which is not recommended).</p>
+<p>To upgrade Drupal core (say for a new security release) while running Aegir stable, this method should work, but make sure to test on a development instance before running on your production environment:</p>
+<ol>
+<li>Become the Aegir user.<ul>
+<li><code>sudo -Hsu aegir</code></li>
+</ul>
+</li>
+<li>Upgrade Drupal core.<ul>
+<li><code>drush @hostmaster pm-updatecode drupal</code></li>
+</ul>
+</li>
+<li>Verify the upgraded platform.<ul>
+<li><code>drush @platform_hostmaster provision-verify</code></li>
+</ul>
+</li>
+<li>Verify the Hostmaster site.<ul>
+<li><code>drush @hostmaster provision-verify</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="upgrades-with-debian-packages">Upgrades with Debian packages</h2>
+<h3 id="regular-update-process">Regular update process</h3>
+<p>Make sure you have the Aegir repository in your sources.list, as per the <a href="../../install#2-add-project-repositories">installation docs</a>.</p>
+<p>If you want to upgrade all packages in one shot, use:</p>
+<pre><code>apt-get update
+apt-get install aegir3
+</code></pre>
+<p>Note that you can upgrade Aegir in steps. Upgrading your backend to the Debian package should be as simple as running:</p>
+<pre><code>apt-get install aegir3-provision
+</code></pre>
+<p>Upgrading the frontend to the Debian package works identically:</p>
+<pre><code>apt-get install aegir3-hostmaster
+</code></pre>
+<p>As during install, you can use the DEBUG variable to run Drush in debugging mode:</p>
+<pre><code>env DPKG_DEBUG=yes apt-get install aegir3-hostmaster
+</code></pre>
+<p><strong>Note on contrib modules</strong>: some Aegir-specific contrib modules may have been installed on your Aegir deployment. This may fail if you are doing a major upgrade. In this case, you will probably want to disable those contrib modules.  Look for directories in <code>~/.drush</code> or <code>/usr/share/drush/commands</code> or other components of the Drush commandfiles search path, and move them out of the way.  After the upgrade, download the new versions of the modules that are compatible with the new Aegir release.</p>
+<h3 id="upgrading-from-non-debian-installs">Upgrading from non-Debian installs</h3>
+<p>The Debian package supports migrating from existing installs. You will need to move <code>/var/aegir/.drush/provision</code> out of the way before going ahead:</p>
+<pre><code>tar cfz /var/aegir/backups/provision.tgz /var/aegir/.drush/provision
+rm -rf /var/aegir/.drush/provision
+</code></pre>
+<p>You'll also need to go through steps 1 through 3 of <a href="../../install/#1-ensure-requirements-are-satisfied">automatic install on Debian</a>.</p>
+<p>Then just install the package as if you were installing from scratch.</p>
+<h3 id="custom-distributions">Custom distributions</h3>
+<p>If you have your own makefile, you can go ahead with the above process, but change the makefile to the one you want:</p>
+<pre><code>echo debconf aegir/makefile string
+/var/aegir/makefiles/aegir/aegir-koumbit.make | debconf-set-selections
+apt-get install aegir3
+</code></pre>
+<p>Usually no questions are asked when upgrading - this allows you to specify the makefile path for your custom distribution of Aegir, even if you're upgrading.  It's also how you can switch distributions.</p>
+<p>An example aegir-koumbit.make file could look like:</p>
+<pre><code>core = 7.x
+api = 2
+
+includes[aegir] = "/usr/share/drush/commands/provision/aegir.make"
+
+projects[] = module_filter
+</code></pre>
+<h4 id="keeping-custom-distributions-up-to-date">Keeping custom distributions up to date</h4>
+<p>This section describes how to upgrade the code for custom distributions in between debian package upgrades. Here, we assume that Aegir is already installed through the debian package.</p>
+<p>Create a new Aegir makefile, or update the custom Aegir makefile. (You can use the makefile in http://git.drupal.org/project/provision as a starting point.) Add modules/features/themes/libraries/whatever to the makefile. Ex:</p>
+<pre><code>projects[] = token
+projects[] = views
+</code></pre>
+<p>Follow the manual upgrade path:</p>
+<pre><code>drush @hostmaster hostmaster-migrate URL /path/to/platform --makefile='/path/to/makefile'
+</code></pre>
+<p>Hope it's all green (no errors). If there are errors, fix the makefile.</p>
+<p>A new platform should exist, the new site should be in there, verifying. If the task is not running, check that hosting-queued is running. If it's not, restart it using <code>/etc/init.d/hosting-queued force-reload</code>. (Since hostmaster changed location, hosting-queued may have crashed at this point.)</p>
+<p>When the debian package is upgraded, it should create a new hostmaster platform automatically. (You can test this with <code>dpkg --configure</code>.)</p>
+<h3 id="rolling-back-the-upgrade">Rolling back the upgrade</h3>
+<p>If something went wrong with the upgrade, you can rollback by deleting the hostmaster site and redeploying on the older platform:</p>
+<pre><code>drush @hostmaster provision-delete
+vi ~/.drush/hostmaster.alias.drushrc.php
+</code></pre>
+<p>Then edit the alias to make the following changes:</p>
+<ol>
+<li>change the platform to point to the older platform alias</li>
+<li>change the platform root path</li>
+<li>change the site path</li>
+</ol>
+<p>During the upgrade, a backup was done end you need to find which backup file it was in the backups directory. Use this backup to redeploy the older platform:</p>
+<pre><code>drush @hostmaster provision-deploy ~/backups/hostmaster.date.tgz
+</code></pre>
+<h4 id="recovering-a-failed-upgrade">Recovering a Failed Upgrade</h4>
+<p>When using the <a href="#regular-update-process">regular update process</a> and you encounter an error it leaves the debian package in a broken state.</p>
+<p>First you need to figure out why it failed. For example is there a permission problem? Once you determined the issue correct it and clean up the environment.  It may be necessary to remove the new hostmaster platform. It is up to you to determine what state Aegir is in.</p>
+<p>Next you need to fix the broken package by running the fix-broken parameter:</p>
+<pre><code>apt-get install -f
+</code></pre>
+<p>This tells the debian package system to start through the process again.</p>
+<h2 id="upgrades-with-upgradesh-script">Upgrades with upgrade.sh script</h2>
+<p>This page describes the upgrade script in the Provision repository that tries to automate much of the upgrade process.</p>
+<p>It is imperative that you read the version-specific upgrade notes before attempting to run the upgrade.sh script, as the script will assume you have your system set up appropriately to handle the upgrade process.</p>
+<p>You can download the upgrade.sh script for Aegir 3.x with the following command:</p>
+<pre><code>wget -O upgrade.sh 'http://cgit.drupalcode.org/provision/plain/upgrade.sh.txt?h=7.x-3.6'
+</code></pre>
+<p>Make sure you download it to somewhere that the aegir user can access in order to execute it.</p>
+<p>You may need to edit the script to set any variables that are different from the defaults, for example to upgrade to a different Aegir version.</p>
+<p>To do the upgrade, just run the script:</p>
+<pre><code>su -s /bin/sh aegir -c "sh upgrade.sh"
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../uninstall/" class="btn btn-neutral float-right" title="Uninstall">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Install"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../uninstall/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Verifying servers, platforms and sites - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_css/toc.css" rel="stylesheet">
+  <link href="../../_css/menu.css" rel="stylesheet">
+  <link href="../../_css/images.css" rel="stylesheet">
+  <link href="../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Verifying servers, platforms and sites";
+    var mkdocs_page_input_path = "usage/verify.md";
+    var mkdocs_page_url = "/usage/verify/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Verifying servers, platforms and sites</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#verifying-servers-platforms-and-sites">Verifying servers, platforms and sites</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-happens-in-a-verify-task">What happens in a Verify task?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+    
+    <li>Verifying servers, platforms and sites</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="verifying-servers-platforms-and-sites">Verifying servers, platforms and sites</h1>
+<div class="toc">
+<ul>
+<li><a href="#verifying-servers-platforms-and-sites">Verifying servers, platforms and sites</a><ul>
+<li><a href="#what-happens-in-a-verify-task">What happens in a Verify task?</a><ul>
+<li><a href="#servers">Servers</a></li>
+<li><a href="#platforms">Platforms</a></li>
+<li><a href="#sites">Sites</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>One of the common tasks available to all three of the major entities in Aegir (Servers, Platforms and Sites) is the Verify task.</p>
+<p>You can think of the Verify task as a sort of routine 'sanity check' of that specific entity, with a sort of checklist of expected behaviour with which it runs through to confirm that the entity is operating as normal.</p>
+<p>The Verify task also can be used to regularly 'sync' your platform or site with the Aegir package registry, to keep it up to date on whether any modules have changed (been removed or enabled/disabled). This will aid running Migration and Clone tasks, since Aegir needs to have a precise knowledge of what modules, themes or profiles are on the system before it can accurately judge whether an upgrade is possible.</p>
+<p>It is recommended to run the Verify task on your entities routinely to keep them in sync with the Aegir database, and to run a Verify of your site, current platform and target platform prior to attempting a Migration or Clone task.</p>
+<h2 id="what-happens-in-a-verify-task">What happens in a Verify task?</h2>
+<h3 id="servers">Servers</h3>
+<ul>
+<li>When you add a new server node in the Aegir frontend, a Verify task is spawned for the first time.</li>
+<li>The configuration directories are created if they don't exist and set to the correct permissions, or set to the correct permissions if they already existed but were incorrectly set</li>
+<li>If the server is the master server, some additional configuration and backup directories are created</li>
+<li>Aegir generates or updates a Drush alias file for the server.</li>
+<li>Some configuration directories are synced from the master server to remote servers</li>
+<li>Checks that new databases and database users can be created</li>
+<li>Checks that the HTTP web server can be restarted</li>
+</ul>
+<h3 id="platforms">Platforms</h3>
+<ul>
+<li>When you add a new platform node in the Aegir frontend, a Verify task is spawned for the first time.</li>
+<li>If the platform directory didn't exist on the file system and a Drush makefile was provided, Drush Make will be called to build the platform in that location.</li>
+<li>If the platform directory didn't exist and no Drush makefile was provided, the task will fail with the error 'Does not contain a valid Drupal installation'.</li>
+<li>Checks that the permissions are correct, at least of the 'sites' folder of the platform directory (so we can create new sites here)</li>
+<li>Searches for existing sites on the platform that are not yet in the system.</li>
+<li>These sites will be 'imported' into Aegir.</li>
+<li>Scans the platform and builds or updates the package registry in the Aegir database.</li>
+<li>Generates or updates a Drush alias for the platform, and a drushrc.php file in the platform's directory root.</li>
+<li>Reads in the platform's .htaccess file into a platform-wide web server vhost configuration file.</li>
+<li>Restart the web server</li>
+</ul>
+<h3 id="sites">Sites</h3>
+<ul>
+<li>When you add a new site in the Aegir system, an Install task is spawned,</li>
+<li>This is contrasted with the above entities which spawn only Verify tasks initially.</li>
+<li>Scans the site and builds or updates the package registry in the Aegir database.</li>
+<li>Creates important directories in the site folder, such as 'files'.</li>
+<li>Sets or corrects the appropriate permissions</li>
+<li>Manages/updates any site aliases (symlinks, redirects etc)</li>
+<li>Re-generates the settings.php</li>
+<li>Re-generates the site's web server vhost configuration file</li>
+<li>Re-generates the site's drushrc.php and a Drush alias</li>
+<li>Clears caches.</li>
+</ul>
+<p>You can run or re-run the Verify task at any time on a server, platform or site, and it is encouraged to do so.</p>
+<p>Certain tasks, such as 'deploy' when a site is being imported, automatically imply a verify of the site.</p>
+<p>Each Verify task, like all tasks generated by Aegir, emit a 'task log' available for review after the task has completed (or failed).</p>
+<p>If a Verify task fails, and the task log does not provide enough information to help you resolve the problem, trying running drush @example.org provision-verify --debug from the command line to find out what caused the problem. Remember to replace 'example.org' with the URL of the site you are trying to verify.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sites/" class="btn btn-neutral float-right" title="Sites">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Using Aegir"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../sites/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

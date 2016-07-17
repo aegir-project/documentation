@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Site aliases - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Site aliases";
+    var mkdocs_page_input_path = "usage/sites/aliases.md";
+    var mkdocs_page_url = "/usage/sites/aliases/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Site aliases</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#site-url-aliases">Site URL aliases</a></li>
+                
+                    <li><a class="toctree-l4" href="#enable-alias-support-in-aegir">Enable alias support in Aegir</a></li>
+                
+                    <li><a class="toctree-l4" href="#global-alias-settings">Global alias settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#site-specific-alias-settings">Site-specific alias settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#redirection-option">Redirection Option</a></li>
+                
+                    <li><a class="toctree-l4" href="#aegir-alias-management-under-the-hood">Aegir alias management under the hood</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Sites &raquo;</li>
+        
+      
+    
+    <li>Site aliases</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="site-url-aliases">Site URL aliases</h1>
+<div class="toc">
+<ul>
+<li><a href="#site-url-aliases">Site URL aliases</a><ul>
+<li><a href="#enable-alias-support-in-aegir">Enable alias support in Aegir</a></li>
+<li><a href="#global-alias-settings">Global alias settings</a></li>
+<li><a href="#site-specific-alias-settings">Site-specific alias settings</a></li>
+<li><a href="#redirection-option">Redirection Option</a></li>
+<li><a href="#aegir-alias-management-under-the-hood">Aegir alias management under the hood</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Site aliases are helpful if you move content to a new domain, change domain names or simply want to make sure that http://example.com and http://www.example.com take users to the same place. You can implement site aliases with or without redirection. The differences between these two methods and how Aegir handles them is described below.</p>
+<h2 id="enable-alias-support-in-aegir">Enable alias support in Aegir</h2>
+<p>You have to enable alias support in Aegir as it is off by default.</p>
+<ul>
+<li>Browse to <code>/admin/hosting/features</code>
+<img alt="Features page" src="../../../_images/features-page.png" /></li>
+<li>Check the Site aliasing box
+<img alt="Site aliasing feature" src="../../../_images/site-aliasing-feature.png" /></li>
+<li>Click Save configuration</li>
+</ul>
+<h2 id="global-alias-settings">Global alias settings</h2>
+<p>After you have enabled the site aliasing feature in Aegir you can navigate to aegir.example.com/admin/hosting/aliases (see the menu item that is added under Hosting in the admin menu bar). Here you can set default site alias settings for all of your Aegir-hosted sites.</p>
+<p><img alt="Global alias settings" src="../../../_images/global-aliasing-settings.png" /></p>
+<h2 id="site-specific-alias-settings">Site-specific alias settings</h2>
+<p>You can override the global settings for aliasing by configuring
+site-specific alias settings either when you create the site or later by
+editing the site settings.</p>
+<p><img alt="Site-specific alias settings" src="../../../_images/site-specific-aliasing-settings.png" /></p>
+<h2 id="redirection-option">Redirection Option</h2>
+<p>For users, one of the main differences that occurs when redirection is turned
+on is that the URL that they enter in the browser address bar changes. This
+reflects what the server is doing, which is in effect to redirect the request
+to the same site under the main URL, as opposed to serving the same site from
+under an alias.</p>
+<p>User navigates to my-old-domain.com with redirection off</p>
+<p><img alt="Aliasing without redirection" src="../../../_images/aliasing-without-redirection.png" /></p>
+<p>User navigates to my-old-domain.com with redirection on</p>
+<p><img alt="Aliasing with redirection" src="../../../_images/aliasing-with-redirection.png" /></p>
+<h2 id="aegir-alias-management-under-the-hood">Aegir alias management under the hood</h2>
+<p>Aegir primarily manages aliases in the virtual hosts file for each site (e.g.  <code>/var/aegir/config/server_master/apache/vhost.d/www.example.com</code>)</p>
+<p>When Aliases are in use, the virtual hosts file will have a ServerAlias
+directive for each site alias:</p>
+<pre><code>ServerAlias example.com
+ServerAlias www.my-old-domain.com
+</code></pre>
+<p>In addition to the above directives, when redirection is off, Aegir creates a symlink in the platform/sites/ folder for each alias that points to the folder associated with the primary domain:</p>
+<pre><code>lrwxrwxrwx 1 aegir aegir   15 Oct 31 23:25 example.com -&gt; www.example.com
+drwxr-xr-x 7 aegir aegir 4096 Oct 31 23:02 www.example.com
+lrwxrwxrwx 1 aegir aegir   15 Oct 31 23:25 www.my-old-domain.com -&gt; www.example.com
+</code></pre>
+<p>When redirection is enabled, Rewrite directives are added to the virtualhost to send http requests to the primary domain that the aliases are associated with:</p>
+<pre><code>ServerAlias example.com
+ServerAlias www.my-old-domain.com
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^www.example.com$ [NC]
+RewriteRule ^/(.)$ http://www.example.com/$1 [L,R=301]
+</code></pre>
+<p>The symlinks are not required in this case.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../importing/" class="btn btn-neutral float-right" title="Importing sites">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tasks/" class="btn btn-neutral" title="Site tasks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../tasks/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../importing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

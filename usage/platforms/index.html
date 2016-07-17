@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Platforms - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_css/toc.css" rel="stylesheet">
+  <link href="../../_css/menu.css" rel="stylesheet">
+  <link href="../../_css/images.css" rel="stylesheet">
+  <link href="../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Platforms";
+    var mkdocs_page_input_path = "usage/platforms.md";
+    var mkdocs_page_url = "/usage/platforms/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Platforms</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#setting-up-a-platform">Setting up a Platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-is-a-platform-anyway">What is a platform anyway?</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-else-could-be-considered-a-platform">What else could be considered a platform?</a></li>
+                
+                    <li><a class="toctree-l4" href="#getting-a-platform-onto-your-server">Getting a Platform onto your server</a></li>
+                
+                    <li><a class="toctree-l4" href="#platforms-and-remote-web-servers">Platforms and remote web servers</a></li>
+                
+                    <li><a class="toctree-l4" href="#do-i-have-to-have-multiple-platforms">Do I have to have multiple platforms?</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-the-platform-node">Adding the Platform node</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+    
+    <li>Platforms</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="setting-up-a-platform">Setting up a Platform</h1>
+<div class="toc">
+<ul>
+<li><a href="#setting-up-a-platform">Setting up a Platform</a><ul>
+<li><a href="#what-is-a-platform-anyway">What is a platform anyway?</a></li>
+<li><a href="#what-else-could-be-considered-a-platform">What else could be considered a platform?</a></li>
+<li><a href="#getting-a-platform-onto-your-server">Getting a Platform onto your server</a><ul>
+<li><a href="#drush">Drush</a></li>
+<li><a href="#wget">Wget</a></li>
+<li><a href="#version-control">Version control</a></li>
+<li><a href="#manually">Manually</a></li>
+<li><a href="#drush-make">Drush Make</a></li>
+</ul>
+</li>
+<li><a href="#platforms-and-remote-web-servers">Platforms and remote web servers</a></li>
+<li><a href="#do-i-have-to-have-multiple-platforms">Do I have to have multiple platforms?</a></li>
+<li><a href="#adding-the-platform-node">Adding the Platform node</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="what-is-a-platform-anyway">What is a platform anyway?</h2>
+<p>Platforms are a type of node in Aegir and often the source of confusion for new users. This is because the term or concept isn't really used explicitly outside of Aegir - Aegir is a system that suddenly makes Platforms 'make sense' to have.</p>
+<p>The simplest definition of a Platform is a copy of Drupal core. That's really it. When you download a copy of Drupal from drupal.org, the result is what Aegir thinks of as a 'Platform'. No sites exist on it yet.</p>
+<p>Before you can create a site using Aegir, you must first define the Platform.  This tells Aegir where to store the site directory, settings.php etc on the system.</p>
+<p>In short: first you create a Platform, and a site 'lives' on that platform, in exactly this fashion:</p>
+<ul>
+<li><code>/var/aegir/platforms/drupal-7.41</code> (Platform)<ul>
+<li><code>/sites/example.com/settings.php</code> (site)</li>
+</ul>
+</li>
+</ul>
+<p>This abstraction is somewhat unique to Aegir in that it opens up a world of new opportunities for you. By managing Platforms or copies of Drupal core, and understanding what sites are on what copy of core, Aegir is capable of moving sites between platforms (which is effectively upgrading a site) - read more about this in Migrating/upgrading and renaming sites.</p>
+<h2 id="what-else-could-be-considered-a-platform">What else could be considered a platform?</h2>
+<p>Anything that is more or less a copy of Drupal core is something Aegir considers a 'platform'. This thus includes any Drupal distribution, such as OpenAtrium, Pressflow, Acquia Drupal, OpenPublish, ManagingNews, and so on.</p>
+<p>The key difference between such distributions and a standard 'vanilla' copy of Drupal core is that these distributions tend to have:</p>
+<ul>
+<li>a custom install profile in the /profiles/ directory</li>
+<li>a set of contrib or custom developed modules, libraries or themes shipped with the core or profile</li>
+</ul>
+<p>If you build a copy of Drupal core and place your custom install profile in /profiles, this could be considered a Platform.</p>
+<p>If you place your custom install profile in an existing Platform and re-Verify the Platform, that profile will now be recognised as an option when creating a site on that Platform.</p>
+<p>Various 'versions' of Drupal, such as Drupal 6.x, Drupal 7.x or Drupal 8.x, are all considered separate Platforms in Aegir.</p>
+<p>Is this paradigm clear? 'Sites' are managed inside 'Platforms'. 'Platforms' are managed inside 'Servers'. 'Servers' are managed by Aegir. In this sense, Aegir manages all the rest too.</p>
+<h2 id="getting-a-platform-onto-your-server">Getting a Platform onto your server</h2>
+<p>A number of techniques exist to put a platform on a server. By convention, we
+keep platforms in <code>/var/aegir/platform</code>. So that's a good place to begin:</p>
+<pre><code>$ cd ~/platforms
+</code></pre>
+<h3 id="drush">Drush</h3>
+<p>For a standard Drupal platform, the easiest is to simply use drush:</p>
+<pre><code>$ drush dl
+</code></pre>
+<h3 id="wget">Wget</h3>
+<p>You can also use the 'wget' command, for example:</p>
+<pre><code>$ wget http://launchpad.net/prosepoint/trunk/0.23/+download/prosepoint-0.23.tar.gz
+$ tar -zxvf prosepoint-0.23.tar.gz
+</code></pre>
+<h3 id="version-control">Version control</h3>
+<p>You could use Git, e.g.:</p>
+<pre><code>$ git clone https://github.com/pressflow/7.git pressflow-7
+</code></pre>
+<h3 id="manually">Manually</h3>
+<p>You could download it on your PC and scp or FTP the files up onto your server.</p>
+<h3 id="drush-make">Drush Make</h3>
+<p>Drush Make comes installed on your Aegir system by default. You can use Drush Make to 'build' a platform, which does the job of fetching core and any other contributed or custom packages that you specify in a makefile.</p>
+<p>You can even specify the URL or path to a makefile in the form you are given when adding a Platform node in the Aegir frontend, and Aegir will execute the Drush Make command in the backend and build it for you!</p>
+<p>Explaining how to use Drush Make is outside the scope of this document. Consult the README.txt of Drush Make to learn the makefile syntax, or use a ready-made makefile available from the web. Some distributions such as OpenAtrium provide an example makefile for you to build the distribution with.</p>
+<h2 id="platforms-and-remote-web-servers">Platforms and remote web servers</h2>
+<p>Aegir has a 'spoke' model when it comes to remote servers, whereby the 'master' Aegir server keeps a copy of all platforms and sites and syncs changes outbound to remote servers that are running those platforms or sites, on tasks such as Verify etc.</p>
+<p>Because of this, all platform names and paths must be unique, even across remote servers. This means you cannot have 'Drupal 7.0' in /var/aegir/platforms/drupal-7.0 on both Server A and Server B, because it can only exist once in that location on the master Aegir server. Platforms can't share the same name 'Drupal 7.0' because Aegir uses the platform name to define a 'context' by which it can refer to that server, and there can be no conflicts.</p>
+<p>The exception to the unique path rule is when using web clustering (a collection of web servers running a platform), but even then, the platform is attached to the 'cluster' server and so is still 'unique' in this sense, that path cannot be reused for another platform running on another server somewhere else.</p>
+<p>So when adding platforms to your filesystem and to Aegir, make sure that the platform is unique in name and path, so that other servers cannot try and use this reserved name/path for other platforms.</p>
+<p>More on the platform name space</p>
+<p>Migrating a site to a remote server illustrates this name space issue further: as an example; given that an Aegir hostmaster has two directories representing two platforms (and remembering that aegir does not migrate platforms, only sites):</p>
+<ul>
+<li>/var/aegir/platforms/plat-local  </li>
+<li>/var/aegir/platforms/plat-remote  </li>
+</ul>
+<p>and the remote server also has:</p>
+<ul>
+<li>/var/aegir/platforms/plat-remote</li>
+</ul>
+<p>then having aegir hostmaster migrate a site from platform plat-local to plat-remote will result in the site files being:</p>
+<ol>
+<li>moved from .../plat-local to hostmaster's local .../plat-remote and</li>
+<li>rsync'd to .../plat-remote on the remote server.</li>
+</ol>
+<p>It is important to understand this if you are importing a working Drupal site into Aegir's control and Aegir hostmaster is on a different server from the working Drupal site.</p>
+<h2 id="do-i-have-to-have-multiple-platforms">Do I have to have multiple platforms?</h2>
+<p>No, you can simply have one platform or copy of Drupal core and provision all your sites to sit on the one platform. However, eventually you will want to upgrade your sites to a new copy of Drupal core, and rather than replace your core files in-place, it's recommended to build a new Platform with the newer copy of core, and use the Migrate task to move your sites (upgrade) onto the new code.</p>
+<h2 id="adding-the-platform-node">Adding the Platform node</h2>
+<p>Now that you've got your Platform on your server, or you know where and how you're going to do it (say, with Drush Make), it's time to tell Aegir about your new Platform.</p>
+<p>To do so, add a new node of type 'Platform' in your Aegir frontend. Typically this is most easily done by visiting Create Content &gt; Platform in the Admin Menu.</p>
+<p>The Platform node form has several fields required for giving Aegir information about your platform. These are:</p>
+<ul>
+<li><strong>Name</strong> -- a descriptive name for your platform. You very likely want this to be something like "Drupal 7.41".</li>
+<li><strong>Publish Path</strong> -- the path on the filesystem where the platform is, or will be when Drush Make builds it. This must be the absolute path, for instance <code>/var/aegir/drupal-7.41</code></li>
+<li><strong>Makefile</strong> -- the path on the filesystem to a makefile that will be used to create the platform.</li>
+</ul>
+<p>Once you have completed entering this information, you can click the Save button. A 'Verify' task will be spawned and added to the Task queue (visible in the right sidebar). The backend will then parse this new platform and build up a registry of information about it, such as what version of Drupal it is, as well as what versions of install profiles, modules and themes are present on that platform.</p>
+<p>Certain system configurations, such as Apache configurations similar to the .htaccess file that comes with Drupal, will be written to the filesystem, permissions checked and adjusted where necessary, and services restarted.</p>
+<p>Now that you have a platform or codebase that Aegir is aware of, you can now proceed to install or import sites onto that platform!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tasks/" class="btn btn-neutral float-right" title="Platform tasks">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sites/importing/" class="btn btn-neutral" title="Importing sites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../sites/importing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="tasks/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

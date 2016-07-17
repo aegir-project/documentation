@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Importing sites - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Importing sites";
+    var mkdocs_page_input_path = "usage/sites/importing.md";
+    var mkdocs_page_url = "/usage/sites/importing/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Importing sites</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#importing-sites-into-aegir">Importing sites into Aegir</a></li>
+                
+                    <li><a class="toctree-l4" href="#remote-import">Remote Import</a></li>
+                
+                    <li><a class="toctree-l4" href="#importing-a-single-site-manually">Importing a single site manually</a></li>
+                
+                    <li><a class="toctree-l4" href="#importing-a-complete-drupal-platform">Importing a complete Drupal platform</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#extracting-a-drupal-site-from-aegir">Extracting a Drupal site from Aegir</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Sites &raquo;</li>
+        
+      
+    
+    <li>Importing sites</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="importing-sites-into-aegir">Importing sites into Aegir</h1>
+<div class="toc">
+<ul>
+<li><a href="#importing-sites-into-aegir">Importing sites into Aegir</a><ul>
+<li><a href="#remote-import">Remote Import</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a href="#importing-a-single-site-manually">Importing a single site manually</a><ul>
+<li><a href="#1-create-site-resources">1. Create site resources</a></li>
+<li><a href="#2-transfer-files">2. Transfer files</a></li>
+<li><a href="#3-transfer-database">3. Transfer database</a></li>
+<li><a href="#4-verify-in-aegir">4. Verify in Aegir</a></li>
+</ul>
+</li>
+<li><a href="#importing-a-complete-drupal-platform">Importing a complete Drupal platform</a><ul>
+<li><a href="#1-transfer-the-codebase">1. Transfer the codebase</a></li>
+<li><a href="#2-transfer-the-database">2. Transfer the Database</a></li>
+<li><a href="#3-setup-platform-in-aegir">3. Setup Platform in Aegir</a></li>
+<li><a href="#4-import-and-verify-sites-in-aegir">4. Import and Verify Sites In Aegir</a></li>
+<li><a href="#5-migrate-to-another-platform">5. Migrate To Another Platform</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#extracting-a-drupal-site-from-aegir">Extracting a Drupal site from Aegir</a></li>
+</ul>
+</div>
+<p>It is possible to import existing sites into the Aegir hosting system, so that they can be managed by Aegir.</p>
+<p>These instructions assume you've set up a new server with Aegir on it, and you want to import sites into Aegir from another server, or even from the same server, using backups.</p>
+<p>There are three standard ways of importing sites into Aegir:</p>
+<ul>
+<li>using <a href="#remote-import">Remote Import</a> - simplest and fastest, scriptable</li>
+<li>from any <a href="#importing-a-single-site-manually">single site</a> manually - most reliable, can import even non-aegir sites, hard to automate</li>
+<li>from a <a href="#importing-a-complete-drupal-platform">complete drupal install</a> - fairly reliable, can import non-aegir sites, could be automated but requires access to the database servers currently in use by the site</li>
+</ul>
+<h2 id="remote-import">Remote Import</h2>
+<p>This Drupal module provides a UI for fetching sites from remote Aegir servers.</p>
+<h3 id="installation">Installation</h3>
+<p>Install this module like any other, and enable in the usual way.</p>
+<h3 id="usage">Usage</h3>
+<p>You'll need to add the remote Aegir server as any other server in the frontend,
+selecting ONLY the 'hostmaster' remote service as you do so.</p>
+<p>This means, of course, that you'll need to add your ssh key to this server and
+set it up like other remote servers. Note that you don't need to install
+anything other than the SSH key on this server.</p>
+<p>A general guide to setting up SSH on remote servers can be found <a href="http://aegir.readthedocs.org/en/3.x/usage/advanced/remote-servers/#ssh-keys">here</a>.</p>
+<p>Once you've set up your server in the frontend you should get a new menu item
+called: 'Import remote sites' when viewing the server node. Click on that link
+and follow the instructions there.</p>
+<h2 id="importing-a-single-site-manually">Importing a single site manually</h2>
+<p>If you already have a platform setup on Aegir with EXACTLY the same codebase as your existing site, then you don't need to transfer the entire old codebase - you can just transfer the sites/example.com directory. However, you also need to make sure any dependencies on contrib modules that your site has, are covered on the codebase or Platform that you're importing it into.</p>
+<p>In general it may be considered safer/less prone to confusing errors to <a href="#complete-drupal-install">transfer the entire old codebase</a> into Aegir as a whole Platform, whereby the site will be imported automatically under that Platform. You can then migrate it in Aegir to one of your existing Platforms later.</p>
+<p>Also, it is much faster to just "deploy" an Aegir backup than go through the manual procedure here, so you should generally follow that procedure instead of the one defined here unless you have a very hairy setup.</p>
+<h3 id="1-create-site-resources">1. Create site resources</h3>
+<p>In order to import the site, you need to create a database and database user for the site, along with a directory in the platform.</p>
+<p>The simplest way to do this is to create an empty site in the right platform and overwrite it. Through the commandline:</p>
+<pre><code>$ drush provision-save @example.com --context_type=site --platform=@platform_d6 --uri=example.com --db_server=@server_localhost --client_name=admin
+
+$ drush provision-install @example.com
+</code></pre>
+<p>Through the UI, this can be done simply by creating a site in Create content.</p>
+<p>If this is not working for some reason, you can create the mysql user and database manually using the following:</p>
+<pre><code>mysql&gt; GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES, CREATE TEMPORARY TABLES ON databasename.* TO 'databaseuser'@'localhost' IDENTIFIED BY 'password';
+
+mysql&gt; CREATE DATABASE databasename;
+</code></pre>
+<h3 id="2-transfer-files">2. Transfer files</h3>
+<p>You need to copy the sites/example.com directory from your old server to the new Aegir server.</p>
+<p>To do this, first create a tarball of the site on the old server. Within the sites/example.com directory type:</p>
+<pre><code>$ tar -zcvf example.com.tar.gz .
+</code></pre>
+<p>Then, on the Aegir server, you can create a directory for it in the codebase (platform) you want to put it under:</p>
+<pre><code>$ cd /var/aegir/platforms/drupal-X.Y/sites
+$ mkdir example.com
+$ cd example.com
+$ wget http://example.com/example.com.tar.gz
+$ tar -zxvf example.com.tar.gz ./files ./modules ./libraries ./themes
+</code></pre>
+<p>Instead of using wget you could of course use curl, rsync, SCP or FTP to transfer the tarball onto the Aegir server.</p>
+<p>In the above we assume that you have created an empty site as directed above, if not, you will also need to extract the settings.php file, so that last command should instead be simply:</p>
+<pre><code>$ tar -zxvf example.com.tar.gz
+</code></pre>
+<p>Then you will need to modify the settings.php file to follow the user and database created in the first step. Again, this is not necessary if you let Aegir create the site for you.</p>
+<p>Once the file is unpacked, check the ownership and group of each file by using ls -al. It should be either 'aegir:aegir' or 'aegir:www-data'. Change it if necessary. In particular, files that may have been uploaded on your site via modules like imagecache, upload, Profile pics etc, may need to have their ownership changed:</p>
+<pre><code>$ sudo chown -R aegir:www-data $platform/sites/*/files
+</code></pre>
+<h3 id="3-transfer-database">3. Transfer database</h3>
+<p>Make a backup of the database on your old server Backup and Migrate module is good for this, or you can use phpmyadmin or your favourite MySQL management tool. It's a good idea to truncate the cache, search and watchdog tables first to reduce the size of the database. The "Backup and Migrate" module does this for you.</p>
+<p>If you are importing a site from a previous Aegir installation somewhere, such as from a backup tarball, the database.sql will already be within the tarball you unpacked. You can use this to import into a new database on your new server.</p>
+<p>You can import the database with drush using the following command:</p>
+<pre><code>$ drush @example.com sqlc &lt; database.sql
+</code></pre>
+<h3 id="4-verify-in-aegir">4. Verify in Aegir</h3>
+<p>In the Aegir web interface click on the name of the platform you have added your site to. You can access the list of platforms via the 'Platforms' tab in the primary links menu.</p>
+<p>Execute a new Verify task on this platform via the 'Verify' button in the task list.</p>
+<p>Aegir will now re-verify the platform. In the process of this, it will discover your new site and spawn a new 'Import' task for the site.</p>
+<p>Once it's done this (it may take a couple of cron runs to dispatch these tasks in the queue) the tasks should turn green.</p>
+<p>At this point, presuming you have updated DNS or are overriding DNS via an entry in your /etc/hosts file to access the site via the new Aegir server, you can visit the site in a browser and check around to see that it has worked. Pay particular attention to any links in node content that pointed to paths referencing /sites/community.aegirproject.org if your site was not part of a multisite setup. (Drupal has a habit of storing these paths in the database, or they may have been hard-coded into nodes by users).</p>
+<p>Aegir will not go through all your database and update all URLs, so some images or links may be broken. This will need to be done manually. Aegir does attempt to update paths stored in tables such as 'files' though.</p>
+<p>It's a good idea to clear the caches, and you may need to get imagecache to rebuild its thumbnails if you use it.</p>
+<h2 id="importing-a-complete-drupal-platform">Importing a complete Drupal platform</h2>
+<p>This method of importing sites is often considered the safest whereby you transfer across an entire codebase containing Drupal core, and define it as a Platform first. This makes sure you bring any dependencies, contrib modules etc, in exactly the same version and configuration that is referenced in the database for the site.</p>
+<h3 id="1-transfer-the-codebase">1. Transfer the codebase</h3>
+<p>Create a tarball of the codebase on the old server. Within the drupal root directory type: tar -zcvf example.com.tar.gz * .htaccess</p>
+<p>Note that we have to specify including the .htaccess because it isn't picked up by the * wildcard due to being prefixed with a full stop. It is important to bring along the .htaccess for a platform so that Aegir can consider these settings when it generates Apache configuration for this platform.</p>
+<p>Then, on the new server you can create a directory for it in the codebase you want to put it under:</p>
+<pre><code>$ cd /var/aegir/platforms
+$ mkdir your-new-platform
+$ cd your-new-platform
+$ wget http://example.com/example.com.tar.gz
+$ tar -zxvf example.com.tar.gz
+</code></pre>
+<p>Instead of using wget you could of course use SCP or FTP to transfer the tarball onto the Aegir server.</p>
+<p>Once the file is unpacked, check the ownership and group of each file by using ls -al. It should be either 'aegir:aegir' or 'aegir:www-data'. Change it if necessary. We have to assume you have basic knowledge of Linux and POSIX permissions - we can't be responsible for teaching you sysadmin skills :)</p>
+<p>In particular, files that may have been uploaded on your site via modules like
+imagecache, upload, Profile pics etc, may need to have their ownership changed:
+sudo chown -R aegir $platform/sites/*/files</p>
+<p>If your site previously resided in sites/defau1t you need to move it because Aegir ignores the default directory (it has no way of understanding what URL this would be accessed by, so it is impossible to 'manage' it). Each site needs its own directory with the correct domain in typical Drupal multisite design:</p>
+<pre><code>$ mv sites/defau1t sites/example.com
+</code></pre>
+<p>If you do this, you may need to also update your filepath's stored in the files table by running the following query on your database:</p>
+<pre><code>mysql&gt; UPDATE files SET filepath = REPLACE(filepath, 'sites/defau1t', 'sites/example.com');
+</code></pre>
+<p>There are many other places in the database that can suffer the same problem, the node_revisions table for example. If you have phpMyAdmin available you can easily search the entire database for 'sites/defau1t'. Select the database, then click the Search tab. Once you know which tables are affected you can run a variation of the above query to correct these records.</p>
+<h3 id="2-transfer-the-database">2. Transfer the Database</h3>
+<p>Note: This step is not necessary if you are moving your site from one directory on your server (e.g., /var/www/html) to a newly created Aegir directory on the same server (e.g., /var/aegir).</p>
+<p>Make a backup of the database on your old server Backup and Migrate module is good for this, or you can use phpmyadmin or your favourite MySQL management tool. It's a good idea to truncate the cache, search and watchdog tables first to reduce the size of the database (Backup and Migrate does this for you).</p>
+<p>Aegir does not provide support for importing databases with prefixed tables so it is best to remove prefixes form the database. However, a <a href="https://www.drupal.org/node/483346#comment-3113516">workaround is available</a> if you want to keep prefixes on your tables.</p>
+<p>Unlike traditional Drupal projects the database settings cannot be found in settings.php. The database credentials are stored in the Apache vhost config of the associated site. This is a security measure implemented by the Aegir project.</p>
+<p>In the vhost directory on your old server, /var/aegir/config/server_master/apache/vhost.d/, there is a vhost file for every site on your server. The contents of the file can be displayed in your terminal with the command:</p>
+<pre><code>$ cat thenameofthefile
+</code></pre>
+<p>At the top of the file you will find the credentials needed to create a database on the new server.</p>
+<p>On your new server, manually create a new database and upload the .sql file from your backup.</p>
+<p>Then create the mysql user that your site accesses the database as, and grant it all permissions on that database except 'GRANT'.</p>
+<p>Connect to the database on the old server:</p>
+<pre><code>$ mysql -u root -p
+</code></pre>
+<p>Create the new database:</p>
+<pre><code>mysql&gt; create database yourdatabasename
+</code></pre>
+<p>Add the user:</p>
+<pre><code>mysql&gt; CREATE USER 'yourdatabaseuser'@'localhost' identified by 'youruserpassword';
+</code></pre>
+<p>Give the necessary privileges:</p>
+<pre><code>mysql&gt; GRANT ALL PRIVILEGES ON yourdatabasename.* TO 'yourdatabaseuser'@'localhost';
+</code></pre>
+<p>Import the database:</p>
+<pre><code>$ mysql -u yourdatabaseuser -p -h localhost yourdatabasename &lt; thenameofthedatabase.sql
+</code></pre>
+<h3 id="3-setup-platform-in-aegir">3. Setup Platform in Aegir</h3>
+<p>In the Aegir web interface click on 'Create Content' and 'Platform'. This step is often easiest when using the admin-menu on the top of your screen.</p>
+<p>Enter the name you want to use for the platform (eg 'My Platform import'), and the path to the platform on the server (eg '/var/aegir/platforms/your-new-platform')</p>
+<p>Click Save to submit the form, and Aegir will spawn a Verify task for this platform into the queue.</p>
+<p>Once the task is complete this the task should turn green (click through to the homepage to refesh and check. If not, see 'Troubleshooting' below).</p>
+<h3 id="4-import-and-verify-sites-in-aegir">4. Import and Verify Sites In Aegir</h3>
+<p>Upon completion of the above Platform verification task, Aegir will discover your new site and spawn a new 'Import' task for the site.</p>
+<p>Once it's done this (it may take a couple of cron runs to dispatch these tasks in the queue) the tasks should turn green (if not, see 'Troubleshooting' below).</p>
+<p>At this point, presuming you have updated DNS or are overriding DNS via an entry in your /etc/hosts file to access the site via the new Aegir server, you can visit site in a browser and check around to see that it has worked. Pay particular attention to any links in node content that pointed to paths referencing /sites/community.aegirproject.org if your site was not part of a multisite setup. (Drupal has a habit of storing these paths in the database, or they may have been hard-coded into nodes by users).</p>
+<p>It's a good idea to clear the caches, and you may need to get imagecache to rebuild its thumbnails if you use it.</p>
+<h3 id="5-migrate-to-another-platform">5. Migrate To Another Platform</h3>
+<p>Now that you have your sites under Aegir's control you can take advantage of its power, and easily migrate them to another platform. In the event that your sites were on old versions of Drupal core and a new one is available and present as another Platform on your Aegir server, you can use the Migrate process to upgrade those sites onto the new core.</p>
+<p>For details on how to Migrate sites, consult the <a href="../../../usage/sites/tasks/#migratingupgrading-sites">Migrate documentation</a>.</p>
+<h1 id="extracting-a-drupal-site-from-aegir">Extracting a Drupal site from Aegir</h1>
+<p>You may occasionally want to take a Drupal site hosted on a server managed with Aegir and put it somewhere else. This is pretty easy, but not quite as simple as moving a normal Drupal site not managed by Aegir from one machine to another. In brief, you have to copy the site, delete the <code>drushrc.php</code> file, and replace <code>settings.php</code> with a copy of the default configuration file. More specifically:</p>
+<ol>
+<li>Make a backup of your site in Aegir.</li>
+<li>Download the same copy of drupal core to the new server (and re-apply core patches, if any).</li>
+<li>Copy <code>sites/all/</code> to the new server.</li>
+<li>Copy the Aegir backup of your site to the new server and unzip in <code>sites/example.com/</code>.</li>
+<li>Create a database on the new server and import the database backup.</li>
+<li>Copy any custom site aliases in <code>sites/sites.php</code> to the new server.</li>
+<li>Copy any custom configuration in <code>local.settings.php</code> to <code>settings.php</code>.</li>
+<li>Edit <code>settings.php</code> to add the database authentication details for the new server.</li>
+</ol>
+<p>That's it!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../platforms/" class="btn btn-neutral float-right" title="Platforms">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../aliases/" class="btn btn-neutral" title="Site aliases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../aliases/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../platforms/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

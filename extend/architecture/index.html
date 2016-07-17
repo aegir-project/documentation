@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Architecture - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_css/toc.css" rel="stylesheet">
+  <link href="../../_css/menu.css" rel="stylesheet">
+  <link href="../../_css/images.css" rel="stylesheet">
+  <link href="../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Architecture";
+    var mkdocs_page_input_path = "extend/architecture.md";
+    var mkdocs_page_url = "/extend/architecture/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Architecture</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#aegir-architecture">Aegir Architecture</a></li>
+                
+                    <li><a class="toctree-l4" href="#schematic">Schematic</a></li>
+                
+                    <li><a class="toctree-l4" href="#file-system-structure">File system structure</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Aegir &raquo;</li>
+        
+      
+    
+    <li>Architecture</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="aegir-architecture">Aegir Architecture</h1>
+<div class="toc">
+<ul>
+<li><a href="#aegir-architecture">Aegir Architecture</a><ul>
+<li><a href="#schematic">Schematic</a></li>
+<li><a href="#file-system-structure">File system structure</a><ul>
+<li><a href="#scripts-and-configuration-files">Scripts and configuration files</a></li>
+<li><a href="#hostmaster-platform-and-aegir-site">Hostmaster platform and Aegir site</a></li>
+<li><a href="#deployed-platforms">Deployed Platforms</a></li>
+<li><a href="#ownership-and-permissions">Ownership and permissions</a><ul>
+<li><a href="#fixing-ownership-and-permissions">Fixing ownership and permissions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="schematic">Schematic</h2>
+<p>Below is a representation of the Aegir architecture in schematic form. It is intented to complement the section further down on the typical <a href="#file-system-structure">file system structure</a> on an Aegir installation.</p>
+<p><a href="../../_images/schematic.png"><img alt="Schematic" src="../../_images/schematic.png" /></a>
+Click on image for a larger version.</p>
+<h2 id="file-system-structure">File system structure</h2>
+<p>This section documents the typical file system structure on an Aegir installation.  It is intended to complement the <a href="#schematic">Aegir architecture schematic</a> above. The following paths are based on an Aegir 3.x installation and assume that all directories are within the <code>/var/aegir</code> folder.</p>
+<h3 id="scripts-and-configuration-files">Scripts and configuration files</h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/backups</code></td>
+<td>Site-specific tar balls containing a database dump and folders under <code>path/to/platform/sites/example.com</code></td>
+</tr>
+<tr>
+<td><code>~/config</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/config/server_master</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/conf.d</code></td>
+<td>non-aegir or non-drupal virtual hosts files</td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/platform.d</code></td>
+<td>contains <code>.htaccess</code> information for each aegir platform</td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/vhost.d</code></td>
+<td>Apache virtual host files for Aegir sites</td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/vhost.d/aegir.example.com</code></td>
+<td>Virtual host file for Aegir front-end site - specifies path to platform directory and site database settings (so that database credentials are not exposed directly in site <code>settings.php</code> file)</td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/vhost.d/site-1.com</code></td>
+<td>virtual host file for deployed web site</td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/vhost.d/site-2.com</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/config/server_master/apache/vhost.d/site-3.com</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/.drush</code></td>
+<td>Drush extensions and server, platform and site aliases</td>
+</tr>
+<tr>
+<td><code>~/.drush/provision</code></td>
+<td>Provision folder</td>
+</tr>
+<tr>
+<td><code>~/.drush/server_master.alias.drushrc.php</code></td>
+<td>Settings for the master server where the main aegir database, hosting platform and aegir site reside</td>
+</tr>
+<tr>
+<td><code>~/.drush/platform_hostmaster.alias.drushrc.php</code></td>
+<td>Settings for the hostmaster platform on which the aegir site is based</td>
+</tr>
+<tr>
+<td><code>~/.drush/hostmaster.alias.drushrc.php</code></td>
+<td>Settings for the Aegir front-end site</td>
+</tr>
+<tr>
+<td><code>~/.drush/platform_platform1.alias.drushrc.php</code></td>
+<td>Settings for platform1 on which site-1.com is based</td>
+</tr>
+<tr>
+<td><code>~/.drush/site-1.com.alias.drushrc.php</code></td>
+<td>Settings for site-1.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hostmaster-platform-and-aegir-site">Hostmaster platform and Aegir site</h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/hostmaster-3.x</code></td>
+<td>Hostmaster platform</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/default</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/</code></td>
+<td>hostmaster profile</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/modules</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/modules/contrib/</code></td>
+<td>Contrib modules bundled with the distribution</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/modules/aegir</code></td>
+<td>Aegir core and "Golden Contrib" modules</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/modules/aegir/hosting</code></td>
+<td>Hosting module – provides core Aegir front-end functionality.</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/themes/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/themes/eldir</code></td>
+<td>Eldir theme – provides Aegir front end look and feel</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/hostmaster.profile</code></td>
+<td>Profile file – used in site provisioning to configure a drupal database</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/build-hostmaster.make</code></td>
+<td>Stub Drush make file – used to build a working Aegir platform. Includes core and drupal-org.make</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/drupal-org.make</code></td>
+<td>drupal.org distribution packaging Drush make file – used to build the tarballs hosted on drupal.org. Includes Aegir core and "Golden Contrib" modules, Eldir and contrib modules.</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/profiles/hostmaster/hostmaster.make</code></td>
+<td>Drush make file – This makefile includes drupal-org.make, but overrides the versions to ensure we build from development code instead of the tagged releases.</td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/sites/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/hostmaster-3.x/sites/aegir.example.com</code></td>
+<td>Aegir front-end site folders</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deployed-platforms">Deployed Platforms</h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/platforms/</code></td>
+<td>Technically, the <code>~/platforms</code> directory is optional. It is however used by convention to separate deployed platforms from directories for scripts, config files and hostmaster platform.</td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/default/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/custom-profile/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/custom-profile/modules/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/custom-profile/themes/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/custom-profile/custom.profile</code></td>
+<td>Profile file – used in site provisioning to configure a drupal database</td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/profiles/custom-profile/custom.make</code></td>
+<td>Drush Make file – used to include modules, themes, libraries etc. from various sources</td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/modules/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/themes/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/modules/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/themes/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/files/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/settings.php</code></td>
+<td>Site-specific drupal configuration file</td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-1.com/drushrc.php</code></td>
+<td>Site- and Aegir-specific configuration file</td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-2.com/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-3.com/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-1/sites/site-n.com/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-2/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-3/</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/platforms/platform-n/</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ownership-and-permissions">Ownership and permissions</h3>
+<p>From the platform root (e.g. <code>~/platforms/drupal-7.41/</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Ownership</th>
+<th>Permissions</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>./*/</code></td>
+<td>aegir:aegir</td>
+<td>drwxr-xr-x</td>
+<td>The webserver has no business writing or moving <strong>directories</strong> in the Drupal codebase.</td>
+</tr>
+<tr>
+<td><code>./*</code></td>
+<td>aegir:aegir</td>
+<td>-rw-r--r--</td>
+<td>The webserver has no business writing or moving <strong>files</strong> in the Drupal codebase.</td>
+</tr>
+<tr>
+<td><code>./sites/all/drush/drushrc.php</code></td>
+<td>aegir:aegir</td>
+<td>-r--------</td>
+<td>Web server shouldn't be able to read drushrc.php, it's not a component of the Drupal platform.</td>
+</tr>
+</tbody>
+</table>
+<p>Inside <code>./sites/example.com</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Ownership</th>
+<th>Permissions</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>drushrc.php</code></td>
+<td>aegir:aegir</td>
+<td>-r--------</td>
+<td>Web server shouldn't be able to read drushrc.php, it's not a component of the Drupal site.</td>
+</tr>
+<tr>
+<td><code>settings.php</code></td>
+<td>aegir:www-data</td>
+<td>-r--r-----</td>
+<td>Web server can read this file, but otherwise tight control over this file which can contain sensitive information.</td>
+</tr>
+<tr>
+<td><code>libraries/</code></td>
+<td>aegir:aegir</td>
+<td>drwxrwsr-x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>libraries/*</code></td>
+<td>aegir:aegir</td>
+<td>-rw-r--r--</td>
+<td>Because of the sticky bit (s) on the parent directory, each child directory will inherit attributes of the parent. The attribute that is consistently inherited is the group. This means that a developer in the "aegir" group can add files which will retain the "aegir" group ownership of the parent</td>
+</tr>
+<tr>
+<td><code>modules/</code></td>
+<td>aegir:aegir</td>
+<td>drwxrwsr-x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>modules/*</code></td>
+<td>aegir:aegir</td>
+<td>-rw-r--r--</td>
+<td>Same as <code>libraries/*</code></td>
+</tr>
+<tr>
+<td><code>themes/</code></td>
+<td>aegir:aegir</td>
+<td>drwxrwsr-x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>themes/*</code></td>
+<td>aegir:aegir</td>
+<td>-rw-r--r--</td>
+<td>Same as <code>libraries/*</code></td>
+</tr>
+<tr>
+<td><code>files/</code></td>
+<td>aegir:www-data</td>
+<td>drwxrws---</td>
+<td>Aegir sets these directories with a sticky bit (s) so that under certain conditions new folders and files will inherit parent permissions. There are only a few cases where this happens though.</td>
+</tr>
+<tr>
+<td><code>files/*/</code></td>
+<td>www-data:www-data</td>
+<td>drwxr-sr-x</td>
+<td>The permissions shown here are how <strong>directories</strong> created by www-data will look. When verifying a platform, Aegir won't "correct" these files and directories to match the parents.  See the next section if you need to fix file ownership or permissions.</td>
+</tr>
+<tr>
+<td><code>files/*</code></td>
+<td>www-data:www-data</td>
+<td>-rw-r--r--</td>
+<td>The permissions shown here are how <strong>files</strong> created by www-data will look. When verifying a platform, Aegir won't "correct" these files and directories to match the parents. See the next section if you need to fix file ownership or permissions.</td>
+</tr>
+<tr>
+<td><code>private/</code></td>
+<td>aegir:www-data</td>
+<td>drwxrws---</td>
+<td>Same as <code>files/</code></td>
+</tr>
+<tr>
+<td><code>private/*/</code></td>
+<td>www-data:www-data</td>
+<td>drwxr-sr-x</td>
+<td>Same as <code>files/*/</code></td>
+</tr>
+<tr>
+<td><code>private/*</code></td>
+<td>www-data:www-data</td>
+<td>-rw-r--r--</td>
+<td>Same as <code>files/*</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fixing-ownership-and-permissions">Fixing ownership and permissions</h4>
+<p>If you have trouble with permissions/ownership on the <code>files/</code> or <code>private/</code> directories, you can safely run the following commands (in this case on the files directory):</p>
+<pre><code># chown -R aegir:www-data /path/to/site/files/*
+# chmod -R 775 /path/to/site/files/*
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../provision/" class="btn btn-neutral float-right" title="Provision">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../terminology/" class="btn btn-neutral" title="Design and terminology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../terminology/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../provision/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

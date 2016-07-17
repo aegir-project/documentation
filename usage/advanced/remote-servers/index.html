@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Multiple servers - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Multiple servers";
+    var mkdocs_page_input_path = "usage/advanced/remote-servers.md";
+    var mkdocs_page_url = "/usage/advanced/remote-servers/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Multiple servers</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#multiple-servers">Multiple Servers</a></li>
+                
+                    <li><a class="toctree-l4" href="#remote-servers">Remote servers</a></li>
+                
+                    <li><a class="toctree-l4" href="#clustering">Clustering</a></li>
+                
+                    <li><a class="toctree-l4" href="#platforms-on-remote-web-servers">Platforms on remote web servers</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Advanced features &raquo;</li>
+        
+      
+    
+    <li>Multiple servers</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="multiple-servers">Multiple Servers</h1>
+<div class="toc">
+<ul>
+<li><a href="#multiple-servers">Multiple Servers</a><ul>
+<li><a href="#remote-servers">Remote servers</a><ul>
+<li><a href="#system-dependencies">System dependencies</a></li>
+<li><a href="#aegir-user">Aegir user</a></li>
+<li><a href="#web-server-configuration">Web server configuration</a><ul>
+<li><a href="#sudoers">Sudoers</a></li>
+</ul>
+</li>
+<li><a href="#login-shell">Login shell</a></li>
+<li><a href="#mysql-access">MySQL access</a></li>
+<li><a href="#ssh-keys">SSH keys</a></li>
+<li><a href="#verify-the-server">Verify the server</a><ul>
+<li><a href="#shell-commands-as-root">Shell commands as root</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#clustering">Clustering</a><ul>
+<li><a href="#using-the-pack-module">Using the Pack module</a><ul>
+<li><a href="#configuring-the-pack-server-node">Configuring the Pack server node:</a></li>
+<li><a href="#configuring-the-web-server-nodes">Configuring the Web server nodes:</a><ul>
+<li><a href="#creating-a-platform-on-a-pack">Creating a Platform on a Pack:</a></li>
+<li><a href="#caveats">Caveats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#using-the-cluster-module">Using the Cluster module</a><ul>
+<li><a href="#setting-up-web-clusters">Setting up Web Clusters</a></li>
+<li><a href="#final-tasks">Final Tasks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#platforms-on-remote-web-servers">Platforms on remote web servers</a><ul>
+<li><a href="#understanding-the-process">Understanding the process</a></li>
+<li><a href="#the-mechanics">The mechanics</a></li>
+<li><a href="#creating-sites-on-the-remote">Creating sites on the remote</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Aegir supports multiple 'server' entities. These servers have 'services' such as 'Web' or 'Database', and 'service types' which are implementations of that service, such as 'Apache' or 'MySQL'.</p>
+<p>Some previous experience in the configuration of Apache and MySQL will help if you want to use remote servers with Aegir. If you haven't had any experience in setting up and maintaining Apache or MySQL before you might want get familiar with the basic concepts first.</p>
+<h2 id="remote-servers">Remote servers</h2>
+<h3 id="system-dependencies">System dependencies</h3>
+<p>On the remote server, install these packages</p>
+<pre><code>apt-get install rsync apache2 php5 php5-cli php5-mysql postfix mysql-client sudo
+</code></pre>
+<h3 id="aegir-user">Aegir user</h3>
+<p>Any number of remote web servers may be configured. The remote server needs an aegir user created on the system.</p>
+<pre><code>adduser --system --group --home /var/aegir aegir
+adduser aegir www-data    #make aegir a user of group www-data
+</code></pre>
+<h3 id="web-server-configuration">Web server configuration</h3>
+<p>You'll also need to prepare the web server in the same way you did for the master Aegir server during installation:</p>
+<p><strong>For Apache 2.4 and up:</strong></p>
+<pre><code>a2enmod rewrite
+ln -s /var/aegir/config/apache.conf /etc/apache2/conf-enabled/aegir.conf
+</code></pre>
+<p><strong>For Apache 2.3 and lower:</strong></p>
+<pre><code>a2enmod rewrite
+ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
+</code></pre>
+<p>In case of doubt, just check in /etc/apache2/ whether you have conf.d or conf-enabled, you should only have one of them.</p>
+<p><strong>Don't restart Apache even when it prompts you.</strong> This will be done by the Verify task you'll spawn for the server from the Aegir frontend later.</p>
+<h4 id="sudoers">Sudoers</h4>
+<p>Add the aegir user to sudoers so it can restart Apache</p>
+<pre><code>sudo visudo -f /etc/sudoers.d/aegir
+
+aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
+</code></pre>
+<h3 id="login-shell">Login shell</h3>
+<p>The remote aegir user will also need a login shell, which can be modified using the chsh command.</p>
+<pre><code>chsh -s /bin/sh aegir
+</code></pre>
+<h3 id="mysql-access">MySQL access</h3>
+<p>Aegir connects directly to the remote server's MySQL to create databases and users. Therefore, you need to log into MySQL in the remote server as root and create a user with the following command:</p>
+<pre><code>mysql&gt; GRANT ALL PRIVILEGES ON *.* TO root@aegir_server_ip IDENTIFIED BY 'password' WITH GRANT OPTION;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre>
+<p>Where</p>
+<ul>
+<li>'root' is the username on the Aegir server that will be connecting. Leave 'root';</li>
+<li>'aegir_server_ip' is the IP address of your Aegir server. For example '123.123.123.123';</li>
+<li>'password' is the password that will be used by your Aegir 'root' user to connect to the remote server's MySQL to create databases and users. It is suggested to store that password in a secure location. To increase security, it is recommended to choose a password with 6 to 16 alphanumeric and or punctuation characters.</li>
+</ul>
+<p>If MySQL returns something like "Query OK", that means the command was successful. For example:</p>
+<pre><code>Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+<p>Note the comment about "bind-address = 127.0.0.1" within section 3.6 of the <a href="../../../install/#36-database-configuration">manual configuration page</a>.</p>
+<p>When the server is being verified, Aegir will attempt to create a database and grant privileges to a user for that database. If any of these two fails, <a href="http://www.ghacks.net/2009/12/27/allow-remote-connections-to-your-mysql-server/">verify that your MySQL configuration is correct</a> and that there is no firewall blocking your MySQL port.</p>
+<p>You can confirm that MySQL is configured correctly on the remote server by manually connecting from the command line on your Aegir machine:</p>
+<pre><code>$ mysql -h &lt;mysql_server_IP&gt; -u root -p
+</code></pre>
+<p>If your MySql database is running on the same server as the Aegir master and is configured with the name "localhost", you may run an issue where the remote web server tries to access MySql via a local socket rather than the hostname. To resolve this, just change the server hostname for the MySql server in Aegir from "localhost" to the hostname of the server.</p>
+<h3 id="ssh-keys">SSH keys</h3>
+<p>SSH public/private keys should be set up so the main Aegir server's aegir user can access remote web aegir users with no passwords required.</p>
+<p>Example:</p>
+<pre><code>$ ssh-keygen -t rsa
+</code></pre>
+<p>Follow the promts. Do not use a passphrase when you create your key. Simply press Enter to leave the passphrase blank. Otherwise, SSH will insist that you enter the passphrase everytime you try to SSH using the key. We don't want SSH to present any prompts.</p>
+<p>Put the public key's contents into /var/aegir/.ssh/authorized_keys on the remote web server. The easiest way to do this is to use the ssh-copy-id command.</p>
+<p>You should manually login for the first time from your Aegir master server to your remote server as the aegir user, so that the remote web server is added to the known_hosts file in /var/aegir/.ssh on your Aegir master server. Verifying the remote webserver will fail until this has been done.</p>
+<p>You can confirm that SSH is set up correctly by manually connecting from your aegirmaster server to your remote server as aegir@ user to aegir@ user:</p>
+<pre><code>[aegir@aegirmaster:~]$ ssh aegir@&lt;remoteserver&gt;
+</code></pre>
+<p>This should directly log you into the remote shell command line without any additional keys pressed.</p>
+<pre><code>[...]
+[aegir@&lt;remoteserver&gt;:~]$
+</code></pre>
+<p>There are many, many tutorials online for setting up ssh keys, and various mistakes can be made by inexperienced users such as permissions etc. Aegir isn't a 'Linux beginner's practice tool', so setting these up is really out of the scope of this document and users are encouraged to research this on their own. (For Ubuntu, <a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">see this article</a>).</p>
+<p>If you have followed the instructions above, and your SSH connection gets closed immediately after you try to connect to the remote server as the aegir user, you may not have given the aegir user a shell correctly. Check the /etc/passwd file on the remote server to make sure that the aegir user has a shell.</p>
+<h3 id="verify-the-server">Verify the server</h3>
+<p>Now you can add a new server node in Aegir, set the hostname and/or IP and set the service type to be 'Apache' (or Apache_SSL if this site is to handle SSL sites).</p>
+<p><img alt="Create Server Aegir Admin Screen" src="../../../_images/create-remote-server.png" /></p>
+<p>A verify task will be spawned and added to the Task queue ready for dispatching. During a server verification task, various configurations will be set on the Aegir master server and also synced to the remote web server, restarting Apache.</p>
+<p>Now when you add a new Platform node in Aegir, you have the option of setting which web server to host it on. If you are not using a makefile but are downloading a platform manually, you must still do this on the main Aegir server. The contents will then be synced across to the web server.</p>
+<p>You don't choose a web server when installing a new site. Because a site depends on a platform, its web server is implied by which platform has been chosen. In other words, all sites on a platform are hosted on the same server. You cannot host two sites on the same platform on different servers.</p>
+<h4 id="shell-commands-as-root">Shell commands as root</h4>
+<p>These are the commands outlined above consolidated.</p>
+<pre><code>apt-get install mysql-client
+adduser --system --group --home /var/aegir aegir
+adduser aegir www-data    #make aegir a user of group www-data
+chsh -s /bin/sh aegir
+apt-get install rsync apache2 php5 php5-cli php5-mysql
+mkdir /var/aegir/.ssh
+cat &gt; /var/aegir/.ssh/authorized_keys &lt;&lt;EOF
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQAB...UF aegir@filer01
+EOF
+chown aegir:aegir /var/aegir/.ssh -R
+chmod 750 /var/aegir/.ssh
+chmod 640 /var/aegir/.ssh/authorized_keys
+a2enmod rewrite
+ln -s /var/aegir/config/apache.conf /etc/apache2/conf.d/aegir.conf
+cat &gt; /etc/sudoers.d/aegir &lt;&lt;EOF
+Defaults:aegir  !requiretty
+aegir ALL=NOPASSWD: /usr/sbin/apache2ctl
+EOF
+chmod 440 /etc/sudoers.d/aegir
+</code></pre>
+<h2 id="clustering">Clustering</h2>
+<p>If you wish to run the same website concurrently on multiple hosts you can use the Pack or Cluster module.</p>
+<p>The <a href="#using-the-cluster-module"><strong>Web Cluster</strong></a> module uses Rsync to get all files to all servers.</p>
+<p>The <a href="#using-the-pack-module"><strong>Web Pack</strong></a> module shares files to all servers via an NFS mount.  The NFS setup must be done manually.</p>
+<h3 id="using-the-pack-module">Using the Pack module</h3>
+<p>If you wish to run the same website concurrently on multiple hosts you use the Pack module. Enable the pack module as you would any other drupal module.</p>
+<p>A Pack consists of a single server node that is specified as "pack" and any number of server nodes specified as "apache" or "nginx". Aegir rsync's configuration (Apache &amp; Nginx) to "all" nodes in the Pack and rysnc's the platform and site code to only the "master" node in the Pack. All other "slave" nodes will see the platform and site code via NFS.</p>
+<h4 id="configuring-the-pack-server-node">Configuring the Pack server node:</h4>
+<p>The "pack" server node will not be used by Aegir to physically deploy sites or platforms on, so consider it more of a 'virtual server group' for logistical purposes only. When creating the pack node, you do not need to supply a valid Server hostname or IP address, so choose a naming convention that makes sense in your environment.</p>
+<p>Next, select the "pack" radio button option under the web configuration when creating or editing the server node, in order to designate this server node as the "pack" server.</p>
+<p>Now select the "Master" server from the list of Master servers. The Master server will be the server node that Aegir rsync's the platform and site to. Typically, you would choose the Aegir server itself as the 'master'.</p>
+<p>Finally, select the "Slave" servers from the list of Slave servers. The Slave servers will have the Apache or Nginx config rsync'd to them but not the platform or site code, since those will be available to all Slave servers via the NFS share.</p>
+<h4 id="configuring-the-web-server-nodes">Configuring the Web server nodes:</h4>
+<p>Configure all web server nodes using <a href="#remote-servers">these instructions</a>. Take care to ensure the 'aegir' user and group on your NFS client machines, have the same UID/GID as that of the NFS server, or else you may run into permissions issues with NFS.</p>
+<p>Then mount the files on the remote server.</p>
+<p>On the NFS server:</p>
+<pre><code>sudo apt-get install nfs-kernel-server
+echo "/var/aegir/platforms    10.0.0.0/24(rw,no_subtree_check)" &gt;&gt; /etc/exports
+sudo service nfs-kernel-server reload
+</code></pre>
+<p>(Replace the subnet here or add specific /32 hosts as necessary for your environment)</p>
+<p>Then on the web servers (Master, if it wasn't also the NFS server, and the Slaves):</p>
+<pre><code>sudo apt-get install nfs-client
+sudo mount 10.0.0.1:/var/aegir/platforms /var/aegir/platforms
+</code></pre>
+<p>(Replace the NFS server's IP here with that of your master server/Aegir server)</p>
+<p>Add this to your fstab on the servers that mount the NFS share, so that the share is mounted on boot:</p>
+<pre><code>10.0.0.1:/var/aegir/platforms /var/aegir/platforms nfs rw 0 0
+</code></pre>
+<h5 id="creating-a-platform-on-a-pack">Creating a Platform on a Pack:</h5>
+<p>When configuring a Platform to be deployed on a Pack, choose the "Pack" server node from the Web server radio group during the Platform node creation. Then you choose this Platform as usual when adding a site, and that site will be served from any servers within the Pack.</p>
+<h5 id="caveats">Caveats</h5>
+<p>Relying on an NFS share to serve your entire /var/aegir/platforms can be a single point of failure if the NFS share becomes unavailable. You may want to look into providing some sort of failover for NFS (google for things like DRBD and Heartbeat), or using some other form of redundancy for your NFS (Netapp filer clusters etc)</p>
+<p>Below is an example diagram of a Pack cluster known to be functioning in production (with an optional MySQL-MMM cluster out of scope for this documentation), which may help you visualise the Pack and how it can be put together.</p>
+<p><img alt="Diagram of Pack configuration with multiple servers" src="../../../_images/aegir-pack.png" /></p>
+<h3 id="using-the-cluster-module">Using the Cluster module</h3>
+<p>This documentation page is about the <strong>Web Cluster</strong> module.</p>
+<h4 id="setting-up-web-clusters">Setting up Web Clusters</h4>
+<p>In this setup, we will add two web servers and a single database server.</p>
+<ol>
+<li>Under <strong>Admin &gt; Hosting &gt; Features</strong>, enable the "Web Clusters" module.</li>
+<li>Setup two or more additional <strong>Remote Servers</strong> using the <a href="#remote-servers">Remote Server Instructions</a>.</li>
+<li>Create Remote Server Nodes: Visit <strong>Servers &gt; Add Server</strong> and enter the hostname of your remote server.  For <strong>Web Server</strong>, select <em>Apache</em>, <em>Apache SSL</em>, <em>NGINX</em>, or <em>NGINX SSL</em>.</li>
+<li>Repeat Step 3 for all of your web servers.</li>
+<li>Create Cluster Server Node: Visit <strong>Servers &gt; Add Server</strong> and enter any hostname (something like "cluster" so you can identify it.).  For <strong>Web Server</strong>, select <em>Cluster</em> and select all of the web servers you wish to add to the cluster.</li>
+<li>Setup Database Server: You have two options here.</li>
+<li>Provision a new, separate database server using only the <a href="#mysql-access">MySQL section</a> above.  Then visit <strong>Servers &gt; Add Server</strong>, enter the new server's hostname, and select "MySQL" for "Database" and enter the root username and password you set during the Remote Server Instructions.</li>
+<li>Use an existing server other than "localhost". Aegir installs a database server called "localhost" by default. You cannot use this server for sites installed on remote servesr.  Find the default web server aegir installed (named after the hostmaster hostname).  Click <em>Edit</em>, then select "MySQL" for "Database" and enter the root username and password.  If you use the server with the same hostname as the "localhost" database server, you can use the same root username and password.</li>
+<li>Make sure the Database Server Hostname resolves to the database server IP.  This can be done with DNS or by manually editing the /etc/hosts file on the remote servers.</li>
+<li>Create or Edit a platform node, and select the cluster server you created in step 5.</li>
+<li>Create a site node, and select the database server you created in step 6.</li>
+</ol>
+<p>If all goes well, the site should install.</p>
+<p>To test that the site is available from both servers, you must edit your DNS or hosts file:</p>
+<ol>
+<li>Given your site node URL is myclustersite.com, edit /etc/hosts or your DNS so myclustersite.com resolves to the IP of remote server #1.</li>
+<li>Visit the URL http://myclustersite.com in the browser. If the site works, we know we can load the site from remote server #1.</li>
+<li>Edit /etc/hosts or your DNS so myclustersite.com resolves to the IP of server #2.</li>
+<li>Visit the URL http://myclustersite.com again. If the site works, we know we can load the site from remote server #2.</li>
+</ol>
+<h4 id="final-tasks">Final Tasks</h4>
+<p>There are two important final tasks to get a working drupal site running on a server cluster:</p>
+<ol>
+<li>
+<p>Load Balancer.
+  Now you must setup a load balancer that will route requests to both remote server #1 and #2.</p>
+</li>
+<li>
+<p>Shared Files folder.
+  Uploaded files will only go to one server when you upload them.  They will appear as missing when requests come in to the other servers.</p>
+</li>
+</ol>
+<p>There are a number of ways to deal with this: You can use NFS to create a shared files folder, or you can configure your load balancer to always send requests for the files folder to a single server.</p>
+<p>Setting up a load balancer and dealing with the files folder is out of scope of this article, for now.</p>
+<h2 id="platforms-on-remote-web-servers">Platforms on remote web servers</h2>
+<p>If you have been using Aegir for a while simply because it handles updates, moving to new releases, cloning, aliases and everything Drupal with such elegance on a single server - you might not be entirely clear on what changes when you make the move to multiple servers. Hopefully this will help.</p>
+<h3 id="understanding-the-process">Understanding the process</h3>
+<p>Multiple servers are great even if you do not have to manage a server farm. Having a server for development that you are free to break, one for testing that you hope will not break, one for approvals so your clients can go to see how their "real" website will look, and one for production that serves the daily grind of live sites is a wonderful thing. This DTAP (Development, Testing, Acceptance, and Production) structure works and it is surprisingly easy to accomplish under Aegir.</p>
+<p>If you are managing a farm, creating massive numbers of servers is quick and easy with Aegir - especially if you use virtual machines like Xen where a server image can be cloned or generated using LVM disks that can be migrated (even while running) to other physical machines.</p>
+<p>When it is time break out an Aegir master controller and remote slaves you have to remember that Aegir is the place that it (almost) all happens. Everything is stored in Aegir - including your remote platforms and your sites - and then distributed to the slave servers by Aegir in the Verify process.</p>
+<p>Remember too that sites reside on platforms, and platforms reside on servers. You are turning your Aegir install into an Aegir Master as the hub, and the Aeger Remote Slaves as the spokes. To move into this "hub and spoke" architecture, you must build the remote server, tell the Aegir Master about that server and verify it, install a Drupal platform for that server on the Aegir Master and finally tell the Aegir Master about that Drupal install and verify that. You then create the sites on the platform you want based upon the install profile you select for that site.</p>
+<h3 id="the-mechanics">The mechanics</h3>
+<ol>
+<li>
+<p>Build a server image on your network to become your Aegir Slave. This can be anything from a separate headless server to a Virtual Machine image on a physical machine with a dozen other Virtual Machines on it. As long as it has its own IP and is capable of running a Drupal image, it will work.</p>
+</li>
+<li>
+<p>Ensure that your new server image is resolved in your DNS by adding it to your zone files and incrementing the serial number in the zone file. Aegir can manage that for you now to some extent, but you might want to wait until that feature leaves the experimental status. Make sure the entries in /etc/hostname and /etc/hosts all match your zone files (including reverse DNS). Reload/restart the DNS server. Any DNS slaves should automatically get notified and the incremented serial number should make sure they reload automatically. Test the resolution and ping the new Aegir Slave server image from the Aegir Master to Ensure that the IPs all resolved properly.</p>
+</li>
+<li>
+<p>Follow the steps for <a href="./">Setting up a remote web server</a> carefully. You should be able to use cut and paste if you are using Debian Stable or the like. In any case, you will need those packages. You do not need Aegir on the slave, but you do need the aegir user and that user must have a shell. I prefer the bash shell, but the sh shell in the instructions will do.</p>
+</li>
+<li>
+<p>You need to have the "passphraseless" ssh working and proven before you continue. A web search on the terms "passphraseless ssh" plus your operating system will generally get you great instructions, but putting those instructions here for every possible combination is beyond the scope of this example. In terms of helpful hints, however, you do not need to have a password for the aegir user on the Aegir Slave. Your access will be this certificate. By simply hitting enter when it asks for the passphrase, you make the certificate passphraseless. You should carefully set the permissions and back these certificates up to a secure location. You MUST log in manually from the Aegir Master to the Aegir Slave the first time or your verify will fail. This is because the system has to add the ssh keys to the known hosts and it will ask about about it before it will allow the connection. Aegir nows nothing about this and will not answer, so the verify will fail. To be absolutely sure it works, after exiting the initial login, you should retry the login to verify it does not ask for a password and then exit the login and try an rsync (which is the process by which the Aegir Master controls the Aegir Slaves). All of these commands should work from the Aegir Master to the new Aegir Slave while logged into the Aegir Master as the aegir user with no request for a password, proving that the systems are exchanging keys (do not proceed until you can do this flawlessly without having to enter a response):</p>
+<pre><code>## Start from the Aegir Master as the aegir user
+# Log in to the slave from the Aegir Master and exit without any password or reply required
+ssh slavename.example.com
+exit
+# Create a test file for rsync
+echo 'rsync test file' &gt; MyRsyncTest
+# Send the test file to the remote slave by name using rsync
+rsync -azvv /var/aegir/MyRsyncTest aegir@slavename.example.com:/var/aegir
+# Log back into the remote slave
+ssh slavename.example.com
+# Make sure the file is there and readable
+cat /var/aegir/MyRsyncTest
+# Delete the test file from the remote slave
+rm /var/aegir/MyRsyncTest
+# Exit the ssh login session on the remote
+exit
+# Delete the test file on the Aegir Master
+rm /var/aegir/MyRsyncTest
+</code></pre>
+</li>
+<li>
+<p>Go to Add Content/Server and put in the server name, leave the Database set as None (Your sites will use the Aegir Master database and none is required on the Remote Slave) and under Web select apache or apache ssl (to match the example) then click Save. After the process completes you should see that it found the IP address properly on its own, plugged it in all by itself and then Verify quite nicely. If you look on the Aegir Slave remote server you will see that you now have directories named config and platform.</p>
+</li>
+<li>
+<p>Now that hard decision for platform choice comes in play. My preference is a Drupal install that is the same release as the Aegir Master server or higher. Since sites are eventually destined to be Drupal 8 one day, and the Aegir system is not Drupal 8 ready as of this writing but heading that direction, making at least one Drupal 8 slave is a good idea so that you can migrate sites to that platform as they are ready. If you are migrating sites off of your existing Aegir and onto slaves, migrating to platforms of the same Drupal version makes that process much easier. In any case, firm up your decision about which Drupal version you want to install on your new Aegir Slave Platform.</p>
+</li>
+<li>
+<p>Time to create that platform. The big thing here is to do it right the first time and make certain that the name of the platform is unique to any platform on your Aegir Master server. If you look in your /var/aegir directory you will notice that Aegir has its own naming convention. For instance, you should see /var/aegir/hostmaster-6.x-2.4 as the platform for the Aegir 6.x-2.4 release. You need to consider doing the same. For instance, name your platform something like: /var/aegir/slavename-drupal-version and you will make it easier to distinguish which server the platform resides upon and the drupal version so that you can manage updates and migrations more easily. Make certain that you are not destroying one platform when creating another. Be aware that at some point Aegir started organizing platforms into a separate directory: /var/aegir/platforms and you should change to that structure if you have an older original install. Again, be careful you are not overwriting an existing install when you create the new one. For instance, if you already have a Drupal install in /var/aegir/platforms/drupal-7.38 the code below will attempt to recreate it on top of the existing install. If you are using a Makefile, be sure that the same problem does not occur in that makefile. To create a Drupal 7 Aegir Remote Slave Platform, log into the Aegir Master as the aegir user and run this simple code (of course edit it to match the platform and name you want to create:</p>
+<pre><code># Make sure you are in the proper directory
+cd /var/aegir/platforms
+# Install Drupal 7.38
+drush/drush.php dl drupal-7.38
+# Rename the platform to your own naming convention
+mv /var/aegir/platforms/drupal-7.38 /var/aegir/platforms/slavename-drupal-7.38
+</code></pre>
+</li>
+<li>
+<p>The final step in creating this platform is to actually tell the Aegir Master about it so that it can distribute it (via rsync) to the new Aegir Remote Slave. Simple enough. Just go to Create Content/Platform and the Create Platform screen comes up. Under Name write something descriptive and unique. In the example so far, this will be something like 'slavename Drupal 7.14' or in some way adhere to your chosen naming convention. I use the directory name I created above since that serves two purposes. Under Publish Path you will put the path that holds this Drupal distribution. In the example above that will be /var/aegir/platforms/slavename-drupal-7.14 but the path will be reflected from the Aegir Master to the Aegir Slave and will be the same on both. If you are using a Makefile you need to enter the full path and name of that Makefile here as well, but the creation and use of the Makefile is beyond the scope of this example. Lastly choose the server that this platform will reside upon. When you are finished, double check the screen and then click on Save. The Verify step should execute flawlessly and when it does, your Aegir Remote Slave will be complete and ready to accept sites.</p>
+</li>
+<li>
+<p>Lather, rinse and repeat for each Aegir Remote Slave.</p>
+</li>
+</ol>
+<h3 id="creating-sites-on-the-remote">Creating sites on the remote</h3>
+<p>The only difference you will notice when creating a new site under Aegir will be the choice of platform. The Create Site screen is quite self explanatory, but the main thing is to select the Install Profile that you require and then the list of Platforms that support that install profile will be populated.</p>
+<p>As usual, Aegir makes it all faster and easier than you expect.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../clients/" class="btn btn-neutral float-right" title="Access control">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ssl/" class="btn btn-neutral" title="SSL"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../ssl/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../clients/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

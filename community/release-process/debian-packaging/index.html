@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Debian packaging - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Debian packaging";
+    var mkdocs_page_input_path = "community/release-process/debian-packaging.md";
+    var mkdocs_page_url = "/community/release-process/debian-packaging/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Debian packaging</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#building-and-working-with-the-debian-packages">Building and working with the debian packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#basic-requirements">Basic requirements</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-a-package-for-a-new-release">Building a package for a new release</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-a-branch-package">Building a branch package</a></li>
+                
+                    <li><a class="toctree-l4" href="#installing-packages-manually">Installing packages manually</a></li>
+                
+                    <li><a class="toctree-l4" href="#developing-on-debian">Developing on Debian</a></li>
+                
+                    <li><a class="toctree-l4" href="#package-versioning">Package versioning</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-a-new-uploader">Adding a new uploader</a></li>
+                
+                    <li><a class="toctree-l4" href="#replacing-an-expired-key">Replacing an expired key</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-the-archive-was-built">How the archive was built</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Community &raquo;</li>
+        
+      
+        
+          <li>Release process &raquo;</li>
+        
+      
+    
+    <li>Debian packaging</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="building-and-working-with-the-debian-packages">Building and working with the debian packages</h1>
+<div class="toc">
+<ul>
+<li><a href="#building-and-working-with-the-debian-packages">Building and working with the debian packages</a><ul>
+<li><a href="#basic-requirements">Basic requirements</a></li>
+<li><a href="#building-a-package-for-a-new-release">Building a package for a new release</a></li>
+<li><a href="#building-a-branch-package">Building a branch package</a></li>
+<li><a href="#installing-packages-manually">Installing packages manually</a></li>
+<li><a href="#developing-on-debian">Developing on Debian</a></li>
+<li><a href="#package-versioning">Package versioning</a></li>
+<li><a href="#adding-a-new-uploader">Adding a new uploader</a></li>
+<li><a href="#replacing-an-expired-key">Replacing an expired key</a></li>
+<li><a href="#how-the-archive-was-built">How the archive was built</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Debian is one of the main supported operating systems in Aegir. For other
+systems, see Operating System Support. See also the following instructions:</p>
+<ul>
+<li><a href="../../../install/#debianubuntu">Install using Debian packages</a></li>
+<li><a href="../../../install/upgrade/#upgrades-with-debian-packages">Upgrade using Debian packages</a></li>
+</ul>
+<p>The following is aimed at developers wishing to maintain their own Debian
+packages or work within the packaging framework.</p>
+<h2 id="basic-requirements">Basic requirements</h2>
+<p>You need the following packages to build the Aegir Debian packages:</p>
+<pre><code>apt-get install devscripts git-buildpackage
+</code></pre>
+<p>See also the section below on <a href="#adding-a-new-uploader">Adding a new uploader</a>.</p>
+<h2 id="building-a-package-for-a-new-release">Building a package for a new release</h2>
+<p>Assuming we have just released 3.3, the following instructions will merge that
+code into the <code>upstream</code> branch (which is used to create the Debian diff) and
+then merged again in the debian branch (where the Debian code lives). We then
+use <code>git-buildpackage</code> to build the package and tag it, then push those changes
+back in the repository.</p>
+<pre><code>cd provision
+git pull
+# if you previously ran release.sh, run:
+git reset --hard 7.x-3.4
+# otherwise run this next line:
+dch -v 3.3 -D unstable new upstream release
+git-buildpackage -kanarcat@koumbit.org
+dput aegir ../build-area/aegir3-provision_3.3_i386.changes
+</code></pre>
+<p><em>Note</em>: Version numbers are slightly different in Debian - we use the "magic"
+<code>~</code> separator to indicate that 3.0~alpha2 is actually lower than 3.0...</p>
+<p>Packages are initially uploaded to the <code>unstable</code> repository for initial
+test builds. The idea is that this final package can be moved to <code>testing</code> for
+broader testing, using the command:</p>
+<pre><code>sudo -u reprepro reprepro -b /srv/reprepro/ copy testing unstable aegir2 aegir2-provision aegir2-hostmaster aegir2-cluster-slave
+</code></pre>
+<p>When confirmed as ready, it is migrated to the <code>stable</code> repository, using the command:</p>
+<pre><code>sudo -u reprepro reprepro -b /srv/reprepro/ copy stable testing aegir2 aegir2-provision aegir2-hostmaster aegir2-cluster-slave
+</code></pre>
+<h2 id="building-a-branch-package">Building a branch package</h2>
+<p>Sometimes you want to have a test package for a given branch without going
+through a full release. Here how it's done.</p>
+<pre><code>git checkout debian
+git merge 7.x-3.x
+git describe
+dch -v 3.4~rc3+28-1
+git-buildpackage --git-tag -kanarcat@koumbit.org
+</code></pre>
+<p>This is also available in the Debian package as:</p>
+<pre><code>./debian/rules jenkins-build-auto
+</code></pre>
+<h2 id="installing-packages-manually">Installing packages manually</h2>
+<pre><code>dpkg -i aegir3-provision_3.4~rc3+g6632e6e-1_all.deb
+</code></pre>
+<p>We also make sure our custom makefile fetches the right one from provision:</p>
+<pre><code>-includes[aegir] = "http://drupalcode.org/project/provision.git/blob_plain/7.x-3.4-rc3:/aegir.make"
++includes[aegir] = "http://drupalcode.org/project/provision.git/blob_plain/7.x-3.x:/aegir.make"
+</code></pre>
+<h2 id="developing-on-debian">Developing on Debian</h2>
+<p>To develop third party extensions to Aegir on Debian, it is recommended to
+install the Debian packages. If you are working on Aegir core, this could be a
+bit trickier since the files are not where you expect them to be and are not
+deployed as git repositories however.</p>
+<p>You can, however, copy in place a .git directory using the following:</p>
+<pre><code>git clone --branch=7.x-3.4-rc3 http://git.drupal.org/project/provision
+cp -Rp provision/.git /usr/share/drush/commands/provision/.git
+cd /usr/share/drush/commands/provision
+git stash
+</code></pre>
+<p>This will bring back a bunch of files that are removed from the Debian package,
+so it will yield warnings on uninstall of the Debian package but it should
+otherwise work.</p>
+<p>You can do something similar with the frontend.</p>
+<h2 id="package-versioning">Package versioning</h2>
+<p>The stable repository should contain the latest release. The testing repository
+will also contain the latest release (unless we're in the process of building a
+release) but could have fixes to the Debian package that are being tested. The
+unstable repository is automatically built from the stable branch and may be
+broken.</p>
+<p>To see what changes are done to the Debian package, see the
+<a href="http://drupalcode.org/project/provision.git/blob/refs/heads/debian:/debian/changelog">debian/changelog</a>
+which is maintained on the <a href="http://drupalcode.org/project/provision.git/shortlog/refs/heads/debian">debian
+branch</a>.
+To see which version of the package is currently available in the repository,
+you will unfortunately need to parse
+the Packages file for
+<a href="http://debian.aegirproject.org/dists/unstable/main/binary-amd64/Packages">unstable</a>,
+<a href="http://debian.aegirproject.org/dists/testing/main/binary-amd64/Packages">testing</a>
+or
+<a href="http://debian.aegirproject.org/dists/stable/main/binary-amd64/Packages">stable</a>.</p>
+<h2 id="adding-a-new-uploader">Adding a new uploader</h2>
+<p>To enable a new maintainer to upload to the Debian repository at
+debian.aegirproject.org, something like the following steps will have to be
+followed:</p>
+<p>Create a <code>~/.dput.cfg</code> with the following entry:</p>
+<pre><code># See /etc/dput.cf for examples
+[aegir]
+login     = *
+# login     = another_username
+fqdn      = debian.aegirproject.org
+method      = scp
+incoming    = ~reprepro/incoming
+</code></pre>
+<p>Next, GPG keys will have to be authorized to upload to the repository:</p>
+<pre><code>sudo -u reprepro -i
+gpg --search-keys foo@bar.com
+gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
+echo allow * by key 1234ABCD &gt;&gt; /srv/reprepro/conf/uploaders
+</code></pre>
+<h2 id="replacing-an-expired-key">Replacing an expired key</h2>
+<pre><code>gpg --gen-key
+gpg --list-keys
+gpg --keyserver pgp.mit.edu --send-keys &lt;key id&gt;
+sudo -u reprepro -i
+gpg --search-keys &lt;key id&gt;
+gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
+echo allow * by key &lt;key id&gt; &gt;&gt; /srv/reprepro/conf/uploaders
+</code></pre>
+<h2 id="how-the-archive-was-built">How the archive was built</h2>
+<p>The following documentation was used: <a href="https://wiki.koumbit.net/RepreproConfiguration">https://wiki.koumbit.net/RepreproConfiguration</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Release process"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

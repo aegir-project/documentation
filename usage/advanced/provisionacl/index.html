@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>ProvisionACL - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ProvisionACL";
+    var mkdocs_page_input_path = "usage/advanced/provisionacl.md";
+    var mkdocs_page_url = "/usage/advanced/provisionacl/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">ProvisionACL</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#provision-acl">Provision ACL</a></li>
+                
+                    <li><a class="toctree-l4" href="#install-instructions">Install instructions</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-provisionacl-does">What ProvisionACL does</a></li>
+                
+                    <li><a class="toctree-l4" href="#ldap-integration">LDAP integration</a></li>
+                
+                    <li><a class="toctree-l4" href="#provisionacl-api">ProvisionACL API</a></li>
+                
+                    <li><a class="toctree-l4" href="#caveats-ie-what-it-does-not-do">Caveats (ie. what it does not do)</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Advanced features &raquo;</li>
+        
+      
+    
+    <li>ProvisionACL</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="provision-acl">Provision ACL</h1>
+<div class="toc">
+<ul>
+<li><a href="#provision-acl">Provision ACL</a><ul>
+<li><a href="#install-instructions">Install instructions</a><ul>
+<li><a href="#install-provisionacl">Install provisionacl</a></li>
+<li><a href="#install-acl-support-package">Install ACL support package</a></li>
+<li><a href="#enable-acls-on-your-filesystem">Enable ACLs on your filesystem</a></li>
+<li><a href="#create-a-unix-group">Create a UNIX group</a></li>
+<li><a href="#add-users-to-the-group">Add users to the group</a></li>
+<li><a href="#create-a-client">Create a client</a></li>
+<li><a href="#create-a-site">Create a site</a></li>
+</ul>
+</li>
+<li><a href="#what-provisionacl-does">What ProvisionACL does</a></li>
+<li><a href="#ldap-integration">LDAP integration</a></li>
+<li><a href="#provisionacl-api">ProvisionACL API</a></li>
+<li><a href="#caveats-ie-what-it-does-not-do">Caveats (ie. what it does not do)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>This section documents the <a href="https://www.drupal.org/project/provisionacl">Provision ACL extension</a> to Aegir which allows more granular access control over your sites files and directories. While this extension does not ship with Aegir by default, it can be extremely useful in securing access to resources on the CLI.</p>
+<h2 id="install-instructions">Install instructions</h2>
+<p>Most (if not all) of these commands will have to be run as root (or using sudo, etc.)</p>
+<h3 id="install-provisionacl">Install provisionacl</h3>
+<p>First, download and install provisionacl:</p>
+<pre><code>drush dl provisionacl
+drush cc drush
+</code></pre>
+<h3 id="install-acl-support-package">Install ACL support package</h3>
+<p>ACL support usually requires the installation of a system package:</p>
+<pre><code>apt-get install acl
+</code></pre>
+<h3 id="enable-acls-on-your-filesystem">Enable ACLs on your filesystem</h3>
+<p>To enable ACLs on you filesystem, it will have to be re-mounted with ACL support:</p>
+<pre><code>mount -o remount,acl /
+</code></pre>
+<p>Here we assume everything is under the root (<code>/</code>) filesystem here, otherwise run this command for every filesystem Aegir will work on (e.g. <code>/srv</code>, <code>/var</code> or <code>/home</code>).</p>
+<p>You also need to edit your <code>/etc/fstab</code> for this configuration to survive reboots.</p>
+<h3 id="create-a-unix-group">Create a UNIX group</h3>
+<p>In this case we choose a group called "devs" but you can choose another name.</p>
+<pre><code>groupadd devs
+</code></pre>
+<h3 id="add-users-to-the-group">Add users to the group</h3>
+<p>Add one or more UNIX users that you want to give access to that group. For an existing user, this would look like:</p>
+<pre><code>usermod -a -G devs &lt;username&gt;
+</code></pre>
+<p>For a new user, this would look like:</p>
+<pre><code>useradd -G devs &lt;username&gt;
+</code></pre>
+<h3 id="create-a-client">Create a client</h3>
+<p>Create a client (should be called "devs" for this example) in the frontend at <code>/node/add/client</code>. The client name (in the front-end) and the user group (on the system) should match. Each new client that you want to grant such CLI access to will require its own user group.</p>
+<h3 id="create-a-site">Create a site</h3>
+<p>Create a site for the client in the frontend at <code>/node/add/site</code>.</p>
+<h2 id="what-provisionacl-does">What ProvisionACL does</h2>
+<p>When the site is installed, members of the "devs" group will be able to write to the sites' directories (e.g. upload files and modules) and run drush commands on the site (yes, including site aliases, although see caveats below).</p>
+<p>This works also for existing sites; make sure you create a group matching the internal name of the existing client and reverify the site.</p>
+<h2 id="ldap-integration">LDAP integration</h2>
+<p>Provisionacl supports LDAP groups as well. Ensure that an LDAP client is running and that the 'aegir' user can see the LDAP-provided groups:</p>
+<pre><code>getent groups
+</code></pre>
+<p>You may need to restart the Name Service Cache Daemon (nscd):</p>
+<pre><code>/etc/init.d/nscd restart
+</code></pre>
+<h2 id="provisionacl-api">ProvisionACL API</h2>
+<p>ACL support can be integrated into contrib or custom Aegir extensions.</p>
+<p>To change ACLs on files, you should use something like this:</p>
+<pre><code>if (function_exists('provisionacl_set_acl')) {
+  provisionacl_files_acls(d()-&gt;site_path . '/mysettings.php');
+}
+</code></pre>
+<p>You can optionnally pass a group as an argument, but it will guess that from the client name of the site. Also note that this will raise a drush error if setfacl fails, but just set a warning if the group doesn't exist.</p>
+<h2 id="caveats-ie-what-it-does-not-do">Caveats (ie. what it does not do)</h2>
+<p>Giving shell access to users in Aegir is still insecure, see <a href="https://drupal.org/node/762138">this upstream issue</a>.</p>
+<p>We may refactor this into Aegir core in the future, but in the meantime this should provide a good workaround for the limitations of the existing permission system.</p>
+<p>You may need to change your $HOME variable for aliases to work, because of <a href="https://drupal.org/node/1104438">this bug in Drush</a>. Example:</p>
+<pre><code>env HOME=/var/aegir drush @hostmaster cc all
+</code></pre>
+<p>See also <a href="http://community.aegirproject.org/node/494/index.html">this post</a> for context and design.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../extend/" class="btn btn-neutral float-right" title="Extending Aegir">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../clients/" class="btn btn-neutral" title="Access control"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../clients/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../extend/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

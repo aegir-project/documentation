@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Uninstall - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_css/toc.css" rel="stylesheet">
+  <link href="../../_css/menu.css" rel="stylesheet">
+  <link href="../../_css/images.css" rel="stylesheet">
+  <link href="../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Uninstall";
+    var mkdocs_page_input_path = "install/uninstall.md";
+    var mkdocs_page_url = "/install/uninstall/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Uninstall</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#uninstalling-aegir">Uninstalling Aegir</a></li>
+                
+                    <li><a class="toctree-l4" href="#warning">WARNING</a></li>
+                
+                    <li><a class="toctree-l4" href="#backup">Backup</a></li>
+                
+                    <li><a class="toctree-l4" href="#uninstall-aegir">Uninstall Aegir</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/clients/">Access control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../usage/advanced/provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Install &raquo;</li>
+        
+      
+    
+    <li>Uninstall</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="uninstalling-aegir">Uninstalling Aegir</h1>
+<div class="toc">
+<ul>
+<li><a href="#uninstalling-aegir">Uninstalling Aegir</a><ul>
+<li><a href="#warning">WARNING</a></li>
+<li><a href="#backup">Backup</a></li>
+<li><a href="#uninstall-aegir">Uninstall Aegir</a><ul>
+<li><a href="#destroy-the-data">Destroy the data</a><ul>
+<li><a href="#delete-configuration-files">Delete configuration files</a></li>
+<li><a href="#delete-site-and-platform-files">Delete site and platform files</a></li>
+<li><a href="#drop-the-databases-and-db-users">Drop the databases and db users</a></li>
+</ul>
+</li>
+<li><a href="#remove-everything-else">Remove everything else</a><ul>
+<li><a href="#remove-the-aegir-users-crontab">Remove the aegir user's crontab</a></li>
+<li><a href="#delete-the-aegir-user-and-its-home-directory-varaegir">Delete the aegir user and its home directory, /var/aegir</a></li>
+<li><a href="#remove-the-user-from-sudoers">Remove the user from sudoers</a></li>
+<li><a href="#delete-the-symlinkinclude-from-apache">Delete the symlink/include from Apache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>There is no formal method for uninstalling Aegir, but there is also no real mystery either since the system tries to keep itself together in one location, typically /var/aegir.</p>
+<p>Below are the steps to completely remove all traces of Aegir from your server. Also included are instructions allowing one to leave Aegir intact, but destroy its data, attempting to reset to an almost post-install setup.</p>
+<p>Ideally, you would delete all sites and all platforms from the system first. That would take care of deleting all databases and users. But this can take some time and is annoying, so we provide instructions on how to destroy everything.</p>
+<h2 id="warning">WARNING</h2>
+<p>Obviously if you have any sites and platforms currently managed by Aegir, you would want to move them out of the /var/aegir area before you delete it! Ensure you have set up your sites and platforms elsewhere, with Apache vhost files, etc. in their typical locations, or at least out of harm's way before attempting this.</p>
+<p><em>WARNING: Performing these steps will remove Aegir from your server and may result in loss of data. Use with caution.</em></p>
+<p>Run these commands as a privileged user (such as root). We assume your Aegir installation resides in /var/aegir.</p>
+<h2 id="backup">Backup</h2>
+<p>You probably want to backup everything before trashing it.</p>
+<p>Backup all you need to keep from the /var/aegir/ directory.</p>
+<p>Backup your database server, we'll be also destroying that.
+Uninstall script</p>
+<h2 id="uninstall-aegir">Uninstall Aegir</h2>
+<p>Aegir 3.x comes with a hostmaster-uninstall script that allows you to automate good chunks of the steps below.</p>
+<h3 id="destroy-the-data">Destroy the data</h3>
+<p>Aegir manages three types of data:</p>
+<ul>
+<li>configuration files - yes, we consider those as data</li>
+<li>site and platform files</li>
+<li>site databases</li>
+</ul>
+<h4 id="delete-configuration-files">Delete configuration files</h4>
+<p>This step is optional if you are going to remove everything anyways.</p>
+<pre><code>rm /var/aegir/.drush/*alias.drushrc.php
+rm -r /var/aegir/config/*
+</code></pre>
+<h4 id="delete-site-and-platform-files">Delete site and platform files</h4>
+<p>At this point, you could still probably recover by verifying the platforms, which would recreate config files. At this point we start really destroying data.</p>
+<pre><code>rm -r /var/aegir/platforms/*
+rm -r /var/aegir/hostmaster-*
+</code></pre>
+<h4 id="drop-the-databases-and-db-users">Drop the databases and db users</h4>
+<p>There are no generic instructions for this, since every system differs. Essentially you can perform this within a MySQL shell</p>
+<pre><code>mysql -u root -p
+</code></pre>
+<p>Use the DROP DATABASE $databasename; syntax to drop databases. and DROP USER $user; to delete users, example:</p>
+<pre><code>DROP DATABASE aegirexamplecom;
+DROP USER aegirexamplecom@localhost;
+</code></pre>
+<p>This removes the Aegir user, assuming you have not created any site. If you did, you may want to cleanup those sites if you are going to delete them anyways. To see a list of GRANTs that Aegir has made for your database users, you can use a command like the following:</p>
+<pre><code>USE mysql;
+SELECT User,Host FROM user WHERE Host='localhost' AND User &lt;&gt; 'root' AND User &lt;&gt; 'debian-sys-maint';
+SELECT Host,Db,User FROM db WHERE User &lt;&gt; '';
+</code></pre>
+<p>In Debian, the following will remove all non-system users (which may include non-aegir users!!!).</p>
+<p><strong>WARNING: DO NOT RUN THIS BEFORE CHECKING WHAT WILL BE DELETED BY RUNNING THE SELECT ABOVE!! THIS WILL DELETE ALL USERS FROM YOUR MYSQL DATABASE!!!</strong></p>
+<pre><code>DELETE FROM db WHERE User &lt;&gt; '';
+DELETE FROM user WHERE Host='localhost' AND User &lt;&gt; 'root' AND User &lt;&gt; 'debian-sys-maint';
+FLUSH PRIVILEGES;
+</code></pre>
+<p>Then you will need to DROP DATABASE for every database.</p>
+<p>Consult the <a href="http://dev.mysql.com/doc/refman/5.1/en/grant.html">GRANT</a> and <a href="http://dev.mysql.com/doc/refman/5.1/en/drop-user.html">DROP</a> documentation from MySQL for more information.</p>
+<h3 id="remove-everything-else">Remove everything else</h3>
+<p>At this point, we have removed all data that Aegir manages and we would be ready to reinstall the frontend. If we want to remove all traces, however, there's more work to do.</p>
+<h4 id="remove-the-aegir-users-crontab">Remove the aegir user's crontab</h4>
+<pre><code>crontab -r -u aegir
+</code></pre>
+<h4 id="delete-the-aegir-user-and-its-home-directory-varaegir">Delete the aegir user and its home directory, /var/aegir</h4>
+<pre><code>userdel --remove aegir
+</code></pre>
+<p>This will also remove the user from the www-data group.</p>
+<h4 id="remove-the-user-from-sudoers">Remove the user from sudoers</h4>
+<pre><code>rm /etc/sudoers.d/aegir
+</code></pre>
+<h4 id="delete-the-symlinkinclude-from-apache">Delete the symlink/include from Apache</h4>
+<p>Depending on your installation and OS this may vary.</p>
+<p>Generally:</p>
+<pre><code>rm /etc/apache2/conf.d/aegir.conf # for Apache
+rm /etc/nginx/conf.d/aegir.conf # for Nginx
+</code></pre>
+<p>If Apache's Include statements were contained in a global system httpd.conf file or similar, you will need to remove these lines manually.</p>
+<p>Restart the Web server when you have completed this.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../usage/" class="btn btn-neutral float-right" title="Using Aegir">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../upgrade/" class="btn btn-neutral" title="Upgrade"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../upgrade/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../usage/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

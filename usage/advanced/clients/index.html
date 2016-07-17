@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Access control - Aegir Hosting System</title>
+  
+
+  <link rel="shortcut icon" href="../../../_images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../_css/toc.css" rel="stylesheet">
+  <link href="../../../_css/menu.css" rel="stylesheet">
+  <link href="../../../_css/images.css" rel="stylesheet">
+  <link href="../../../_css/style.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Access control";
+    var mkdocs_page_input_path = "usage/advanced/clients.md";
+    var mkdocs_page_url = "/usage/advanced/clients/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Aegir Hosting System</a>
+        <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../quick-start/">Quick start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/">Install</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Install</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/upgrade/">Upgrade</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/uninstall/">Uninstall</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Using Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../verify/">Verifying servers, platforms and sites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/">Sites</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Sites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/tasks/">Site tasks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/aliases/">Site aliases</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../sites/importing/">Importing sites</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/">Platforms</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Platforms</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../platforms/tasks/">Platform tasks</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Advanced features</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced features</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ssl/">SSL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../remote-servers/">Multiple servers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Access control</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#client-management">Client management</a></li>
+                
+                    <li><a class="toctree-l4" href="#enable-the-clients-feature">Enable the Clients feature</a></li>
+                
+                    <li><a class="toctree-l4" href="#configure-the-client-feature-options">Configure the Client feature options</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-clients">Create clients</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-new-users-to-a-client">Adding new users to a client</a></li>
+                
+                    <li><a class="toctree-l4" href="#clients-accessing-the-system">Clients accessing the system</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../provisionacl/">ProvisionACL</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/">Extending Aegir</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Aegir</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/terminology/">Design and terminology</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/">Provision</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Provision</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/provision/contexts/">Contexts</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/altering-behaviours/">Altering behaviours</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/contrib/">Contributed projects</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../help/contact/">Help</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/">Community</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Community</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/code-of-conduct/">Code of Conduct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/">Core team</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Core team</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/criteria/">Criteria</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/leadership/">Leadership</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/core-team/welcome/">Welcoming a new member</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../community/resources/">Resources</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.0/">3.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.1/">3.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.2/">3.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.3/">3.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.4/">3.4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.5/">3.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Aegir Hosting System</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Using Aegir &raquo;</li>
+        
+      
+        
+          <li>Advanced features &raquo;</li>
+        
+      
+    
+    <li>Access control</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="client-management">Client management</h1>
+<div class="toc">
+<ul>
+<li><a href="#client-management">Client management</a><ul>
+<li><a href="#enable-the-clients-feature">Enable the Clients feature</a></li>
+<li><a href="#configure-the-client-feature-options">Configure the Client feature options</a></li>
+<li><a href="#create-clients">Create clients</a></li>
+<li><a href="#adding-new-users-to-a-client">Adding new users to a client</a></li>
+<li><a href="#clients-accessing-the-system">Clients accessing the system</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>In some situations you may wish to allow different people access to Aegir, but restrict which sites they can manage.</p>
+<ul>
+<li><strong>Use Case 1:</strong>
+  As a developer you may simply wish to segregate your sites in Aegir by different clients for your own internal management reasons.</li>
+<li><strong>Use Case 2:</strong>
+  If you have many staff working on different projects, you may wish to issue them with different logins and restrict which sites they can access on the Aegir system.</li>
+<li><strong>Use Case 3:</strong>
+  As a drupal hosting company you might allow clients to sign up via your promotional website (using the 'Signup Form' feature in Aegir!), and then have their own account created on Aegir, with their newly provisioned site. They can then login and manage their own upgrades (by migrating to new platforms).  This functionality is provided by the Client feature in Aegir. Here's a brief guide to using it...</li>
+</ul>
+<p>To grant clients secure access to the CLI, see the page on <a href="../provisionacl">Provision ACL</a></p>
+<h2 id="enable-the-clients-feature">Enable the Clients feature</h2>
+<p>If you didn't enable this feature during installation, you can do so now by choosing the following from the menu bar at the very top of the page: <strong>Hosting &gt; Features</strong>. On this page, click on 'Experimental' to expand these feature options. You can tick 'Clients' and click on the 'Save Configuration' button.</p>
+<p><strong>NOTE:</strong> Experimental features are designed to be for developer preview only, although we do have reports of them being successfully used in production environments - but do so at your own risk!</p>
+<h2 id="configure-the-client-feature-options">Configure the Client feature options</h2>
+<p>From the top admin menu select <strong>Hosting&gt;Clients</strong>. On this page you can configure how you want this feature to operate, with the following options:</p>
+<p><strong>Automatically Create User Accounts for New Clients</strong> -- If you tick this option, whenever you setup a new Client within Aegir, they will have a drupal user account created for them to be able to access their sites within the Aegir site. You will definitely want to leave this unticked for Use Case 1, perhaps also for Use Case 2, but may want to tick this for Use Case 3.</p>
+<p><strong>Send Welcome Mail to New Clients</strong> -- If this setting is ticked, the client will be sent an email when you create their drupal user account allowing them access to the system. Below this you can configure the email that will be sent.</p>
+<h2 id="create-clients">Create clients</h2>
+<p>Creating a new Client on Aegir is as simple as selecting <strong>Create Content&gt;Client</strong>. Then enter their email address (twice for confirmation), Name and Organization. Now click 'Save'.  <em>A <a href="https://www.drupal.org/node/2698687">bug</a> was introduced in Aegir 3 preventing capture of email addresses and organization names. For now, it's only possible to enter client names.</em></p>
+<p>Depending on the options you selected above they might also have a user account created for them at this stage by Aegir, and then be emailed with their login details.</p>
+<p>Otherwise the Client record will just be stored in the database and you will be able to assign sites to this client in the future.</p>
+<h2 id="adding-new-users-to-a-client">Adding new users to a client</h2>
+<p>Perhaps you didn't initially allow clients to access their own Client area within Aegir and just kept it for your own internal use, or perhaps you now want to add additional users to a Client on the system.</p>
+<p>To do this visit the Client page and select the 'Edit' tab. You'll see a list of allowed users. You can add users to this list by typing their username in the autocomplete field, or you can remove users by tciking the box next to their username and saving the form.</p>
+<p>If the user you wish to add doesn't yet have a drupal user account on the Aegir site, you can create one as normal by going to the following on the top admin menu: <strong>User Management&gt;Users&gt;Add User</strong>. Then you can return to the client page and add their username to give them access to that client's area.</p>
+<h2 id="clients-accessing-the-system">Clients accessing the system</h2>
+<p>If you have selected above that new Clients should also have an Aegir account setup for them, then they will be able to access the Aegir site.</p>
+<p>Within Aegir they will ONLY be able to see details about their own sites.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../provisionacl/" class="btn btn-neutral float-right" title="ProvisionACL">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../remote-servers/" class="btn btn-neutral" title="Multiple servers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../remote-servers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../provisionacl/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
