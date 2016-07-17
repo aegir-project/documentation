@@ -16,6 +16,8 @@ The Aegir maintainers are developer who have commit access to the code. They are
 * Guillaume Boudrias (gboudrias) - Contributor of a number of contrib modules, kplatforms and patches to Aegir core.
 * Cameron Eagans (cweagans) - Maintainer of a number of contrib modules, and contributor to several more, as well as patches to Aegir core.
 * Jon Pugh - maintainer of devshop hosting/provision, provision_git, and tons of other contrib modules, submitter of many good patches.
+* Colan Schwartz (colan) - Documentation, patches to core, contributions to hosting_services and hosting_saas.
+* Mathieu Lutfy (mlutfy) - CiviCRM support lead, contributing and testing many patches.
 
 
 Emeritus members
@@ -36,17 +38,8 @@ Other contributors
 
 These people have made significant contributions to the project but do not yet have complete commit access.
 
-* Mathieu Lutfy (mlutfy) - CiviCRM support lead, contributing and testing many patches.
-* Colan Schwartz (colan) - Documentation, patches to core, contributions to hosting_services and hosting_saas.
 * Stuart Clark (Deciphered) - views integration and other patches.
 * Brian Gilbert (realityloop) - views integration and other patches.
-
-
-Past contributors
------------------
-
-These people have made significant contributions to the project but do not yet have complete commit access.
-
 * Thomas Bosviel (tbosviel) - DNS support improvements.
 * Sofian Benaissa (sfyn) - ubercart integration, quota API.
 * univate - views support and batch operations
