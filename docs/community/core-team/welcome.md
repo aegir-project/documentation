@@ -12,4 +12,5 @@ Once the member is approved on the mailing list, you should follow this checklis
 * Grant admin access to the community site(s).
 * Add the new member to the core team page.
 * Send a nice welcome email to the new member and CC the mailing list.
+* Lastpass access for project assets.
 * (Optional) Announce the great news in the next release.
