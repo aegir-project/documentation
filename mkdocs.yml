@@ -45,6 +45,7 @@ pages:
   - 'Frontend': 'extend/frontend.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Contributed projects': 'extend/contrib.md'
+  - 'Projects repositories': 'extend/repositories.md'
 - 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
