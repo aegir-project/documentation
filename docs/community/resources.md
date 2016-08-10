@@ -13,6 +13,12 @@ Presentations
 
 ### 2016
 
+* [When free is still too expensive](http://nyccamp.org/session/when-free-still-too-expensive)
+    * Christopher Gervais - ergonlogic | Chris Doten - cdoten, July 2016
+* [One Drupal to Rule Them All](http://nyccamp.org/session/one-drupal-rule-them-all)
+    * Christopher Gervais - ergonlogic, July 2016
+* [Advanced Drush Make](http://nyccamp.org/session/advanced-drush-make)
+    * Christopher Gervais - ergonlogic, July 2016
 * [One Drupal to Rule Them All](http://www.drupalnorth.org/en/session/one-drupal-rule-them-all)
     * Christopher Gervais - ergonlogic - June 2016
 * [DIY GPL Planet Scale Drupal "Cloud"(DrupalCamp Stanford)](https://drupalcamp.stanford.edu/diy-gpl-planet-scale-drupal-cloud) - [slides](https://docs.google.com/presentation/d/1bl350NkaARCUDoi8jA7G7ylIUpa_fIJL9kU4rTNwb9A/edit?usp=sharing)
