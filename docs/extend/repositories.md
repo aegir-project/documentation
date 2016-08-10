@@ -10,3 +10,9 @@ This document is intended to give some guidelines as to what should go where. It
 - Pull Requests on GitHub are very welcome, please just add a link to them in an issue on Drupal.org.
 - Feature branches can best be pushed to GitHub to facilitate testing with Travis.
 
+
+### Branch naming
+
+7.x-3.x is the main branch for all the core projects. This follows the Drupal default.
+
+Feature branches can best be prefixed with 'feature/' resulting in 'feature/[issue number]-some-change'. Pushing them to GitHub and creating a PR for it les us test the results with Travis.
