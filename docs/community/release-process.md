@@ -20,9 +20,9 @@ In general, each major Aegir release comprises a simultaneous release of all the
 Steps for a release
 -------------------
 
-### 1. Make sure Jenkins is all green
+### 1. Make sure our tests are all green
 
-Look into [Jenkins](http://ci.aegirproject.org/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
+Look into [Jenkins](http://ci.aegirproject.org/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
 #### 1.1 Disable Debian dev builds
 
