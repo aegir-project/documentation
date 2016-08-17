@@ -61,12 +61,15 @@ Paraphrasing from the script itself:
 ```
 $ ./release.sh 3.4
 
-This script should only be used by the core dev team when doing an official
-release. If you are not one of those people, you probably shouldn't be running
-this.
+Aegir release script
+====================
+
+This script should only be used by the core dev team when doing an
+official release. If you are not one of those people, you probably
+shouldn't be running this.
 
 This script is going to modify the configs and documentation to
-release 7.x-3.4.
+release 7.x-3.7.
 
 The following operations will be done:
  0. prompt you for a debian/changelog entry
@@ -76,9 +79,14 @@ The following operations will be done:
  4. commit those changes to git
  5. lay down the tag
  6. revert the commit
- 7. (optionally) push those changes
+ 7. clone fresh copies of hosting/hostmaster and eldir to lay down the tag
+ 8. (optionally) push those changes
+ 9. clone fresh copies of golden contrib to lay down the tag
+10. (optionally) push those changes
 
-The operation can be aborted before step 7. Don't forget that as
+ ARE YOU SURE you disabled the D_aegir-debian-build-3x job in Jenkins?
+
+The operation can be aborted before step 8. Don't forget that as
 long as changes are not pushed upstream, this can all be reverted (see
 git-reset(1) and git-revert(1) ).
 ```
@@ -123,17 +131,24 @@ Once the tags are pushed and release notes published, we create a release node w
 
 Using the template (change the version number):
 ```
-See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.6/
+See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.7/
 ```
 
 This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
+And for Golden Contrib...
+[hosting_civicrm](https://drupal.org/node/add/project-release/1982662),
+[hosting_git](https://drupal.org/node/add/project-release/2217793),
+[hosting_remote_import](https://drupal.org/node/add/project-release/1405640),
+[hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830) and
+[hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498)
+
 WAIT.... And after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
 ### 8. Test the upgrade in Jenkins
 
-Once both of those tasks have executed successfully, you can test the upgrade of the Debian packages by running the following Jenkins job:
+Once all reease nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:
 
 * [7.x-3.x-stable-to-unstable](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package)
 * [6.x-2.x_to_7.x-3.x_upgrade](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/)
