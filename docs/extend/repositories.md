@@ -15,4 +15,5 @@ This document is intended to give some guidelines as to what should go where. It
 
 7.x-3.x is the main branch for all the core projects. This follows the Drupal default.
 
-Feature branches can best be prefixed with 'feature/' resulting in 'feature/[issue number]-some-change'. Pushing them to GitHub and creating a PR for it les us test the results with Travis.
+Feature branches can best be prefixed with 'feature/' resulting in 'feature/[issue number]-some-change'. Pushing them to GitHub and creating a PR for it lets us test the results with Travis.
+Thease feature branches don't have to be pushed to D.o, and can be removed after being merged.
