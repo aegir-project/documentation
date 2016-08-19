@@ -46,6 +46,7 @@ pages:
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Contributed projects': 'extend/contrib.md'
   - 'Projects repositories': 'extend/repositories.md'
+- 'Developing Aegir': 'develop.md'
 - 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
