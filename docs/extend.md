@@ -5,7 +5,7 @@ Extending Aegir
 
 This section shows how to modify Aegir to suit your unique use case.
 
-Aegir is designed to be easily extendable by developers. As it is made with Drupal and Drush, it is made of the hooks and command you know and love. If you are a user or admin looking to deploy contrib modules, you should perhaps look into the [contrib modules list](./contrib.md) and [user documentation](/usage.md) instead.
+Aegir is designed to be easily extendable by developers. As it is made with Drupal and Drush, it is made of the hooks and command you know and love. If you are a user or admin looking to deploy contrib modules, you should perhaps look into the [contrib modules list](/extend/contrib.md) and [user documentation](/usage.md) instead.
 
 
 What can I extend exactly?
