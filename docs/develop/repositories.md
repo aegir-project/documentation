@@ -1,3 +1,6 @@
+Git Repositories
+================
+
 Aegir consists of a number of components each living in their own Git repository.
 
 To make thinks more interresting (or complex) we also have these spread over [Drupal.org](https://www.drupal.org/project/hostmaster), [GitHub](https://github.com/aegir-project) and [GitLab.com](https://gitlab.com/aegir).
