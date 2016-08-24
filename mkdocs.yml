@@ -37,14 +37,18 @@ pages:
     - 'ProvisionACL': 'usage/advanced/provisionacl.md'
 - 'Extending Aegir': 'extend.md'
 - 'Extending Aegir':
-  - 'Design and terminology': 'extend/terminology.md'
-  - 'Architecture': 'extend/architecture.md'
-  - 'Provision': 'extend/provision.md'
-  - 'Provision':
-    - 'Contexts': 'extend/provision/contexts.md'
   - 'Frontend': 'extend/frontend.md'
+  - 'Backend': 'extend/backend.md'
   - 'Altering behaviours': 'extend/altering-behaviours.md'
   - 'Contributed projects': 'extend/contrib.md'
+- 'Developing Aegir': 'develop.md'
+- 'Developing Aegir':
+  - 'Design and terminology': 'develop/terminology.md'
+  - 'Architecture': 'develop/architecture.md'
+  - 'Provision': 'develop/provision.md'
+  - 'Provision':
+    - 'Contexts': 'develop/provision/contexts.md'
+  - 'Projects repositories': 'develop/repositories.md'
 - 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
