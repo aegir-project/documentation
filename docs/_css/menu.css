@@ -4,7 +4,7 @@ ul.subnav > li > span {
   display: none;
 }
 /* Hide redirected pages */
-li > a[href="help/contact/"] {
+li > a[href*="help/contact"] {
   display: none;
 }
 
