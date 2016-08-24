@@ -8,7 +8,7 @@
   
   
   
-  <title>3.1 - Aegir Hosting System</title>
+  <title>Backend - Aegir Hosting System</title>
   
 
   <link rel="shortcut icon" href="../../_images/favicon.ico">
@@ -28,9 +28,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "3.1";
-    var mkdocs_page_input_path = "release-notes/3.1.md";
-    var mkdocs_page_url = "/release-notes/3.1/";
+    var mkdocs_page_name = "Backend";
+    var mkdocs_page_input_path = "extend/backend.md";
+    var mkdocs_page_url = "/extend/backend/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -228,7 +228,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../extend/">Extending Aegir</a>
+        <a class="" href="../">Extending Aegir</a>
         
     </li>
 <li>
@@ -240,28 +240,37 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../extend/frontend/">Frontend</a>
+        <a class="" href="../frontend/">Frontend</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Backend</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#provision-the-aegir-backend">Provision - the Aegir backend</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-a-drush-extension">Adding a Drush extension</a></li>
+                
+            
+            </ul>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../extend/backend/">Backend</a>
+        <a class="" href="../altering-behaviours/">Altering behaviours</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../extend/altering-behaviours/">Altering behaviours</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../extend/contrib/">Contributed projects</a>
+        <a class="" href="../contrib/">Contributed projects</a>
         
     </li>
 
@@ -423,7 +432,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../3.4/">Release notes</a>
+        <a class="" href="../../release-notes/3.4/">Release notes</a>
         
     </li>
 <li>
@@ -435,67 +444,56 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.0/">3.0</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">3.1</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#aegir-31">Aegir 3.1</a></li>
-                
-                    <li><a class="toctree-l4" href="#changes">Changes</a></li>
-                
-                    <li><a class="toctree-l4" href="#known-issues">Known Issues</a></li>
-                
-            
-            </ul>
+        <a class="" href="../../release-notes/3.0/">3.0</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.2/">3.2</a>
+        <a class="" href="../../release-notes/3.1/">3.1</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.3/">3.3</a>
+        <a class="" href="../../release-notes/3.2/">3.2</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.4/">3.4</a>
+        <a class="" href="../../release-notes/3.3/">3.3</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.5/">3.5</a>
+        <a class="" href="../../release-notes/3.4/">3.4</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.6/">3.6</a>
+        <a class="" href="../../release-notes/3.5/">3.5</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../3.7/">3.7</a>
+        <a class="" href="../../release-notes/3.6/">3.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.7/">3.7</a>
         
     </li>
 
@@ -525,11 +523,11 @@
     
       
         
-          <li>Release notes &raquo;</li>
+          <li>Extending Aegir &raquo;</li>
         
       
     
-    <li>3.1</li>
+    <li>Backend</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -543,52 +541,19 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="aegir-31">Aegir 3.1</h1>
-<p>The Aegir team is proud to announce the second release in the stable 3.x branch!</p>
-<p>This release ships with a security fix for Drupal core. Everyone is encouraged to upgrade.</p>
-<p>This release ships with UI and backend fixes and improvements.</p>
-<h2 id="changes">Changes</h2>
-<p><strong>Changes to Hosting since 7.x-3.0</strong>:</p>
+                <h1 id="provision-the-aegir-backend">Provision - the Aegir backend</h1>
+<div class="toc">
 <ul>
-<li><a href="https://drupal.org/node/2451731">#2451731</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Fix user with only the aegir client role</li>
-<li><a href="https://drupal.org/node/2547209">#2547209</a> by <a href="https://drupal.org/u/gboudrias">gboudrias</a>, <a href="https://drupal.org/u/ergonlogic">ergonlogic</a>: Display execution time in task log</li>
-<li><a href="https://drupal.org/node/2407885">#2407885</a> by <a href="https://drupal.org/u/helmo">helmo</a>: refactor SSL forms</li>
-<li><a href="https://drupal.org/node/2040445">#2040445</a> by <a href="https://drupal.org/u/formatc'vt">formatC'vt</a>: Provide a safe way to remove a server from the system</li>
-<li><a href="https://drupal.org/node/2507397">#2507397</a> by <a href="https://drupal.org/u/sdrycroft">sdrycroft</a>: Allow form to be submitted</li>
-<li><a href="https://drupal.org/node/2459321">#2459321</a> by <a href="https://drupal.org/u/socialnicheguru">SocialNicheGuru</a>, <a href="https://drupal.org/u/formatc'vt">formatC'vt</a>: Fix undefined index aliases in hosting_subdirs_site_form_validate</li>
-<li><a href="https://drupal.org/node/2538880">#2538880</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Fix execution time says '0 seconds' for all tasks</li>
-<li><a href="https://drupal.org/node/2540174">#2540174</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Only show key as disabled when it was ever enabled.</li>
-<li><a href="https://drupal.org/node/1585820">#1585820</a>: Make client feature checkbox readonly</li>
+<li><a href="#provision-the-aegir-backend">Provision - the Aegir backend</a><ul>
+<li><a href="#adding-a-drush-extension">Adding a Drush extension</a></li>
 </ul>
-<p><strong>Changes to Provision since 7.x-3.0</strong>:</p>
-<ul>
-<li>Add spacing for beter readability</li>
-<li><a href="https://drupal.org/node/1902542">#1902542</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Rename template file</li>
-<li><a href="https://drupal.org/node/1902542">#1902542</a> by <a href="https://drupal.org/u/helmo">helmo</a>, <a href="https://drupal.org/u/formatc'vt">formatC'vt</a>: Review ini_set() block in default settings.php for D7</li>
-<li><a href="https://drupal.org/node/2539328">#2539328</a> by <a href="https://drupal.org/u/gboudrias">gboudrias</a>: Fix nginx admin_menu problem (with cache setting?)</li>
-<li>Revert "Issue <a href="https://drupal.org/node/2539124">#2539124</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Sudo example missing in minimalistic debian install"</li>
-<li><a href="https://drupal.org/node/2539124">#2539124</a> by <a href="https://drupal.org/u/helmo">helmo</a>: Sudo example missing in minimalistic debian install</li>
-<li>Nginx: Add support for s3/files/styles (s3fs)</li>
-<li><a href="https://drupal.org/node/2537756">#2537756</a>: Aegir3 Ubuntu fresh install</li>
+</li>
 </ul>
-<p><strong>Changes to Hostmaster since 7.x-3.0</strong>:</p>
-<ul>
-<li>Update ctools and betterlogin versions</li>
-<li>Have makefile build from releases.</li>
-</ul>
-<p><strong>New golden contrib releases</strong>:</p>
-<ul>
-<li><a href="https://www.drupal.org/node/2554859">Hosting Site Backup Manager</a></li>
-<li><a href="https://www.drupal.org/node/2554875">Hosting Tasks Extra</a></li>
-</ul>
-<h2 id="known-issues">Known Issues</h2>
-<ul>
-<li>Provision (Jessie installs): <a href="https://www.drupal.org/node/2347557">#2347557: No systemd service file for queue runner</a></li>
-<li>Provision: <a href="https://www.drupal.org/node/1194602" title="Status: Needs work">#1194602: [meta] Support the hosting of Drupal 8 sites</a></li>
-<li>Hosting: <a href="https://www.drupal.org/node/2459403" title="Status: Needs review">#2459403: String data, right truncated: 1406 Data too long for column 'filename' at row 1: INSERT INTO {hosting_package_instance}</a></li>
-<li>Hosting: <a href="https://www.drupal.org/node/2069431" title="Status: Needs review">#2069431:  Form error message is confusing when trying to enable SSL when creating new site on a platform on a server without SSL enabled</a></li>
-<li>Git (contrib): <a href="https://www.drupal.org/node/2541758" title="Status: Needs work, Assigned to: formatC'vt">#2541758: Trigger verify after "git pull" task when a site is on remote server</a></li>
-</ul>
+</div>
+<p>The Aegir backend is a Drush extension called "Provision". It does all the heavy lifting in Aegir, such as writing vhost files and creating new databases. You can use additional Drush extensions to extend Aegir or <a href="../altering-behaviours/">modify its behaviour</a>.</p>
+<h2 id="adding-a-drush-extension">Adding a Drush extension</h2>
+<p>There are a couple ways that you can add a Drush extension. First, and most commonly, you can add it under <code>/var/aegir/.drush/</code> and clear the Drush cache. Drush will search a number of paths for extensions, but that's the the conventional place to put them on an Aegir install.</p>
+<p>Since Aegir 3, you can also bundle Drush extensions with front-end modules that expose a "Hosting Feature." This allows for both the frontend module, along with the included backend extension, to be deployed via a makefile, as part of the Hostmaster platform. Upon enabling such a Feature, Aegir will re-write it's drushrc file to dynamically include the backend directory for each Hosting Feature.</p>
               
             </div>
           </div>
@@ -596,10 +561,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../3.2/" class="btn btn-neutral float-right" title="3.2">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../altering-behaviours/" class="btn btn-neutral float-right" title="Altering behaviours">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../3.0/" class="btn btn-neutral" title="3.0"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../frontend/" class="btn btn-neutral" title="Frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -627,10 +592,10 @@
           <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../3.0/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../frontend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../3.2/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../altering-behaviours/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

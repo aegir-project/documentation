@@ -8,7 +8,7 @@
   
   
   
-  <title>3.6 - Aegir Hosting System</title>
+  <title>3.7 - Aegir Hosting System</title>
   
 
   <link rel="shortcut icon" href="../../_images/favicon.ico">
@@ -28,9 +28,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "3.6";
-    var mkdocs_page_input_path = "release-notes/3.6.md";
-    var mkdocs_page_url = "/release-notes/3.6/";
+    var mkdocs_page_name = "3.7";
+    var mkdocs_page_input_path = "release-notes/3.7.md";
+    var mkdocs_page_url = "/release-notes/3.7/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -476,12 +476,19 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../3.6/">3.6</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
-        <a class="current" href="./">3.6</a>
+        <a class="current" href="./">3.7</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#aegir-36">Aegir 3.6</a></li>
+                <li class="toctree-l3"><a href="#aegir-37">Aegir 3.7</a></li>
                 
                     <li><a class="toctree-l4" href="#drush-install-from-debian-package">Drush install from Debian package</a></li>
                 
@@ -495,13 +502,6 @@
                 
             
             </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../3.7/">3.7</a>
         
     </li>
 
@@ -535,7 +535,7 @@
         
       
     
-    <li>3.6</li>
+    <li>3.7</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -549,9 +549,65 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="aegir-36">Aegir 3.6</h1>
-<p>The Aegir team is proud to announce the seventh release in the stable 3.x branch!</p>
-<p>This release ships with bug fixes and a number of UI improvements.</p>
+                <h1 id="aegir-37">Aegir 3.7</h1>
+<p>The Aegir team is proud to announce the eighth release in the stable 3.x branch!</p>
+<p>This release ships with a security fix and a number of bug fixes and UI improvements.</p>
+<p>With this release we also introduce a number of new tools to the ecosystem:</p>
+<ul>
+<li>Semi-official Docker Images: <a href="https://hub.docker.com/r/aegir/hostmaster">hub.docker.com/r/aegir/hostmaster</a> - Use these images to launch Aegir in minutes. Use the included Docker-compose files to launch a cluster of containers. </li>
+<li>Aegir Development Environment on Docker: <a href="http://github.com/aegir-project/development">github.com/aegir-project/development</a> - Run one script to prepare all git repositories and launch Aegir on Docker.</li>
+<li>Behat Tests: <a href="http://github.com/aegir-project/tests">github.com/aegir-project/tests</a> New behavioural testing will ensure expected functionality from a user's perspective. Includes common scripts for Travis-CI, and tools to allow the same tests suite to run on all repositories. </li>
+<li>GitHub Repositories: <a href="http://github.com/aegir-project/hosting">Hosting</a>, <a href="http://github.com/aegir-project/provision">Provision</a>, and <a href="http://github.com/aegir-project/provision">Hostmaster</a> now have mirrors on GitHub.com. This allows us to integrate with Travis and other services, and allows the community to submit changes in the form of Pull Requests.  Each pull request will be tested automatically using the Behat tests and Docker containers. This will enable much more rapid development as we progress through the major changes expected to come in Aegir 4.x. </li>
+<li>Travis-CI.org Testing: Extra testing is now automated by <a href="https://travis-ci.org/aegir-project">Travis CI</a>, the table below can from now on be found on <a href="https://github.com/aegir-project/tests/">our GitHub tests repository</a> where we intend to further implements these tests.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+<th>Links</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provision</td>
+<td>Drush commands</td>
+<td><a href="https://www.drupal.org/project/provision">drupal.org/project/provision</a> <br /> <a href="https://github.com/aegir-project/provision">github.com/aegir-project/provision</a></td>
+<td><a href="https://travis-ci.org/aegir-project/provision"><img alt="Build Status" src="https://travis-ci.org/aegir-project/provision.svg?branch=7.x-3.x" /></a></td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Drupal Modules</td>
+<td><a href="https://www.drupal.org/project/hosting">drupal.org/project/hosting</a> <br /> <a href="https://github.com/aegir-project/hosting">github.com/aegir-project/hosting</a></td>
+<td><a href="https://travis-ci.org/aegir-project/hosting"><img alt="Build Status" src="https://travis-ci.org/aegir-project/hosting.svg?branch=7.x-3.x" /></a></td>
+</tr>
+<tr>
+<td>Hostmaster</td>
+<td>Drupal Install Profile</td>
+<td><a href="https://www.drupal.org/project/hostmaster">drupal.org/project/hostmaster</a> <br /> <a href="https://github.com/aegir-project/hostmaster">github.com/aegir-project/hostmaster</a></td>
+<td><a href="https://travis-ci.org/aegir-project/hostmaster"><img alt="Build Status" src="https://travis-ci.org/aegir-project/hostmaster.svg?branch=7.x-3.x" /></a></td>
+</tr>
+<tr>
+<td>Dockerfiles</td>
+<td>Docker image definitions. Used for all tests.</td>
+<td><a href="https://github.com/aegir-project/dockerfiles">github.com/aegir-project/dockerfiles</a><br /> <a href="https://hub.docker.com/r/aegir/hostmaster">hub.docker.com/r/aegir/hostmaster</a></td>
+<td><a href="https://travis-ci.org/aegir-project/dockerfiles"><img alt="Build Status" src="https://travis-ci.org/aegir-project/dockerfiles.svg?branch=master" /></a></td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>Behat tests and Travis tools</td>
+<td><a href="https://github.com/aegir-project/tests">github.com/aegir-project/tests</a></td>
+<td><a href="https://travis-ci.org/aegir-project/tests"><img alt="Build Status" src="https://travis-ci.org/aegir-project/tests.svg?branch=master" /></a></td>
+</tr>
+<tr>
+<td>Development Environment</td>
+<td>Local docker-based development environment.</td>
+<td><a href="https://github.com/aegir-project/development">github.com/aegir-project/development</a></td>
+<td><a href="https://travis-ci.org/aegir-project/development"><img alt="Build Status" src="https://travis-ci.org/aegir-project/development.svg?branch=master" /></a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="drush-install-from-debian-package">Drush install from Debian package</h2>
 <p>We now follow the recommended Drush install procedure again, and use the latest published .phar by default. However, we do make alternative Drush versions available. To install the lastest Drush 6 from composer (as we did prior to Aegir 3.3), you can run the following before installing or upgrading the packages:</p>
 <pre><code># echo aegir3-provision aegir/drush_version string 6.x | debconf-set-selections
@@ -576,54 +632,65 @@
 <p>Consult this page for more information: <a href="http://docs.aegirproject.org/en/3.x/community">http://docs.aegirproject.org/en/3.x/community</a></p>
 <p>Thanks to our awesome <a href="http://community.aegirproject.org">community</a> for their help, support and encouragement as always! Enjoy the new release :)</p>
 <h2 id="changes">Changes</h2>
-<p><strong>Changes to Hostmaster since 7.x-3.5</strong></p>
+<p><strong>Changes to Hostmaster since 7.x-3.6</strong></p>
 <ul>
-<li><a href="https://www.drupal.org/node/2750361">#2750361</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Add exclusive and distribution_name info</li>
-<li>Update views to 3.14</li>
+<li>Merge remote-tracking branch 'github/node-access-rebuild' into 7.x-3.x <a href="https://www.drupal.org/node/2778447">meta</a></li>
+<li>Merge branch 'travis-support' of github.com:aegir-project/hostmaster into travis-support</li>
+<li><a href="https://www.drupal.org/node/2754657">#2754657</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Reported installs for the hostmaster project is not 3</li>
 </ul>
-<p><strong>Changes to Hosting since 7.x-3.5</strong></p>
+<p><strong>Changes to Hosting since 7.x-3.6</strong></p>
 <ul>
-<li>Code style</li>
-<li><a href="https://www.drupal.org/node/2705097">#2705097</a> by <a href="https://www.drupal.org/u/jon-pugh">jon-pugh</a>: Check for hosting_platform before querying hosting_platform table</li>
-<li><a href="https://www.drupal.org/node/2013719">#2013719</a> by <a href="https://www.drupal.org/u/colan">colan</a>, <a href="https://www.drupal.org/u/ergonlogic">ergonlogic</a>: Warn when missing service implementations.</li>
-<li>Fixes <a href="https://www.drupal.org/node/2691167">#2691167</a>: Notice: Undefined variable: rows in hosting_client_view()</li>
-<li>Add hook docs in example modules.</li>
-<li><a href="https://www.drupal.org/node/2150787">#2150787</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>, <a href="https://www.drupal.org/u/ergonlogic">ergonlogic</a>, <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Queue daemon give MySQL close error</li>
-<li>Refactor check to use hosting_get_hostmaster_site_nid function</li>
-<li><a href="https://www.drupal.org/node/2744975">#2744975</a> by <a href="https://www.drupal.org/u/jeremyr">jeremyr</a>: Fix missing closing div on Hosting confirm task form actions.</li>
-<li>Fix watchdog syntax</li>
-<li><a href="https://www.drupal.org/node/2738587">#2738587</a> by <a href="https://www.drupal.org/u/tom_spiers">tom_spiers</a>: hosting_task_count_running always returns 0</li>
-<li><a href="https://www.drupal.org/node/2606700">#2606700</a> by <a href="https://www.drupal.org/u/ergonlogic">ergonlogic</a>, <a href="https://www.drupal.org/u/m.stenta">m.stenta</a>, <a href="https://www.drupal.org/u/tvl">tvl</a>: Shared SSL cert deleted from {hosting_ssl_cert}</li>
-<li><a href="https://www.drupal.org/node/2734599">#2734599</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Hosting SSL certificate not shown correctly</li>
-<li><a href="https://www.drupal.org/node/2732491">#2732491</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Undefined variable in hosting_get_queues</li>
-<li>D7 form API change</li>
-<li>Add timeout to queued waiting for db</li>
-<li><a href="https://www.drupal.org/node/2731609">#2731609</a> by <a href="https://www.drupal.org/u/javi.pl">javi.pl</a>: Hosting SSL. Instalation error</li>
-<li><a href="https://www.drupal.org/node/2731681">#2731681</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Unable to set falsey parameters in hosting_get_tasks</li>
+<li>Cleanup remaining D7 upgrade issue in node_access hooks.</li>
+<li><a href="https://www.drupal.org/node/2763509">#2763509</a> by <a href="https://www.drupal.org/u/bgm">bgm</a>: Deprecate hosting_context_node_types()</li>
+<li>Merge pull request <a href="https://github.com/aegir-project/hosting/pull/1">#1</a> from aegir-project/travis-yml</li>
+<li><a href="https://www.drupal.org/node/2069431">#2069431</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Do not show SSL form when SSL is not enabled on any server</li>
+<li>code style</li>
+<li><a href="https://www.drupal.org/node/1405904">#1405904</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Add optional HOSTING_QUEUE_TYPE_SPREAD</li>
+<li><a href="https://www.drupal.org/node/2212149">#2212149</a> by <a href="https://www.drupal.org/u/jon-pugh">jon-pugh</a>: Improve task queue AJAX refresh</li>
+<li><a href="https://www.drupal.org/node/2779193">#2779193</a> by <a href="https://www.drupal.org/u/jon-pugh">jon-pugh</a>: node/add/site?platform=123 doesn't default to platform 123 if it doesn't have Standard profile</li>
+<li><a href="https://www.drupal.org/node/2739011">#2739011</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: AJAX task log never stops loading more</li>
+<li>Fixes <a href="https://www.drupal.org/node/2771687">#2771687</a>: Respect modules' required parameter.</li>
+<li><a href="https://www.drupal.org/node/2765479">#2765479</a>: Notices after disabling module with extra tasks</li>
+<li><a href="https://www.drupal.org/node/2714049">#2714049</a> by <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Pre-commit code style improvements</li>
+<li><a href="https://www.drupal.org/node/2730603">#2730603</a> by <a href="https://www.drupal.org/u/clemens.tolboom">clemens.tolboom</a>, <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Implement hook_entity_property_info</li>
+<li><a href="https://www.drupal.org/node/2714561">#2714561</a> by <a href="https://www.drupal.org/u/jon-pugh">jon-pugh</a>, <a href="https://www.drupal.org/u/helmo">helmo</a>: Add "name" property to HostingService classes to allow for human readable service selection</li>
+<li><a href="https://www.drupal.org/node/2474801">#2474801</a>: Partial Revert: Task cancellation broken - restore function</li>
 </ul>
-<p><strong>Changes to Provision since 7.x-3.5</strong></p>
+<p><strong>Changes to Provision since 7.x-3.6</strong></p>
 <ul>
-<li><a href="https://www.drupal.org/node/2754309">#2754309</a>: Add option to ignore drush version during deb install</li>
-<li>Revert "Issue <a href="https://www.drupal.org/node/2729891">#2729891</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Fix Debian upgrade error 3.4 to 3.5 (with hosting_git enabled)"</li>
-<li>Fix more hook docs.</li>
-<li>Fix hook documentation.</li>
-<li>Merge branch '2731471-backup-delete-warning' into 7.x-3.x</li>
-<li>Fixing docblock for d() function.  You can now CTRL-click methods like d()-&gt;get_services() to go to the definition.</li>
-<li>exmplain new release.sh steps</li>
-<li>Merge remote-tracking branch 'origin/7.x-3.5.x' into 7.x-3.x</li>
-<li><a href="https://www.drupal.org/node/2731605">#2731605</a> by gboudrias - Hardcoded hosting_le code limits behavior with regards to the .well-known directory</li>
-<li><a href="https://www.drupal.org/node/2730977">#2730977</a> by <a href="https://www.drupal.org/u/mpv">mpv</a>: 403 Forbidden for hosting_le acme challenges</li>
-<li>Nginx: Fix for /.well-known/acme-challenge in subdir sites</li>
-<li>Bump default Drush version in manual upgrade script</li>
-<li>Update debian/changelog for 3.5.1 mini release</li>
-<li><a href="https://www.drupal.org/node/2729891">#2729891</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Fix Debian upgrade error 3.4 to 3.5 (with hosting_git enabled)</li>
-<li>Add code to optinally make release tags for golden contrib</li>
-<li>Minor text changed to release.sh</li>
-<li>Apache: Add Alias /.well-known/acme-challenge also in the SSL vhost</li>
+<li><a href="https://www.drupal.org/node/2738987">#2738987</a> by <a href="https://www.drupal.org/u/millenniumtree">millenniumtree</a>, <a href="https://www.drupal.org/u/memtkmcc">memtkmcc</a>: Nginx unknown directive etag</li>
+<li>Adding .travis.yml to provision repository (<a href="https://www.drupal.org/node/2778447">meta</a>)</li>
+<li><a href="https://www.drupal.org/node/2774487">#2774487</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Enable using bz2 for backup files</li>
+<li>Revert "Issue <a href="https://www.drupal.org/node/1694792">#1694792</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Allow provision-deploy to move a site to a platform with different module paths"</li>
+<li><a href="https://www.drupal.org/node/1694792">#1694792</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Allow provision-deploy to move a site to a platform with different module paths</li>
+<li><a href="https://www.drupal.org/node/2764111">#2764111</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>, <a href="https://www.drupal.org/u/thomas-bosviel">thomas-bosviel</a>: Support for utf8mb4</li>
+<li><a href="https://www.drupal.org/node/2738983">#2738983</a> by <a href="https://www.drupal.org/u/memtkmcc">memtkmcc</a>: Nginx unknown status variable</li>
+<li><a href="https://www.drupal.org/node/2764111">#2764111</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>, <a href="https://www.drupal.org/u/thomas-bosviel">thomas-bosviel</a>: Support for utf8mb4 - extra check</li>
+<li><a href="https://www.drupal.org/node/2769587">#2769587</a> by <a href="https://www.drupal.org/u/colan">colan</a>: Check for PHP 7 FPM sockets as well as in PHP 5.</li>
+<li><a href="https://www.drupal.org/node/2768725">#2768725</a> by <a href="https://www.drupal.org/u/memtkmcc">memtkmcc</a>, <a href="https://www.drupal.org/u/colan">colan</a>: Started blocking httpoxy attacks.</li>
+<li>Add debian repo to vagrant file</li>
 </ul>
 <p><strong>Changes to Eldir since 7.x-3.5</strong></p>
+<p>None</p>
+<p><strong>Changes to hosting_civicrm since 7.x-3.5</strong></p>
 <ul>
-<li><a href="https://www.drupal.org/node/2283159">#2283159</a> by <a href="https://www.drupal.org/u/arosboro">arosboro</a>, <a href="https://www.drupal.org/u/steven-jones">steven-jones</a>: Increase task information info box width</li>
+<li><a href="https://www.drupal.org/node/2702365">#2702365</a>: Do not allow access to civicrm/custom directory.</li>
+<li><a href="https://www.drupal.org/node/2706879">#2706879</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Add mandatory parameter to _civicrm_install_db()</li>
+</ul>
+<p><strong>Changes to Hosting Git since 7.x-3.5</strong></p>
+<p>None</p>
+<p><strong>Changes to hosting_remote_import since 7.x-3.1</strong></p>
+<ul>
+<li><a href="https://www.drupal.org/node/2538788">#2538788</a> by <a href="https://www.drupal.org/u/kienan">kienan</a>: Fix Aegir2 support for older versions of Drush.</li>
+<li><a href="https://www.drupal.org/node/2538788">#2538788</a> by <a href="https://www.drupal.org/u/gboudrias-and-ergonlogic">gboudrias-and-ergonlogic</a>: Allow imports from both Aegir 2 and 3 remotes.</li>
+</ul>
+<p><strong>Changes to Hosting Site Backup Manager since 7.x-3.5</strong></p>
+<ul>
+<li><a href="https://www.drupal.org/node/2756411">#2756411</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: Backup tasks are not being generated</li>
+</ul>
+<p><strong>Changes to Aegir Hosting Tasks Extra since 7.x-3.5</strong></p>
+<ul>
+<li><a href="https://www.drupal.org/node/2778443">#2778443</a> by <a href="https://www.drupal.org/u/helmo">helmo</a>: refactor backup filename code to use core function</li>
 </ul>
 <h2 id="known-issues">Known Issues</h2>
 <ul>
@@ -632,8 +699,6 @@
 </ul>
 </li>
 <li>Provision (Jessie installs): <a href="https://www.drupal.org/node/2347557">#2347557</a>: systemd service file not enabled by default</li>
-<li>Hosting: <a href="https://www.drupal.org/node/2069431">#2069431</a>: Form error message is confusing when trying to enable SSL when creating new site on a platform on a server without SSL enabled ("Status: Needs review")</li>
-<li>Call to undefined function hosting_get_most_recent_task when using hosting_backup_queue <a href="https://www.drupal.org/node/2755693">#2755693</a></li>
 </ul>
 <p>Our combined <a href="https://www.drupal.org/project/issues?projects=provision%2C+hosting%2C+eldir%2C+Hostmaster+%28Aegir%29%2C+Aegir+Hosting+Git%2C+Aegir+Hosting+tasks+extra%2C+Aegir+Hosting+Logs%2C+Hosting+Site+Backup+Manager">issue queues</a></p>
               
@@ -643,10 +708,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../3.7/" class="btn btn-neutral float-right" title="3.7">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../3.5/" class="btn btn-neutral" title="3.5"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3.6/" class="btn btn-neutral" title="3.6"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -674,10 +737,8 @@
           <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../3.5/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../3.6/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../3.7/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

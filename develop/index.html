@@ -8,7 +8,7 @@
   
   
   
-  <title>Extending Aegir - Aegir Hosting System</title>
+  <title>Developing Aegir - Aegir Hosting System</title>
   
 
   <link rel="shortcut icon" href="../_images/favicon.ico">
@@ -28,9 +28,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Extending Aegir";
-    var mkdocs_page_input_path = "extend.md";
-    var mkdocs_page_url = "/extend/";
+    var mkdocs_page_name = "Developing Aegir";
+    var mkdocs_page_input_path = "develop.md";
+    var mkdocs_page_url = "/develop/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -227,17 +227,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Extending Aegir</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#extending-aegir">Extending Aegir</a></li>
-                
-                    <li><a class="toctree-l4" href="#what-can-i-extend-exactly">What can I extend exactly?</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../extend/">Extending Aegir</a>
         
     </li>
 <li>
@@ -249,28 +240,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="frontend/">Frontend</a>
+        <a class="" href="../extend/frontend/">Frontend</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="backend/">Backend</a>
+        <a class="" href="../extend/backend/">Backend</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="altering-behaviours/">Altering behaviours</a>
+        <a class="" href="../extend/altering-behaviours/">Altering behaviours</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="contrib/">Contributed projects</a>
+        <a class="" href="../extend/contrib/">Contributed projects</a>
         
     </li>
 
@@ -279,8 +270,21 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../develop/">Developing Aegir</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Developing Aegir</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#developing-aegir">Developing Aegir</a></li>
+                
+                    <li><a class="toctree-l4" href="#aegir-api-documentation">Aegir API documentation</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-modules">Example modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#aegir-development-environment">Aegir Development Environment</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -292,21 +296,21 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../develop/terminology/">Design and terminology</a>
+        <a class="" href="terminology/">Design and terminology</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../develop/architecture/">Architecture</a>
+        <a class="" href="architecture/">Architecture</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../develop/provision/">Provision</a>
+        <a class="" href="provision/">Provision</a>
         
     </li>
 
@@ -318,7 +322,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../develop/provision/contexts/">Contexts</a>
+        <a class="" href="provision/contexts/">Contexts</a>
         
     </li>
 
@@ -328,7 +332,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../develop/repositories/">Projects repositories</a>
+        <a class="" href="repositories/">Projects repositories</a>
         
     </li>
 
@@ -523,7 +527,7 @@
     
       
     
-    <li>Extending Aegir</li>
+    <li>Developing Aegir</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -537,26 +541,30 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="extending-aegir">Extending Aegir</h1>
+                <h1 id="developing-aegir">Developing Aegir</h1>
 <div class="toc">
 <ul>
-<li><a href="#extending-aegir">Extending Aegir</a><ul>
-<li><a href="#what-can-i-extend-exactly">What can I extend exactly?</a></li>
+<li><a href="#developing-aegir">Developing Aegir</a><ul>
+<li><a href="#aegir-api-documentation">Aegir API documentation</a></li>
+<li><a href="#example-modules">Example modules</a></li>
+<li><a href="#aegir-development-environment">Aegir Development Environment</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>This section shows how to modify Aegir to suit your unique use case.</p>
-<p>Aegir is designed to be easily extendable by developers. As it is made with Drupal and Drush, it is made of the hooks and command you know and love. If you are a user or admin looking to deploy contrib modules, you should perhaps look into the <a href="contrib/">contrib modules list</a> and <a href="../usage/">user documentation</a> instead.</p>
-<h2 id="what-can-i-extend-exactly">What can I extend exactly?</h2>
-<p>These extensions may come in the form of:</p>
-<ul>
-<li>Adding new tasks to be performed against sites</li>
-<li>Adding new services or implementations of service types (postgres for the DB service, for example)</li>
-<li>Overriding or hooking into existing forms such as the site form, to send extra data to the backend</li>
-<li>Using APIs to inject bits of configuration into configuration files such as settings.php and vhosts.</li>
-<li>Use the powers of Drupal to extend the content types and views.</li>
-</ul>
+<p>This devoted to teaching you how to extend and develop for Aegir to encourage contributions to the Aegir project or to help you modify Aegir to suit your unique use case.</p>
+<p>Aegir is built on Drupal and Drush, as well as implementing it's own API. As such, a familiarity with the <a href="http://api.drupal.org">Drupal API</a> and the <a href="http://api.drush.org">Drush API</a> is pretty much assumed.</p>
+<p>This section documents methods and best-practices for hacking on Aegir core or building a <a href="../extend/contrib/">contrib module</a>. You should probably become familiar with the <a href="../extend/">Extending Aegir</a> section before proceeding much further.</p>
+<h2 id="aegir-api-documentation">Aegir API documentation</h2>
+<p>The inline documentation is a good start to understand the various hooks and internals that allow you to extend and customize Aegir to your liking. The documentation is rendered on <a href="http://api.aegirproject.org">api.aegirproject.org</a> daily.</p>
+<p>See also the <a href="http://community.aegirproject.org/dev-cheat-sheet/">developer cheat sheet</a>.</p>
+<p>Please submit any suggestions or bug reports to the Aegir Project issue queue of your choice, under the "documentation" component.</p>
+<h2 id="example-modules">Example modules</h2>
+<p>Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways. These are fully functional, and are often used as a template to get the required boilerplate in place.</p>
+<p>In addition, the <a href="../extend/contrib/">Contributed Extensions</a> page documents all known Aegir extensions in existence. Reading through some of these modules' code is a good way to familiarize yourself with how the Aegir API works.</p>
+<h2 id="aegir-development-environment">Aegir Development Environment</h2>
+<p>There are multiple ways you can setup a development environment to get working on Aegir itself.</p>
+<p>See <a href="../extend/contrib/#development">Contributed Extensions - Development</a> for the options.</p>
               
             </div>
           </div>
@@ -564,10 +572,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="frontend/" class="btn btn-neutral float-right" title="Frontend">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="terminology/" class="btn btn-neutral float-right" title="Design and terminology">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../usage/advanced/provisionacl/" class="btn btn-neutral" title="ProvisionACL"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../extend/contrib/" class="btn btn-neutral" title="Contributed projects"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -595,10 +603,10 @@
           <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../usage/advanced/provisionacl/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../extend/contrib/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="frontend/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="terminology/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
