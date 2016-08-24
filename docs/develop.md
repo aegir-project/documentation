@@ -25,3 +25,11 @@ Example modules
 Aegir ships with a set of example modules that illustrate how to extend Aegir in various ways. These are fully functional, and are often used as a template to get the required boilerplate in place.
 
 In addition, the [Contributed Extensions](extend/contrib.md) page documents all known Aegir extensions in existence. Reading through some of these modules' code is a good way to familiarize yourself with how the Aegir API works.
+
+
+Aegir Development Environment
+-----------------------------
+
+There are multiple ways you can setup a development environment to get working on Aegir itself.
+
+See [Contributed Extensions - Development](extend/contrib.md#development) for the options.
