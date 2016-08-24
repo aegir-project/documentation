@@ -10,8 +10,8 @@ This document is intended to give some guidelines as to what should go where. It
 
 - Drupal.org is the canonical repository for the stable branches and releases.
 - Issues should be on Drupal.org
-- Pull Requests on GitHub are very welcome, please just add a link to them in an issue on Drupal.org.
 - Feature branches can best be pushed to GitHub to facilitate testing with Travis.
+- Pull Requests on GitHub are very welcome, please just add a link to them in an issue on Drupal.org.
 
 
 ### Branch naming
@@ -20,3 +20,7 @@ This document is intended to give some guidelines as to what should go where. It
 
 Feature branches can best be prefixed with 'feature/' resulting in 'feature/[issue number]-some-change'. Pushing them to GitHub and creating a PR for it lets us test the results with Travis.
 Thease feature branches don't have to be pushed to D.o, and can be removed after being merged.
+
+### Pull requests
+
+- When a PR is not ready you can prefix the title with: `[WIP]`.
