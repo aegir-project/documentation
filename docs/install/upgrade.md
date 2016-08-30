@@ -38,17 +38,7 @@ Major upgrade from Aegir 6.x-2.x
 Most of the instructions on this page are targetted to minor updates, e.g. Aegir 3.1 to 3.2.
 When upgrading from Aegir 2.x there are a few extra precautions to take. But apart from that the normal upgrade options apply.
 
-To avoid the upgrade breaking after the Drupal 7.50 release we had to add the following contents to a file called something like `/var/aegir/hostmaster-6.x-2.x/sites/aegir.example.com/local.settings.php`.
-```
-<?php
-
-# Upgrade help: https://www.drupal.org/node/2762701
-error_reporting(0);
-ini_set('display_errors', FALSE);
-ini_set('display_startup_errors', FALSE);
-```
-
-Additionally you should run these drush commands:
+To avoid the upgrade breaking run these drush commands:
 ```
 drush @hostmaster en --yes ctools
 drush @hostmaster pm-disable --yes hosting_platform_pathauto
@@ -57,7 +47,7 @@ drush @hostmaster pm-disable --yes install_profile_api
 
 The upgrade will complain about missing modules like `modalframe` and `jquery_update`. This is to be expected, and can be ignored.
 
-This upgrade path is [tested by Jenkins](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/) with [the steps coded](cgit.drupalcode.org/puppet-aegir/tree/tests/functional_tests/aegir2to3-dev/run-tests.sh).
+This upgrade path is [tested by Jenkins](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/).
 
 Manual Upgrade
 --------------
