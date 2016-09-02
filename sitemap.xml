@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/quick-start/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>None/install/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -29,13 +29,13 @@
         
     <url>
      <loc>None/install/upgrade/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/install/uninstall/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -44,7 +44,7 @@
     
     <url>
      <loc>None/usage/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -53,13 +53,13 @@
         
     <url>
      <loc>None/usage/verify/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/usage/sites/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -71,7 +71,7 @@
         
     <url>
      <loc>None/usage/platforms/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -83,7 +83,7 @@
         
     <url>
      <loc>None/usage/advanced/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -98,7 +98,7 @@
     
     <url>
      <loc>None/extend/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -107,25 +107,25 @@
         
     <url>
      <loc>None/extend/frontend/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/extend/backend/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/extend/altering-behaviours/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/extend/contrib/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -134,7 +134,7 @@
     
     <url>
      <loc>None/develop/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -143,19 +143,19 @@
         
     <url>
      <loc>None/develop/terminology/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/develop/architecture/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/develop/provision/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -167,7 +167,7 @@
         
     <url>
      <loc>None/develop/repositories/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -176,7 +176,7 @@
     
     <url>
      <loc>None/help/contact/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -184,7 +184,7 @@
     
     <url>
      <loc>None/community/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -193,13 +193,13 @@
         
     <url>
      <loc>None/community/code-of-conduct/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/community/core-team/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -211,7 +211,7 @@
         
     <url>
      <loc>None/community/release-process/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -223,7 +223,7 @@
         
     <url>
      <loc>None/community/resources/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -232,7 +232,7 @@
     
     <url>
      <loc>None/release-notes/3.4/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -241,49 +241,49 @@
         
     <url>
      <loc>None/release-notes/3.0/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.1/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.2/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.3/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.4/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.5/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.6/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/release-notes/3.7/</loc>
-     <lastmod>2016-08-24</lastmod>
+     <lastmod>2016-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

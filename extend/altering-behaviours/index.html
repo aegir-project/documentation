@@ -610,9 +610,10 @@ Overriding PHP file size values. See .drush/ergonlogiccom.drush.inc</p>
 <p>One challenge this technique may present is inspecting the values of the parameters passed into this function. It appears that the Hostmaster site doesn't get bootstrapped, and so common debugging tools (such as devel.module's dd()) aren't available. However drush_log() is, and when called, will push arbitrary messages back into your Aegir site's verify task log.</p>
 <p>So sticking the following into the function above can help:</p>
 <pre><code>&lt;?php
-  drush_log("$uri: " . print_r($uri));
-?&gt;
+  drush_log("$uri: " . print_r($uri, TRUE));
 </code></pre>
+<p>ps
+    ?&gt;</p>
 <h2 id="injecting-into-settingsphp">Injecting into settings.php</h2>
 <p>Every web site in an Aegir environment has a Drupal configuration file settings.php in /sites/example.com directory. Web administrators often need to make changes to this file; however, the Aegir system also manages this file and any manual customizations will be lost when a site is verified.</p>
 <p>Fortunately, there are two mechanisms to ensure that your customizations can be preserved. If you look in the bottom of an Aegir settings.php file you will see references to two files local.settings.php and global.inc.</p>

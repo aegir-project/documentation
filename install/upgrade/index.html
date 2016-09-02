@@ -98,6 +98,8 @@
                 
                     <li><a class="toctree-l4" href="#new-release-of-drupal-core">New release of Drupal core</a></li>
                 
+                    <li><a class="toctree-l4" href="#major-upgrade-from-aegir-6x-2x">Major upgrade from Aegir 6.x-2.x</a></li>
+                
                     <li><a class="toctree-l4" href="#manual-upgrade">Manual Upgrade</a></li>
                 
                     <li><a class="toctree-l4" href="#upgrades-with-debian-packages">Upgrades with Debian packages</a></li>
@@ -555,6 +557,7 @@
 <li><a href="#upgrade-guide">Upgrade Guide</a><ul>
 <li><a href="#upgrade-options">Upgrade options</a></li>
 <li><a href="#new-release-of-drupal-core">New release of Drupal core</a></li>
+<li><a href="#major-upgrade-from-aegir-6x-2x">Major upgrade from Aegir 6.x-2.x</a></li>
 <li><a href="#manual-upgrade">Manual Upgrade</a><ul>
 <li><a href="#conventions-tips">Conventions &amp; Tips</a></li>
 <li><a href="#upgrading-overview">Upgrading Overview</a><ul>
@@ -568,6 +571,7 @@
 </li>
 <li><a href="#upgrades-with-debian-packages">Upgrades with Debian packages</a><ul>
 <li><a href="#regular-update-process">Regular update process</a></li>
+<li><a href="#temporarily-upgrading-to-the-unstable-debian-package">Temporarily upgrading to the unstable Debian package</a></li>
 <li><a href="#upgrading-from-non-debian-installs">Upgrading from non-Debian installs</a></li>
 <li><a href="#custom-distributions">Custom distributions</a><ul>
 <li><a href="#keeping-custom-distributions-up-to-date">Keeping custom distributions up to date</a></li>
@@ -599,6 +603,17 @@
 <h2 id="new-release-of-drupal-core">New release of Drupal core</h2>
 <p>Just as you would use the Migrate task in Aegir to upgrade one of your sites to a new copy of Drupal core, you can follow the UPGRADE.txt to upgrade your actual Aegir frontend system to a new copy of Drupal core too. The upgrade process (including the script) will always fetch the latest available copy of Drupal core to place the frontend on.</p>
 <p>Currently you cannot upgrade the Aegir site itself from the frontend with a Migrate task as you do for your managed sites. This may change in the future as we have an open issue over at <a href="https://www.drupal.org/node/711746">Allow upgrade of hostmaster sites from the frontend</a>.</p>
+<h2 id="major-upgrade-from-aegir-6x-2x">Major upgrade from Aegir 6.x-2.x</h2>
+<p>Most of the instructions on this page are targetted to minor updates, e.g. Aegir 3.1 to 3.2.
+When upgrading from Aegir 2.x there are a few extra precautions to take. But apart from that the normal upgrade options apply.</p>
+<p>To avoid the upgrade breaking run these drush commands:</p>
+<pre><code>drush @hostmaster en --yes ctools
+drush @hostmaster pm-disable --yes hosting_platform_pathauto
+drush @hostmaster pm-disable --yes install_profile_api
+</code></pre>
+
+<p>The upgrade will complain about missing modules like <code>modalframe</code> and <code>jquery_update</code>. This is to be expected, and can be ignored.</p>
+<p>This upgrade path is <a href="http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/">tested by Jenkins</a>.</p>
 <h2 id="manual-upgrade">Manual Upgrade</h2>
 <p>This section outlines the requirements for doing a manual upgrade of Aegir to a new release. Before going ahead with this, you probably want to read the upgrade path and version-specific notes.</p>
 <h3 id="conventions-tips">Conventions &amp; Tips</h3>
@@ -658,6 +673,18 @@ apt-get install aegir3
 <pre><code>env DPKG_DEBUG=yes apt-get install aegir3-hostmaster
 </code></pre>
 <p><strong>Note on contrib modules</strong>: some Aegir-specific contrib modules may have been installed on your Aegir deployment. This may fail if you are doing a major upgrade. In this case, you will probably want to disable those contrib modules.  Look for directories in <code>~/.drush</code> or <code>/usr/share/drush/commands</code> or other components of the Drush commandfiles search path, and move them out of the way.  After the upgrade, download the new versions of the modules that are compatible with the new Aegir release.</p>
+<h3 id="temporarily-upgrading-to-the-unstable-debian-package">Temporarily upgrading to the unstable Debian package</h3>
+<p>Occasionally, you might be facing a bug that has been fixed in Aegir's git repos, but hasn't made it into a new release yet. The Aegir Project's CI system automatically builds and uploads new Debian packages for each commit to one of the core repos. As such, you <em>could</em> download and install the .deb directly. Note that this is <em>not</em> recommended.</p>
+<ol>
+<li>Ensure that the latest build is passing the <a href="http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package/">test suite</a>.</li>
+<li>Visit http://debian.aegirproject.org/pool/main/a/aegir3-provision/</li>
+<li>Find the latest unstable release packages for aegir3-provision and aegir3-hostmaster (they'll be the ones with a long suffix).</li>
+<li>Download the Provision package to your Aegir server (e.g., <code>wget aegir3-provision_3.7+438.10e2f5b_all.deb</code>)</li>
+<li>Download the Hostmaster package to your Aegir server (e.g., <code>wget aegir3-hostmaster_3.7+438.10e2f5b_all.deb</code>)</li>
+<li>Install the Provision package to your Aegir server (e.g., <code>sudo dpkg -i aegir3-provision_3.7+438.10e2f5b_all.deb</code>)</li>
+<li>Install the Hostmaster package to your Aegir server (e.g., <code>sudo dpkg -i aegir3-hostmaster_3.7+438.10e2f5b_all.deb</code>)</li>
+</ol>
+<p>The idea here is that you're only running the unstable version of Aegir until the next full release, at which point the normal update procedure (e.g., <code>apt-get install aegir3</code>) will install the next stable release.</p>
 <h3 id="upgrading-from-non-debian-installs">Upgrading from non-Debian installs</h3>
 <p>The Debian package supports migrating from existing installs. You will need to move <code>/var/aegir/.drush/provision</code> out of the way before going ahead:</p>
 <pre><code>tar cfz /var/aegir/backups/provision.tgz /var/aegir/.drush/provision
