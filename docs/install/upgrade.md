@@ -32,6 +32,23 @@ Just as you would use the Migrate task in Aegir to upgrade one of your sites to 
 Currently you cannot upgrade the Aegir site itself from the frontend with a Migrate task as you do for your managed sites. This may change in the future as we have an open issue over at [Allow upgrade of hostmaster sites from the frontend](https://www.drupal.org/node/711746).
 
 
+Major upgrade from Aegir 6.x-2.x
+--------------------------------
+
+Most of the instructions on this page are targetted to minor updates, e.g. Aegir 3.1 to 3.2.
+When upgrading from Aegir 2.x there are a few extra precautions to take. But apart from that the normal upgrade options apply.
+
+To avoid the upgrade breaking run these drush commands:
+```
+drush @hostmaster en --yes ctools
+drush @hostmaster pm-disable --yes hosting_platform_pathauto
+drush @hostmaster pm-disable --yes install_profile_api
+```
+
+The upgrade will complain about missing modules like `modalframe` and `jquery_update`. This is to be expected, and can be ignored.
+
+This upgrade path is [tested by Jenkins](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/).
+
 Manual Upgrade
 --------------
 
