@@ -132,6 +132,20 @@ As during install, you can use the DEBUG variable to run Drush in debugging mode
 
 **Note on contrib modules**: some Aegir-specific contrib modules may have been installed on your Aegir deployment. This may fail if you are doing a major upgrade. In this case, you will probably want to disable those contrib modules.  Look for directories in `~/.drush` or `/usr/share/drush/commands` or other components of the Drush commandfiles search path, and move them out of the way.  After the upgrade, download the new versions of the modules that are compatible with the new Aegir release.
 
+### Temporarily upgrading to the unstable Debian package
+
+Occasionally, you might be facing a bug that has been fixed in Aegir's git repos, but hasn't made it into a new release yet. The Aegir Project's CI system automatically builds and uploads new Debian packages for each commit to one of the core repos. As such, you *could* download and install the .deb directly. Note that this is *not* recommended.
+
+1. Ensure that the latest build is passing the [test suite](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package/).
+2. Visit http://debian.aegirproject.org/pool/main/a/aegir3-provision/
+3. Find the latest unstable release packages for aegir3-provision and aegir3-hostmaster (they'll be the ones with a long suffix).
+4. Download the Provision package to your Aegir server (e.g., `wget aegir3-provision_3.7+438.10e2f5b_all.deb`)
+5. Download the Hostmaster package to your Aegir server (e.g., `wget aegir3-hostmaster_3.7+438.10e2f5b_all.deb`)
+6. Install the Provision package to your Aegir server (e.g., `sudo dpkg -i aegir3-provision_3.7+438.10e2f5b_all.deb`)
+7. Install the Hostmaster package to your Aegir server (e.g., `sudo dpkg -i aegir3-hostmaster_3.7+438.10e2f5b_all.deb`)
+
+The idea here is that you're only running the unstable version of Aegir until the next full release, at which point the normal update procedure (e.g., `apt-get install aegir3`) will install the next stable release.
+
 ### Upgrading from non-Debian installs
 
 The Debian package supports migrating from existing installs. You will need to move `/var/aegir/.drush/provision` out of the way before going ahead:
