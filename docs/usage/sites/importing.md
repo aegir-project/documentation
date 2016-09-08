@@ -38,6 +38,22 @@ called: 'Import remote sites' when viewing the server node. Click on that link
 and follow the instructions there.
 
 
+Importing a single site from another Aegir
+------------------------------------------
+
+If Remote Import isn't working for you (perhaps a broken site on the source server is blocking a site listing), you can pretty easily perform similar operations manually.
+
+1. Install a site with the same name on the destination server.
+2. Take a backup of the new site.
+3. Disable the site on the source server (this generates a backup).
+4. Use `scp` or `rsync` to copy the latest backup from the source server to destination.
+5. Move the backup from the source over top of the one taken on the destination.
+6. Restore the backup via the Aegir UI  (on the destination server).
+7. Clear caches, rebuild registries and verify the new site.
+8. (Optional) Point the DNS entry for the site to the new server.
+9. (Optional) Login to the site, and perhaps fix some internally stored paths (i.e., CiviCRM's "Resource URL")
+
+
 Importing a single site manually
 --------------------------------
 
