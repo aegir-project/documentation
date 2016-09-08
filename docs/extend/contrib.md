@@ -64,6 +64,10 @@ Aims to be a one-stop shop for all Web services functionality offered within Aeg
 
 The Aegir SaaS sub-module sets up a fully functional endpoint (via the base module's API) allowing for remote administration of sites, notably cloning existing sites, for software-as-a-service (SaaS) / site-factory Aegir set-ups. It fully configures a service endpoint providing common parameters for cloning as configured in the module's settings. Using the API's task resource, sites can also be disabled, enabled, deleted, and have any other task performed on them supported by your Aegir installation. See [the module's README](http://cgit.drupalcode.org/hosting_services/tree/submodules/hosting_saas/README.md) for more information.
 
+#### [Aegir Site Probes](https://www.drupal.org/project/hosting_probes)
+
+This module fetches information from sites for use in other hosting modules.
+
 #### [Hosting Certificate](https://gitlab.com/aegir/hosting_certificate)
 
 SSL certificate handling as a Hosting Service. A prototype to restyle SSL handling in Aegir.
