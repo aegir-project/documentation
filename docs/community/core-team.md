@@ -18,6 +18,7 @@ The Aegir maintainers are developer who have commit access to the code. They are
 * Jon Pugh ([Jon Pugh](https://www.drupal.org/u/jon-pugh)) - maintainer of devshop hosting/provision, provision_git, and tons of other contrib modules, submitter of many good patches.
 * Colan Schwartz ([colan](https://www.drupal.org/u/colan)) - Documentation, patches to core, contributions to [Aegir Services/SaaS](https://www.drupal.org/project/hosting_services) and e-commerce integration via [Recurly Aegir](https://www.drupal.org/project/recurly_aegir).
 * Mathieu Lutfy ([bgm](https://www.drupal.org/u/bgm)) - CiviCRM support lead, contributing and testing many patches.
+* Adam Andrzej Jaworski ([memtkmcc](https://www.drupal.org/u/memtkmcc)) - Nginx support, Barracuda Project, and much more.
 
 
 Emeritus members

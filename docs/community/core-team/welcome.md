@@ -7,6 +7,8 @@ Once the member is approved on the mailing list, you should follow this checklis
 
 * Give membership on the mailing list.
 * Grant commit access to the core repositories (Hostmaster, Hosting, Provision and Eldir).
+* Invite on [GitHub](https://github.com/orgs/aegir-project/people)
+* Invite on [GitLab.com](https://gitlab.com/groups/aegir/group_members)
 * Grant jenkins access (simply create a user then go to the configuration page to give him the same access as others - consider also Vagrant scripts used in Jenkins and maybe the Aegir Jenkins scripts.
 * Grant operator status on the IRC channel (/msg ChanServ flags #aegir user +\*).
 * Grant admin access to the community site(s).
