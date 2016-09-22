@@ -58,6 +58,10 @@ This module provides config-export and config-import commands for Aegir.
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
 
+#### [Aegir Rules](https://www.drupal.org/project/aegir_rules)
+
+Provides integration with [the Rules module](https://www.drupal.org/project/rules) to enable actions on various triggers.  Related to [Hosting Notifications](https://www.drupal.org/project/hosting_notifications).
+
 #### [Aegir Services](https://www.drupal.org/project/hosting_services)
 
 Aims to be a one-stop shop for all Web services functionality offered within Aegir. It allows for remote site management via the [Services](https://www.drupal.org/project/services) framework.
@@ -83,6 +87,10 @@ This is a simple module for the Aegir project that adds a 'Logs' tab to sites an
 #### [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le)
 
 This module replaces self-generated Aegir certificates with Let's Encrypt ones.
+
+#### [Hosting Notifications](https://www.drupal.org/project/hosting_notifications)
+
+Integrates with [the Notifications framework](https://www.drupal.org/project/notifications). This allows you to receive notifications about task execution in various formats, Email, Twitter, iPhone etc.  Related to [Aegir Rules](https://www.drupal.org/project/aegir_rules).
 
 #### [Hosting Piwik](https://www.drupal.org/project/hosting_piwik)
 
