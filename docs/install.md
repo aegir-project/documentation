@@ -168,7 +168,21 @@ During the Postfix configuration, the following options appear: "No configuratio
 
 At the end of the installation, you will receive an email message or, if the user "aegir" has been assigned with a local email account during the installation, the file /var/mail/aegir will contain the message. It will include a one-time login to your new Aegir control panel, that is a URL to copy into your browser so that you can set the password for the "admin" user.
 
-#### 7.1. Custom make files
+#### 7.1 Custom options
+
+The Debian packages allow for a number of options to be set for the various packages:
+
+* [aegir3-provision](http://cgit.drupalcode.org/provision/plain/debian/aegir3-provision.templates)
+* [aegir3-hostmaster](http://cgit.drupalcode.org/provision/plain/debian/aegir3-hostmaster.templates)
+* [aegir-cluster-slave](http://cgit.drupalcode.org/provision/plain/debian/aegir3-cluster-slave.templates)
+
+For example, to create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option thusly:
+
+    $ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
+
+Note that `debconf-set-selections` is part of the [debconf-utils](https://packages.debian.org/search?keywords=debconf-utils) package.
+
+##### 7.1.1 Custom make files
 
 If you have your own Drupal make file, you can go ahead with the above process, but change the make file to the one you want:
 
@@ -177,21 +191,7 @@ If you have your own Drupal make file, you can go ahead with the above process, 
 
 This allows you to specify the makefile path for your custom distribution of Aegir. To maintain these customizations, you'll need to ensure you do the same when upgrading.
 
-An example aegir-custom.make file could look like http://cgit.drupalcode.org/provision/tree/aegir-dev.make
-
-After installing Aegir, you can reinstall (WARNING, data is LOST) the front end (hostmaster), with following commands:
-
-    $ sudo rm -rf /var/aegir/hostmaster-\*.\*
-    $ sudo su -s /bin/sh aegir -c "drush -y hostmaster-install --aegir_db_pass=$DB_PASSWORD --makefile=$MAKEFILE $DOMAIN"
-
-``su -s /bin/sh aegir -c "some command"`` runs ``some command`` in the ``/bin/sh`` shell as user ``aegir``.  ``sudo`` runs the ``su`` command as root - prompting for your user's password instead ``su`` asking for aegir's password.
- Make sure you fil in the variables.
-
-#### 7.2 Custom options
-
-To create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option.
-
-    $ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
+An example custom Aegir makefile could look like [this](http://cgit.drupalcode.org/provision/tree/aegir-dev.make).
 
 ### 8. Troubleshooting the install
 
