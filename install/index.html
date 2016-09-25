@@ -568,8 +568,10 @@
 <li><a href="#5-optional-manual-installation-of-mysql">5. (Optional) Manual installation of MySQL</a></li>
 <li><a href="#6-optional-install-with-nginx">6. (Optional) Install with Nginx</a></li>
 <li><a href="#7-install-aegir">7. Install Aegir</a><ul>
-<li><a href="#71-custom-make-files">7.1. Custom make files</a></li>
-<li><a href="#72-custom-options">7.2 Custom options</a></li>
+<li><a href="#71-custom-options">7.1 Custom options</a><ul>
+<li><a href="#711-custom-make-files">7.1.1 Custom make files</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#8-troubleshooting-the-install">8. Troubleshooting the install</a></li>
@@ -740,23 +742,24 @@ Remove anonymous users? [Y/n] Y
 <p>This will prompt you for the required information (MySQL password, Postfix configuration...) and go ahead with the install.</p>
 <p>During the Postfix configuration, the following options appear: "No configuration, Internet site, Internet with smarthost, Satellite system, Local only". That first text screen only allows to use the tab key to select "OK", and then the enter key to display a second screen where you can select one of the choices. The default is "Internet site", useful in most cases to enable the server to send email messages, for example to the admin.</p>
 <p>At the end of the installation, you will receive an email message or, if the user "aegir" has been assigned with a local email account during the installation, the file /var/mail/aegir will contain the message. It will include a one-time login to your new Aegir control panel, that is a URL to copy into your browser so that you can set the password for the "admin" user.</p>
-<h4 id="71-custom-make-files">7.1. Custom make files</h4>
+<h4 id="71-custom-options">7.1 Custom options</h4>
+<p>The Debian packages allow for a number of options to be set for the various packages:</p>
+<ul>
+<li><a href="http://cgit.drupalcode.org/provision/plain/debian/aegir3-provision.templates">aegir3-provision</a></li>
+<li><a href="http://cgit.drupalcode.org/provision/plain/debian/aegir3-hostmaster.templates">aegir3-hostmaster</a></li>
+<li><a href="http://cgit.drupalcode.org/provision/plain/debian/aegir3-cluster-slave.templates">aegir-cluster-slave</a></li>
+</ul>
+<p>For example, to create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option thusly:</p>
+<pre><code>$ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
+</code></pre>
+<p>Note that <code>debconf-set-selections</code> is part of the <a href="https://packages.debian.org/search?keywords=debconf-utils">debconf-utils</a> package.</p>
+<h5 id="711-custom-make-files">7.1.1 Custom make files</h5>
 <p>If you have your own Drupal make file, you can go ahead with the above process, but change the make file to the one you want:</p>
 <pre><code>$ echo "aegir3-hostmaster aegir/makefile string /var/aegir/makefiles/aegir/aegir-custom.make | sudo debconf-set-selections
 $ sudo apt-get install aegir3
 </code></pre>
 <p>This allows you to specify the makefile path for your custom distribution of Aegir. To maintain these customizations, you'll need to ensure you do the same when upgrading.</p>
-<p>An example aegir-custom.make file could look like http://cgit.drupalcode.org/provision/tree/aegir-dev.make</p>
-<p>After installing Aegir, you can reinstall (WARNING, data is LOST) the front end (hostmaster), with following commands:</p>
-<pre><code>$ sudo rm -rf /var/aegir/hostmaster-\*.\*
-$ sudo su -s /bin/sh aegir -c "drush -y hostmaster-install --aegir_db_pass=$DB_PASSWORD --makefile=$MAKEFILE $DOMAIN"
-</code></pre>
-<p><code>su -s /bin/sh aegir -c "some command"</code> runs <code>some command</code> in the <code>/bin/sh</code> shell as user <code>aegir</code>.  <code>sudo</code> runs the <code>su</code> command as root - prompting for your user's password instead <code>su</code> asking for aegir's password.
- Make sure you fil in the variables.</p>
-<h4 id="72-custom-options">7.2 Custom options</h4>
-<p>To create the hostmaster platform as working copies (Git checkouts for all modules) you can set the aegir/working-copy option.</p>
-<pre><code>$ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
-</code></pre>
+<p>An example custom Aegir makefile could look like <a href="http://cgit.drupalcode.org/provision/tree/aegir-dev.make">this</a>.</p>
 <h3 id="8-troubleshooting-the-install">8. Troubleshooting the install</h3>
 <p>To make the install smoother, the install command is run without much debugging information, which can make diagnostics pretty hard. For this, there's a special environment variable you can set that will trigger debugging output. Install aegir with this:</p>
 <pre><code>$ env DPKG_DEBUG=developer sudo apt-get install aegir

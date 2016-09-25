@@ -570,12 +570,14 @@
 <li><a href="#aegir-cloud">Aegir Cloud</a></li>
 <li><a href="#aegir-config-management">Aegir Config Management</a></li>
 <li><a href="#aegir-network">Aegir Network</a></li>
+<li><a href="#aegir-rules">Aegir Rules</a></li>
 <li><a href="#aegir-services">Aegir Services</a></li>
 <li><a href="#aegir-site-probes">Aegir Site Probes</a></li>
 <li><a href="#hosting-certificate">Hosting Certificate</a></li>
 <li><a href="#hosting-drulenium">Hosting Drulenium</a></li>
 <li><a href="#hosting-logs">Hosting Logs</a></li>
 <li><a href="#hosting-lets-encrypt">Hosting Let's Encrypt</a></li>
+<li><a href="#hosting-notifications">Hosting Notifications</a></li>
 <li><a href="#hosting-piwik">Hosting Piwik</a></li>
 <li><a href="#hosting-site-make">Hosting Site Make</a></li>
 <li><a href="#hosting-variables">Hosting Variables</a></li>
@@ -642,6 +644,8 @@
 <p>This module provides config-export and config-import commands for Aegir.</p>
 <h4 id="aegir-network"><a href="https://www.drupal.org/project/hosting_network">Aegir Network</a></h4>
 <p>Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.</p>
+<h4 id="aegir-rules"><a href="https://www.drupal.org/project/aegir_rules">Aegir Rules</a></h4>
+<p>Provides integration with <a href="https://www.drupal.org/project/rules">the Rules module</a> to enable actions on various triggers.  Related to <a href="https://www.drupal.org/project/hosting_notifications">Hosting Notifications</a>.</p>
 <h4 id="aegir-services"><a href="https://www.drupal.org/project/hosting_services">Aegir Services</a></h4>
 <p>Aims to be a one-stop shop for all Web services functionality offered within Aegir. It allows for remote site management via the <a href="https://www.drupal.org/project/services">Services</a> framework.</p>
 <p>The Aegir SaaS sub-module sets up a fully functional endpoint (via the base module's API) allowing for remote administration of sites, notably cloning existing sites, for software-as-a-service (SaaS) / site-factory Aegir set-ups. It fully configures a service endpoint providing common parameters for cloning as configured in the module's settings. Using the API's task resource, sites can also be disabled, enabled, deleted, and have any other task performed on them supported by your Aegir installation. See <a href="http://cgit.drupalcode.org/hosting_services/tree/submodules/hosting_saas/README.md">the module's README</a> for more information.</p>
@@ -655,6 +659,8 @@
 <p>This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.</p>
 <h4 id="hosting-lets-encrypt"><a href="https://github.com/omega8cc/hosting_le">Hosting Let's Encrypt</a></h4>
 <p>This module replaces self-generated Aegir certificates with Let's Encrypt ones.</p>
+<h4 id="hosting-notifications"><a href="https://www.drupal.org/project/hosting_notifications">Hosting Notifications</a></h4>
+<p>Integrates with <a href="https://www.drupal.org/project/notifications">the Notifications framework</a>. This allows you to receive notifications about task execution in various formats, Email, Twitter, iPhone etc.  Related to <a href="https://www.drupal.org/project/aegir_rules">Aegir Rules</a>.</p>
 <h4 id="hosting-piwik"><a href="https://www.drupal.org/project/hosting_piwik">Hosting Piwik</a></h4>
 <p>Integrates with an instance of the <a href="https://en.wikipedia.org/wiki/Piwik">Piwik analytic software package</a> and the <a href="https://www.drupal.org/project/piwik">Drupal Piwik module</a>.</p>
 <h4 id="hosting-site-make"><a href="https://github.com/mglaman/hosting_site_make">Hosting Site Make</a></h4>
