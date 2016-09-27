@@ -50,6 +50,10 @@ It also includes site functionality for:
 
 Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.
 
+#### [Hosting DNS](https://www.drupal.org/project/hosting_dns)
+
+DNS server integration for Aegir, previously included in core.
+
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
 This module provides config-export and config-import commands for Aegir.
