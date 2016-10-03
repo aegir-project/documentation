@@ -62,6 +62,10 @@ DNS server integration for Aegir, previously included in core.
 
 This module provides config-export and config-import commands for Aegir.
 
+#### [Aegir Kubernetes](https://gitlab.com/AegirCoop/hosting_kubernetes)
+
+This module adds [Kubernetes](http://kubernetes.io) support by allowing for hosting of any [containerized](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) application (via [Docker](https://en.wikipedia.org/wiki/Docker_(software)) for now) with resource definition files.
+
 #### [Aegir Network](https://www.drupal.org/project/hosting_network)
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
