@@ -70,6 +70,10 @@ This module adds [Kubernetes](http://kubernetes.io) support by allowing for host
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
 
+#### [Aegir Reporting](https://www.drupal.org/project/hosting_report)
+
+This module provides a reporting framework. It builds atop the [Aegir Monitoring API](https://www.drupal.org/project/hosting_monitor) to report on the health of hosted sites. It ships with some basic probes, but is intended to be extended, as with [Aegir Site Audit](https://www.drupal.org/project/hosting_site_audit).
+
 #### [Aegir Rules](https://www.drupal.org/project/aegir_rules)
 
 Provides integration with [the Rules module](https://www.drupal.org/project/rules) to enable actions on various triggers.  Related to [Hosting Notifications](https://www.drupal.org/project/hosting_notifications).
