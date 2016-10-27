@@ -148,7 +148,7 @@ Note: this could be [automated](https://www.drupal.org/node/1050618) with the ri
 
 ### 8. Test the upgrade in Jenkins
 
-Once all reease nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:
+Once all release nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:
 
 * [7.x-3.x-stable-to-unstable](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package)
 * [6.x-2.x_to_7.x-3.x_upgrade](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/)
