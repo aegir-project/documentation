@@ -51,6 +51,9 @@ pages:
   - 'Provision':
     - 'Contexts': 'develop/provision/contexts.md'
   - 'Projects repositories': 'develop/repositories.md'
+  - 'Release process': 'community/release-process.md'
+  - 'Release process':
+    - 'community/release-process/debian-packaging.md'
 - 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
@@ -60,9 +63,6 @@ pages:
     - 'Criteria': 'community/core-team/criteria.md'
     - 'Leadership': 'community/core-team/leadership.md'
     - 'Welcoming a new member': 'community/core-team/welcome.md'
-  - 'Release process': 'community/release-process.md'
-  - 'Release process':
-    - 'community/release-process/debian-packaging.md'
   - 'Resources': 'community/resources.md'
 - 'Release notes': 'release-notes/3.4.md'
 - 'Release notes':
