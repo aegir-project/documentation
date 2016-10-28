@@ -155,6 +155,32 @@ Replacing an expired key
     gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
     echo allow * by key <key id> >> /srv/reprepro/conf/uploaders
 
+This new key.asc should be placed on http://debian.aegirproject.org/key.asc and http://cgit.drupalcode.org/provision/tree/debian/key.asc
+
+Extending the lifetime of a key
+-------------------------------
+
+
+    reprepro@zeus:~$ gpg --edit-key 3376CCF9
+
+    gpg> expire
+    Changing expiration time for the primary key.
+    Please specify how long the key should be valid.
+             0 = key does not expire
+          <n>  = key expires in n days
+          <n>w = key expires in n weeks
+          <n>m = key expires in n months
+          <n>y = key expires in n years
+    Key is valid for? (0) 3y
+    Key expires at Sat 12 Oct 2019 09:12:54 AM EDT
+    Is this correct? (y/N) y
+    gpg> save
+
+    gpg --armor --export 3376CCF9 > key.asc
+
+This new key.asc should be placed on http://debian.aegirproject.org/key.asc and http://cgit.drupalcode.org/provision/tree/debian/key.asc
+
+
 How the archive was built
 -------------------------
 
