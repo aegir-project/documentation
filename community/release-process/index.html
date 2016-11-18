@@ -3,10 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
   
   <title>Release process - Aegir Hosting System</title>
   
@@ -29,8 +26,6 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Release process";
-    var mkdocs_page_input_path = "community/release-process.md";
-    var mkdocs_page_url = "/community/release-process/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -324,6 +319,39 @@
     </li>
 
         
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Release process</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#release-process">Release Process</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-release-cycle">The release cycle</a></li>
+                
+                    <li><a class="toctree-l4" href="#steps-for-a-release">Steps for a release</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
     </ul>
 <li>
           
@@ -390,39 +418,6 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Release process</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#release-process">Release Process</a></li>
-                
-                    <li><a class="toctree-l4" href="#the-release-cycle">The release cycle</a></li>
-                
-                    <li><a class="toctree-l4" href="#steps-for-a-release">Steps for a release</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <ul class="subnav">
-    <li><span>Release process</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="debian-packaging/">Debian packaging</a>
-        
-    </li>
-
-        
-    </ul>
-
-        
-            
     <li class="toctree-l1 ">
         <a class="" href="../resources/">Resources</a>
         
@@ -434,7 +429,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        <a class="" href="../../release-notes/3.8/">Release notes</a>
         
     </li>
 <li>
@@ -500,6 +495,13 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.8/">3.8</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
@@ -525,7 +527,7 @@
     
       
         
-          <li>Community &raquo;</li>
+          <li>Developing Aegir &raquo;</li>
         
       
     
@@ -603,7 +605,7 @@ On Drupal.org we add a link to the version specific release notes page on the re
 <p><code>drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.3 7.x-3.4</code></p>
 <p>This is done for the different git projects. Changing the first line to add 'to $name'.
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.</p>
-<p>Add it as a new file under <a href="https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes">release-notes</a>, and add a line to <a href="https://github.com/aegir-project/documentation/blob/3.x/mkdocs.yml">mkdocs.yml</a></p>
+<p>Add it as a new file under <a href="https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes">release-notes</a>, and add a line to <a href="https://github.com/aegir-project/documentation/blob/3.x/mkdocs.yml">mkdocs.yml</a>. And update the default page for the 'Release notes' section.</p>
 <h3 id="4-running-the-releasesh-script">4. Running the release.sh script</h3>
 <p>Each time we make a new release, we run a script called <code>release.sh</code> in provision. This script does all the 'hard' work in that it doesn't forget all the very many places to edit version numbers etc of relevant documentation and other scripts. This includes install.sh.txt and upgrade.sh.txt.</p>
 <p>Paraphrasing from the script itself:</p>
@@ -673,7 +675,7 @@ And for Golden Contrib...
 <p>WAIT.... And after those are fully build... in the <a href="https://drupal.org/node/add/project-release/195997">hostmaster</a> project.</p>
 <p>Note: this could be <a href="https://www.drupal.org/node/1050618">automated</a> with the right stuff on Drupal.org.</p>
 <h3 id="8-test-the-upgrade-in-jenkins">8. Test the upgrade in Jenkins</h3>
-<p>Once all reease nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:</p>
+<p>Once all release nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:</p>
 <ul>
 <li><a href="http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package">7.x-3.x-stable-to-unstable</a></li>
 <li><a href="http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/">6.x-2.x_to_7.x-3.x_upgrade</a></li>
@@ -734,10 +736,10 @@ reprepro copy stable unstable aegir3-cluster-slave
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="debian-packaging/" class="btn btn-neutral float-right" title="Debian packaging">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="debian-packaging/" class="btn btn-neutral float-right" title="Debian packaging"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../core-team/welcome/" class="btn btn-neutral" title="Welcoming a new member"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../develop/repositories/" class="btn btn-neutral" title="Projects repositories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -762,10 +764,10 @@ reprepro copy stable unstable aegir3-cluster-slave
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../core-team/welcome/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../develop/repositories/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="debian-packaging/" style="color: #fcfcfc">Next &raquo;</a></span>

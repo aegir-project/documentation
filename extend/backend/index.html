@@ -3,10 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
   
   <title>Backend - Aegir Hosting System</title>
   
@@ -29,8 +26,6 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Backend";
-    var mkdocs_page_input_path = "extend/backend.md";
-    var mkdocs_page_url = "/extend/backend/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -333,6 +328,28 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
     </ul>
 <li>
           
@@ -400,28 +417,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../community/release-process/">Release process</a>
-        
-    </li>
-
-        
-            
-    <ul class="subnav">
-    <li><span>Release process</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
-        
-    </li>
-
-        
-    </ul>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../community/resources/">Resources</a>
         
     </li>
@@ -432,7 +427,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        <a class="" href="../../release-notes/3.8/">Release notes</a>
         
     </li>
 <li>
@@ -498,6 +493,13 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.8/">3.8</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
@@ -550,7 +552,7 @@
 </li>
 </ul>
 </div>
-<p>The Aegir backend is a Drush extension called "Provision". It does all the heavy lifting in Aegir, such as writing vhost files and creating new databases. You can use additional Drush extensions to extend Aegir or <a href="../altering-behaviours/">modify its behaviour</a>.</p>
+<p>The Aegir backend is a Drush extension called "Provision". It does all the heavy lifting in Aegir, such as writing vhost files and creating new databases. You can use additional Drush extensions to extend Aegir or <a href="/extend/altering-behaviours.md">modify its behaviour</a>.</p>
 <h2 id="adding-a-drush-extension">Adding a Drush extension</h2>
 <p>There are a couple ways that you can add a Drush extension. First, and most commonly, you can add it under <code>/var/aegir/.drush/</code> and clear the Drush cache. Drush will search a number of paths for extensions, but that's the the conventional place to put them on an Aegir install.</p>
 <p>Since Aegir 3, you can also bundle Drush extensions with front-end modules that expose a "Hosting Feature." This allows for both the frontend module, along with the included backend extension, to be deployed via a makefile, as part of the Hostmaster platform. Upon enabling such a Feature, Aegir will re-write it's drushrc file to dynamically include the backend directory for each Hosting Feature.</p>
@@ -561,7 +563,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../altering-behaviours/" class="btn btn-neutral float-right" title="Altering behaviours">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../altering-behaviours/" class="btn btn-neutral float-right" title="Altering behaviours"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../frontend/" class="btn btn-neutral" title="Frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -589,7 +591,7 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../frontend/" style="color: #fcfcfc;">&laquo; Previous</a></span>

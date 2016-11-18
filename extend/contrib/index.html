@@ -3,10 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
   
   <title>Contributed projects - Aegir Hosting System</title>
   
@@ -29,8 +26,6 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Contributed projects";
-    var mkdocs_page_input_path = "extend/contrib.md";
-    var mkdocs_page_url = "/extend/contrib/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -345,6 +340,28 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
     </ul>
 <li>
           
@@ -412,28 +429,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../community/release-process/">Release process</a>
-        
-    </li>
-
-        
-            
-    <ul class="subnav">
-    <li><span>Release process</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../community/release-process/debian-packaging/">Debian packaging</a>
-        
-    </li>
-
-        
-    </ul>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../community/resources/">Resources</a>
         
     </li>
@@ -444,7 +439,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../release-notes/3.4/">Release notes</a>
+        <a class="" href="../../release-notes/3.8/">Release notes</a>
         
     </li>
 <li>
@@ -510,6 +505,13 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/3.8/">3.8</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
@@ -568,8 +570,12 @@
 </li>
 <li><a href="#not-included-in-aegir-package">Not included in Aegir package</a><ul>
 <li><a href="#aegir-cloud">Aegir Cloud</a></li>
+<li><a href="#hosting-dev">Hosting Dev</a></li>
+<li><a href="#hosting-dns">Hosting DNS</a></li>
 <li><a href="#aegir-config-management">Aegir Config Management</a></li>
+<li><a href="#aegir-kubernetes">Aegir Kubernetes</a></li>
 <li><a href="#aegir-network">Aegir Network</a></li>
+<li><a href="#aegir-reporting">Aegir Reporting</a></li>
 <li><a href="#aegir-rules">Aegir Rules</a></li>
 <li><a href="#aegir-services">Aegir Services</a></li>
 <li><a href="#aegir-site-probes">Aegir Site Probes</a></li>
@@ -640,10 +646,18 @@
 <h3 id="not-included-in-aegir-package">Not included in Aegir package</h3>
 <h4 id="aegir-cloud"><a href="https://www.drupal.org/project/aegir_cloud">Aegir Cloud</a></h4>
 <p>Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.</p>
+<h4 id="hosting-dev"><a href="https://www.drupal.org/project/hosting_dev">Hosting Dev</a></h4>
+<p>This is a suite of tools to enable smoother development using Aegir. It is currently simply a port of the hosting_reinstall module to Aegir 3.</p>
+<h4 id="hosting-dns"><a href="https://www.drupal.org/project/hosting_dns">Hosting DNS</a></h4>
+<p>DNS server integration for Aegir, previously included in core.</p>
 <h4 id="aegir-config-management"><a href="https://www.drupal.org/project/aegir_config">Aegir Config Management</a></h4>
 <p>This module provides config-export and config-import commands for Aegir.</p>
+<h4 id="aegir-kubernetes"><a href="https://gitlab.com/aegir/hosting_kubernetes">Aegir Kubernetes</a></h4>
+<p>This module adds <a href="http://kubernetes.io">Kubernetes</a> support by allowing for hosting of any <a href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization">containerized</a> application (via <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a> for now) with resource definition files.</p>
 <h4 id="aegir-network"><a href="https://www.drupal.org/project/hosting_network">Aegir Network</a></h4>
 <p>Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.</p>
+<h4 id="aegir-reporting"><a href="https://www.drupal.org/project/hosting_report">Aegir Reporting</a></h4>
+<p>This module provides a reporting framework. It builds atop the <a href="https://www.drupal.org/project/hosting_monitor">Aegir Monitoring API</a> to report on the health of hosted sites. It ships with some basic probes, but is intended to be extended, as with <a href="https://www.drupal.org/project/hosting_site_audit">Aegir Site Audit</a>.</p>
 <h4 id="aegir-rules"><a href="https://www.drupal.org/project/aegir_rules">Aegir Rules</a></h4>
 <p>Provides integration with <a href="https://www.drupal.org/project/rules">the Rules module</a> to enable actions on various triggers.  Related to <a href="https://www.drupal.org/project/hosting_notifications">Hosting Notifications</a>.</p>
 <h4 id="aegir-services"><a href="https://www.drupal.org/project/hosting_services">Aegir Services</a></h4>
@@ -726,7 +740,7 @@ Development &amp; Support</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../develop/" class="btn btn-neutral float-right" title="Developing Aegir">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../develop/" class="btn btn-neutral float-right" title="Developing Aegir"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../altering-behaviours/" class="btn btn-neutral" title="Altering behaviours"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -754,7 +768,7 @@ Development &amp; Support</p>
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../altering-behaviours/" style="color: #fcfcfc;">&laquo; Previous</a></span>

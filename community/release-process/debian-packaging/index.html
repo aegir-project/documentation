@@ -3,10 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
   
   <title>Debian packaging - Aegir Hosting System</title>
   
@@ -29,8 +26,6 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Debian packaging";
-    var mkdocs_page_input_path = "community/release-process/debian-packaging.md";
-    var mkdocs_page_url = "/community/release-process/debian-packaging/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
@@ -324,6 +319,55 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Release process</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Release process</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Debian packaging</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#building-and-working-with-the-debian-packages">Building and working with the debian packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#basic-requirements">Basic requirements</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-a-package-for-a-new-release">Building a package for a new release</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-a-branch-package">Building a branch package</a></li>
+                
+                    <li><a class="toctree-l4" href="#installing-packages-manually">Installing packages manually</a></li>
+                
+                    <li><a class="toctree-l4" href="#developing-on-debian">Developing on Debian</a></li>
+                
+                    <li><a class="toctree-l4" href="#package-versioning">Package versioning</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-a-new-uploader">Adding a new uploader</a></li>
+                
+                    <li><a class="toctree-l4" href="#replacing-an-expired-key">Replacing an expired key</a></li>
+                
+                    <li><a class="toctree-l4" href="#extending-the-lifetime-of-a-key">Extending the lifetime of a key</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-the-archive-was-built">How the archive was built</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+
+        
     </ul>
 <li>
           
@@ -391,53 +435,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../">Release process</a>
-        
-    </li>
-
-        
-            
-    <ul class="subnav">
-    <li><span>Release process</span></li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Debian packaging</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#building-and-working-with-the-debian-packages">Building and working with the debian packages</a></li>
-                
-                    <li><a class="toctree-l4" href="#basic-requirements">Basic requirements</a></li>
-                
-                    <li><a class="toctree-l4" href="#building-a-package-for-a-new-release">Building a package for a new release</a></li>
-                
-                    <li><a class="toctree-l4" href="#building-a-branch-package">Building a branch package</a></li>
-                
-                    <li><a class="toctree-l4" href="#installing-packages-manually">Installing packages manually</a></li>
-                
-                    <li><a class="toctree-l4" href="#developing-on-debian">Developing on Debian</a></li>
-                
-                    <li><a class="toctree-l4" href="#package-versioning">Package versioning</a></li>
-                
-                    <li><a class="toctree-l4" href="#adding-a-new-uploader">Adding a new uploader</a></li>
-                
-                    <li><a class="toctree-l4" href="#replacing-an-expired-key">Replacing an expired key</a></li>
-                
-                    <li><a class="toctree-l4" href="#how-the-archive-was-built">How the archive was built</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-    </ul>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../../resources/">Resources</a>
         
     </li>
@@ -448,7 +445,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../../release-notes/3.4/">Release notes</a>
+        <a class="" href="../../../release-notes/3.8/">Release notes</a>
         
     </li>
 <li>
@@ -514,6 +511,13 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../release-notes/3.8/">3.8</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
@@ -537,10 +541,6 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../..">Docs</a> &raquo;</li>
     
-      
-        
-          <li>Community &raquo;</li>
-        
       
         
           <li>Release process &raquo;</li>
@@ -573,6 +573,7 @@
 <li><a href="#package-versioning">Package versioning</a></li>
 <li><a href="#adding-a-new-uploader">Adding a new uploader</a></li>
 <li><a href="#replacing-an-expired-key">Replacing an expired key</a></li>
+<li><a href="#extending-the-lifetime-of-a-key">Extending the lifetime of a key</a></li>
 <li><a href="#how-the-archive-was-built">How the archive was built</a></li>
 </ul>
 </li>
@@ -695,6 +696,26 @@ gpg --search-keys &lt;key id&gt;
 gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
 echo allow * by key &lt;key id&gt; &gt;&gt; /srv/reprepro/conf/uploaders
 </code></pre>
+<p>This new key.asc should be placed on http://debian.aegirproject.org/key.asc and http://cgit.drupalcode.org/provision/tree/debian/key.asc</p>
+<h2 id="extending-the-lifetime-of-a-key">Extending the lifetime of a key</h2>
+<pre><code>reprepro@zeus:~$ gpg --edit-key 3376CCF9
+
+gpg&gt; expire
+Changing expiration time for the primary key.
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+Key is valid for? (0) 3y
+Key expires at Sat 12 Oct 2019 09:12:54 AM EDT
+Is this correct? (y/N) y
+gpg&gt; save
+
+gpg --armor --export 3376CCF9 &gt; key.asc
+</code></pre>
+<p>This new key.asc should be placed on http://debian.aegirproject.org/key.asc and http://cgit.drupalcode.org/provision/tree/debian/key.asc</p>
 <h2 id="how-the-archive-was-built">How the archive was built</h2>
 <p>The following documentation was used: <a href="https://wiki.koumbit.net/RepreproConfiguration">https://wiki.koumbit.net/RepreproConfiguration</a></p>
               
@@ -704,7 +725,7 @@ echo allow * by key &lt;key id&gt; &gt;&gt; /srv/reprepro/conf/uploaders
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../resources/" class="btn btn-neutral float-right" title="Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../help/contact/" class="btn btn-neutral float-right" title="Help"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../" class="btn btn-neutral" title="Release process"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -732,13 +753,13 @@ echo allow * by key &lt;key id&gt; &gt;&gt; /srv/reprepro/conf/uploaders
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/aegir-project/documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../help/contact/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
