@@ -104,6 +104,8 @@ To upgrade Drupal core (say for a new security release) while running Aegir stab
     * `drush @platform_hostmaster provision-verify`
 1. Verify the Hostmaster site.
     * `drush @hostmaster provision-verify`
+1. Run database updates
+    * `drush @hostmaster updatedb`
 
 
 Upgrades with Debian packages
