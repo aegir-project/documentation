@@ -5,7 +5,7 @@ Resources
 
 This page aims to provide links presentation video's, slides, and other training materials.
 
-Found an interresting resource? Please add [a pull request or issue](https://github.com/aegir-project/documentation)
+Found an interesting resource? Please add [a pull request or issue](https://github.com/aegir-project/documentation)
 
 
 Presentations
@@ -19,7 +19,7 @@ Presentations
     * Christopher Gervais - ergonlogic, July 2016
 * [Advanced Drush Make](http://nyccamp.org/session/advanced-drush-make)
     * Christopher Gervais - ergonlogic, July 2016
-* [One Drupal to Rule Them All](http://www.drupalnorth.org/en/session/one-drupal-rule-them-all)
+* [One Drupal to Rule Them All](http://www.drupalnorth.org/en/session/one-drupal-rule-them-all) - [slides (keynote)](../_files/aegir_keynote.key)
     * Christopher Gervais - ergonlogic - June 2016
 * [DIY GPL Planet Scale Drupal "Cloud"(DrupalCamp Stanford)](https://drupalcamp.stanford.edu/diy-gpl-planet-scale-drupal-cloud) - [slides](https://docs.google.com/presentation/d/1bl350NkaARCUDoi8jA7G7ylIUpa_fIJL9kU4rTNwb9A/edit?usp=sharing)
     * Nicholas Roberts, April
