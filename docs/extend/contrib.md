@@ -129,6 +129,10 @@ Allows a site to have its modules built from a makefile in the sites directory.
 
 Allows you to set arbitrary custom Drupal variables for each site, such as site name and slogan.  These variables will be put in settings.php so can't be overriden (or changed) through the site interface.
 
+### [Hosting Injections](https://www.drupal.org/project/hosting_injections)
+
+Adds fields for injecting custom settings into settings.php and the Apache vhost.
+
 #### [Hosting Wordpress](https://www.drupal.org/project/hosting_wordpress)
 
 Module to manage WordPress sites. It aims to support the main Aegir functionality, such as installation, upgrade, migration and backups.
