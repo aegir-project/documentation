@@ -57,7 +57,6 @@ So sticking the following into the function above can help:
 
     <?php
       drush_log("$uri: " . print_r($uri, TRUE));
-ps
     ?>
 
 
