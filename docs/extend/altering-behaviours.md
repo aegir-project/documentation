@@ -330,3 +330,30 @@ One further example from staceyb on injecting a rewrite rule. Name the file the 
     }
 
 Make sure you Verify your site after you create the file. Then scroll through the log and find the message you added in the code.
+
+
+Running extra code after a task
+-------------------------------
+
+Drush provides a number of hooks that Aegir can take advantage of.
+
+There is drush_hook_post_COMMAND(), with an example in hosting_example:
+
+    <?php
+      /**
+       * Implements drush_hook_post_COMMAND().
+       */
+      function drush_server_data_post_provision_install() {
+        drush_log('server_data received from the frontend (d()->server_data): ' . d()->server_data);
+      }
+
+      function drush_server_data_post_provision_verify() {
+        drush_log('server_data received from the frontend (d()->server_data): ' . d()->server_data);
+      }
+    ?>
+
+Running any drush command could then be done like:
+
+    <?php
+      provision_backend_invoke('@www.example.com', 'features-revert-all', array(), array('yes' => TRUE));
+    ?>
