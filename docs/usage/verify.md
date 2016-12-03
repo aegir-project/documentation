@@ -50,6 +50,7 @@ What happens in a Verify task?
 * Re-generates the site's web server vhost configuration file
 * Re-generates the site's drushrc.php and a Drush alias
 * Clears caches.
+* Restart the web server.
 
 You can run or re-run the Verify task at any time on a server, platform or site, and it is encouraged to do so.
 
