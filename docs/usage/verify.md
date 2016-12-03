@@ -18,37 +18,37 @@ What happens in a Verify task?
 ### Servers
 
 * When you add a new server node in the Aegir frontend, a Verify task is spawned for the first time.
-* The configuration directories are created if they don't exist and set to the correct permissions, or set to the correct permissions if they already existed but were incorrectly set
-* If the server is the master server, some additional configuration and backup directories are created
+* The configuration directories are created if they don't exist and set to the correct permissions, or set to the correct permissions if they already existed but were incorrectly set.
+* If the server is the master server, some additional configuration and backup directories are created.
 * Aegir generates or updates a Drush alias file for the server.
-* Some configuration directories are synced from the master server to remote servers
-* Checks that new databases and database users can be created
-* Checks that the HTTP web server can be restarted
+* Some configuration directories are synced from the master server to remote servers.
+* Checks that new databases and database users can be created.
+* Checks that the HTTP web server can be restarted.
 
 ### Platforms
 
 * When you add a new platform node in the Aegir frontend, a Verify task is spawned for the first time.
 * If the platform directory didn't exist on the file system and a Drush makefile was provided, Drush Make will be called to build the platform in that location.
 * If the platform directory didn't exist and no Drush makefile was provided, the task will fail with the error 'Does not contain a valid Drupal installation'.
-* Checks that the permissions are correct, at least of the 'sites' folder of the platform directory (so we can create new sites here)
+* Checks that the permissions are correct, at least of the 'sites' folder of the platform directory (so we can create new sites here).
 * Searches for existing sites on the platform that are not yet in the system.
 * These sites will be 'imported' into Aegir.
 * Scans the platform and builds or updates the package registry in the Aegir database.
 * Generates or updates a Drush alias for the platform, and a drushrc.php file in the platform's directory root.
 * Reads in the platform's .htaccess file into a platform-wide web server vhost configuration file.
-* Restart the web server
+* Restart the web server.
 
 ### Sites
 
-* When you add a new site in the Aegir system, an Install task is spawned,
+* When you add a new site in the Aegir system, an Install task is spawned.
 * This is contrasted with the above entities which spawn only Verify tasks initially.
 * Scans the site and builds or updates the package registry in the Aegir database.
 * Creates important directories in the site folder, such as 'files'.
-* Sets or corrects the appropriate permissions
-* Manages/updates any site aliases (symlinks, redirects etc)
-* Re-generates the settings.php
-* Re-generates the site's web server vhost configuration file
-* Re-generates the site's drushrc.php and a Drush alias
+* Sets or corrects the appropriate permissions.
+* Manages/updates any site aliases (symlinks, redirects etc).
+* Re-generates the settings.php.
+* Re-generates the site's web server vhost configuration file.
+* Re-generates the site's drushrc.php and a Drush alias.
 * Clears caches.
 * Restart the web server.
 
