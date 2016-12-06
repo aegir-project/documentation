@@ -396,7 +396,7 @@ The remaining of this manual assumes you are running as the Aegir user. Things w
 
 Once Drush is installed, install the latest recommended Provision release.
 
-    $ drush dl --destination=/var/aegir/.drush provision-7.x-3.0
+    $ drush dl --destination=/var/aegir/.drush provision-7.x
     $ drush cache-clear drush
 
 #### 4.4. Running hostmaster-install
