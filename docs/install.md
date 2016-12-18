@@ -180,13 +180,15 @@ For example, to create the front-end hostmaster platform as working copies (Git 
 
     $ sudo apt install debconf-utils
     $ mkdir -p ~/projects/aegir/core
-    $ git clone https://git.drupal.org/project/hostmaster.git ~/projects/aegir/core/hostmaster
     $ git clone https://git.drupal.org/project/provision.git ~/projects/aegir/core/provision
     $ echo "aegir3-hostmaster aegir/makefile string /home/$USER/projects/aegir/core/provision/aegir-dev.make" | sudo debconf-set-selections
     $ echo "aegir3-hostmaster aegir/working-copy boolean true" | sudo debconf-set-selections
     $ sudo apt install aegir3
 
-Note that this is not currently possible for the Provision back-end, but there is [a feature request](https://www.drupal.org/node/2830610) for it.  For the moment, you'll have to manually replace `/usr/share/drush/commands/provision` with [a git clone](https://www.drupal.org/project/provision/git-instructions) after installation.
+Note that this is not currently possible for the Provision back-end, but there is [a feature request](https://www.drupal.org/node/2830610) for it.  For the moment, you'll have to manually replace it with a link to the above Git clone after installation:
+
+    $ sudo mv /usr/share/drush/commands/provision /tmp/provision.default
+    $ sudo ln -s ~/projects/aegir/core/provision /usr/share/drush/commands
 
 ##### 7.1.1 Custom make files
 
