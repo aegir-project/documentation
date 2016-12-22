@@ -70,9 +70,11 @@ As a result, Aegir disables the reading of the Drupal .htaccess in the runtime e
 
 This does not mean that the .htaccess is not needed. Instead, when you run the Verify task against a Platform, the .htaccess is studied by Aegir and its contents are copied into the platform-wide Apache vhost configuration, typically located in `/var/aegir/config/server_master/apache/platform.d`
 
-Need to make a modification to the .htaccess? Simple: you can simply edit it in-place as you normally would, but you must re-Verify the platform in Aegir afterward, in order for those new or modified settings to be 'loaded in' to the platform vhost file.
+Need to make a modification to the .htaccess? Simple: you can simply edit it in-place as you normally would, but you must re-Verify the platform in Aegir afterward, in order for those new or modified settings to be 'loaded in' to the platform vhost file. Note that this only works on the platform .htaccess file.
 
 The end result is improved performance for your sites, without losing any functionality, as you can still customise the `.htaccess` to your liking.
+
+Site specific rules for the site vhost are not directly supported because this can create major security issues. To add your own rules to the site vhost apache config you can use a contrib module like [Hosting Injections](https://www.drupal.org/project/hosting_injections)
 
 
 Permissions
