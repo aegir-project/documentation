@@ -64,7 +64,7 @@ pages:
     - 'Leadership': 'community/core-team/leadership.md'
     - 'Welcoming a new member': 'community/core-team/welcome.md'
   - 'Resources': 'community/resources.md'
-- 'Release notes': 'release-notes/3.8.md'
+- 'Release notes': 'release-notes/3.9.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
