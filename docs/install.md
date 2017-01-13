@@ -384,7 +384,7 @@ NOTE : If you are running either Ubuntu 12.04 LTS, RHEL 6 or Arch Linux, you sho
 
     $ sudo mysql_secure_installation
 
-Otherwise, Aegir will fail to install and work at all. See [this FAQ entry]().
+Otherwise, Aegir will fail to install and work at all. See [this FAQ entry](#installation-trouble-shooting).
 
 ### 4. Install Aegir components
 
