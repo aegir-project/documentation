@@ -497,6 +497,12 @@ Simply add all domains you want to this line. e.g:
 
      127.0.0.1  localhost aegir.example.com example.com
 
+### 'Could not find the alias @hostmaster' error
+
+If your installation fails with this rather ambiguous error, it is a symptom that your server is not properly configured to run Aegir. At this point you have to go back to the [system requirements](#system-requirements) section and verify that you have completed all the steps.
+
+Double check that your server has a resolvable hostname, a working mail system and secured MySQL configuration. Once you are sure that everything is set up as required, simply rerun the installation command – it should be able to succeed without errors.
+
 ### NameVirtualHost \*:80 has no VirtualHosts
 
 It does not hurt anything, but it can be annoying in your logs. This may disappear as soon as you define your first virtual site using Aegir. If it does not, you most likely have a second NameVirtualHost statement in your configuration someplace other than in the Aegir configurations.
