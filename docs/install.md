@@ -614,3 +614,27 @@ If you are having trouble running APC with Aegir, try downgrading to APC 3.1.4. 
     sudo pecl uninstall apc
     sudo pecl install apc-3.1.4
 
+
+### Error sending e-mail during Aegir installation
+
+Unlike Drupal, Aegir does not prompt you for administrator login and password during installation. Instead, it will set a random password and will send you a one-time login link via email.
+
+In the installation logs you may find an error similar to this:
+
+    WD mail: Error sending e-mail (from admin@localhost.localdomain to          [error]
+    admin@localhost.localdomain).
+
+It means that your server is not configured to send email. In some cases, this may prevent Aegir from finishing its installation, see [this error](#could-not-find-the-alias-hostmaster-error) for details.
+
+When you install Aegir from a Debian package using the `apt-get install aegir3` command, it will install Postfix as a dependency. In which case, you will be presented with a configuration window that has the following options:
+
+    +--------| Postfix Configuration |--------+
+    |                                         |
+    |         No configuration                |
+    |         Internet Site                   |
+    |         Internet with smarthost         |
+    |         Satellite system                |
+    |         Local only                      |
+    +-----------------------------------------+
+
+If you choose `No configuration` option, your host will not be configured to send email and Aegir will not install. Make sure you configure Postfix for private use only by selecting the `Local only` option.
