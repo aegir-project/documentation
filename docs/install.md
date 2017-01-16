@@ -384,7 +384,7 @@ NOTE : If you are running either Ubuntu 12.04 LTS, RHEL 6 or Arch Linux, you sho
 
     $ sudo mysql_secure_installation
 
-Otherwise, Aegir will fail to install and work at all. See [this FAQ entry]().
+Otherwise, Aegir will fail to install and work at all. See [this FAQ entry](#installation-trouble-shooting).
 
 ### 4. Install Aegir components
 
@@ -497,6 +497,12 @@ Simply add all domains you want to this line. e.g:
 
      127.0.0.1  localhost aegir.example.com example.com
 
+### 'Could not find the alias @hostmaster' error
+
+If your installation fails with this rather ambiguous error, it is a symptom that your server is not properly configured to run Aegir. At this point you have to go back to the [system requirements](#system-requirements) section and verify that you have completed all the steps.
+
+Double check that your server has a resolvable hostname, a working mail system and secured MySQL configuration. Once you are sure that everything is set up as required, simply rerun the installation command – it should be able to succeed without errors.
+
 ### NameVirtualHost \*:80 has no VirtualHosts
 
 It does not hurt anything, but it can be annoying in your logs. This may disappear as soon as you define your first virtual site using Aegir. If it does not, you most likely have a second NameVirtualHost statement in your configuration someplace other than in the Aegir configurations.
@@ -608,3 +614,27 @@ If you are having trouble running APC with Aegir, try downgrading to APC 3.1.4. 
     sudo pecl uninstall apc
     sudo pecl install apc-3.1.4
 
+
+### Error sending e-mail during Aegir installation
+
+Unlike Drupal, Aegir does not prompt you for administrator login and password during installation. Instead, it will set a random password and will send you a one-time login link via email.
+
+In the installation logs you may find an error similar to this:
+
+    WD mail: Error sending e-mail (from admin@localhost.localdomain to          [error]
+    admin@localhost.localdomain).
+
+It means that your server is not configured to send email. In some cases, this may prevent Aegir from finishing its installation, see [this error](#could-not-find-the-alias-hostmaster-error) for details.
+
+When you install Aegir from a Debian package using the `apt-get install aegir3` command, it will install Postfix as a dependency. In which case, you will be presented with a configuration window that has the following options:
+
+    +--------| Postfix Configuration |--------+
+    |                                         |
+    |         No configuration                |
+    |         Internet Site                   |
+    |         Internet with smarthost         |
+    |         Satellite system                |
+    |         Local only                      |
+    +-----------------------------------------+
+
+If you choose `No configuration` option, your host will not be configured to send email and Aegir will not install. Make sure you configure Postfix for private use only by selecting the `Local only` option.
