@@ -150,6 +150,22 @@ Therefore this list will be shorter then for previous versions.
 Adds the Strict Transport Security header to hosts that require SSL.
 
 
+Extensions to client sites
+--------------------------
+
+These modules are not for hostmaster, but for the sites hosted under Aegir.
+
+### [Aegir Pathologic Files](https://github.com/Lab43/aegir-pathologic-files)
+
+A tiny Drupal Module to simplify file paths in content. This helps prevent broken images when the site directory name changes. Requires an apache rewrite rule to point /files to /sites/example.com/files, which Aegir provides by default.
+
+### [Site Quota Enforcer](https://www.drupal.org/project/quenforcer)
+
+Enforces quotas set for the entire Drupal site. It works by preventing new entities from being creating on form submission if associated resources are at or past their limits.
+
+Currently supported limits are the number of users and the amount of storage (the combined files and database size).
+
+
 Themes
 ------
 
@@ -210,12 +226,6 @@ Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemo
 DevShop is a Drupal Development Environment Manager built on Aegir.
 
 DevShop creates Aegir platforms and sites automatically from Git URLs. It tracks multiple Projects and allows multiple environments to be created for each Project, such as dev, test, and live. It provides tools to Pull Code, Sync Data, Commit Features, and Run Tests on these environments, and provides a dashboard with useful links and information for developers.
-
-### [Aegir Pathologic Files](https://github.com/Lab43/aegir-pathologic-files)
-
-A tiny Drupal Module to simplify file paths in content. This helps prevent broken images when the site directory name changes. Requires an apache rewrite rule to point /files to /sites/example.com/files, which Aegir provides by default.
-
-This module is not for hostmaster, but for the sites hosted under Aegir.
 
 ### [Recurly Aegir](https://www.drupal.org/project/recurly_aegir)
 
