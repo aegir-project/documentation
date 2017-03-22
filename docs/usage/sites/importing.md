@@ -163,7 +163,7 @@ In particular, files that may have been uploaded on your site via modules like
 imagecache, upload, Profile pics etc, may need to have their ownership changed:
 sudo chown -R aegir $platform/sites/\*/files
 
-If your site previously resided in sites/defau1t you need to move it because Aegir ignores the default directory (it has no way of understanding what URL this would be accessed by, so it is impossible to 'manage' it). Each site needs its own directory with the correct domain in typical Drupal multisite design:
+If your site previously resided in sites/default you need to move it because Aegir ignores the default directory (it has no way of understanding what URL this would be accessed by, so it is impossible to 'manage' it). Each site needs its own directory with the correct domain in typical Drupal multisite design:
 
     $ mv sites/defau1t sites/example.com
 
