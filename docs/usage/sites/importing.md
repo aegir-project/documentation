@@ -136,6 +136,103 @@ Aegir will not go through all your database and update all URLs, so some images 
 It's a good idea to clear the caches, and you may need to get imagecache to rebuild its thumbnails if you use it.
 
 
+Importing a single site using a remote drush alias and Git
+--------------------------------
+
+Drush can sync files and databases from a remote server when you have ssh access there.
+We create a new platform and dummy site and overwrite it with the real data.
+
+### Requirements
+
+1. The Git integration module (Install via Hosting => Advanced)
+2. The Extra tasks module (Install via Hosting => Advanced)
+3. (optional) The Git pull task module (Install via Hosting => Advanced)
+4. SSH public key access to the origin server.
+
+### Prepare platform
+
+*You can skip this is you already have a suitable platform on your server, just make sure it has all the modules that the imported site needs.*
+
+1. Create a Git repository on your favaurite Git hosting site.
+2. Clone the new repository on a workstation.
+3. Copy the original document root into this new repository.
+4. Add the lines below to the .gitignore file, and preserve the lines that Drupal core ships with.
+
+```
+# Aegir related code and config
+sites/*/drushrc.php
+sites/*/local.settings.php
+sites/all/drush/drushrc.php
+sites/sites.php
+```
+
+5. Commit and push
+```
+git add -A
+git commit -m 'Initial import'
+git push origin master
+```
+
+6. On your hostmaster site go to /node/add/platform and add the platform from the git repo.
+
+7. If you have enabled the Git pull task module then you can set this new platform to use the 'Pull on URL Callback' method.
+You the add the 'Pull Trigger URL' shown on the platform's edit page to you Git hosting site as Trigger/webhook.
+
+### Setting up a Drush alias for the origin site.
+
+Add a custom Drush alias for the origin site. Add the following to `~/.drush/aliases.drushrc.php`.
+```
+<?php
+$aliases['originwww'] = array (
+  'remote-host' => 'oldserver.example.com',
+  'remote-user' => 'webuser',
+  'root' => '/home/webuser/sites/example.com/www',
+  'uri' => 'http://example.com/',
+);
+```
+
+
+
+### Transfer the data.
+
+These steps could potentially be done with the 'Sync task' module, but the commands below give a better insight into what is being done.
+
+Database:
+```
+drush sql-sync @originwww @www.example.com
+```
+
+When the site was not a multisite before (it was in in sites/default) you can use this to set things strait in the database.
+```
+drush @www.example.com provision-update_uri www.example.com www.example.com
+```
+
+Files:
+```
+drush rsync @originwww:%files/ @www.example.com:%files
+```
+
+
+
+
+### Testing
+
+Before changing the DNS you can test if the site behaves correctly on the new host by updateing the /etc/hosts file on your local machine to add the new IP for the site uri.
+
+- login en check /admin/reports/status
+- It's a good idea to clear the caches, and you may need to get imagecache to rebuild its thumbnails if you use it.
+
+
+
+### Live
+
+- (optional) repeat the earlier sync steps to get the latest data from the origin server, you might want to put that in maintenance mode first to be sure.
+- Update the DNS
+- Optionally enable SSL
+
+
+
+
 Importing a complete Drupal platform
 ------------------------------------
 
