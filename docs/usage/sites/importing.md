@@ -226,9 +226,9 @@ Before changing the DNS you can test if the site behaves correctly on the new ho
 
 ### Live
 
-- (optional) repeat the earlier sync steps to get the latest data from the origin server, you might want to put that in maintenance mode first to be sure.
-- Update the DNS
-- Optionally enable SSL
+- (optional) Repeat the earlier sync steps to get the latest data from the origin server, you might want to put that in maintenance mode first to be sure.
+- Update the DNS.
+- (optional) Enable https.
 
 
 
