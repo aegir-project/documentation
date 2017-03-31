@@ -201,6 +201,25 @@ This allows you to specify the makefile path for your custom distribution of Aeg
 
 An example custom Aegir makefile could look like [this](http://cgit.drupalcode.org/provision/tree/aegir-dev.make).
 
+##### 7.1.2 Custom Drush
+
+By default the Aegir Debian package will download the latest stable Drush version as a phar file.
+
+However, we do make alternative Drush versions available. To install the lastest Drush 6 from composer (as we did prior to Aegir 3.3), you can run the following before installing or upgrading the packages:
+
+    # echo aegir3-provision aegir/drush_version string 6.x | debconf-set-selections
+
+Likewise, to use the latest dev build of Drush (not recommended), you could run:
+
+    # echo aegir3-provision aegir/drush_version string unstable | debconf-set-selections
+
+Or to ignore Drush during upgrades of the Debian package:
+
+    # echo aegir3-provision aegir/drush_version string ignore | debconf-set-selections
+
+The ignore option is also useful if your building your own Drush Debian package, like with [drush.deb](https://github.com/ergonlogic/drush.deb)
+
+
 ### 8. Troubleshooting the install
 
 To make the install smoother, the install command is run without much debugging information, which can make diagnostics pretty hard. For this, there's a special environment variable you can set that will trigger debugging output. Install aegir with this:
