@@ -5,6 +5,11 @@ Contact the community
 
 Want to talk with the Aegir community? There are many channels with various virtues.
 
+Service Providers
+-----------------
+
+If you need professional support for your Aegir installation, check out the [Service Providers page](/community/services.md).
+
 IRC
 ---
 
