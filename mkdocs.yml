@@ -42,6 +42,7 @@ pages:
     - 'Distributions': 'usage/advanced/distributions.md'
     - 'Distributions':
       - 'Updates': 'usage/advanced/distributions/updates.md'
+    - 'Deployment strategies': 'usage/advanced/deployment.md'
 - 'Extending Aegir': 'extend.md'
 - 'Extending Aegir':
   - 'Frontend': 'extend/frontend.md'
