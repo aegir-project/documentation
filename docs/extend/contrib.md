@@ -62,9 +62,18 @@ However, we recommend instead maintaining a custom Aegir makefile that can inclu
 
 Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.
 
+#### [Aegir Composer](https://www.drupal.org/project/hosting_composer)
+
+This module adds the ability to install dependencies using Composer. In addition, it provides the [Aegir Deploy](/usage/advanced/deployment/) module that improves the platform form's support for an increasing number of platform deployment strategies. Finally, it provides a couple new such strategies, including the building platforms from Composer packages via project templates, and git-based deployments than maintain platform immutability.
+
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
 This module provides config-export and config-import commands for Aegir.
+
+
+#### [Aegir Distributions](https://www.drupal.org/project/hosting_distribution)
+
+This module simplifies and further automates platform maintenance and site updates. A distribution is a "type" or "flavour" of platform. It could just as easily be an off-the-shelf package like OpenAtrium or Thunder, as a custom cobe-base specific to a client's use-case.
 
 #### [Aegir Feeds](https://www.drupal.org/project/aegir_feeds)
 
@@ -77,6 +86,10 @@ This module adds [Kubernetes](http://kubernetes.io) support by allowing for host
 #### [Aegir Network](https://www.drupal.org/project/hosting_network)
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
+
+#### [Aegir Objects](https://www.drupal.org/project/aegir_objects)
+
+This API-only module provides some base classes and traits to make object-oriented development of Aegir 3.x easier. It does not provide any functionality of it's own, and should only be installed when required by another extension.
 
 #### [Aegir Reporting](https://www.drupal.org/project/hosting_report)
 
