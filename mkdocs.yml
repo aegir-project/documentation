@@ -39,6 +39,9 @@ pages:
     - 'SSL': 'usage/advanced/ssl.md'
     - 'Access control': 'usage/advanced/clients.md'
     - 'ProvisionACL': 'usage/advanced/provisionacl.md'
+    - 'Distributions': 'usage/advanced/distributions.md'
+    - 'Distributions':
+      - 'Updates': 'usage/advanced/distributions/updates.md'
 - 'Extending Aegir': 'extend.md'
 - 'Extending Aegir':
   - 'Frontend': 'extend/frontend.md'
