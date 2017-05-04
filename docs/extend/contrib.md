@@ -3,14 +3,15 @@ Contributed extensions
 
 [TOC]
 
-Please note that the support and development status varies for these.
+Note that the support and development status varies for these. Please evaluate each extension for yourself (or [ask the advice of an expert]()) before installing them on a production Aegir system.
 
-Extensions to Hostmaster (frontend)
------------------------------------
 
-Some of these ship with Aegir (the ["golden contrib"](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) suite of modules) so their features simply require enabling if desired.  For the others, manual installation is required.
+"Golden" Contrib
+----------------
 
 ### Included in Aegir package
+
+These ship with Aegir (the ["golden contrib"](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) suite of modules) so their features simply require enabling if desired.  For the others, manual installation is required.
 
 #### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
 
@@ -44,19 +45,22 @@ It also includes site functionality for:
 * [HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
 * Generating and showing Drush aliases
 
-### Not included in Aegir package
+
+Front-end Extensions
+--------------------
+
+While these modules are not included in the base Aegir distribution, they can be added easily, since the are (mostly) just Drupal modules. As such, they can be installed in the [usual way](https://www.drupal.org/docs/7/extending-drupal-7/installing-contributed-modules).
+
+However, we recommend instead maintaining a custom Aegir makefile that can include any of these modules (or [themes](#themes)). Such custom Aegir makefiles are supported by:
+
+* Debian package [installation](/install/#711-custom-make-files) and [upgrades](/install/upgrade/#custom-distributions).
+* manual [installation](/install/#44-running-hostmaster-install) and [upgrades](/install/upgrade/#upgrading-the-frontend), via the `--makefile` option.
+* most of the suggested [configuration management tools](#configuration-management).
+
 
 #### [Aegir Cloud](https://www.drupal.org/project/aegir_cloud)
 
 Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.
-
-#### [Hosting Dev](https://www.drupal.org/project/hosting_dev)
-
-This is a suite of tools to enable smoother development using Aegir. It is currently simply a port of the hosting_reinstall module to Aegir 3.
-
-#### [Hosting DNS](https://www.drupal.org/project/hosting_dns)
-
-DNS server integration for Aegir, previously included in core.
 
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
@@ -73,11 +77,6 @@ This module adds [Kubernetes](http://kubernetes.io) support by allowing for host
 #### [Aegir Network](https://www.drupal.org/project/hosting_network)
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
-
-
-### [Hosting Migrate Module](https://www.drupal.org/project/hosting_migrate_module)
-
-This module allows to launch migrate import through the Aegir interface.
 
 #### [Aegir Reporting](https://www.drupal.org/project/hosting_report)
 
@@ -101,17 +100,34 @@ This module fetches information from sites for use in other hosting modules.
 
 SSL certificate handling as a Hosting Service. A prototype to restyle SSL handling in Aegir.
 
+#### [Hosting Dev](https://www.drupal.org/project/hosting_dev)
+
+This is a suite of tools to enable smoother development using Aegir. It is currently simply a port of the hosting_reinstall module to Aegir 3.
+
+#### [Hosting DNS](https://www.drupal.org/project/hosting_dns)
+
+DNS server integration for Aegir, previously included in core.
+
 #### [Hosting Drulenium](https://www.drupal.org/project/hosting_drulenium)
 
 This module adds [Drulenium](https://www.drupal.org/project/drulenium) tasks to be performed on an Aegir managed site.
+
+#### [Hosting Injections](https://www.drupal.org/project/hosting_injections)
+
+Adds fields for injecting custom settings into settings.php and the Apache vhost.
+
+#### [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le)
+
+This module replaces self-generated Aegir certificates with Let's Encrypt ones.
 
 #### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
 
 This is a simple module for the Aegir project that adds a 'Logs' tab to sites and platforms. Showing Apache error, Git commit and watchdog logs.
 
-#### [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le)
+#### [Hosting Migrate Module](https://www.drupal.org/project/hosting_migrate_module)
 
-This module replaces self-generated Aegir certificates with Let's Encrypt ones.
+This module allows to launch migrate import through the Aegir interface.
+
 
 #### [Hosting Notifications](https://www.drupal.org/project/hosting_notifications)
 
@@ -128,10 +144,6 @@ Allows a site to have its modules built from a makefile in the sites directory.
 #### [Hosting Variables](https://www.drupal.org/project/hosting_variables)
 
 Allows you to set arbitrary custom Drupal variables for each site, such as site name and slogan.  These variables will be put in settings.php so can't be overriden (or changed) through the site interface.
-
-### [Hosting Injections](https://www.drupal.org/project/hosting_injections)
-
-Adds fields for injecting custom settings into settings.php and the Apache vhost.
 
 #### [Hosting Wordpress](https://www.drupal.org/project/hosting_wordpress)
 
