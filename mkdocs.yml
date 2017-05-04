@@ -29,13 +29,14 @@ pages:
   - 'Platforms': 'usage/platforms.md'
   - 'Platforms':
     - 'Platform tasks': 'usage/platforms/tasks.md'
-#  - 'Servers': 'usage/servers.md'
-#  - 'Servers':
+  - 'Servers': 'usage/servers.md'
+  - 'Servers':
+    - 'Remote servers': 'usage/servers/remote-servers.md'
+    - 'Clustering': 'usage/servers/clustering.md'
 #    - 'Server tasks': 'usage/servers/tasks.md'
   - 'Advanced features': 'usage/advanced.md'
   - 'Advanced features':
     - 'SSL': 'usage/advanced/ssl.md'
-    - 'Multiple servers': 'usage/advanced/remote-servers.md'
     - 'Access control': 'usage/advanced/clients.md'
     - 'ProvisionACL': 'usage/advanced/provisionacl.md'
 - 'Extending Aegir': 'extend.md'
