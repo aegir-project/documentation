@@ -3,7 +3,7 @@ Contributed extensions
 
 [TOC]
 
-Note that the support and development status varies for these. Please evaluate each extension for yourself (or [ask the advice of an expert]()) before installing them on a production Aegir system.
+Note that the support and development status varies for these. Please evaluate each extension for yourself (or [ask the advice of an expert](/community)) before installing them on a production Aegir system.
 
 
 "Golden" Contrib
