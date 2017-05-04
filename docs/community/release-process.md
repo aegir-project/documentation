@@ -22,7 +22,7 @@ Steps for a release
 
 ### 1. Make sure our tests are all green
 
-Look into [Jenkins](http://ci.aegirproject.org/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
+Look into [GitLabi CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
 #### 1.1 Disable Debian dev builds
 
@@ -103,9 +103,11 @@ If any of these builds fail, delete the remote tags (using `git push origin :7.x
 
 ### 6. Build the Debian packages
 
-Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/). Enter the latest tag in the `JENKINS_AEGIR_TAG` field (e.g. `7.x-3.4`).
+#Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/). Enter the latest tag in the `JENKINS_AEGIR_TAG` field (e.g. `7.x-3.4`).
+TODO trigger GitLab CI trigger
 
-If you need to move the tags again, you will need to clear the testing archive using the [R clear repo job](http://ci.aegirproject.org/job/R%20clear%20repo/), with the testing argument.
+#If you need to move the tags again, you will need to clear the testing archive using the [R clear repo job](http://ci.aegirproject.org/job/R%20clear%20repo/), with the testing argument.
+ ??
 
 You can also build and upload the package yourself as explained in these [detailed instructions](release-process/debian-packaging/). We first upload the package to the `testing` distribution, and it gets migrated down into `stable` after tests.
 
@@ -220,3 +222,22 @@ Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://m
 ### 12. Re-enable the debian dev build job
 
 The job that was disabled in section 2.1.1 can now be enabled again.
+
+
+
+
+NEW: 
+Debian repo management
+
+gitlab scp's to /var/www/repos/incoming/ on the repo server
+incrond waits for new files and trigers reprepro using /usr/local/bin/reprepro_process_incomming for them.
+
+
+Troubleshooting CI tests
+====
+
+
+When you have your own runner [docs]() you can inspect the container while it's running the tests.
+Adding an extra sleep as a last task in the .gitlab-ci.yml script section would keep it alive a bit longer. The default timeout is 3600 seconds.
+
+Use `docker ps` to get the container ID, and `docker exec -ti [containerID] bash` to get a shell inside the container.
