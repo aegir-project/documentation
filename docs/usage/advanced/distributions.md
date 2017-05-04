@@ -3,7 +3,7 @@ Distributions
 
 [TOC]
 
-The Aegir Distributions module simplifies and further automates platform maintenance and site updates.
+The [Aegir Distributions module](https://www.drupal.org/project/hosting_distribution) simplifies and further automates platform maintenance and site updates.
 
 It extends the Aegir Hosting System to add a concept of "distributions". According to [drupal.org](https://www.drupal.org/project/project_distribution):
 
