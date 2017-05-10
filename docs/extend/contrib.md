@@ -230,7 +230,7 @@ Others
 
 ### [Skynet](https://github.com/PraxisLabs/skynet)
 
-Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemon. It is written in Python using [Cement](http://builtoncement.org).
+Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemon. It is written in Python using [Cement](http://builtoncement.com).
 
 
 ### [DevShop](https://www.drupal.org/project/devshop)
