@@ -24,9 +24,6 @@ Steps for a release
 
 Look into [GitLab CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
-#### 1.1 Disable Debian dev builds
-
-It is important to disable the Jenkins job named [D_aegir-debian-build-3x](http://ci.aegirproject.org/view/Debian%20dev%20builds/job/D_aegir-debian-build-3x/). This prevents later troubles in the [Publish the Debian packages](#10-publish-the-debian-packages) section. Otherwise a dev package may be built after the stable one, but before it has been promoted to the `testing` and `stable` repositories. As this will have a higher version number, it would take precedence when publishing to the `stable` repo.
 
 ### 2. Verify drupal-org.make
 
@@ -41,7 +38,7 @@ On Drupal.org we add a link to the version specific release notes page on the re
 Using [Git Release Notes for Drush](https://www.drupal.org/project/grn)
  with [a patch for the MD format](https://www.drupal.org/node/2609134):
 
-`drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.3 HEAD`
+`drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.10 HEAD`
 
 or after placing the tags
 
