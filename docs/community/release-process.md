@@ -22,7 +22,7 @@ Steps for a release
 
 ### 1. Make sure our tests are all green
 
-Look into [GitLabi CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
+Look into [GitLab CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis](https://github.com/aegir-project/tests/) to see if all tasks have been performed without errors since the last commit. If there is an error, fix it before the release.
 
 #### 1.1 Disable Debian dev builds
 
@@ -94,11 +94,11 @@ git-reset(1) and git-revert(1) ).
 Notice how we just provide the Aegir release number (`3.4`) to the release script, not the Drupal branch (`7.x`), which is hardcoded in the script to remove potential confusion.
 
 
-### 5. Test the manual install in Jenkins
+### 5. Watch the GitLab CI pipelines
 
-Before making a full release, test the release in Jenkins. To do so, start a build of the [P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush8](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush8/) job. Similar job exist for [Drush7](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush7/) and [Drush6](http://ci.aegirproject.org/job/P_Aegir_Puppet_Module_functional_test_Aegir3-dev-Drush6/)
+After the release script pushes it's commits you should give Ci some time to finish it's tests.
 
-If any of these builds fail, delete the remote tags (using `git push origin :7.x-3.4`, for example), fix the bugs and start again.
+If any of these builds fail, one option might be to delete the remote tags (using `git push origin :7.x-3.4`, for example), fix the bugs and start again.
 
 
 ### 6. Build the Debian packages
@@ -133,7 +133,7 @@ Once the tags are pushed and release notes published, we create a release node w
 
 Using the template (change the version number):
 ```
-See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.7/
+See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.11/
 ```
 
 This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
@@ -144,20 +144,14 @@ And for Golden Contrib...
 [hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830) and
 [hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498)
 
-WAIT.... And after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
+WAIT.... And only after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
-### 8. Test the upgrade in Jenkins
-
-Once all release nodes have been created you can test the upgrade of the Debian packages by running the following Jenkins job:
-
-* [7.x-3.x-stable-to-unstable](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_7.x-3.x-stable-to-unstable-deb-package)
-* [6.x-2.x_to_7.x-3.x_upgrade](http://ci.aegirproject.org/view/Upgrades/job/U_aegir_6.x-2.x_to_7.x-3.x_upgrade/)
 
 ### 9. Manually test install and upgrade
 
-If the Jenkins tests are disabled in one of the early steps, you should test the install and upgrade to the new version in a local VM. (Vagrant is very useful for this, the provision repo has a Vagrantfile.)
+Just to make sure you should test the install and upgrade to the new version in a local VM. (Vagrant is very useful for this, the provision repo has a Vagrantfile.)
 
 At this point, the unstable repo actually contains the future stable version (ie 3.1 instead of 3.1-dev-abc). Check that it actually does: <http://debian.aegirproject.org/dists/unstable/main/binary-amd64/Packages>
 
@@ -185,19 +179,17 @@ Finally, when the Debian packages are tested you will need to pull them into the
 
 We pull to stable (since the betas), manually:
 
-    ssh jenkins@ci.aegirproject.org
+    ssh aegir0.aegir.coop
     sudo su - reprepro
-    reprepro@zeus:~$
+    reprepro@aegir0:~$
     reprepro copy stable unstable aegir3
     reprepro copy stable unstable aegir3-hostmaster
     reprepro copy stable unstable aegir3-provision
     reprepro copy stable unstable aegir3-cluster-slave
 
-If Jenkins has managed to build .debs and upload them before you've have a chance to pull them into testing/stable, you can manually remove them like so:
+If CI has managed to build .debs and upload them before you've have a chance to pull them into testing/stable, you can manually remove them like so:
 
     reprepro remove unstable aegir3-cluster-slave aegir3 aegir3-provision aegir3-hostmaster
-
-This should be prevented by disabling the Jenkins jobs named `D_aegir-debian*` before starting to push the release tags.
 
 You can then re-upload the new .debs you've generated, using the '-f' (force) flag:
 
@@ -219,18 +211,12 @@ Once all this is done and the tarballs are generated, the release notes are publ
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
 
-### 12. Re-enable the debian dev build job
+### 12. Debian repository management
 
-The job that was disabled in section 2.1.1 can now be enabled again.
+The repo is managed with a tool called reprepro.
+Gitlab scp's to /var/www/repos/incoming/ on the repo server. It has an ssh key stored as a secret variable.
 
-
-
-
-NEW: 
-Debian repo management
-
-gitlab scp's to /var/www/repos/incoming/ on the repo server
-incrond waits for new files and trigers reprepro using /usr/local/bin/reprepro_process_incomming for them.
+On the repo server incrond waits for new files and trigers reprepro using /usr/local/bin/reprepro_process_incomming for them.
 
 
 Troubleshooting CI tests
