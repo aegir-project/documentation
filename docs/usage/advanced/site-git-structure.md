@@ -16,7 +16,7 @@ Once you've setup your platform (which can also be managed by Git), you'll need 
     modules/
     themes/
     .gitignore
-    versioned.settings.php (optional)
+    versioned.settings.php (optional, you have to include it yourself from local.settings.php)
     read.me (again optional, but good practice)
 
 Within the `.gitignore` file add the following (this is just a suggestion):
@@ -33,3 +33,7 @@ Top tip: one trick to 'safely' store some `$conf` settings in Git is to include 
 ### Step 2
 
 Once you have committed your sites code you will need to log into Aegir and click create site on the platform you want to install the site to.  When creating the site enter your Git URL (if you have not done so yet add your service SSH key to your Git repository) and Aegir will give you some options as to how to trigger `Git Pull`.
+
+### Step 3
+
+On the site node's edit page you now have a field 'Pull Trigger URL' when you set the 'Git pull method' field to match yiou can add this url as webhook url in your Git repository manager.
