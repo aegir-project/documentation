@@ -1,7 +1,7 @@
 Managing Your Site With Git
 ===========================
 
-Using the Aegir Hosting Git (https://www.drupal.org/project/hosting_git) you can manage your site with Git within Aegir. This reduces the need to SSH/SFTP into your Aegir server every time you need to make a change, reducing the risk of something going wrong.
+Using the [Aegir Hosting Git](https://www.drupal.org/project/hosting_git) module you can manage your site with Git within Aegir. This reduces the need to SSH/SFTP into your Aegir server every time you need to make a change, reducing the risk of something going wrong.
 
 Within this guide, you will need to install the Aegir Git module on your Aegir instance.
 
