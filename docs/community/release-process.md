@@ -56,7 +56,7 @@ Each time we make a new release, we run a script called `release.sh` in provisio
 Paraphrasing from the script itself:
 
 ```
-$ ./release.sh 3.4
+$ ./scripts/release.sh 3.4
 
 Aegir release script
 ====================
