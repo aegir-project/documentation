@@ -17,7 +17,7 @@ Once you've setup your platform (which can also be managed by Git), you'll need 
     themes/
     .gitignore
     versioned.settings.php (optional, you have to include it yourself from local.settings.php)
-    read.me (again optional, but good practice)
+    README.txt (again optional, but good practice)
 
 Within the `.gitignore` file add the following (this is just a suggestion):
 
