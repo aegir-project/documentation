@@ -99,3 +99,49 @@ You should now be able to access your site via https:// using your commercial ce
 ### Nginx
 
 It is recommended to allow Aegir to create a default self-signed certificate and key first, and then replace the contents of both files (not the files itself) with your real key and certificate. Any chained certificates (bundles) should be included in the same file, directly below your own certificate - there is no need for extra files/lines like it is for Apache configuration.
+
+# Modern Security Practices
+
+If you scan an SSL protected Aegir site with the standard configuration provided by your OS, it will probably fail.
+
+Test your site with https://www.ssllabs.com/ssltest/analyze.html.
+
+If you use Ubuntu 14.04, for example, and don't update the SSL configuration, even if your Certificate is valid, your site will receive an F: failing grade from security scan software.
+
+Mozilla has created a SSL Config Generator for any web server and SSL version: https://mozilla.github.io/server-side-tls/ssl-config-generator/
+
+## Apache Configuration
+
+These are the instructions for hardening your server for Ubuntu 14.04:
+
+1. Upgrade Apache to the latest stable version.
+
+        add-apt-repository ppa:ondrej/apache2
+        apt-get update
+        apt-get upgrade
+
+  If you have any custom Apache configuration you will receive a warning about the new version overwriting it.
+  
+2. Configure Apache SSL using `/etc/apache2/mods-available/ssl.conf`:
+
+        # In the latest apache, SSLv2 is not present so you don't have to exclude it.
+        SSLProtocol all -SSLv3
+        SSLCipherSuite ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS
+        SSLHonorCipherOrder on
+        SSLCompression off
+        SSLSessionTickets off
+
+        # OCSP Stapling, only in httpd 2.3.3 and later
+        SSLUseStapling on
+        SSLStaplingResponderTimeout 5
+        SSLStaplingReturnResponderErrors off
+        SSLStaplingCache shmcb:/var/run/ocsp(128000)
+
+3. Restart Apache:
+
+        sudo service apache2 restart
+    
+    If you already had valid certificates, you shouldn't have to do anything else.
+    
+    [Test your site again](https://www.ssllabs.com/ssltest/analyze.html), and you should receive an A grade!
+    
