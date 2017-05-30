@@ -67,7 +67,7 @@ pages:
     - 'Welcoming a new member': 'community/core-team/welcome.md'
   - 'Resources': 'community/resources.md'
   - 'Service providers': 'community/services.md'
-- 'Release notes': 'release-notes/3.10.md'
+- 'Release notes': 'release-notes/3.11.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
