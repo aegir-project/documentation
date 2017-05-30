@@ -64,7 +64,7 @@ git remote add gitlab git@gitlab.com:aegir/provision.git
 Paraphrasing from the script itself:
 
 ```
-$ ./scripts/release.sh 3.4
+$ ./scripts/release.sh 3.11
 
 Aegir release script
 ====================
@@ -80,23 +80,22 @@ The following operations will be done:
  0. prompt you for a debian/changelog entry
  1. change the makefile to download tarball
  2. change the upgrade.sh.txt version
- 3. display the resulting diff
- 4. commit those changes to git
- 5. lay down the tag
- 6. revert the commit
- 7. clone fresh copies of hosting/hostmaster and eldir to lay down the tag
- 8. (optionally) push those changes
- 9. clone fresh copies of golden contrib to lay down the tag
-10. (optionally) push those changes
-
- ARE YOU SURE you disabled the D_aegir-debian-build-3x job in Jenkins?
+ 3. change the .gitlab-ci.yml to build a release package
+ 4. display the resulting diff
+ 5. commit those changes to git
+ 6. lay down the tag
+ 7. revert the commit
+ 8. clone fresh copies of hosting/hostmaster and eldir to lay down the tag
+ 9. (optionally) push those changes
+10. clone fresh copies of golden contrib to lay down the tag
+11. (optionally) push those changes
 
 The operation can be aborted before step 8. Don't forget that as
 long as changes are not pushed upstream, this can all be reverted (see
 git-reset(1) and git-revert(1) ).
 ```
 
-Notice how we just provide the Aegir release number (`3.4`) to the release script, not the Drupal branch (`7.x`), which is hardcoded in the script to remove potential confusion.
+Notice how we just provide the Aegir release number (`3.11`) to the release script, not the Drupal branch (`7.x`), which is hardcoded in the script to remove potential confusion.
 
 
 ### 5. Watch the GitLab CI pipelines
