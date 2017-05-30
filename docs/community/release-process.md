@@ -105,18 +105,8 @@ After the release script pushes it's commits you should give Ci some time to fin
 If any of these builds fail, one option might be to delete the remote tags (using `git push origin :7.x-3.4`, for example), fix the bugs and start again.
 
 
-### 6. Build the Debian packages
 
-#Build the package and upload to [http://debian.aegirproject.org/](http://debian.aegirproject.org/ "http://debian.aegirproject.org/"). Jenkins can build and upload a Debian package for you with [the S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/). Enter the latest tag in the `JENKINS_AEGIR_TAG` field (e.g. `7.x-3.4`).
-TODO trigger GitLab CI trigger
-
-#If you need to move the tags again, you will need to clear the testing archive using the [R clear repo job](http://ci.aegirproject.org/job/R%20clear%20repo/), with the testing argument.
- ??
-
-You can also build and upload the package yourself as explained in these [detailed instructions](release-process/debian-packaging/). We first upload the package to the `testing` distribution, and it gets migrated down into `stable` after tests.
-
-
-#### 6.1 Fix Debian packages only
+#### 6 Fix Debian packages only
 
 When there's a bug in the Debian packaging itself we can do a minor package version update. **USE WITH CARE!**
 
@@ -128,7 +118,7 @@ When there's a bug in the Debian packaging itself we can do a minor package vers
 
 TODO: We also need to update version numbers(as release.sh does), but only for provision. Maybe the script can get an option for it...
 
-We don't create a release node on Drupal.org, just run the [S_aegir-debian-official-3.x job](http://ci.aegirproject.org/job/S_aegir-debian-official-3.x/) job. And publish as listed below.
+We don't create a release node on Drupal.org, just let CI create the packages and publish them as described below.
 
 
 ### 7. Creating release nodes on Drupal.org
