@@ -102,6 +102,14 @@ This repository self-signs packages uploaded to it (and packages uploaded are ve
 Use these commands to download and add the repository's PGP key, then update the package list on your system:
 
     sudo wget -O /usr/share/keyrings/aegir-archive-keyring.gpg https://debian.aegirproject.org/aegir-archive-keyring.gpg
+
+    # For your own security, this tells APT to not expect packages in the Aegir repo that are in the main Debian archive. (Thus not allowing Aegir to give you a new kernel)
+    cat > /etc/apt/preferences.d/aegir <<EOD
+    Package: *
+    Pin: origin debian.aegirproject.org
+    Pin-Priority: 100
+    EOD
+
     sudo apt-get update
 
 ### 4. DNS configuration
