@@ -3,8 +3,7 @@ Building and working with the debian packages
 
 [TOC]
 
-Debian is one of the main supported operating systems in Aegir. For other
-systems, see Operating System Support. See also the following instructions:
+Debian is one of the main supported operating systems in Aegir. See also the following instructions:
 
 * [Install using Debian packages](/install/#debianubuntu)
 * [Upgrade using Debian packages](/install/upgrade/#upgrades-with-debian-packages)
@@ -81,17 +80,9 @@ Building a branch package
 -------------------------
 
 Sometimes you want to have a test package for a given branch without going
-through a full release. Here how it's done.
+through a full release. This can be done by pushing the feature branch to GitLab.
+You can then download the packages as build artefacts.
 
-    git checkout debian
-    git merge 7.x-3.x
-    git describe
-    dch -v 3.4~rc3+28-1
-    git-buildpackage --git-tag -kanarcat@koumbit.org
-
-This is also available in the Debian package as:
-
-    ./debian/rules jenkins-build-auto
 
 Installing packages manually
 ----------------------------
@@ -145,29 +136,6 @@ the Packages file for
 or
 [stable](http://debian.aegirproject.org/dists/stable/main/binary-amd64/Packages).
 
-Adding a new uploader
----------------------
-
-To enable a new maintainer to upload to the Debian repository at
-debian.aegirproject.org, something like the following steps will have to be
-followed:
-
-Create a `~/.dput.cfg` with the following entry:
-
-    # See /etc/dput.cf for examples
-    [aegir]
-    login     = *
-    # login     = another_username
-    fqdn      = debian.aegirproject.org
-    method      = scp
-    incoming    = ~reprepro/incoming
-
-Next, GPG keys will have to be authorized to upload to the repository:
-
-    sudo -u reprepro -i
-    gpg --search-keys foo@bar.com
-    gpg --fingerprint foo@bar.com ; gpg --check-sigs foo@bar.com # check if this is the real key
-    echo allow * by key 1234ABCD >> /srv/reprepro/conf/uploaders
 
 Replacing an expired key
 ------------------------
