@@ -108,18 +108,7 @@ If any of these builds fail, one option might be to delete the remote tags (usin
 
 #### 6 Fix Debian packages only
 
-When there's a bug in the Debian packaging itself we can do a minor package version update. **USE WITH CARE!**
-
-    cd <provision source>
-    <Fix>
-    git commit
-    git tag <previous version tag>.1
-    git push --tags
-
-TODO: We also need to update version numbers(as release.sh does), but only for provision. Maybe the script can get an option for it...
-
-We don't create a release node on Drupal.org, just let CI create the packages and publish them as described below.
-
+See [Creating a Debian mini release](/community/release-process/debian-packaging/#creating-a-debian-mini-release)
 
 ### 7. Creating release nodes on Drupal.org
 

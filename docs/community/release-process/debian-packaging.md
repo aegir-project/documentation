@@ -21,6 +21,31 @@ You need the following packages to build the Aegir Debian packages:
 
 See also the section below on [Adding a new uploader](#adding-a-new-uploader).
 
+Creating a Debian mini release
+------------------------------
+
+- Create a feature branch
+ `git checkout -b 3.11.x 3.11.0`
+- Commit or cherry-pick the desired fix
+- Update the version number in provision.info
+- Update to debian/changes ( specify 'testing' instead of unstable)
+- Commit
+- Set a tag
+- Push to gitlab
+- Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
+- Test the packages using the [testing repository](http://debian.aegirproject.org/dists/testing/)
+- Promote the packages to the stable repository.
+On the repo server as the reprepro user do:
+```
+reprepro copy stable testing aegir3
+reprepro copy stable testing aegir3-hostmaster
+reprepro copy stable testing aegir3-provision
+reprepro copy stable testing aegir3-cluster-slave
+```
+
+- Merge the feature branch into the main branch
+- Broadcast? Mention in the irc/matrix room. Maybe Twitter, email.
+
 Building a package for a new release
 ------------------------------------
 
