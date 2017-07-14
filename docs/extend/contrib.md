@@ -104,6 +104,10 @@ SSL certificate handling as a Hosting Service. A prototype to restyle SSL handli
 
 This is a suite of tools to enable smoother development using Aegir. It is currently simply a port of the hosting_reinstall module to Aegir 3.
 
+#### [Hosting Drush Backup](https://www.drupal.org/project/hosting_drush_backup)
+
+Provides a provision command and a task in the hostmaster interface to create backups using drush archive-dump instead of the normal provision-backup code.
+
 #### [Hosting DNS](https://www.drupal.org/project/hosting_dns)
 
 DNS server integration for Aegir, previously included in core.
@@ -140,6 +144,10 @@ Integrates with an instance of the [Piwik analytic software package](https://en.
 #### [Hosting Site Make](https://github.com/mglaman/hosting_site_make)
 
 Allows a site to have its modules built from a makefile in the sites directory.
+
+#### [Hosting Task Graphs](https://www.drupal.org/sandbox/kienan/2735595)
+
+Adds graphs to visualize task duration evolution over time for Aegir hosting tasks.
 
 #### [Hosting Variables](https://www.drupal.org/project/hosting_variables)
 
