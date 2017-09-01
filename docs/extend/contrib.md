@@ -70,6 +70,12 @@ This module provides config-export and config-import commands for Aegir.
 
 Provides [Feeds](https://www.drupal.org/project/feeds) integration with Aegir.
 
+#### [Aegir HTTPS](https://gitlab.com/aegir/hosting_https)
+
+This module enables HTTPS support for sites using certificate management services such as [Let's Encrypt](https://letsencrypt.org/), whose support is included.
+
+It provides a cleaner, more sustainable and more extensible implementation that what's currently offered in Aegir SSL within Aegir core, and doesn't require workarounds such as [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le).
+
 #### [Aegir Kubernetes](https://gitlab.com/aegir/hosting_kubernetes)
 
 This module adds [Kubernetes](http://kubernetes.io) support by allowing for hosting of any [containerized](https://en.wikipedia.org/wiki/Operating-system-level_virtualization) application (via [Docker](https://en.wikipedia.org/wiki/Docker_(software)) for now) with resource definition files.
@@ -96,10 +102,6 @@ The Aegir SaaS sub-module sets up a fully functional endpoint (via the base modu
 
 This module fetches information from sites for use in other hosting modules.
 
-#### [Hosting Certificate](https://gitlab.com/aegir/hosting_certificate)
-
-SSL certificate handling as a Hosting Service. A prototype to restyle SSL handling in Aegir.
-
 #### [Hosting Dev](https://www.drupal.org/project/hosting_dev)
 
 This is a suite of tools to enable smoother development using Aegir. It is currently simply a port of the hosting_reinstall module to Aegir 3.
@@ -122,7 +124,10 @@ Adds fields for injecting custom settings into settings.php and the Apache vhost
 
 #### [Hosting Let's Encrypt](https://github.com/omega8cc/hosting_le)
 
+*Deprecated. Use [Aegir HTTPS](https://gitlab.com/aegir/hosting_https) instead.*
+
 This module replaces self-generated Aegir certificates with Let's Encrypt ones.
+
 
 #### [Hosting Logs](https://www.drupal.org/project/hosting_logs)
 
