@@ -181,6 +181,13 @@ You can then re-upload the new .debs you've generated, using the '-f' (force) fl
 After doing that, you can re-run the 'copy' commands to publish the .debs to the appropriate releases.
 
 
+### 11. Create a specific Docker file
+
+Create a new file like releases/Dockerfile-3.11 in the [dockerfiles](https://github.com/aegir-project/dockerfiles/) repo.
+Then create a build for it on:
+https://hub.docker.com/r/aegir/hostmaster/~/settings/automated-builds/
+
+
 ### 11. Publish the release notes widely
 
 Once all this is done and the tarballs are generated, the release notes are published in:
