@@ -45,6 +45,8 @@ or after placing the tags
 `drush rn --baseurl=https://www.drupal.org/ --md 7.x-3.3 7.x-3.4`
 
 This is done for the different git projects. Changing the first line to add 'to $name'.
+The [script release_notes.sh](http://cgit.drupalcode.org/provision/tree/scripts/release_notes.sh) can be used to automate this step.
+
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
 
 Add it as a new file under [release-notes](https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes), and add a line to [mkdocs.yml](https://github.com/aegir-project/documentation/blob/3.x/mkdocs.yml). And update the default page for the 'Release notes' section.
@@ -123,6 +125,7 @@ This needs to be done in the [provision](https://drupal.org/node/add/project-rel
 And for Golden Contrib...
 [hosting_civicrm](https://drupal.org/node/add/project-release/1982662),
 [hosting_git](https://drupal.org/node/add/project-release/2217793),
+[hosting_logs](https://www.drupal.org/node/add/project-release/1871490),
 [hosting_remote_import](https://drupal.org/node/add/project-release/1405640),
 [hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830) and
 [hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498)
