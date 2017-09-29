@@ -40,6 +40,7 @@ reprepro copy stable testing aegir3
 reprepro copy stable testing aegir3-hostmaster
 reprepro copy stable testing aegir3-provision
 reprepro copy stable testing aegir3-cluster-slave
+reprepro copy stable testing aegir-archive-keyring
 ```
 
 - Merge the feature branch into the main branch
