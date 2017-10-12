@@ -14,12 +14,29 @@ This document is intended to give some guidelines as to what should go where. It
 - Pull Requests on GitHub are very welcome, please just add a link to them in an issue on Drupal.org.
 
 
-### Branch naming
+### Branches
 
-7.x-3.x is the main branch for all the core projects. This follows the Drupal default.
+#### Primary branches
+
+
+* 3.x - current stable Drupal 7 frontend, Drush and provision. (maintainer: helmo)
+
+* 4.x - The next development step, to [go beyond Drush](https://www.drupal.org/node/2912579) (maintainer: jon_pugh)
+
+* 5.x - Aegir NG, [Drupal 8, new queue and modernized backend](https://www.drupal.org/node/2714641) (maintainers: ergonlogic, colan)
+
+
+All core maintainers can work on these branches, however the noted maintainer for each branch is often the first to contact and the most involved in that particular area.
+
+
+#### Branch naming
+
+
+For the current stable release we have 7.x-3.x as the main branch for all the core projects. This follows the Drupal 7 default.
 
 Feature branches can best be prefixed with 'feature/' resulting in 'feature/[issue number]-some-change'. Pushing them to GitHub and creating a PR for it lets us test the results with Travis.
-Thease feature branches don't have to be pushed to D.o, and can be removed after being merged.
+These feature branches don't have to be pushed to D.o, and can be removed after being merged.
+
 
 ### Pull requests
 
