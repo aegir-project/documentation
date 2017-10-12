@@ -23,7 +23,10 @@ This document is intended to give some guidelines as to what should go where. It
 
 * 4.x - The next development step, to [go beyond Drush](https://www.drupal.org/node/2912579) (maintainer: jon_pugh)
 
-* 5.x - Aegir NG, [Drupal 8, new queue and modernized backend](https://www.drupal.org/node/2714641) (maintainers: ergonlogic & colan)
+* 5.x - Aegir NG, [Drupal 8, new queue and modernized backend](https://www.drupal.org/node/2714641) (maintainers: ergonlogic, colan)
+
+
+All core maintainers can work on these branches, however the noted maintainer for each branch is often the first to contact and the most involved in that particular area.
 
 
 #### Branch naming
