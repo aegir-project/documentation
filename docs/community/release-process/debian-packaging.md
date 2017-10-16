@@ -27,6 +27,7 @@ Creating a Debian mini release
  `git checkout -b 3.11.x 3.11.0`
 - Commit or cherry-pick the desired fix
 - Update the version number in provision.info
+- Update the version number in upgrade.sh
 - Update to debian/changes ( specify 'testing' instead of unstable)
 - Commit
 - Set a tag
