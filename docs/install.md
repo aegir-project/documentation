@@ -71,7 +71,7 @@ These are the installation instructions that are recommended on Debian. Aegir de
 
 If you wish to install Debian packages over an existing manual install, it's possible. See [the Debian upgrade procedures](/install/upgrade/#upgrades-with-debian-packages).
 
-Debian packages are uploaded to http://debian.aegirproject.org/ shortly after a release. We eventually want to upload those packages to the official archives, but this will take some adaptation and time to sponsor the packages in.
+Debian packages are uploaded to https://debian.aegirproject.org/ directly after a release.
 
 ### 1. Ensure requirements are satisfied
 
@@ -87,7 +87,9 @@ See [system-requirements](#system-requirements)
 
 Use this command to add the Aegir package "Software Source" repository to your system:
 
-    echo "deb http://debian.aegirproject.org stable main" | sudo tee -a /etc/apt/sources.list.d/aegir-stable.list
+    echo "deb [signed-by=/usr/share/keyrings/aegir-archive-keyring.gpg] https://debian.aegirproject.org stable main" | sudo tee -a /etc/apt/sources.list.d/aegir-stable.list
+
+You need the apt-transport-https package to fetch packages over https, if you don't want this you can remove the 's' in the line above.
 
 To install a customized Debian package, see the [developer instructions for the debian package](/community/release-process/debian-packaging/). Other distributions are available for courageous people that want to try development versions.
 
@@ -99,7 +101,15 @@ This repository self-signs packages uploaded to it (and packages uploaded are ve
 
 Use these commands to download and add the repository's PGP key, then update the package list on your system:
 
-    wget -q http://debian.aegirproject.org/key.asc -O- | sudo apt-key add -
+    sudo wget -O /usr/share/keyrings/aegir-archive-keyring.gpg https://debian.aegirproject.org/aegir-archive-keyring.gpg
+
+    # For your own security, this tells APT to not expect packages in the Aegir repo that are in the main Debian archive. (Thus not allowing Aegir to give you a new kernel)
+    cat > /etc/apt/preferences.d/aegir <<EOD
+    Package: *
+    Pin: origin debian.aegirproject.org
+    Pin-Priority: 100
+    EOD
+
     sudo apt-get update
 
 ### 4. DNS configuration
@@ -160,7 +170,7 @@ This is because the package expects Apache2 by default.
 
 To install Aegir version 3, frontend and backend, use the following command:
 
-    $ sudo apt-get install aegir3
+    $ sudo apt-get install aegir3 aegir-archive-keyring
 
 This will prompt you for the required information (MySQL password, Postfix configuration...) and go ahead with the install.
 
