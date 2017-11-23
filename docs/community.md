@@ -49,6 +49,7 @@ Events
 Aegir is often present at many of the popular DrupalCamps and DrupalCons, either as a formal session or in smaller BOF sessions.
 
 We encourage users who are confident in using Aegir to demonstrate it at any relevant events they attend, and to post slides/screencasts so that others can benefit.
+Examples are in the [resources section](community/resources) of these docs.
 
 
 Blogs
