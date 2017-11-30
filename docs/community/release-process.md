@@ -66,7 +66,7 @@ git remote add gitlab git@gitlab.com:aegir/provision.git
 Paraphrasing from the script itself:
 
 ```
-$ ./scripts/release.sh 3.11
+$ ./scripts/release.sh 3.130 3.120
 
 Aegir release script
 ====================
