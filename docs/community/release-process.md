@@ -121,7 +121,7 @@ Using the template (change the version number):
 See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.11/
 ```
 
-This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and (maybe) [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
+This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
 And for Golden Contrib...
 [hosting_civicrm](https://drupal.org/node/add/project-release/1982662),
 [hosting_git](https://drupal.org/node/add/project-release/2217793),
@@ -184,6 +184,10 @@ You can then re-upload the new .debs you've generated, using the '-f' (force) fl
     dput -f aegir build-area/aegir2-provision_2.3_amd64.changes
 
 After doing that, you can re-run the 'copy' commands to publish the .debs to the appropriate releases.
+
+### x. Push the revert commit
+
+This is the final step in the release.sh script.
 
 
 ### 11. Create a specific Docker file
