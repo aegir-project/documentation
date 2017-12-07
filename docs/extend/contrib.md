@@ -241,6 +241,14 @@ Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting
 Others
 ------
 
+### [Aegir Site Subscriptions](https://www.drupal.org/project/aegir_site_subscriptions)
+
+Adds e-commerce to the Aegir ecosystem by associating hosted sites with customer subscriptions via recurring billing. Communicates with the Aegir API over Web services.
+
+This module allows clients to pay for hosted Drupal sites controlled by the Aegir Hosting System. When a new subscription notification is received, a new site will be provisioned. Overdue payments (e.g. failed credit card billing attempts) will disable and eventually delete sites. The amount of time for each is configurable.
+
+The module acts as [a plug-in manager](https://www.drupal.org/developing/api/8/plugins) with the goal of supporting several subscription providers. It receives notifications from the active service provider, and then acts on those notifications by sending requests to the hosting system.
+
 ### [Skynet](https://github.com/PraxisLabs/skynet)
 
 Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemon. It is written in Python using [Cement](http://builtoncement.com).
@@ -251,12 +259,6 @@ Skynet is an experimental replacement for the Aegir Hosting System's Queue Daemo
 DevShop is a Drupal Development Environment Manager built on Aegir.
 
 DevShop creates Aegir platforms and sites automatically from Git URLs. It tracks multiple Projects and allows multiple environments to be created for each Project, such as dev, test, and live. It provides tools to Pull Code, Sync Data, Commit Features, and Run Tests on these environments, and provides a dashboard with useful links and information for developers.
-
-### [Recurly Aegir](https://www.drupal.org/project/recurly_aegir)
-
-Automatically manages [Aegir](https://www.drupal.org/project/hostmaster) sites from another Drupal instance with [Recurly](https://www.drupal.org/project/recurly) subscriptions / recurring billing / e-commerce.  Communicates with an Aegir instance via [Aegir SaaS](#aegir-services).
-
-This Drupal 8+ module allows clients to pay for their hosted Drupal sites. When a new subscription notification from Recurly is received, a new site will be provisioned. If a subscription is [cancelled](https://dev.recurly.com/page/webhooks#section-canceled-subscription) or [expired](https://dev.recurly.com/page/webhooks#section-expired-subscription), the site will be disabled. If it gets [reactivated](https://dev.recurly.com/page/webhooks#section-reactivated-account) or [re-added](https://dev.recurly.com/page/webhooks#section-new-subscription), the site will be re-enabled. Sites can be deleted after subscription expiration if not renewed.
 
 Your extension here?
 --------------------
