@@ -11,6 +11,12 @@ Found an interesting resource? Please add [a pull request or issue](https://gith
 Presentations
 -------------
 
+### 2018
+
+* [Provision 4.x: Developer Sneak Peak](https://www.youtube.com/watch?v=gEpKngeJRvE)
+    * Jon Pugh, January 03, 2018
+
+
 ### 2017
 
 * [Host Your Own Drupal with Open Source](https://www.drupalgovcon.org/program/sessions/host-your-own-drupal-open-source) - [video](https://youtu.be/ZvUMo_kZqSk) - [slides](https://docs.google.com/presentation/d/1YO2grgODLq0TRSpcjxqTy8TYgtASVLpY10QHYSZ3Fiw/edit?usp=sharing)
