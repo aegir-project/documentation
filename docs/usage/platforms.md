@@ -46,9 +46,9 @@ Before you can add your platform via the web interface, you need to prepare your
 
 If using a git repository, it must contain either a drush make file, a composer.json file, or an entire Drupal codebase. 
 
-See [example makefiles here](http://cgit.drupalcode.org/provision/tree/provision-tests/makes.
-See [Example git repository with drush make](https://github.com/aegir-project/example-drush-make))
-See [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-compose))
+* [Example makefiles](http://cgit.drupalcode.org/provision/tree/provision-tests/makes)
+* [Example git repository with drush make](https://github.com/aegir-project/example-drush-make)
+* [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-compose)
 
 ### Prepare your codebase
 
