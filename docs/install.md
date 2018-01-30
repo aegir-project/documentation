@@ -13,18 +13,7 @@ requirements](#system-requirements) to ensure your server(s) are up to the task.
 Quick start
 -----------
 
-
-On a recent Debian or Ubuntu server (with a fully qualified domain name), run the following commands:
-<!-- These quick start instructions are also on https://gitlab.com/aegir/www.aegirproject.org/blob/master/config.yml -->
-
-```
- sudo apt-get install mysql-server apt-transport-https composer
- sudo wget -O /usr/share/keyrings/aegir-archive-keyring.gpg https://debian.aegirproject.org/aegir-archive-keyring.gpg
- echo "deb [signed-by=/usr/share/keyrings/aegir-archive-keyring.gpg] https://debian.aegirproject.org stable main" | sudo tee -a /etc/apt/sources.list.d/aegir-stable.list
- sudo apt-get update
- sudo apt-get install aegir3 aegir-archive-keyring
-```
-
+See the [quick start page in these docs](quick-start/).
 
 
 System Requirements
