@@ -50,7 +50,7 @@ If using a git repository, it must contain either a drush make file, a composer.
 
  - [Example makefiles](http://cgit.drupalcode.org/provision/tree/provision-tests/makes)
  - [Example git repository with drush make](https://github.com/aegir-project/example-drush-make)
- - [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-compose)
+ - [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-composer)
 
 #### Prepare a Makefile platform
 
