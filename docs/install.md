@@ -30,7 +30,7 @@ On a recent Debian or Ubuntu server (with a fully qualified domain name), run th
 System Requirements
 -------------------
 
-A system capable of running Drupal
+A system capable of running Drupal.
 
 The Aegir system is entirely Drupal based, and has the same base requirements that Drupal does (with the exception that it won't run on Windows). See more notes on Unix and LAMP/LEMP requirements below.
 
@@ -89,7 +89,7 @@ These are the installation instructions that are recommended on Debian. Aegir de
 
 If you wish to install Debian packages over an existing manual install, it's possible. See [the Debian upgrade procedures](/install/upgrade/#upgrades-with-debian-packages).
 
-Debian packages are uploaded to https://debian.aegirproject.org/ directly after a release.
+Debian packages are uploaded to https://debian.aegirproject.org/ directly after a release. They are not part of the main Debian archive.
 
 ### 1. Ensure requirements are satisfied
 
