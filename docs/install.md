@@ -262,7 +262,7 @@ See the [System Requirements](#system-requirements)
 
 To install the required components, use your system's package manager. For Debian based systems this would look like:
 
-    $ sudo apt-get install apache2 php5 php5-cli php5-gd php5-mysql php-pear postfix sudo rsync git-core unzip
+    $ sudo apt-get install apache2 php5 php5-cli php5-gd php5-mysql php-pear postfix sudo rsync git-core unzip composer
 
 *Note*: replace `apache2` with `nginx php5-fpm` to install nginx on Ubuntu Precise or newer.
 
