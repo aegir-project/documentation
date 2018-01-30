@@ -42,15 +42,14 @@ Getting a Platform onto your server
 -----------------------------------
 You can create platforms on your server with either the web interface or the backend CLI.
 
+### Prepare your codebase
 Before you can add your platform via the web interface, you need to prepare your codebase in either a git repository or a drush make file.
 
 If using a git repository, it must contain either a drush make file, a composer.json file, or an entire Drupal codebase. 
 
-* [Example makefiles](http://cgit.drupalcode.org/provision/tree/provision-tests/makes)
-* [Example git repository with drush make](https://github.com/aegir-project/example-drush-make)
-* [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-compose)
-
-### Prepare your codebase
+ - [Example makefiles](http://cgit.drupalcode.org/provision/tree/provision-tests/makes)
+ - [Example git repository with drush make](https://github.com/aegir-project/example-drush-make)
+ - [Example git repository with Drupal Composer](https://github.com/aegir-project/example-drupal-compose)
 
 #### Prepare a Makefile platform
 
