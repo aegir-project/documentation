@@ -17,6 +17,46 @@ Fortunately, Aegir provides a series of hooks and inclusions for overriding or i
 
 This chapter shows you how each of these hooks or inclusions work.
 
+## Customizing Settings.php
+
+The `settings.php` file is overwritten by Aegir every time a "verify" task is run on the site. You should never edit it directly. 
+
+You can customize your `settings.php` without editing the file itself by creating a settings include file. You can find the files that are included at the bottom of every `sites/DOMAIN.COM/settings.php` file created by aegir:
+
+   ```php
+   # Additional host wide configuration settings. Useful for safely specifying configuration settings.
+   if (is_readable('/var/aegir/config/includes/global.inc')) {
+     include_once('/var/aegir/config/includes/global.inc');
+   }
+   # Additional platform wide configuration settings.
+   if (is_readable('/var/aegir/platforms/drupal/sites/all/platform.settings.php')) {
+     include_once('/var/aegir/platforms/drupal/sites/all/platform.settings.php');
+   }
+   # Additional site configuration settings.
+   if (is_readable('/var/aegir/platforms/drupal/sites/DOMAIN.COM/local.settings.php')) {
+     include_once('/var/aegir/platforms/drupal/sites/DOMAIN.COM/local.settings.php');
+   }
+   ```
+   
+Create a file in the location that fits your needs.
+
+- **System-wide:**  All sites will load this code:  
+  `/var/aegir/config/includes/global.inc`
+
+- **Platform-wide:** All sites using this platform will load this code: 
+  `/var/aegir/PUBLISH_PATH/sites/all/platform.settings.php`
+
+- **Site-specific:** Only the site indicated by the folder name will load this code:
+  `/var/aegir/PUBLISH_PATH/sites/DOMAIN/local.settings.php`
+
+Make sure the files can be read by the web server user by changing the file's group to the `web_group` of `server_master`. For example:
+
+```sh
+chgrp www-data /var/aegir/platforms/drupal/sites/all/platform.settings.php
+```
+
+You can find the correct `web_group` for your system in the `server_master` drush alias at `/var/aegir/.drush/server_master.alias.drushrc.php`.
+
 
 Overriding site-specific PHP values
 -----------------------------------
