@@ -19,7 +19,7 @@ This chapter shows you how each of these hooks or inclusions work.
 
 ## Customizing Settings.php
 
-The `settings.php` file is overwritten by Aegir every time a "verify" task is run on the site. You should never edit it directly. 
+Every Drupal website has a file named `sites/DOMAIN.COM/settings.php` that contains important things like database credentials and other settings. Aegir creates this file automatically, so the `settings.php` file is overwritten every time a "verify" task is run on the site. You should never edit it directly. 
 
 You can customize your `settings.php` without editing the file itself by creating a settings include file. You can find the files that are included at the bottom of every `sites/DOMAIN.COM/settings.php` file created by aegir:
 
@@ -40,7 +40,7 @@ You can customize your `settings.php` without editing the file itself by creatin
    
 Create a file in the location that fits your needs, and make sure it is php code by including `<?php` at the top.
 
-- **System-wide:**  All sites will load this code:  
+- **Server-wide:**  All sites hosted on this server will load this code:  
   `/var/aegir/config/includes/global.inc`
 
 - **Platform-wide:** All sites using this platform will load this code: 
@@ -48,6 +48,10 @@ Create a file in the location that fits your needs, and make sure it is php code
 
 - **Site-specific:** Only the site indicated by the folder name will load this code:
   `/var/aegir/PUBLISH_PATH/sites/DOMAIN/local.settings.php`
+  
+NOTE: These special include files are loaded in this order. This means that **Site-specific** settings override **Platform-wide** settings, which overrides **Server-wide** settings.
+
+Whenever you clone a site or migrate it between platforms, Aegir moves a copy of local.settings.php as well.
 
 Make sure the files can be read by the web server user by changing the file's group to the `web_group` of `server_master`. For example:
 
@@ -58,36 +62,23 @@ chgrp www-data /var/aegir/platforms/drupal/sites/all/platform.settings.php
 You can find the correct `web_group` for your system in the `server_master` drush alias at `/var/aegir/.drush/server_master.alias.drushrc.php`.
 
 
-Overriding site-specific PHP values
------------------------------------
+Overriding PHP.ini settings
+---------------------------
 
-Sometimes it is useful to override certain PHP values on a per-site basis, but changes to php.ini are generally server-wide. Depending on the value you want to override, a couple of options present themselves.
+Sometimes it is useful to override certain PHP values on a per-site or per-platform basis, but changes to php.ini are generally server-wide. Depending on the value you want to override, a couple of options present themselves.
 
-First, let's consider where PHP values can be changed. The PHP Manual [lists php.ini](http://www.php.net/manual/en/ini.list.php)  directives, and under the "Changeable" column, indicates where a configuration setting may be set. If your value shows either PHP_INI_USER or PHP_INI_ALL, then the easiest way to change this value would be using ini_set() in a local.settings.php file:
+First, let's consider where PHP values can be changed. The PHP Manual [lists php.ini](http://www.php.net/manual/en/ini.list.php)  directives, and under the "Changeable" column, indicates where a configuration setting may be set. If your value shows either PHP_INI_USER or PHP_INI_ALL, then the easiest way to change this value would be using ini_set() in the `local.settings.php` file:
 
     <?php
+    # Set the memory_limit for this site.
     @ini_set('memory_limit', '128M');
-
-The `local.settings.php` file should be placed in the root of your drupal site, e.g. /sites/sitename/local.settings.php.
+    
+    # override Aegir-generated cookie policy for sites - set cookies to expire after a week (604,800 seconds)
+    @ini_set('session.cookie_lifetime', 604800);
 
 On the other hand, if the changes mode is either PHP_INI_PERDIR or PHP_INI_SYSTEM, php_ini() won't work. In this case, the solution is to inject the value into the vhost. Since vhosts are managed by Aegir, manually adding an override to /var/aegir/config/server_master/apache/vhost.d/<uri> would get blown away the next time that the site is verified.
 
-As described in the [Injecting into site vhosts](#injecting-into-site-vhosts) section, we can inject values into vhosts using a Drush hook. For example, to raise the file upload size limit on http://ergonlogic.com, we add the following code in /var/aegir/.drush/ergonlogiccom.drush.inc:
-
-    <?php
-      function ergonlogiccom_provision_apache_vhost_config($uri, $data) {
-        if ($uri == "ergonlogic.com") {
-          drush_log("Overriding PHP file size values. See .drush/ergonlogiccom.drush.inc");
-          return array("php_value upload_max_filesize 100M", "php_value post_max_size 200M");
-       }
-    }
-
-This results in the insertion of the following lines into /var/aegir/config/server_master/apache/vhost.d/ergonlogic.com:
-php_value upload_max_filesize 100M
-php_value post_max_size 200M
-
-Also, in the verify task log I get the following informative message:
-Overriding PHP file size values. See .drush/ergonlogiccom.drush.inc
+As described in the [Injecting into site vhosts](#injecting-into-site-vhosts) section, we can inject values into vhosts using a Drush hook. 
 
 ### Developer Note
 
@@ -99,46 +90,9 @@ So sticking the following into the function above can help:
       drush_log("$uri: " . print_r($uri, TRUE));
     ?>
 
+## Programmattically modifying Settings.php
 
-Injecting into settings.php
----------------------------
-
-Every web site in an Aegir environment has a Drupal configuration file settings.php in /sites/example.com directory. Web administrators often need to make changes to this file; however, the Aegir system also manages this file and any manual customizations will be lost when a site is verified.
-
-Fortunately, there are two mechanisms to ensure that your customizations can be preserved. If you look in the bottom of an Aegir settings.php file you will see references to two files local.settings.php and global.inc.
-
-    <?php
-      # Additional host wide configuration settings. Useful for safely specifying configuration settings.
-      if (file_exists('/var/aegir/config/includes/global.inc')) {
-        include_once('/var/aegir/config/includes/global.inc');
-      }
-
-     # Additional site configuration settings. Allows to override global settings.
-     if (file_exists('/var/aegir/example-platform/sites/example.com/local.settings.php')) {
-       include_once('/var/aegir/example-platform/sites/example.com/local.settings.php');
-     }
-
-If these files exist they are loaded at run time by Drupal. As you can probably surmise from the paths to these files, local.settings.php is for site-specific customizations and global.inc is for Aegir-wide customization.
-
-Let's look at these files in more detail. We'll use customization of user session cookies as an example. If you look at the settings.php file generated by Aegir you see that it sets more conservative php settings for cookies (@ini_set('session.cookie_lifetime',  0); i.e. cookies expire immediately) than are in the default.settings.php packaged with Drupal (@ini_set('session.cookie_lifetime',  2000000); i.e. 2 million seconds, which is just over 23 days).
-Site-specific Customization
-
-### Site Specific Customization
-
-The local.settings.php file by default does not exist in a new Aegir site installation so you have to create it. Continuing with our example of user session cookies, let's override the Aegir default.
-
-    <?php
-      # site-specific Drupal customization
-
-      # override Aegir-generated cookie policy for sites - set cookies to expire after a week (604,800 seconds)
-      @ini_set('session.cookie_lifetime', 604800);
-
-Note that because local.settings.php is included after the variables are set in the main settings.php it's customizations takes precedence.
-
-Now, whenever you clone a site or migrate it between platforms, Aegir moves a copy of local.settings.php as well.
-Using drush_hook_provision_drupal_config
-
-You can also use the API to add module-specific site configurations with hook_provision_drupal_config
+You can also use the API to add module-specific site configurations by adding a drush file with the hook `hook_provision_drupal_config`
 
     <?php
       * Append PHP code to Drupal's settings.php file.
