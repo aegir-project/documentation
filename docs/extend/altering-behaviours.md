@@ -125,35 +125,6 @@ For example it could look like this
 
 That is used to add the site settings added by the UI in the hosting backend implemented in [https://github.com/EugenMayer/hosting_site_settings](https://github.com/EugenMayer/hosting_site_settings)
 
-### Aegir-wide Customization
-
-In some situations you may want to implement the same configuration settings on all your Aegir sites. This is where global.inc comes in. Note that global.inc is now included in settings.php before local.settings.php, so that Aegir system administrators no longer retain the ability to override configuration changes in local.settings.php, but instead it is possible to override global settings per site [read why this has been changed](https://www.drupal.org/node/1044938): this change is available since 0.4-rc1 release.
-
-For example, say the system administrator wanted to limit users' session lifetimes to a maximum of one day they could create a global.inc as follows:
-
-    <?php
-    # Aegir-wide Drupal customization
-
-    # override Aegir-generated cookie policy for all sites - set cookies to expire after a day (86,400 seconds)
-      @ini_set('session.cookie_lifetime', 86400);
-
-You can even set more granular policy within global.inc (however it makes more sense to keep site-specific overrides in the local.settings.php):
-
-    <?php
-    # Aegir-wide Drupal customization
-
-    # override Aegir-generated cookie policy for all sites - set cookies to expire after a day (86,400 seconds)
-      @ini_set('session.cookie_lifetime', 86400);
-
-    # Make the aegir front-end server more secure by expiring cookies immediately
-      if (preg_match("/hostmaster/", $conf['install_profile'])) {
-    # set cookies to expire immediately on hostmaster
-        @ini_set('session.cookie_lifetime', 0);
-      }
-
-
-If you are using Aegir to manage multiple remote webservers, you will need to run the Verify task on the webserver in order to push global.inc to the remote machine.
-
 Injecting into drushrc.php
 --------------------------
 
