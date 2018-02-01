@@ -38,7 +38,7 @@ You can customize your `settings.php` without editing the file itself by creatin
    }
    ```
    
-Create a file in the location that fits your needs.
+Create a file in the location that fits your needs, and make sure it is php code by including `<?php` at the top.
 
 - **System-wide:**  All sites will load this code:  
   `/var/aegir/config/includes/global.inc`
