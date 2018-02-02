@@ -19,11 +19,11 @@ This chapter shows you how each of these hooks or inclusions work.
 
 ## Customizing Settings.php
 
-Every Drupal website has a file named `sites/DOMAIN.COM/settings.php` that contains important things like database credentials and other settings. Aegir creates this file automatically, so the `settings.php` file is overwritten every time a "verify" task is run on the site. You should never edit it directly. 
+Every Drupal website has a file named `sites/DOMAIN.COM/settings.php` that contains important things like database credentials and other settings. Aegir creates this file automatically, so the `settings.php` file is overwritten every time a "verify" task is run on the site. You should never edit it directly.
 
 You can customize your `settings.php` without editing the file itself by creating a settings include file. You can find the files that are included at the bottom of every `sites/DOMAIN.COM/settings.php` file created by aegir:
 
-   ```php
+```php
    # Additional host wide configuration settings. Useful for safely specifying configuration settings.
    if (is_readable('/var/aegir/config/includes/global.inc')) {
      include_once('/var/aegir/config/includes/global.inc');
@@ -36,19 +36,19 @@ You can customize your `settings.php` without editing the file itself by creatin
    if (is_readable('/var/aegir/platforms/drupal/sites/DOMAIN.COM/local.settings.php')) {
      include_once('/var/aegir/platforms/drupal/sites/DOMAIN.COM/local.settings.php');
    }
-   ```
-   
+```
+
 Create a file in the location that fits your needs, and make sure it is php code by including `<?php` at the top.
 
-- **Server-wide:**  All sites hosted on this server will load this code:  
+- **Server-wide:**  All sites hosted on this server will load this code:
   `/var/aegir/config/includes/global.inc`
 
-- **Platform-wide:** All sites using this platform will load this code: 
+- **Platform-wide:** All sites using this platform will load this code:
   `/var/aegir/PUBLISH_PATH/sites/all/platform.settings.php`
 
 - **Site-specific:** Only the site indicated by the folder name will load this code:
   `/var/aegir/PUBLISH_PATH/sites/DOMAIN/local.settings.php`
-  
+
 NOTE: These special include files are loaded in this order. This means that **Site-specific** settings override **Platform-wide** settings, which overrides **Server-wide** settings.
 
 Whenever you clone a site or migrate it between platforms, Aegir moves a copy of local.settings.php as well.
@@ -123,7 +123,7 @@ For example it could look like this
         return $extra;
       }
 
-That is used to add the site settings added by the UI in the hosting backend implemented in [https://github.com/EugenMayer/hosting_site_settings](https://github.com/EugenMayer/hosting_site_settings)
+That is used to add the site settings added by the UI in the hosting backend implemented in the [Hosting injections module](https://www.drupal.org/project/hosting_injections)
 
 Injecting into drushrc.php
 --------------------------
