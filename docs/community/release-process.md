@@ -129,10 +129,11 @@ And for Golden Contrib...
 [hosting_remote_import](https://drupal.org/node/add/project-release/1405640),
 [hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830) and
 [hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498)
+[hosting_https](https://drupal.org/node/add/project-release/2910575)
 
 WAIT.... And only after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
 
-Build errors don't show up onde the release node page ... but on [the releases list]https://www.drupal.org/project/hostmaster/releases)
+Build errors don't show up on the release node page ... but on [the releases list](https://www.drupal.org/project/hostmaster/releases)
 
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
