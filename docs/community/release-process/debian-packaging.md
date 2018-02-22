@@ -23,14 +23,26 @@ See also the section below on [Adding a new uploader](#adding-a-new-uploader).
 Creating a Debian mini release
 ------------------------------
 
-- Create a feature branch
- `git checkout -b 3.11.x 3.11.0`
+- Create a feature branch in provision
+ `git checkout -b 7.x-3.14.x 7.x-3.140`
 - Commit or cherry-pick the desired fix
 - Update the version number in provision.info
 - Update the version number in upgrade.sh
-- Update to debian/changes ( specify 'testing' instead of unstable)
+- update the version number in aegir.make
+- Update to debian/changes ( specify 'testing' instead of unstable) `dch -i`
 - Commit
 - Set a tag
+
+- For a hosting fix:
+    - set a tag in hostig by hand, push, create Drupal.org release node.
+    - also update hostmaster
+
+- For a hostmaster fix:
+    - same branch for hostmaster as for provision
+    - commit fix or update drupal-org.make with a new version number of e.g hosting.
+    - set tag by hand and push
+    - create D.o release node
+
 - Push to gitlab
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
 - Test the packages using the [testing repository](http://debian.aegirproject.org/dists/testing/)
