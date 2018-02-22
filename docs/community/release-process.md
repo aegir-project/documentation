@@ -121,6 +121,8 @@ Using the template (change the version number):
 See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.11/
 ```
 
+Use something like `Aegir Hostmaster 3.14.4` for the 'Short description' field.
+
 This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
 And for Golden Contrib...
 [hosting_civicrm](https://drupal.org/node/add/project-release/1982662),

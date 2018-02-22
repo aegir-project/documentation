@@ -41,7 +41,7 @@ Creating a Debian mini release
     - same branch for hostmaster as for provision
     - commit fix or update drupal-org.make with a new version number of e.g hosting.
     - set tag by hand and push
-    - create D.o release node
+    - create D.o release node, using the template from the normal release proces.
 
 - Push to gitlab
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
