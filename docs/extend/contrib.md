@@ -62,14 +62,13 @@ However, we recommend instead maintaining a custom Aegir makefile that can inclu
 
 Aegir Cloud allows Aegir to create servers directly in cloud hosting providers like IBM Softlayer and Amazon Web Services.
 
-#### [Aegir Composer](https://www.drupal.org/project/hosting_composer)
-
-This module adds the ability to install dependencies using Composer. In addition, it provides the [Aegir Deploy](/usage/advanced/deployment/) module that improves the platform form's support for an increasing number of platform deployment strategies. Finally, it provides a couple new such strategies, including the building platforms from Composer packages via project templates, and git-based deployments than maintain platform immutability.
-
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
 This module provides config-export and config-import commands for Aegir.
 
+#### [Aegir Deploy](https://www.drupal.org/project/hosting_deploy)
+
+This module extends [Aegir's platform deployment strategies](/usage/advanced/deployment/) by improving the user experience for the Create Platform form.  It also provides a couple new such strategies, including the building platforms from Composer packages via project templates, and git-based deployments than maintain platform immutability.
 
 #### [Aegir Distributions](https://www.drupal.org/project/hosting_distribution)
 
