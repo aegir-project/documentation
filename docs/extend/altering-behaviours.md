@@ -321,3 +321,106 @@ Running any drush command could then be done like:
     <?php
       provision_backend_invoke('@www.example.com', 'features-revert-all', array(), array('yes' => TRUE));
     ?>
+
+
+Finding what data is passed to a hook
+-------------------------------------
+
+To find out the exact contents of the $data parameter, use a line like below inside your hook.
+
+    <?php
+      drush_log('myhook data:' . print_r($data, 1), 'warning');
+
+That would look something like the block below in your task log.
+
+```
+   Array (
+       [server] => Provision_Context_server Object()
+
+       [application_name] => apache
+       [http_pred_path] => /var/aegir/config/server_master/apache/pre.d
+       [http_postd_path] => /var/aegir/config/server_master/apache/post.d
+       [http_platformd_path] => /var/aegir/config/server_master/apache/platform.d
+       [http_vhostd_path] => /var/aegir/config/server_master/apache/vhost.d
+       [http_subdird_path] => /var/aegir/config/server_master/apache/subdir.d
+       [http_port] => 80
+       [redirect_url] => http://example.com
+       [db_type] => mysql
+       [db_host] => localhost
+       [db_port] => 3306
+       [db_passwd] => ***
+       [db_name] => ***
+       [db_user] => ***
+       [packages] => Array of package information...
+       [installed] => 1
+       [config-file] => /var/aegir/platforms/drupal-7.58/sites/example.com/drushrc.php
+       [context-path] => /var/aegir/platforms/drupal-7.58/sites/example.com/drushrc.php
+       [https_port] => 443
+       [extra_config] => # Extra configuration from modules:
+   )
+```
+
+To find out the return of d() function, use a line like below inside your hook.
+
+    <?php
+			drush_log('myhook d():' . print_r(d(), 1), 'warning');
+
+The output would look something like the block below. Note that this is influenced by which modules are enabled.
+
+```
+Provision_Context_site Object
+(
+    [parent_key] => platform
+    [name] => @example.com
+    [type] => site
+    [properties:protected] => Array
+        (
+            [context_type] => site
+            [platform] => @platform_examplepl
+            [server] => @server_master
+            [db_server] => @server_localhost
+            [http_basic_auth_username] =>
+            [http_basic_auth_password] =>
+            [http_basic_auth_message] =>
+            [http_basic_auth_whitelist] =>
+            [repo_url] =>
+            [deploy_from_git] =>
+            [git_ref] =>
+            [git_hooks] =>
+            [uri] => example.com
+            [root] => /var/aegir/platforms/drupal-7.58
+            [site_path] => /var/aegir/platforms/drupal-7.58/sites/example.com
+            [site_enabled] => 1
+            [language] => en
+            [client_name] => admin
+            [aliases] => Array
+                (
+                )
+            [redirection] =>
+            [cron_key] =>
+            [drush_aliases] => Array
+                (
+                    [0] => @example.com
+                )
+
+            [profile] => standard
+            [install_method] => profile
+            [https_enabled] => 0
+            [https_client_authentication_enabled] => 0
+            [https_key] =>
+        )
+
+    [oid_map:protected] => Array
+        (
+            [platform] => 1
+            [server] => 1
+            [db_server] => 1
+        )
+
+    [service_subs:protected] => Array
+        (
+            [db] => @server_localhost
+        )
+
+)
+```
