@@ -174,6 +174,10 @@ Allows you to set arbitrary custom Drupal variables for each site, such as site 
 
 Module to manage WordPress sites. It aims to support the main Aegir functionality, such as installation, upgrade, migration and backups.
 
+#### [Hosting Tasks: Jenkins Queue](https://github.com/opendevshop/hosting_task_jenkins)
+
+This module allows using Jenkins as a Hosting Task Runner.
+
 
 Extensions to Provision (backend)
 ---------------------------------
