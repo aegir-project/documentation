@@ -259,7 +259,7 @@ These instructions provide example commands for a Debian-like distribution, but 
 
 It currently contains special recommendations for CentOS, RHEL 6, Arch Linux and Solaris. Users of those platforms are also strongly encouraged to review the :doc:`common-problems` that occur on those platforms. Aegir is also known to be installable (and was developed partly on) Mac OS X, but that process is so obtuse that it has a [separate page]() for the first part of the manual (up to Install Aegir components).
 
-Installing Aegir may seem daunting at first (which is why we provide automated installs through packages), but once you get around it, it's fairly simple.  Note that these instructions setup a complete Aegir system. If you want to only setup a new remote web/db server, it should be sufficient to install the system requirements (step 1), configure them (step 2) and follow the [Remote server how-to]().
+Installing Aegir may seem daunting at first (which is why we provide automated installs through packages), but once you get around it, it's fairly simple.  Note that these instructions setup a complete Aegir system. If you want to only setup a new remote web/db server, it should be sufficient to install the system requirements (step 1), configure them (step 2) and follow the [Remote server how-to](/usage/servers/remote-servers/).
 
 ### 1. Review System Requirements
 
