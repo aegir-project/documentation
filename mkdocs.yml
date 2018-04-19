@@ -71,6 +71,7 @@ pages:
     - 'Welcoming a new member': 'community/core-team/welcome.md'
   - 'Resources': 'community/resources.md'
   - 'Service providers': 'community/services.md'
+  - 'Sponsering': 'community/sponsoring.md'
 - 'Release notes': 'release-notes/3.14.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
