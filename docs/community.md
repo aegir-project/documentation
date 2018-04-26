@@ -10,7 +10,7 @@ Service Providers
 
 If you need professional support for your Aegir installation, check out the [Service Providers page](/community/services.md).
 
-IRC
+Chat
 ---
 
 You can [join the #aegir channel at Freenode](http://webchat.freenode.net/?channels=#aegir) on IRC. There's a loyal community of Aegir developers and users that frequent this channel. Much development discussion also takes place here, and support questions are welcomed.
@@ -22,6 +22,10 @@ Remember that Aegir, like Drupal, transcends timezones, and even the developers 
 We try to meet/check-in/scrum there on Thursdays at 8PM GMT.
 
 New to IRC? IRC instructions for Drupal users are at: [https://www.drupal.org/irc](https://www.drupal.org/irc "https://www.drupal.org/irc").
+
+There is a bridge from this channel to [a Matrix room](https://riot.im/app/#/room/#drupal-aegir:matrix.org).
+
+And there also is a separate [channel called aegir on Drupal Slack](https://drupal.slack.com).
 
 Twitter
 -------
@@ -55,9 +59,9 @@ Examples are in the [resources section](community/resources) of these docs.
 Blogs
 -----
 
-As well as the News/Blog area here, the developers also often blog about new Aegir features or share handy tips for the community. Here are two blogs to stay up to date with:
+As well as the News/Blog area here, the developers also often blog about new Aegir features or share handy tips for the community. Here are blogs to stay up to date with:
 
-*   [https://developmentseed.org/blog/](https://developmentseed.org/)
+*   [https://www.aegirproject.org/blog](https://www.aegirproject.org/blog)
 *   [https://mig5.net/tags/aegir](https://mig5.net/tags/aegir)
 *   [https://praxis.coop/en/tags/aegir](https://praxis.coop/en/tags/aegir)
 
@@ -65,7 +69,6 @@ As well as the News/Blog area here, the developers also often blog about new Aeg
 Q & A
 -----
 
-* [Askbot](http://ask.aegir.support/)
 * [The Aegir tag on Stack Exchange](http://drupal.stackexchange.com/questions/tagged/aegir)
 
 
