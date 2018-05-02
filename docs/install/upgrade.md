@@ -236,7 +236,7 @@ It is imperative that you read the version-specific upgrade notes before attempt
 
 You can download the upgrade.sh script for Aegir 3.x with the following command:
 
-    wget -O upgrade.sh 'http://cgit.drupalcode.org/provision/plain/upgrade.sh.txt?h=7.x-3.140'
+    wget -O upgrade.sh 'http://cgit.drupalcode.org/provision/plain/upgrade.sh.txt?h=7.x-3.151'
 
 Make sure you download it to somewhere that the aegir user can access in order to execute it.
 
