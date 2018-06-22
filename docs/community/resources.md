@@ -16,8 +16,9 @@ Presentations
 		* Jon Pugh, June 2018
 * [Provision 4, developen sneak peek](https://youtu.be/307gwEvMYNc)
 		* Jon Pugh, June 2018
-- [Hosting Drupal Sites? You need Aegir!](https://youtu.be/_-fJupSTKa4)
-		* Christopher Gervais - ergonlogic | Colan Schwartz, June 2018
+* Hosting Drupal Sites? You need Aegir! ([video](https://youtu.be/_-fJupSTKa4), [slides](https://colan.consulting/blog/drupalcamp-montreal-2018-hosting-drupal-sites-you-need-aegir))
+    * [Christopher Gervais (ergonlogic)](https://www.drupal.org/u/ergonlogic) & [Colan Schwartz (colan)](https://www.drupal.org/u/colan)
+    * June 2018 @ [DrupalCamp Montreal](https://drupalcampmontreal.com/)
 
 * [Provision 4.x: Developer Sneak Peak](https://www.youtube.com/watch?v=gEpKngeJRvE)
     * Jon Pugh, January 03, 2018
