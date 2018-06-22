@@ -12,6 +12,12 @@ Presentations
 -------------
 
 ### 2018
+* [Easy Automated Testing with Pull Request Environments on your own Servers with DevShop](https://youtu.be/htBBnwOL4zo)
+		* Jon Pugh, June 2018
+* [Provision 4, developen sneak peek](https://youtu.be/307gwEvMYNc)
+		* Jon Pugh, June 2018
+- [Hosting Drupal Sites? You need Aegir!](https://youtu.be/_-fJupSTKa4)
+		* Christopher Gervais - ergonlogic | Colan Schwartz, June 2018
 
 * [Provision 4.x: Developer Sneak Peak](https://www.youtube.com/watch?v=gEpKngeJRvE)
     * Jon Pugh, January 03, 2018
