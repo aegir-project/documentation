@@ -86,7 +86,7 @@ Here's what you'll need to install Aegir on a Debian or Ubuntu system:
 
 * Basic Linux system administration skills
 * Root access to your server
-* An up-to-date system and applications (`sudo aptitude update && sudo aptitude safe-upgrade`)
+* An up-to-date system and applications (`sudo apt update && sudo apt safe-upgrade`)
 
 See [system-requirements](#system-requirements)
 
