@@ -68,9 +68,9 @@ Using a .htaccess with an Allow Override all directive in Apache can be a major 
 
 As a result, Aegir disables the reading of the Drupal .htaccess in the runtime environment.
 
-This does not mean that the .htaccess is not needed. Instead, when you run the Verify task against a Platform, the .htaccess is studied by Aegir and its contents are copied into the platform-wide Apache vhost configuration, typically located in `/var/aegir/config/server_master/apache/platform.d`
+This does not mean that the .htaccess is not needed. The .htaccess file from the webroot is automatically included by Apache. DO note that other .htaccess files are NOT included.
 
-Need to make a modification to the .htaccess? Simple: you can simply edit it in-place as you normally would, but you must re-Verify the platform in Aegir afterward, in order for those new or modified settings to be 'loaded in' to the platform vhost file. Note that this only works on the platform .htaccess file.
+Need to make a modification to the .htaccess? Simple: you can simply edit it in-place as you normally would, but the remember to reload the Apache configuration.
 
 The end result is improved performance for your sites, without losing any functionality, as you can still customise the `.htaccess` to your liking.
 
