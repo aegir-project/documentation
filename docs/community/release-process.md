@@ -64,7 +64,7 @@ Each time we make a new release, we run a script called `release.sh` in provisio
 It's best to start in a freshy cloned provision checkout. An extra remote to GitLab is needed for the packaging by GitLab CI.
 
 ```
-git clone $USER@git.drupal.org:project/provision.git
+git clone git@git.drupal.org:project/provision.git
 cd provision/
 git remote add gitlab git@gitlab.com:aegir/provision.git
 ```
@@ -109,9 +109,11 @@ Notice how we just provide the Aegir release number (`3.11`) to the release scri
 ### 5. Watch the GitLab CI pipelines
 
 After the release script pushes it's commits you should give Ci some time to finish it's tests.
+Watch it live on: https://gitlab.com/aegir/provision/pipelines
 
 If any of these builds fail, one option might be to delete the remote tags (using `git push origin :7.x-3.4`, for example), fix the bugs and start again.
 
+The script prompts to WAIT before pushing the revert commit... leave that terminal open until after you completed the 'Publish the Debian packages' step.
 
 
 #### 6 Fix Debian packages only
@@ -135,8 +137,8 @@ And for Golden Contrib...
 [hosting_git](https://drupal.org/node/add/project-release/2217793),
 [hosting_logs](https://www.drupal.org/node/add/project-release/1871490),
 [hosting_remote_import](https://drupal.org/node/add/project-release/1405640),
-[hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830) and
-[hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498)
+[hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830),
+[hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498),
 [hosting_https](https://drupal.org/node/add/project-release/2910575)
 
 WAIT.... And only after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
@@ -177,7 +179,7 @@ Finally, when the Debian packages are tested you will need to pull them into the
 We pull to stable (since the betas), manually:
 
     ssh aegir0.aegir.coop
-    sudo su - reprepro
+    sudo --login --user=reprepro
     reprepro@aegir0:~$
     reprepro copy stable unstable aegir3
     reprepro copy stable unstable aegir3-hostmaster
