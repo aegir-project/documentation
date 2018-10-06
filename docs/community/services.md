@@ -19,6 +19,7 @@ Other service providers
 Below is a list of individual consulting and hosting firms offering paid support for the Aegir Hosting System:
 
 * [Colan Schwartz Consulting](https://colan.consulting/) ✔
+* [Consensus Enterprises](https://consensus.enterprises/)
 * [Ergon Logic Enterprises](http://ergonlogic.com) ✔
 * [Initfour websolutions](https://www.initfour.nl) ✔
 * [Koumbit Networks](https://www.koumbit.org)
