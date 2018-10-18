@@ -57,7 +57,8 @@ reprepro copy stable testing aegir3-cluster-slave
 reprepro copy stable testing aegir-archive-keyring
 ```
 
-- Merge the feature branch into the main branch
+- Merge the feature branch into the main branch (merge conflicts are expected)
+	`git checkout 7.x-3.x; git merge 7.x-3.14.x`
 - Broadcast? Mention in the irc/matrix room. Maybe Twitter, email.
 
 Building a package for a new release
