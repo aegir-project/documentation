@@ -28,6 +28,7 @@ Look into [GitLab CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis]
 ### 2. Verify drupal-org.make
 
 In the hostmaster project we maintain our own drupal-org.make file. Verify that drupal-org.make specifies up-to-date versions. Check that e.g. the ctools version specified is not out-dated.
+Using the update status page of a dev installation is one way, checking the latest release on https://www.drupal.org/project/hostmaster to see if the 'In this package' table has any marked packages is another way.
 
 Run a special drush command to validate the syntax: (docs: [Common Drush Make errors and their solutions](https://www.drupal.org/docs/develop/packaging-a-distribution/how-to-set-up-drupalorg-drush) [setup](https://www.drupal.org/node/1432190)
 ```
@@ -53,7 +54,10 @@ or after placing the tags
 This is done for the different git projects. Changing the first line to add 'to $name'.
 The [script release_notes.sh](http://cgit.drupalcode.org/provision/tree/scripts/release_notes.sh) can be used to automate this step.
 
+`provision$ ./scripts/release_notes.sh 7.x-3.160`
+
 The developers then proceed to format/edit the list of fixes as well as list other significant information/changes for this release. These notes end up becoming the Release Notes for the release.
+Things to remove are lines like 'change version information for release' and multiple commits for a single issue can be summarized.
 
 Add it as a new file under [release-notes](https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes), and add a line to [mkdocs.yml](https://github.com/aegir-project/documentation/blob/3.x/mkdocs.yml). And update the default page for the 'Release notes' section.
 
