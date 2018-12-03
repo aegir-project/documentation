@@ -28,7 +28,7 @@ Look into [GitLab CI](http://gitlab.com/aegir/provision/pipelines/) and [Travis]
 ### 2. Verify drupal-org.make
 
 In the hostmaster project we maintain our own drupal-org.make file. Verify that drupal-org.make specifies up-to-date versions. Check that e.g. the ctools version specified is not out-dated.
-Using the update status page of a dev installation is one way, checking the latest release on https://www.drupal.org/project/hostmaster to see if the 'In this package' table has any marked packages is another way.
+Using the update status page of a dev installation is one way, checking the [latest hostmaster release](https://www.drupal.org/project/hostmaster) to see if the 'In this package' table has any marked packages is another way.
 
 Run a special drush command to validate the syntax: (docs: [Common Drush Make errors and their solutions](https://www.drupal.org/docs/develop/packaging-a-distribution/how-to-set-up-drupalorg-drush) [setup](https://www.drupal.org/node/1432190)
 ```
