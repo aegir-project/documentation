@@ -25,21 +25,21 @@ Creating a Debian mini release
 
 - Create a feature branch in provision
  `git checkout -b 7.x-3.14.x 7.x-3.140`
-- Commit or cherry-pick the desired fix
+- Commit or cherry-pick the desired fix (skip if the fix is limited to another module)
 - Update the version number in provision.info
 - Update the version number in upgrade.sh
 - update the version number in aegir.make (and possibly Drupal core's version)
 - Update to debian/changes ( specify 'testing' instead of unstable) `dch -i`
-- Commit
+- Commit, referencing the release meta issue
 - Set a tag
 
 - For a hosting fix:
     - set a tag in hostig by hand, push
-		- create Drupal.org release node [hosting](https://drupal.org/node/add/project-release/196008)
+		- create Drupal.org release node for [hosting](https://drupal.org/node/add/project-release/196008)
     - also update drupal-org.make in hostmaster
 
 - For a hostmaster fix:
-    - same branch for hostmaster as for provision
+    - create the same branch for hostmaster as for provision
     - commit fix or update drupal-org.make with a new version number of e.g hosting.
     - set tag by hand and push
     - create D.o [release node](https://drupal.org/node/add/project-release/195997), using the template from the normal release proces.
@@ -57,8 +57,10 @@ reprepro copy stable testing aegir3-cluster-slave
 reprepro copy stable testing aegir-archive-keyring
 ```
 
-- Merge the feature branch into the main branch (merge conflicts are expected)
-	`git checkout 7.x-3.x; git merge 7.x-3.14.x`
+- Merge the feature branches (hostmaster, provision) into the main branch (merge conflicts are mostly handled by `-X ours`)
+	`git checkout 7.x-3.x; git merge -X ours 7.x-3.14.x`
+- Push
+- Comment in the release meta issue
 - Broadcast? Mention in the irc/matrix room. Maybe Twitter, email.
 
 Building a package for a new release

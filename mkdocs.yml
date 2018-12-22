@@ -65,7 +65,7 @@ pages:
   - 'Resources': 'community/resources.md'
   - 'Service providers': 'community/services.md'
   - 'Sponsering': 'community/sponsoring.md'
-- 'Release notes': 'release-notes/3.16.md'
+- 'Release notes': 'release-notes/3.17.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
   - '3.1': 'release-notes/3.1.md'
