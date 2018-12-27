@@ -27,6 +27,7 @@ Below is a list of individual consulting and hosting firms offering paid support
 * [Praxis Labs Coop](https://praxis.coop) ✔
 * [SymbioTIC Coop](https://www.symbiotic.coop) ✔
 * [ThinkDrop Consulting](http://www.thinkdrop.net) ✔
+* [Davyin Internet Solutions](http://www.davyin.com) ✔
 
 ✔ indicates that this firm is a member of the Ægir Cooperative.
 
