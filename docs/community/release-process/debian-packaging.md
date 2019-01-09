@@ -31,18 +31,23 @@ Creating a Debian mini release
 - update the version number in aegir.make (and possibly Drupal core's version)
 - Update to debian/changes ( specify 'testing' instead of unstable) `dch -i`
 - Commit, referencing the release meta issue
-- Set a tag
+- Create a tag and push it:
+  ```
+  git tag 7.x-3.180
+  git push origin 7.x-3.180
+  ```
+- [Create a release node for provision on Drupal.org](https://drupal.org/node/add/project-release/196005)
 
 - For a hosting fix:
     - set a tag in hostig by hand, push
-		- create Drupal.org release node for [hosting](https://drupal.org/node/add/project-release/196008)
+		- [Create a release node for hosting on Drupal.org](https://drupal.org/node/add/project-release/196008)
     - also update drupal-org.make in hostmaster
 
 - For a hostmaster fix:
     - create the same branch for hostmaster as for provision
     - commit fix or update drupal-org.make with a new version number of e.g hosting.
     - set tag by hand and push
-    - create D.o [release node](https://drupal.org/node/add/project-release/195997), using the template from the normal release proces.
+    - [Create a release node for hostmaster on Drupal.org](https://drupal.org/node/add/project-release/195997), using the template from the normal release proces.
 
 - Push provision to gitlab `git push gitlab 7.x-3.14.x`
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
