@@ -52,15 +52,17 @@ Creating a Debian mini release
 - Push provision to gitlab `git push gitlab 7.x-3.14.x`
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
 - Test the packages using the [testing repository](http://debian.aegirproject.org/dists/testing/)
-- Promote the packages to the stable repository.
-On the repo server as the reprepro user do:
-```
-reprepro copy stable testing aegir3
-reprepro copy stable testing aegir3-hostmaster
-reprepro copy stable testing aegir3-provision
-reprepro copy stable testing aegir3-cluster-slave
-reprepro copy stable testing aegir-archive-keyring
-```
+- Promote the packages to the stable repository:
+  - SSH into the repo server: `ssh jon@aegir0.aegir.coop`
+  - Change to the `reprepro` user: `sudo su - reprepro`
+  - Run the following commands:
+	```
+	reprepro copy stable testing aegir3
+	reprepro copy stable testing aegir3-hostmaster
+	reprepro copy stable testing aegir3-provision
+	reprepro copy stable testing aegir3-cluster-slave
+	reprepro copy stable testing aegir-archive-keyring
+	```
 
 - Merge the feature branches (hostmaster, provision) into the main branch (merge conflicts are mostly handled by `-X ours`)
 	`git checkout 7.x-3.x; git merge -X ours 7.x-3.14.x`
