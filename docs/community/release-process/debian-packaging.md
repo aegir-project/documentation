@@ -63,7 +63,8 @@ Creating a Debian mini release
 	reprepro copy stable testing aegir3-cluster-slave
 	reprepro copy stable testing aegir-archive-keyring
 	```
-
+  - Verify in the [Packages](http://debian.aegirproject.org/dists/stable/main/binary-amd64/Packages) file that the new version is in there.
+  
 - Merge the feature branches (hostmaster, provision) into the main branch (merge conflicts are mostly handled by `-X ours`)
 	`git checkout 7.x-3.x; git merge -X ours 7.x-3.14.x`
 - Push
