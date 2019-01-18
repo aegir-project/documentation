@@ -43,13 +43,6 @@ Creating a Debian mini release
   ```
   
 - Commit the changes to `debian/changelog`, referencing the release meta issue.
-- Create a tag and push it:
-  ```
-  git tag 7.x-3.180
-  git push origin 7.x-3.180
-  ```
-- [Create a release node for provision on Drupal.org](https://drupal.org/node/add/project-release/196005)
-
 - For a hosting fix:
     - set a tag in hostig by hand, push
 		- [Create a release node for hosting on Drupal.org](https://drupal.org/node/add/project-release/196008)
@@ -60,7 +53,12 @@ Creating a Debian mini release
     - commit fix or update drupal-org.make with a new version number of e.g hosting.
     - set tag by hand and push
     - [Create a release node for hostmaster on Drupal.org](https://drupal.org/node/add/project-release/195997), using the template from the normal release proces.
-
+- Create a tag in provision and push it:
+  ```
+  git tag 7.x-3.180
+  git push origin 7.x-3.180
+  ```
+- [Create a release node for provision on Drupal.org](https://drupal.org/node/add/project-release/196005)
 - Push provision to gitlab `git push gitlab 7.x-3.14.x`
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
 - Test the packages using the [testing repository](http://debian.aegirproject.org/dists/testing/)
