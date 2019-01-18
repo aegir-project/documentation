@@ -29,8 +29,20 @@ Creating a Debian mini release
 - Update the version number in provision.info
 - Update the version number in upgrade.sh
 - update the version number in aegir.make (and possibly Drupal core's version)
-- Update to debian/changes ( specify 'testing' instead of unstable) `dch -i`
-- Commit, referencing the release meta issue
+- Run the command `dch -i` to generate the Debian Change Log:
+  - Change machine-generated version to 3.xxy, and change `UNSTABLE` to `testing`.
+  - Ensure your name and email are correct.
+  - Add release notes, replacing the default ` Non-maintainer upload.`
+  - For example:
+  ```
+  aegir3-provision (3.173) testing; urgency=medium
+
+  * Update to Hostmaster 7.x-3.173 & Drupal 7.63.
+
+  -- Jon Pugh <jon@thinkdrop.net>  Fri, 18 Jan 2019 14:37:21 -0500
+  ```
+  
+- Commit the changes to `debian/changelog`, referencing the release meta issue.
 - Create a tag and push it:
   ```
   git tag 7.x-3.180
