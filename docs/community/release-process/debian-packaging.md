@@ -59,7 +59,11 @@ Creating a Debian mini release
   git push origin 7.x-3.180
   ```
 - [Create a release node for provision on Drupal.org](https://drupal.org/node/add/project-release/196005)
-- Push provision to gitlab `git push gitlab 7.x-3.14.x`
+- Push the new provision tag and branch to gitlab:
+  ```
+  git push gitlab 7.x-3.17.x
+  git push gitlab 7.x-3.173
+  ```
 - Wait for the [pipelines on GitLab.com](https://gitlab.com/aegir/provision/pipelines) to complete (especially the publish job)
 - Test the packages using the [testing repository](http://debian.aegirproject.org/dists/testing/)
 - Promote the packages to the stable repository:
