@@ -83,6 +83,7 @@ Creating a Debian mini release
 	`git checkout 7.x-3.x; git merge -X ours 7.x-3.14.x`
 - Push
 - Comment in the release meta issue
+- Update the [release notes](https://github.com/aegir-project/documentation/tree/3.x/docs/release-notes) of the latest version.
 - Broadcast? Mention in the irc/matrix room. Maybe Twitter, email.
 
 Building a package for a new release
