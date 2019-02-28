@@ -11,7 +11,7 @@ Note that the support and development status varies for these. Please evaluate e
 
 ### Included in Aegir package
 
-These ship with Aegir (the [Golden Contrib](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) suite of modules) so their features simply require enabling if desired.  See [the guidelines](http://docs.aegirproject.org/en/3.x/develop/repositories#golden-contrib-module-guidelines) for inclusion.  For the others, manual installation is required.
+These ship with Aegir (the [Golden Contrib](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) suite of modules) so their features simply require enabling if desired.  See [the guidelines](/develop/repositories#golden-contrib-module-guidelines) for inclusion.  For the others, manual installation is required.
 
 #### [Hosting CiviCRM](https://www.drupal.org/project/hosting_civicrm)
 

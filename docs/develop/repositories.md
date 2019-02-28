@@ -29,7 +29,7 @@ Thease feature branches don't have to be pushed to D.o, and can be removed after
 
 We started adding more modules during the 3.x cycle and invented the *Golden Contrib* name for it.
 
-The idea is to package modules that extend Aegir to make them easier to install.  [Their descriptions](http://docs.aegirproject.org/en/3.x/extend/contrib/#golden-contrib) are listed on the Contributed Projects page.
+The idea is to package modules that extend Aegir to make them easier to install.  [Their descriptions](/extend/contrib/#golden-contrib) are listed on the Contributed Projects page.
 
 These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tree/drupal-org.make) and end up in `profiles/hostmaster/modules/aegir/`.
 
@@ -38,7 +38,7 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
 - It should have a full release on Drupal.org
 - It should be covered by the security team.
 - There should be the intention to maintain the module for the longer term, at least as long as the current stable Aegir release.
-- All Aegir core maintainers should have access to the module project on Drupal.org.  However, a minimum of two is required at all times. Use [the current maintainers list](http://docs.aegirproject.org/en/3.x/community/core-team/#current-members) for reference.
+- All Aegir core maintainers should have access to the module project on Drupal.org.  However, a minimum of two is required at all times. Use [the current maintainers list](/community/core-team/#current-members) for reference.
 - Where appropriate it should include a file for Aegir's feature system. E.g. [hosting.feature.modulename.inc](http://cgit.drupalcode.org/hosting/tree/example/site_data/hosting.feature.site_data.inc)
 - It should be security reviewed by other core maintainers, keeping the following in mind:
     * The module should not increase the system's attack surface.
