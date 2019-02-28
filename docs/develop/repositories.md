@@ -42,5 +42,5 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
 - Where appropriate it should include a file for Aegir's feature system. E.g. [hosting.feature.modulename.inc](http://cgit.drupalcode.org/hosting/tree/example/site_data/hosting.feature.site_data.inc)
 - It should be security reviewed by other core maintainers, keeping the following in mind:
     * The module should not increase the system's attack surface.
-    * etc.
-* It should not encourage users to perform dangerous operations, from which there is no recovery.  If such features are requested, their use must come with warnings. 
+    * If it does, a strong warning must be provided in the description.
+* It should not encourage users to perform dangerous operations, from which there is no recovery.  If such features are requested, their use must come with warnings.
