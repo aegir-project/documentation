@@ -74,7 +74,9 @@ Remember the relative document root for your git repository and path to makefile
 
 When adding your repo to Aegir, you can use HTTPS or SSH syntax, but access must be granted to the `aegir` user on your system. If cloning an SSH repo, try to do it first using the command line interface to ensure Host Key checking is allowing your git host and SSH keys are properly authenticating."
 
-Using Git with Aegir requires enabling an extra module: **Hosting Git**. 
+Using Git with Aegir requires enabling at least one extra module: **Aegir Git**, [Aegir Deploy](https://www.drupal.org/project/hosting_deploy) or both.
+
+To enable Aegir Git:
 
   1. Click **Hosting** in the Admin Toolbar at the top of the page.
   2. Click **Advanced** fieldset.
@@ -82,6 +84,16 @@ Using Git with Aegir requires enabling an extra module: **Hosting Git**.
   4. If you want to be able to run `git pull` from the web interface, check **Git pull task**.
   5. If you want to be able to run `git checkout` from the web interface to checkout a different branch or tag, check **Git Checkout task**.
   6. Press **Save Configuration**.
+
+To enable Aegir Deploy:
+
+  1. Read [the documentation](https://matteobrusa.github.io/md-styler/?url=cgit.drupalcode.org/hosting_deploy/plain/README.md).
+  2. Click **Hosting** in the Admin Toolbar at the top of the page.
+  3. Click **Experimental** fieldset.
+  4. Click **Aegir Deployment**.
+  5. If you want to deploy a Composer-managed platform, check **Composer Deploy via Git**.
+  6. If you want to deploy a non-Composer-managed platform, check **Git Deploy (without Composer)**.
+  7. Press **Save Configuration**.
 
 ### Adding a platform using the Hostmaster Web Interface 
 
