@@ -5,7 +5,7 @@ Deployment Strategies
 
 "Deployment strategies" refer to the method used to deploy a platform in Aegir. Aegir core supports only manual and Drush makefile-based builds by default. However, a number of other options have become available.
 
-By enabling the "Aegir Deploy" module, these options are moved into fieldsets controlled by a radio option list, in order to consolidate and clean up the platform node form.
+By enabling the [Aegir Deploy](https://www.drupal.org/project/hosting_deploy) module, these options are moved into fieldsets controlled by a radio option list, in order to consolidate and clean up the platform node form.
 
 Manual deployment
 -----------------
