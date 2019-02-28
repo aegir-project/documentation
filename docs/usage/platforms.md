@@ -97,7 +97,7 @@ To enable Aegir Deploy:
 
 ### Adding a platform using the Hostmaster Web Interface 
 
-Once you have your makefile or git repository ready, you can deploy Drupal using the web interface:
+Once you have your makefile, Composer project, Git repository or other type of project ready, you can deploy Drupal using the web interface.  Enabling the [Aegir Deploy](https://www.drupal.org/project/hosting_deploy) module is strongly recommended as it simplifies the **Add Platform** form.  See [Deployment Strategies](/usage/advanced/deployment/) for the available deployment methods.
 
 1. Log in to your Aegir Hostmaster site.
 2. Click **Platforms** in the main navigation.
