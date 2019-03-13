@@ -89,7 +89,7 @@ To enable Aegir Deploy:
 
   1. Read [the documentation](https://matteobrusa.github.io/md-styler/?url=cgit.drupalcode.org/hosting_deploy/plain/README.md).
   2. Click **Hosting** in the Admin Toolbar at the top of the page.
-  3. Click **Experimental** fieldset.
+  3. Click on the **Optional** fieldset.
   4. Click **Aegir Deployment**.
   5. If you want to deploy a Composer-managed platform, check **Composer Deploy via Git**.
   6. If you want to deploy a non-Composer-managed platform, check **Git Deploy (without Composer)**.
