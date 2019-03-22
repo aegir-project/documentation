@@ -228,7 +228,17 @@ Those projects allow you to manage Aegir instance(s) through a configaration man
 Development
 -----------
 
-### [Valkyrie](https://www.drupal.org/project/valkyrie)
+### [Aegir Development VM](https://gitlab.com/aegir/aegir-dev-vm)
+
+This project is intended to provide a simple Vagrant-based VM for Aegir development.  Besides local VMs, external ones are also supported for those developers whose local machines aren't powerful enough to run VirtualBox.
+
+### [Aegir Development Environment](https://github.com/aegir-project/development)
+
+A couple of scripts for easier Aegir development using Docker.
+
+### [Valkyrie](https://www.drupal.org/project/valkyrie) (deprecated)
+
+*This tool is deprecated, having been replaced by [Aegir Development VM](#aegir-development-vm), above.*
 
 Valkyrie is an opinionated development stack that makes features/git based Drupal development easy.
 
@@ -241,11 +251,6 @@ Features include:
 Development & Support
 
 While provide release on drupal.org, mostly to allow for installation via: drush dl valkyrie, development happens on Github at: [GetValkyrie](https://github.com/GetValkyrie/valkyrie)
-
-
-### [Aegir Development Environment](https://github.com/aegir-project/development)
-
-A couple of scripts for easier Aegir development using Docker.
 
 ### [Aegir up](https://www.drupal.org/project/aegir-up) (deprecated)
 
