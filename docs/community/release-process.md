@@ -130,7 +130,7 @@ Once the tags are pushed and release notes published, we create a release node w
 
 Using the template (change the version number):
 ```
-See the full release notes at: http://docs.aegirproject.org/en/3.x/release-notes/3.11/
+See the full release notes at: http://docs.aegirproject.org/release-notes/3.11/
 ```
 
 Use something like `Aegir Hostmaster 3.14.4` for the 'Short description' field.
@@ -217,11 +217,11 @@ https://hub.docker.com/r/aegir/hostmaster/~/settings/automated-builds/
 Once all this is done and the tarballs are generated, the release notes are published in:
 
 *   The [docs](http://docs.aegirproject.org)
-*   Update the upgrade.sh link in the [documentation](http://docs.aegirproject.org/en/3.x/install/upgrade/#upgrades-with-upgradesh-script)
+*   Update the upgrade.sh link in the [documentation](http://docs.aegirproject.org/install/upgrade/#upgrades-with-upgradesh-script)
 *   The topic of the IRC channel
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
 *   Twitter as @aegirproject
-    *   Template: "#aegir 3.? released! Release notes at http://docs.aegirproject.org/en/3.x/release-notes/3.?/"
+    *   Template: "#aegir 3.? released! Release notes at http://docs.aegirproject.org/release-notes/3.?/"
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
 

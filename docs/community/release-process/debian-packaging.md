@@ -52,7 +52,7 @@ Creating a Debian mini release
     - create the same branch for hostmaster as for provision
     - commit fix or update drupal-org.make with a new version number of e.g hosting.
     - set tag by hand and push
-    - [Create a release node for hostmaster on Drupal.org](https://drupal.org/node/add/project-release/195997), using the template from the normal release proces.
+    - [Create a release node for hostmaster on Drupal.org](https://drupal.org/node/add/project-release/195997), using the [template from the normal release proces](/community/release-process/#7-creating-release-nodes-on-drupalorg).
 - Create a tag in provision and push it:
   ```
   git tag 7.x-3.180

@@ -1,5 +1,6 @@
 site_name: Aegir Hosting System
 repo_url: https://github.com/aegir-project/documentation
+repo_url: https://gitlab.com/aegir/documentation
 edit_uri: edit/3.x/docs/
 theme: readthedocs
 site_favicon: '_images/favicon.ico'
