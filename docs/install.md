@@ -13,7 +13,7 @@ requirements](#system-requirements) to ensure your server(s) are up to the task.
 Quick start
 -----------
 
-See the [quick start page in these docs](quick-start/).
+See the [quick start page in these docs](#quick-start).
 
 
 System Requirements
@@ -25,18 +25,17 @@ The Aegir system is entirely Drupal based, and has the same base requirements th
 
 ### Your own server
 
-The low level of access required to be able to configure and run this system is very far beyond what is commonly available to users with shared hosting. A VPS from any popular provider such as Linode, Rackspace, Slicehost, Amazon EC, etc. will do fine. You will need root access to the server and the server needs to be dedicated to Aegir.
+The low level of access required to be able to configure and run this system is very far beyond what is commonly available to users with shared hosting. A VPS from any popular provider such as Linode, Rackspace, Slicehost, Amazon, any OpenStack provider, etc. will do fine. You will need root access to the server and the server needs to be dedicated to Aegir.
 
 ### A Unix-based operating system
 
-Aegir must run on some flavour of UNIX, because the majority of functionality in this system occurs in the back-end, through command line scripting. There are also several features (such as symlinks), that are not available to users on Windows. There are no plans currently to add Windows support. See the operating system support page for more information.
+Aegir must run on some flavour of UNIX, because the majority of functionality in this system occurs in the back-end, through command-line scripting. There are also several features (such as symbolic links) that are not available to users on Windows. There are no plans currently to add Windows support. See the operating system support page for more information.
 
 ### Web server
 
-You will need at least one dedicated web server, running Apache. We generally work with Apache 2. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide php-cgi or php-fpm (recommended) modules, you will need to install and run php-fpm server separately. You can find useful examples and tips in the third party Barracuda installer available at the barracuda project page.
-N.B.: This third party installer is not supported by the core Aegir developers, but you can find helpful community support at the boa group.
+You will need at least one dedicated web server, running Apache. We generally work with Apache 2. Aegir also supports the Nginx web server, but requires at least version 0.7.66 or newer. Since Nginx doesn't provide `php-cgi` or `php-fpm` (recommended) modules, you will need to install and run the `php-fpm` server separately.  Follow the instructions at [installing with Nginx](#6-optional-install-with-nginx) further down in these instructions.
 
-See also [installing with Nginx](#install-with-nginx).
+See also: Useful examples and tips in the third party Barracuda installer available at the Barracuda project page.  Note that this third-party installer is not supported by the core Aegir developers, but you can find helpful community support in the BOA group.
 
 ### PHP
 
@@ -48,7 +47,7 @@ You will require a database server, obviously. Aegir currently only supports MyS
 
 ### Mail transfer agent
 
-Aegir requires an MTA (Mail Transfer Agent) installed on your webserver in order to be able to install new sites to your new platform. If you don't have an MTA, the site installation will fail with message like "could not send email". Additional messages will show that site has been removed because of this problem. To remedy the situation simply install an MTA like sendmail, postfix, or exim and do the minimal configuration.
+Aegir requires an MTA (Mail Transfer Agent) installed on your webserver in order to be able to install new sites to your new platform. If you don't have an MTA, the site installation will fail with message like "could not send email". Additional messages will show that site has been removed because of this problem. To remedy the situation simply install a minimal MTA like `msmtp-mta` or `ssmtp` and configure.
 
 ### A Fully Qualified Domain Name (FQDN)
 
@@ -167,9 +166,11 @@ Now you can proceed with installing Aegir below.
 
 ### 6. (Optional) Install with Nginx
 
-If you want to use Nginx instead of Apache, you'll have to explicitely tell apt-get:
+If you want to use Nginx instead of Apache, you'll have to explicitly install it before installing the Aegir package.
 
-    $ sudo apt-get install aegir3 nginx php5-fpm
+```sh
+sudo apt install nginx php-mbstring php-cli php-fpm php-gd php-pear php-zip php-curl
+```
 
 This is because the package expects Apache2 by default.
 
