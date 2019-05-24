@@ -13,7 +13,7 @@ requirements](#system-requirements) to ensure your server(s) are up to the task.
 Quick start
 -----------
 
-See the [quick start page in these docs](#quick-start).
+See the [quick start page in these docs](/quick-start/).
 
 
 System Requirements
