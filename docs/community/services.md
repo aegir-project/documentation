@@ -2,7 +2,7 @@ Aegir Service Providers
 =======================
 
 
-The members of the Aegir [core maintainers team](/community/core-team.md), along with other contributors, service providers, and experts, strive to:
+The members of the Aegir [core maintainers team](/community/core-team/), along with other contributors, service providers, and experts, strive to:
 
 * Provide reliable, affordable support and consulting services for the Aegir Hosting System; and
 * Finance on-going maintenance and development of Aegir and related projects.

@@ -8,7 +8,7 @@ Want to talk with the Aegir community? There are many channels with various virt
 Service Providers
 -----------------
 
-If you need professional support for your Aegir installation, check out the [Service Providers page](/community/services.md).
+If you need professional support for your Aegir installation, check out the [Service Providers page](/community/services/).
 
 Chat
 ---
@@ -23,7 +23,7 @@ We try to meet/check-in/scrum there on Thursdays at 8PM GMT.
 
 New to IRC? IRC instructions for Drupal users are at: [https://www.drupal.org/irc](https://www.drupal.org/irc "https://www.drupal.org/irc").
 
-There is a bridge from this channel to [a Matrix room](https://riot.im/app/#/room/#drupal-aegir:matrix.org).
+There is a bridge from this channel to [a Matrix room](https://riot.im/app/#/room/#aegir:matrix.org).
 
 And there also is a separate [channel called aegir on Drupal Slack](https://drupal.slack.com).
 
@@ -53,7 +53,7 @@ Events
 Aegir is often present at many of the popular DrupalCamps and DrupalCons, either as a formal session or in smaller BOF sessions.
 
 We encourage users who are confident in using Aegir to demonstrate it at any relevant events they attend, and to post slides/screencasts so that others can benefit.
-Examples are in the [resources section](community/resources) of these docs.
+Examples are in the [resources section](/community/resources/) of these docs.
 
 
 Blogs

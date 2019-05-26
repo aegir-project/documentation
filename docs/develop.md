@@ -7,7 +7,7 @@ This devoted to teaching you how to extend and develop for Aegir to encourage co
 
 Aegir is built on Drupal and Drush, as well as implementing it's own API. As such, a familiarity with the [Drupal API](http://api.drupal.org) and the [Drush API](http://api.drush.org) is pretty much assumed.
 
-This section documents methods and best-practices for hacking on Aegir core or building a [contrib module](extend/contrib.md). You should probably become familiar with the [Extending Aegir](/extend.md) section before proceeding much further.
+This section documents methods and best-practices for hacking on Aegir core or building a [contrib module](extend/contrib.md). You should probably become familiar with the [Extending Aegir](/extend/) section before proceeding much further.
 
 Aegir API documentation
 -----------------------

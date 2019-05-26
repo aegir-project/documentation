@@ -59,7 +59,7 @@ Importing a single site manually
 
 If you already have a platform setup on Aegir with EXACTLY the same codebase as your existing site, then you don't need to transfer the entire old codebase - you can just transfer the sites/example.com directory. However, you also need to make sure any dependencies on contrib modules that your site has, are covered on the codebase or Platform that you're importing it into.
 
-In general it may be considered safer/less prone to confusing errors to [transfer the entire old codebase](#complete-drupal-install) into Aegir as a whole Platform, whereby the site will be imported automatically under that Platform. You can then migrate it in Aegir to one of your existing Platforms later.
+In general it may be considered safer/less prone to confusing errors to [transfer the entire old codebase](#importing-a-complete-drupal-platform) into Aegir as a whole Platform, whereby the site will be imported automatically under that Platform. You can then migrate it in Aegir to one of your existing Platforms later.
 
 Also, it is much faster to just "deploy" an Aegir backup than go through the manual procedure here, so you should generally follow that procedure instead of the one defined here unless you have a very hairy setup.
 

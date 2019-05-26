@@ -119,4 +119,4 @@ If you want to allow these users to use aegir without entering a password, simpl
 
     AEGIRUSERS      ALL = (aegir) NOPASSWD:ALL
 
-An alternative to allowing multiple users to operate as 'aegir' is to use [Provision ACL](usage/advanced/provisionacl).
+An alternative to allowing multiple users to operate as 'aegir' is to use [Provision ACL](/usage/advanced/provisionacl/).

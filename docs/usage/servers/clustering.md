@@ -28,7 +28,7 @@ Finally, select the "Slave" servers from the list of Slave servers. The Slave se
 
 #### Configuring the Web server nodes:
 
-Configure all web server nodes using [these instructions](#remote-servers). Take care to ensure the 'aegir' user and group on your NFS client machines, have the same UID/GID as that of the NFS server, or else you may run into permissions issues with NFS.
+Configure all web server nodes using [these instructions](/usage/servers/remote-servers/). Take care to ensure the 'aegir' user and group on your NFS client machines, have the same UID/GID as that of the NFS server, or else you may run into permissions issues with NFS.
 
 Then mount the files on the remote server.
 

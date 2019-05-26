@@ -113,7 +113,7 @@ Upgrades with Debian packages
 
 ### Regular update process
 
-Make sure you have the Aegir repository in your sources.list, as per the [installation docs](../install#2-add-project-repositories).
+Make sure you have the Aegir repository in your sources.list, as per the [installation docs](/install/#2-add-project-repositories).
 
 If you want to upgrade all packages in one shot, use:
 
@@ -155,7 +155,7 @@ The Debian package supports migrating from existing installs. You will need to m
     tar cfz /var/aegir/backups/provision.tgz /var/aegir/.drush/provision
     rm -rf /var/aegir/.drush/provision
 
-You'll also need to go through steps 1 through 3 of [automatic install on Debian](../install/#1-ensure-requirements-are-satisfied).
+You'll also need to go through steps 1 through 3 of [automatic install on Debian](/install/#1-ensure-requirements-are-satisfied).
 
 Then just install the package as if you were installing from scratch.
 
