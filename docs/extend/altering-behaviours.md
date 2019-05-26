@@ -130,7 +130,7 @@ Injecting into drushrc.php
 
 The drushrc.php file can be changed in two ways:
 
-* changing the templates used for the Drushrc context see the [hook_provision_config_load_templates() hook](http://api.aegirproject.org/api/Provision/provision.api.php/function/hook_provision_config_load_templates/7.x-3.x)
+* changing the templates used for the Drushrc context see the [hook_provision_config_load_templates() hook](https://git.drupalcode.org/project/provision/blob/7.x-3.x/provision.api.php#L262)
 * creating a local.drushrc.php file in the site-specific folder (e.g. sites/example.com/local.drushrc.php
 
 Injecting into site vhosts

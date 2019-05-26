@@ -254,7 +254,7 @@ While provide release on drupal.org, mostly to allow for installation via: drush
 
 ### [Aegir up](https://www.drupal.org/project/aegir-up) (deprecated)
 
-*This tool is deprecated, having been replaced by [Valkyrie](#valkyrie), above.*
+*This tool is deprecated, having been replaced by [Valkyrie](#valkyrie-deprecated), above.*
 
 Aegir-up is a Drush extension that deploys a local instance of the Aegir Hosting System atop Vagrant and Virtualbox, for development and testing purposes.
 

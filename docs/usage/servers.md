@@ -5,7 +5,7 @@ Servers
 
 Aegir supports multiple 'server' entities. These servers have 'services' such as 'Web' or 'Database', and 'service types' which are implementations of that service, such as 'Apache' or 'MySQL'.
 
-We designate the server on which Aegir itself is running as the "master" server. Any other server is thus considered "remote". [Remote servers](/usage/servers/remote-servers.md) can be combined into [clusters](/usage/servers/clustering.md) for high-performance and high-availability scenarios.
+We designate the server on which Aegir itself is running as the "master" server. Any other server is thus considered "remote". [Remote servers](/usage/servers/remote-servers/) can be combined into [clusters](/usage/servers/clustering/) for high-performance and high-availability scenarios.
 
 
 Platforms on remote web servers

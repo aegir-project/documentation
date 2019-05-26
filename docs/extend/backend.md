@@ -3,7 +3,7 @@ Provision - the Aegir backend
 
 [TOC]
 
-The Aegir backend is a Drush extension called "Provision". It does all the heavy lifting in Aegir, such as writing vhost files and creating new databases. You can use additional Drush extensions to extend Aegir or [modify its behaviour](/extend/altering-behaviours.md).
+The Aegir backend is a Drush extension called "Provision". It does all the heavy lifting in Aegir, such as writing vhost files and creating new databases. You can use additional Drush extensions to extend Aegir or [modify its behaviour](/extend/altering-behaviours/).
 
 
 Adding a Drush extension

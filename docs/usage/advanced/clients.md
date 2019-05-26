@@ -12,7 +12,7 @@ In some situations you may wish to allow different people access to Aegir, but r
 * **Use Case 3:**
   As a drupal hosting company you might allow clients to sign up via your promotional website (using the 'Signup Form' feature in Aegir!), and then have their own account created on Aegir, with their newly provisioned site. They can then login and manage their own upgrades (by migrating to new platforms).  This functionality is provided by the Client feature in Aegir. Here's a brief guide to using it...
 
-To grant clients secure access to the CLI, see the page on [Provision ACL](provisionacl)
+To grant clients secure access to the CLI, see the page on [Provision ACL](/usage/advanced/provisionacl/)
 
 Enable the Clients feature
 --------------------------

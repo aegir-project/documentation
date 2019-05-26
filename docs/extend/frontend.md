@@ -10,7 +10,7 @@ The Aegir frontend is a Drupal site in itself. You can use any Drupal module to 
 Adding a module
 -------------
 
-Add a new module either to the site specific moduled directory e.g. `/var/aegir/hostmaster-7.x-3.x/sites/aegir.example.com/modules` or use [your own makefile](http://docs.aegirproject.org/en/3.x/install/#71-custom-make-files) to create the hostmaster platform.
+Add a new module either to the site specific moduled directory e.g. `/var/aegir/hostmaster-7.x-3.x/sites/aegir.example.com/modules` or use [your own makefile](/install/#711-custom-make-files) to create the hostmaster platform.
 
 
 UI modules
