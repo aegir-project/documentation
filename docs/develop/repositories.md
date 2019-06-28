@@ -64,8 +64,8 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
 
 #### TODO's when adding a module
 
-- add to [drupal-org.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/drupal-org.make)
-- add to [hostmaster.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/hostmaster.make)
+- Add to [drupal-org.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/drupal-org.make)
+- Add to [hostmaster.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/hostmaster.make)
 
 - Add to [docs/extend/contrib.md](https://gitlab.com/aegir/documentation/blob/3.x/docs/extend/contrib.md), or move to the Golden Contrib section.
 - Add extra link in the [Creating release nodes on Drupal.org section](https://gitlab.com/aegir/documentation/blob/3.x/docs/community/release-process.md)
