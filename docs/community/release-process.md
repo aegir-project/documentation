@@ -155,17 +155,27 @@ See the full release notes at: http://docs.aegirproject.org/release-notes/3.11/
 
 Use something like `Aegir Hostmaster 3.14.4` for the 'Short description' field.
 
-This needs to be done in the [provision](https://drupal.org/node/add/project-release/196005) and [hosting](https://drupal.org/node/add/project-release/196008) and [eldir](https://drupal.org/node/add/project-release/452774) projects on Drupal.org.
-And for Golden Contrib...
-[hosting_civicrm](https://drupal.org/node/add/project-release/1982662),
-[hosting_git](https://drupal.org/node/add/project-release/2217793),
-[hosting_logs](https://www.drupal.org/node/add/project-release/1871490),
-[hosting_remote_import](https://drupal.org/node/add/project-release/1405640),
-[hosting_site_backup_manager](https://drupal.org/node/add/project-release/1459830),
-[hosting_tasks_extra](https://drupal.org/node/add/project-release/1738498),
-[hosting_https](https://drupal.org/node/add/project-release/2910575)
+This needs to be done for the core modules:
 
-WAIT.... And only after those are fully build... in the [hostmaster](https://drupal.org/node/add/project-release/195997) project.
+* [Provision](https://drupal.org/node/add/project-release/196005)
+* [Hosting](https://drupal.org/node/add/project-release/196008)
+* [Eldir](https://drupal.org/node/add/project-release/452774)
+
+And for Golden Contrib...
+
+* [Aegir Hosting CiviCRM](https://drupal.org/node/add/project-release/1982662)
+* [Aegir Hosting Git](https://drupal.org/node/add/project-release/2217793)
+* [Aegir Hosting Logs](https://www.drupal.org/node/add/project-release/1871490)
+* [Aegir Hosting Remote Import](https://drupal.org/node/add/project-release/1405640)
+* [Hosting Site Backup Manager](https://drupal.org/node/add/project-release/1459830)
+* [sudo apt install devscripts](https://drupal.org/node/add/project-release/1738498)
+* [Aegir HTTPS](https://drupal.org/node/add/project-release/2910575)
+* [Aegir Objects](https://www.drupal.org/node/add/project-release/2872073)
+* [Aegir Deploy](https://www.drupal.org/node/add/project-release/2952934)
+
+WAIT.... And only after those are fully built...
+
+* [Hostmaster](https://drupal.org/node/add/project-release/195997)
 
 Build errors don't show up on the release node page ... but on [the releases list](https://www.drupal.org/project/hostmaster/releases)
 
