@@ -219,6 +219,7 @@ Once all this is done and the tarballs are generated, the release notes are publ
 *   The [docs](http://docs.aegirproject.org)
 *   Update the upgrade.sh link in the [documentation](http://docs.aegirproject.org/install/upgrade/#upgrades-with-upgradesh-script)
 *   The topic of the IRC channel
+*   The topic of the Matrix channel (not synced to IRC)
 *   The aegir-announce mailing list ([announce@lists.aegirproject.org](mailto:announce@lists.aegirproject.org).)
 *   Twitter as @aegirproject
     *   Template: "#aegir 3.? released! Release notes at http://docs.aegirproject.org/release-notes/3.?/"
