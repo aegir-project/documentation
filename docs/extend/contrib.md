@@ -45,6 +45,15 @@ It also includes site functionality for:
 * [HTTP basic authentication](https://github.com/computerminds/aegir_http_basic)
 * Generating and showing Drush aliases
 
+#### [Aegir Deploy](https://www.drupal.org/project/hosting_deploy)
+
+This module extends [Aegir's platform deployment strategies](/usage/advanced/deployment/) by improving the user experience for the Create Platform form.  It also provides a couple new such strategies, including the building platforms from Composer packages via project templates, and git-based deployments than maintain platform immutability.
+
+
+#### [Aegir Objects](https://www.drupal.org/project/aegir_objects)
+
+This API-only module provides some base classes and traits to make object-oriented development of Aegir 3.x easier. It does not provide any functionality of it's own, and should only be installed when required by another extension.
+
 
 Front-end Extensions
 --------------------
@@ -65,10 +74,6 @@ Aegir Cloud allows Aegir to create servers directly in cloud hosting providers l
 #### [Aegir Config Management](https://www.drupal.org/project/aegir_config)
 
 This module provides config-export and config-import commands for Aegir.
-
-#### [Aegir Deploy](https://www.drupal.org/project/hosting_deploy)
-
-This module extends [Aegir's platform deployment strategies](/usage/advanced/deployment/) by improving the user experience for the Create Platform form.  It also provides a couple new such strategies, including the building platforms from Composer packages via project templates, and git-based deployments than maintain platform immutability.
 
 #### [Aegir Distributions](https://www.drupal.org/project/hosting_distribution)
 
@@ -91,10 +96,6 @@ This module adds [Kubernetes](http://kubernetes.io) support by allowing for host
 #### [Aegir Network](https://www.drupal.org/project/hosting_network)
 
 Allow inter-communication between Aegir servers (to address the "smart nodes" use case). The point is to centralize information to facilitate management of multiple servers.
-
-#### [Aegir Objects](https://www.drupal.org/project/aegir_objects)
-
-This API-only module provides some base classes and traits to make object-oriented development of Aegir 3.x easier. It does not provide any functionality of it's own, and should only be installed when required by another extension.
 
 #### [Aegir Reporting](https://www.drupal.org/project/hosting_report)
 

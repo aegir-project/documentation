@@ -61,3 +61,13 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
     * The module should not increase the system's attack surface.
     * If it does, a strong warning must be provided in the description.
 * It should not encourage users to perform dangerous operations, from which there is no recovery.  If such features are requested, their use must come with warnings.
+
+#### TODO's when adding a module
+
+- add to [drupal-org.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/drupal-org.make)
+- add to [hostmaster.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/hostmaster.make)
+
+- Add to docs/extend/contrib.md, or move to the Golden Contrib section.
+- Add in [release.sh](https://git.drupalcode.org/project/provision/blob/7.x-3.x/scripts/release.sh#L183)
+- Add in [release_notes.sh](https://git.drupalcode.org/project/provision/blob/7.x-3.x/scripts/release_notes.sh#L9)
+
