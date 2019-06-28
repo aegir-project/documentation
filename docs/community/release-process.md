@@ -184,15 +184,15 @@ Note: this could be [automated](https://www.drupal.org/node/1050618) with the ri
 
 ### 9. Manually test install and upgrade
 
-Just to make sure you should test the install and upgrade to the new version in a local VM. (Vagrant is very useful for this, the provision repo has a Vagrantfile.)
+Just to make sure you should test the install and upgrade to the new version in a local VM, using the [Aegir Dev VM](https://gitlab.com/aegir/aegir-dev-vm) project.  Ideally, this would be from the old stable to the new stable, but as of the time of this writing, [this isn't documented yet](https://gitlab.com/aegir/aegir-dev-vm/issues/15).
 
 At this point, the unstable repo actually contains the future stable version (ie 3.1 instead of 3.1-dev-abc). Check that it actually does: <http://debian.aegirproject.org/dists/unstable/main/binary-amd64/Packages>
 
-To test the install, just use the instructions on http://www.aegirproject.org but replace "stable" by "unstable". You should end up with a stable version.
+To test the install, just use the instructions on [aegirproject.org](http://www.aegirproject.org) but replace "stable" by "unstable". You should end up with a stable version.
 
 To test the upgrade, create a new VM, install normally with the aegirproject.org instructions, then replace stable by unstable in your lists (/etc/apt/), and run
 
-    apt-get update && apt-get upgrade
+    apt update && apt full-upgrade
 
 It should ask you if you want to upgrade Aegir3. Say yes and make sure there are no errors.
 
