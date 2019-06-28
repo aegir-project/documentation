@@ -51,9 +51,8 @@ pages:
   - 'Provision':
     - 'Contexts': 'develop/provision/contexts.md'
   - 'Projects repositories': 'develop/repositories.md'
-  - 'Release process': 'community/release-process.md'
-  - 'Release process':
-    - 'community/release-process/debian-packaging.md'
+  - 'Debian packaging': 'develop/debian-packaging.md'
+  - 'Continuous integration' : 'develop/ci.md'
 - 'Help': 'help/contact.md'
 - 'Community': 'community.md'
 - 'Community':
@@ -66,6 +65,7 @@ pages:
   - 'Resources': 'community/resources.md'
   - 'Service providers': 'community/services.md'
   - 'Sponsering': 'community/sponsoring.md'
+  - 'Release process': 'community/release-process.md'
 - 'Release notes': 'release-notes/3.18.md'
 - 'Release notes':
   - '3.0': 'release-notes/3.0.md'
