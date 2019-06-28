@@ -67,7 +67,8 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
 - add to [drupal-org.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/drupal-org.make)
 - add to [hostmaster.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/hostmaster.make)
 
-- Add to docs/extend/contrib.md, or move to the Golden Contrib section.
+- Add to [docs/extend/contrib.md](https://gitlab.com/aegir/documentation/blob/3.x/docs/extend/contrib.md), or move to the Golden Contrib section.
+- Add extra link in the [Creating release nodes on Drupal.org section](https://gitlab.com/aegir/documentation/blob/3.x/docs/community/release-process.md)
 - Add in [release.sh](https://git.drupalcode.org/project/provision/blob/7.x-3.x/scripts/release.sh#L183)
 - Add in [release_notes.sh](https://git.drupalcode.org/project/provision/blob/7.x-3.x/scripts/release_notes.sh#L9)
 
