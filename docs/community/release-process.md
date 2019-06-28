@@ -140,7 +140,7 @@ If any of these builds fail, one option might be to delete the remote tags (usin
 The script prompts to WAIT before pushing the revert commit... leave that terminal open until after you completed the 'Publish the Debian packages' step.
 
 
-#### 6 Fix Debian packages only
+### 6. Fix Debian packages only
 
 See [Creating a Debian mini release](/develop/debian-packaging/#creating-a-debian-mini-release)
 
@@ -182,7 +182,7 @@ Build errors don't show up on the release node page ... but on [the releases lis
 Note: this could be [automated](https://www.drupal.org/node/1050618) with the right stuff on Drupal.org.
 
 
-### 9. Manually test install and upgrade
+### 8. Manually test install and upgrade
 
 Just to make sure you should test the install and upgrade to the new version in a local VM, using the [Aegir Dev VM](https://gitlab.com/aegir/aegir-dev-vm) project.  Ideally, this would be from the old stable to the new stable, but as of the time of this writing, [this isn't documented yet](https://gitlab.com/aegir/aegir-dev-vm/issues/15).
 
@@ -198,15 +198,7 @@ It should ask you if you want to upgrade Aegir3. Say yes and make sure there are
 
 If you don't encounter errors in this procedure, you're good to go.
 
-#### 9.1. Quick test VMs
-
-You can use an Vagrant base box to quickly test the install and upgrade. Some such boxes are optimized for Aegir development and testing:
-
-* Debian VirtualBox: [PraxisLabs/jessie64-aegir3-dev.box](https://atlas.hashicorp.com/PraxisLabs/boxes/jessie64-aegir3-dev.box)
-
-(Please add your base box to the list if relevant.)
-
-### 10. Publish the Debian packages
+### 9. Publish the Debian packages
 
 Finally, when the Debian packages are tested you will need to pull them into the stable release channel:
 
@@ -230,7 +222,7 @@ You can then re-upload the new .debs you've generated, using the '-f' (force) fl
 
 After doing that, you can re-run the 'copy' commands to publish the .debs to the appropriate releases.
 
-### x. Push the revert commit
+### 10. Push the revert commit
 
 This is the final step in the release.sh script.
 
@@ -242,7 +234,7 @@ Then create a build for it on:
 https://hub.docker.com/r/aegir/hostmaster/~/settings/automated-builds/
 
 
-### 11. Publish the release notes widely
+### 12. Publish the release notes widely
 
 Once all this is done and the tarballs are generated, the release notes are published in:
 
@@ -257,11 +249,9 @@ Once all this is done and the tarballs are generated, the release notes are publ
 
 Optionally, blog posts on [koumbit.org](http://koumbit.org), [mig5.net](http://mig5.net), and elsewhere may go into further detail about significant changes, screencasts etc.
 
-### 12. Debian repository management
+### 13. Debian repository management
 
 The repo is managed with a tool called reprepro.
 Gitlab scp's to /var/www/repos/incoming/ on the repo server. It has an ssh key stored as a secret variable.
 
 On the repo server incrond waits for new files and trigers reprepro using /usr/local/bin/reprepro_process_incomming for them.
-
-
