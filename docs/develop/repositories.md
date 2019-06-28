@@ -64,6 +64,7 @@ These are included from our [makefiles](http://cgit.drupalcode.org/hostmaster/tr
 
 #### TODO's when adding a module
 
+- Create a release with the same version string as the current Aegir stable. Having this helps the automated search/replace in the makefiles during [a release](https://gitlab.com/aegir/provision/blob/7.x-3.x/scripts/release.sh#L134).
 - Add to [drupal-org.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/drupal-org.make)
 - Add to [hostmaster.make](https://git.drupalcode.org/project/hostmaster/blob/7.x-3.x/hostmaster.make)
 
