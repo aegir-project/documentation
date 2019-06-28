@@ -229,6 +229,8 @@ This is the final step in the release.sh script.
 
 ### 11. Create a specific Docker file
 
+*This step is optional as the project hasn't been maintained lately, and folks haven't complained.*
+
 Create a new file like releases/Dockerfile-3.11 in the [dockerfiles](https://github.com/aegir-project/dockerfiles/) repo.
 Then create a build for it on:
 https://hub.docker.com/r/aegir/hostmaster/~/settings/automated-builds/
