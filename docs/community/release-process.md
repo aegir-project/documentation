@@ -75,6 +75,16 @@ Add it as a new file under [release-notes](https://github.com/aegir-project/docu
 
 Each time we make a new release, we run a script called `release.sh` in provision. This script does all the 'hard' work in that it doesn't forget all the very many places to edit version numbers etc of relevant documentation and other scripts. This includes updating upgrade.sh.txt.
 
+#### Prerequisites
+
+Ensure that you have the necessary packages installed:
+
+```sh
+sudo apt install devscripts
+```
+
+#### Process
+
 It's best to start in a freshy cloned provision checkout. An extra remote to GitLab is needed for the packaging by GitLab CI.
 
 ```
