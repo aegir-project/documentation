@@ -168,7 +168,7 @@ And for Golden Contrib...
 * [Aegir Hosting Logs](https://www.drupal.org/node/add/project-release/1871490)
 * [Aegir Hosting Remote Import](https://drupal.org/node/add/project-release/1405640)
 * [Hosting Site Backup Manager](https://drupal.org/node/add/project-release/1459830)
-* [sudo apt install devscripts](https://drupal.org/node/add/project-release/1738498)
+* [Aegir Hosting Tasks Extra](https://drupal.org/node/add/project-release/1738498)
 * [Aegir HTTPS](https://drupal.org/node/add/project-release/2910575)
 * [Aegir Objects](https://www.drupal.org/node/add/project-release/2872073)
 * [Aegir Deploy](https://www.drupal.org/node/add/project-release/2952934)
