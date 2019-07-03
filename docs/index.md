@@ -3,7 +3,7 @@ Aegir Hosting System
 
 Aegir is a powerful hosting system that sits alongside a LAMP or LEMP server to create, deploy and manage Drupal sites.
 
-* Latest release notes: [3.17.3](/release-notes/3.17/)
+* Latest release notes: [3.18](/release-notes/3.18/)
 
 With Aegir, you can setup a Drupal site in just a few clicks. Aegir creates the web server's site configuration files, the site's database, runs the Drupal installation process and reloads the relevant services, all automatically.
 
