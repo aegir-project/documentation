@@ -242,6 +242,7 @@ Once all this is done and the tarballs are generated, the release notes are publ
 
 *   The [docs](http://docs.aegirproject.org)
 *   Update the upgrade.sh link in the [documentation](http://docs.aegirproject.org/install/upgrade/#upgrades-with-upgradesh-script)
+*   Update the [docs landing page with latest version](https://gitlab.com/aegir/documentation/blob/3.x/docs/index.md).
 *   The topic of the IRC channel
 *   The topic of the Matrix channel (not synced to IRC)
 *   The release issue in the [hostmaster queue](https://www.drupal.org/project/issues/hostmaster?categories=All)
