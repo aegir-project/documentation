@@ -62,6 +62,7 @@ Blogs
 As well as the News/Blog area here, the developers also often blog about new Aegir features or share handy tips for the community. Here are blogs to stay up to date with:
 
 *   [https://www.aegirproject.org/blog](https://www.aegirproject.org/blog)
+*   [Consensus Enterprises: Aegir](https://consensus.enterprises/tags/aegir/)
 *   [https://colan.consulting/blog-topics/aegir](https://colan.consulting/blog-topics/aegir)
 *   [https://mig5.net/tags/aegir](https://mig5.net/tags/aegir)
 *   [https://praxis.coop/en/tags/aegir](https://praxis.coop/en/tags/aegir)
